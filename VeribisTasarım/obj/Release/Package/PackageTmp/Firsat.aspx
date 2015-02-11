@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
-<div class="ALAN12">
+<div class="grid12">
         <h3>FIRSAT</h3>
         <div class="tabmenu">
             <ul>
@@ -30,7 +30,7 @@
                         </td>
                     </tr>
                 <hr />
-                <div class="ALAN4"> 
+                <div class="grid4"> 
                    
                                    
                     <table class="KisiTable" id="Table1">
@@ -257,7 +257,7 @@
                   
                   </table>
                 </div>                
-                <div class="ALAN4">
+                <div class="grid4">
                    <table class="KisiTable" > 
                         <tr>
                         <td width="35%">
@@ -367,7 +367,7 @@
                        </table>
                     
                     </div>
-                  <div class="ALAN4">
+                  <div class="grid4">
               <table class="KisiTable" > 
                     <tr>
                         <td width="35%">

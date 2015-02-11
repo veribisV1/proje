@@ -29,18 +29,15 @@
 <div class="menubutton"><hr><hr><hr></div>
 <div class="menuhiddencontainer">
     <div class="menuhidden">
-        <li>Ana Menü</li>
-        <li>Firma</li>
-        <li><asp:Linkbutton ID="LinkButton2" PostBackUrl="Kisi.aspx" runat="server" >Kiþi</asp:Linkbutton></li>
-        <li>Bakiye Listesi</li>
-        <li>Fýrsat</li>
-        <li>Sözleþme</li>
-        <li>Proje</li>
-        <li>Zaman Planý</li>
-        <li>Masraf</li>
-        <li>Raporlar</li>
-        <li>Ayarlar</li>
-        <li>Araç Plaka Kayýt</li>
+        <asp:Repeater ID="Repeater2" runat="server">
+                            <ItemTemplate>
+                                <li>
+                          <asp:LinkButton ID="LinkButtonMiniMenu" runat="server" PostBackUrl='<%#Eval("LINK") %>'><%# Eval("MENU_NAME") %></asp:LinkButton>
+                               </li>
+                            </ItemTemplate>
+
+        </asp:Repeater>
+
     </div>
 </div>
 </div>
@@ -48,25 +45,30 @@
 
 <div class="content">
 <div class="mainmenu">
-        <li>Ana Menü</li>
-        <li>Firma</li>
-        <li><asp:Linkbutton ID="LinkButton1" PostBackUrl="Kisi.aspx" runat="server" >Kiþi</asp:Linkbutton></li>
-        <li>Bakiye Listesi</li>
-        <li>Fýrsat</li>
-        <li>Sözleþme</li>
-        <li>Proje</li>
-        <li>Zaman Planý</li>
-        <li>Masraf</li>
-        <li>Raporlar</li>
-        <li>Ayarlar</li>
-        <li>Araç Plaka Kayýt</li>
+       <ul class="MenuDizayn">
+                        <asp:Repeater ID="Menu2" runat="server">
+                            <ItemTemplate>
+                                <li>
+                          <asp:LinkButton ID="LinkButtonmenu" runat="server" PostBackUrl='<%#Eval("LINK") %>'><%# Eval("MENU_NAME") %></asp:LinkButton>
+                               </li>
+
+                            </ItemTemplate>
+                            
+                        </asp:Repeater>
+           
+                        
+                    </ul> 
+  
 </div>
 
 <div class="mainbody"> 
-    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
+
+    </asp:ContentPlaceHolder>
+    
 </div>
 </div>
-<div class="footer">© 2015 Veribis</div>  
+  <div class="footer">Veribis</div>
 </form>
 </body>
 </html>

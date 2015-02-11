@@ -10,20 +10,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Aktivite.aspx">
+      <publishTime>02/07/2015 15:27:26</publishTime>
+    </File>
     <File Include="bin/VeribisTasarım.dll">
-      <publishTime>02/05/2015 11:01:02</publishTime>
+      <publishTime>02/11/2015 13:43:11</publishTime>
+    </File>
+    <File Include="Company.aspx">
+      <publishTime>02/07/2015 14:12:38</publishTime>
     </File>
     <File Include="css/responsive.css">
-      <publishTime>02/05/2015 00:18:54</publishTime>
+      <publishTime>02/06/2015 02:02:25</publishTime>
     </File>
     <File Include="css/stil.css">
-      <publishTime>02/05/2015 00:23:24</publishTime>
+      <publishTime>02/06/2015 23:37:52</publishTime>
     </File>
     <File Include="css/uiTabsArrow.png">
       <publishTime>02/04/2015 16:47:37</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>02/05/2015 00:08:18</publishTime>
+      <publishTime>02/05/2015 11:49:36</publishTime>
+    </File>
+    <File Include="Firsat.aspx">
+      <publishTime>02/06/2015 23:38:12</publishTime>
     </File>
     <File Include="IMG/logo.png">
       <publishTime>02/05/2015 00:20:21</publishTime>
@@ -95,13 +104,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/04/2015 16:49:03</publishTime>
     </File>
     <File Include="Kisi.aspx">
-      <publishTime>02/05/2015 00:18:50</publishTime>
+      <publishTime>02/06/2015 21:14:26</publishTime>
     </File>
     <File Include="MasterPage.master">
-      <publishTime>02/05/2015 00:23:43</publishTime>
+      <publishTime>02/06/2015 02:14:12</publishTime>
+    </File>
+    <File Include="Teklif.aspx">
+      <publishTime>02/07/2015 14:30:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/05/2015 11:01:03</publishTime>
+      <publishTime>02/11/2015 13:43:12</publishTime>
     </File>
   </ItemGroup>
 </Project>

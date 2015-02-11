@@ -3,3 +3,8 @@ C:\Users\Emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasar
 C:\Users\Emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\obj\Release\VeribisTasarım.dll
 C:\Users\Emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\obj\Release\VeribisTasarım.pdb
 C:\Users\Emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\obj\Release\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribisProjeler\proje\VeribisTasarım\bin\VeribisTasarım.dll
+C:\veribisProjeler\proje\VeribisTasarım\bin\VeribisTasarım.pdb
+C:\veribisProjeler\proje\VeribisTasarım\obj\Release\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribisProjeler\proje\VeribisTasarım\obj\Release\VeribisTasarım.dll
+C:\veribisProjeler\proje\VeribisTasarım\obj\Release\VeribisTasarım.pdb

@@ -2,7 +2,7 @@ body,html {margin:0px;font-size:12px;font-family:arial;overflow:hidden;}
 h1,h2,h3,h4,h5,h6{border-bottom:1px solid #00B4ff;}
 .header {
     width:100%;
-    height:100px;
+    height:50px;
     padding:8px;
     border-bottom:3px solid #012353;
     color:white;
@@ -124,7 +124,7 @@ border:1px solid #00B4ff;
 input[type='text']
  {
     padding:2px 3px;
-    border:1px solid #0024ff;
+    border:1px solid none;
     width:100%;
     height:20px;
  }
@@ -281,17 +281,17 @@ textarea
 
 
 /* =============================================
------------------ Grid ------------------
+----------------- ALAN ------------------
 ==============================================*/
-.grid1 {width:8%;float:left;margin-left:10px;min-height:10px;}
-.grid2 {width:16%;float:left;margin-left:10px;min-height:10px;}
-.grid3 {width:24%;float:left;margin-left:10px;min-height:10px;}
-.grid4 {width:32%;float:left;margin-left:10px;min-height:10px;}
-.grid5 {width:40%;float:left;margin-left:10px;min-height:10px;}
-.grid6 {width:48%;float:left;margin-left:10px;min-height:10px;}
-.grid7 {width:56%;float:left;margin-left:10px;min-height:10px;}
-.grid8 {width:64%;float:left;margin-left:10px;min-height:10px;}
-.grid9 {width:72%;float:left;margin-left:10px;min-height:10px;}
-.grid10 {width:80%;float:left;margin-left:10px;min-height:10px;}
-.grid11 {width:88%;float:left;margin-left:10px;min-height:10px;}
-.grid12 {width:96%;float:left;margin-left:10px;min-height:10px;}
+.ALAN1 {width:8%;float:left;margin-left:10px;min-height:10px;}
+.ALAN2 {width:16%;float:left;margin-left:10px;min-height:10px;}
+.ALAN3 {width:24%;float:left;margin-left:10px;min-height:10px;}
+.ALAN4 {width:32%;float:left;margin-left:10px;min-height:10px;}
+.ALAN5 {width:40%;float:left;margin-left:10px;min-height:10px;}
+.ALAN6 {width:48%;float:left;margin-left:10px;min-height:10px;}
+.ALAN7 {width:56%;float:left;margin-left:10px;min-height:10px;}
+.ALAN8 {width:64%;float:left;margin-left:10px;min-height:10px;}
+.ALAN9 {width:72%;float:left;margin-left:10px;min-height:10px;}
+.ALAN10 {width:80%;float:left;margin-left:10px;min-height:10px;}
+.ALAN11 {width:88%;float:left;margin-left:10px;min-height:10px;}
+.ALAN12 {width:96%;float:left;margin-left:10px;min-height:10px;}

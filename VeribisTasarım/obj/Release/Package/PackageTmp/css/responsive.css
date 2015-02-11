@@ -6,9 +6,10 @@
     .content {height:800px;}
     .content .mainbody {width:84%;margin-top:4px;height:600px;}
     .content .mainmenu {
-        height:600px;
+        height:800px;
         width: 14%;
     }	
+  
      
    
  }
@@ -20,7 +21,7 @@
         width: 18%;
     }	
      .KisiTableHizalama {
-       min-height:1000px;
+       min-height:1200px;
        
    }
 }
@@ -32,7 +33,7 @@
    .content .mainbody {width:97%;margin-top:4px;}
    .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
      .KisiTableHizalama {
-       min-height:1000px;
+       min-height:1200px;
    }
    	
 }
@@ -45,7 +46,7 @@
    .content .mainbody {width:97%;margin-top:4px;}
    .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
    .KisiTableHizalama {
-       min-height:900px;
+       min-height:1200px;
    }	
 }
 /* Landscape telefon ve portrait tablet */
@@ -57,7 +58,7 @@
    .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
    .KisiTableHizalama 
    {
-       min-height:1000px;
+       min-height:1200px;
    }
 
 }
@@ -74,7 +75,7 @@
    #Table2{display:block;}
    .KisiTableHizalama 
 {
-  min-height:800px;
+  min-height:1200px;
    
 }
 }

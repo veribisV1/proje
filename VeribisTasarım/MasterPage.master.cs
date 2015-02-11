@@ -37,8 +37,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
         dtv.Columns.Add("MENU_NAME");
         dtv.Columns.Add("LINK");
         dv.Fill(dtv);
+        Repeater Menu2 = (Repeater)this.FindControl("Menu2");
         Menu2.DataSource = dtv;
         Menu2.DataBind();
+        Repeater Repeater2 = (Repeater)this.FindControl("Repeater2");
         Repeater2.DataSource = dtv;
         Repeater2.DataBind();
         conn.Close();

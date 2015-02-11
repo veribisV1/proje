@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Teklif.aspx.cs" Inherits="_Teklif" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeBehind="Teklif.aspx.cs" Inherits="_Teklif" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Kisi.aspx.cs" Inherits="_Kisi" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeBehind="Kisi.aspx.cs" Inherits="_Kisi" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> 
 

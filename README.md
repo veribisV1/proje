@@ -3,3 +3,5 @@ for(;;)
 {
 Console.WriteLine("Veribis");
 }
+
+// Sonsuza KADARRRRR

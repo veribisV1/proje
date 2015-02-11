@@ -1,0 +1,93 @@
+/* =============================================
+----------------- Responsive  ------------------
+==============================================*/
+@media (min-width: 1200px)
+ {
+    .content {height:800px;}
+    .content .mainbody {width:84%;margin-top:4px;height:600px;}
+    .content .mainmenu {
+        height:600px;
+        width: 14%;
+    }	
+     
+   
+ }
+
+@media (min-width:980px) and (max-width:1199px) 
+{
+    .content .mainbody {width:79%;margin-top:4px;}
+    .content .mainmenu {
+        width: 18%;
+    }	
+     .KisiTableHizalama {
+       min-height:1000px;
+       
+   }
+}
+
+@media (min-width:768px) and (max-width:979px) 
+{
+    .menuhiddencontainer, .menubutton{display:block;float:left;}
+    .mainmenu {display:none;float:left;}
+   .content .mainbody {width:97%;margin-top:4px;}
+   .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
+     .KisiTableHizalama {
+       min-height:1000px;
+   }
+   	
+}
+
+/* Landscape telefon ve portrait tablet */
+@media (min-width:640px) and (max-width:767px) 
+{
+ 	.menuhiddencontainer, .menubutton{display:block;float:left;}
+    .mainmenu {display:none;float:left;}
+   .content .mainbody {width:97%;margin-top:4px;}
+   .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
+   .KisiTableHizalama {
+       min-height:900px;
+   }	
+}
+/* Landscape telefon ve portrait tablet */
+@media (min-width:481px) and (max-width:639px) 
+{
+   .menuhiddencontainer, .menubutton{display:block;float:left;}
+    .mainmenu {display:none;float:left;}
+   .content .mainbody {width:97%;margin-top:4px;}
+   .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
+   .KisiTableHizalama 
+   {
+       min-height:1000px;
+   }
+
+}
+
+ 
+/* Landscape telefonlar ve daha düþük çözünürlük */
+@media (max-width: 480px) 
+{
+    .menuhiddencontainer, .menubutton{display:block;float:left;}
+    .mainmenu {display:none;float:left;}
+   .content .mainbody {width:97%;margin-top:4px;}
+   .grid4 {width:95%;float:left;margin-left:1px;min-height:10px;}
+   #Tablo1{ display:none;}
+   #Table2{display:block;}
+   .KisiTableHizalama 
+{
+  min-height:800px;
+   
+}
+}
+
+@media (max-width: 320px) 
+{
+        
+
+}
+
+
+    /* Retina Display */
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) 
+    {
+
+    }

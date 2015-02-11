@@ -1,0 +1,159 @@
+body,html {margin:0px;font-size:12px;font-family:arial;overflow:hidden;}
+h1,h2,h3,h4,h5,h6{border-bottom:1px solid #00B4ff;}
+.header {
+    width:100%;
+    height:100px;
+    padding:8px;
+    border-bottom:3px solid #012353;
+    color:white;
+background: #012353; /* Old browsers */
+background: -moz-linear-gradient(top, #012353 0%, #012353 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#012353), color-stop(100%,#012353)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #012353 0%,#012353 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #012353 0%,#012353 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #012353 0%,#0123532 100%); /* IE10+ */
+background: linear-gradient(to bottom, #012353 0%,#012353 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#012353', endColorstr='#012353 ',GradientType=0 ); /* IE6-9 */
+}
+.footer {
+border-top:2px solid #AAA;
+background:#444;
+width:100%;
+height:20px;
+color:#FFF;
+padding:4px 6px;
+text-align:left;
+}
+.content {
+width:100%;
+height:510px;
+overflow-x:hidden;
+overflow-y:auto;
+padding:0px;
+}
+.content .mainmenu {
+min-height:510px;
+width:14%;
+border-right:1px solid #0024ff;
+background:#F8F8F8;
+float:left;
+padding:6px;
+}
+
+.content .mainbody {
+min-height:510px;
+width:84%;
+background:#F5F5F5;
+padding:6px;
+float:left;
+}
+.menubutton {
+height:30px;
+width:30px;
+border:1px solid #AAA;
+background:#F5F5F5;
+float:left;
+padding:4px;
+display:none;
+margin-top:60px;
+}
+.menubutton hr {
+border:1px solid #00B4ff;
+  }
+.menubutton:hover {background:#F0F0F0;}
+.menubutton:hover hr {border:1px solid #0084ff;}
+.menuhiddencontainer, .menuhidden {display:none;margin-top:13px;float:left;width:100%;}
+.mainmenu li, .menuhidden li {width:92%;background:#012353;padding:8px;border-bottom:1px solid #CECECE;list-style-type:none;color:white;}
+.mainmenu li a, .menuhidden li {text-decoration:none;color:white;}
+.mainmenu li:hover, .menuhidden:hover li {background:#00ff21;}
+.mainmenu li:hover a,.menuhidden li:hover a {color:#4280B2;}
+
+.tabmenu { 
+    background: transparent; 
+    border: none; 
+} 
+.tabmenu .ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+.tabmenu .ui-tabs-nav .ui-state-default { 
+    background: transparent; 
+    border: none; 
+} 
+.tabmenu .ui-tabs-nav .ui-state-active { 
+    background: transparent url(uiTabsArrow.png) no-repeat bottom center; 
+    border: none; 
+} 
+.tabmenu .ui-tabs-nav .ui-state-default a { 
+    color: #c0c0c0; 
+} 
+.tabmenu .ui-tabs-nav .ui-state-active a { 
+    color: #4280B2;
+}
+
+
+.KisiTable
+
+{
+   width:100%;
+   border:0px;
+}
+
+.KisiTable td
+{
+  padding:2px 3px;
+  border:0px;
+  white-space:nowrap;
+
+}
+.KisiTableHizalama 
+
+{
+   width:100%;
+   min-height:400px;
+   
+}
+input[type='text']
+ {
+    padding:2px 3px;
+    border:1px solid #0024ff;
+    width:100%;
+    height:20px;
+ }
+textarea 
+{
+    padding:2px 3px;
+    border:1px solid #0024ff;
+    width:100%;
+    height:80px;
+}
+#Table2
+ {
+    display:none;
+}
+
+.ButtonKaydet {
+    margin-right:50px;
+    height:50px;
+    width:100px;
+}
+
+/* =============================================
+----------------- Grid ------------------
+==============================================*/
+.grid1 {width:8%;float:left;margin-left:10px;min-height:10px;}
+.grid2 {width:16%;float:left;margin-left:10px;min-height:10px;}
+.grid3 {width:24%;float:left;margin-left:10px;min-height:10px;}
+.grid4 {width:32%;float:left;margin-left:10px;min-height:10px;}
+.grid5 {width:40%;float:left;margin-left:10px;min-height:10px;}
+.grid6 {width:48%;float:left;margin-left:10px;min-height:10px;}
+.grid7 {width:56%;float:left;margin-left:10px;min-height:10px;}
+.grid8 {width:64%;float:left;margin-left:10px;min-height:10px;}
+.grid9 {width:72%;float:left;margin-left:10px;min-height:10px;}
+.grid10 {width:80%;float:left;margin-left:10px;min-height:10px;}
+.grid11 {width:88%;float:left;margin-left:10px;min-height:10px;}
+.grid12 {width:96%;float:left;margin-left:10px;min-height:10px;}

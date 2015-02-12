@@ -1176,10 +1176,359 @@
                     
                     </div>
                  </div>           
-            <div id="Fatura" style="min-height:100px">
+           <div id="Fatura" style="min-height:100px">
+                <div class="KisiTableHizalama">
+                    <tr>
+                        <td>
+                            <asp:Button ID="ButtonFaturaYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonFaturaKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonFaturaSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                   
+                    
+                <hr />
+                <div class="ALAN4"> 
+                  
+                    <table class="KisiTable">
+                       
+                    <tr>
+                        <td width="35%">
+                         Kodu
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="50%">
 
+                      </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Firma Adı
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="104%">
 
-            </div>
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Kontak
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="DropDownList3" runat="server" Height="30px" Width="104%">
+
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Cinsi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="DropDownList4" runat="server" Height="30px" Width="50%">
+
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Evrak No
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="TextBox1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="TextBox2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Evrak Tarihi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:TextBox ID="TextBox3" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="35%">
+                        Temsilcisi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="DropDownList5" runat="server" Height="30px" Width="104%">
+
+                      </asp:DropDownList>
+
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="15%">
+                        Stok Bağımsız
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+                             <asp:ListItem Text="" Value="1"></asp:ListItem>
+                         </asp:CheckBoxList>
+                        </td>
+                    </tr>
+                        
+                     
+                    <tr>
+                        <td width="35%">
+                        Açıklama
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:TextBox ID="TextBox4" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                        </td>
+                    </tr>
+                        
+
+                </table>             
+                
+     
+                </div>                
+                <div class="ALAN4">
+                   <table class="KisiTable"> 
+                      
+                    
+                    <tr>
+                        <td width="35%">
+                        Sipariş Yolu
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="DropDownList6" runat="server" Height="30px" Width="104%">
+                              
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td width="35%">
+                        Ödeme Şekli
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="DropDownList7" runat="server" Height="30px" Width="104%">
+                        
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Teslim Şekli
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                        <asp:DropDownList ID="DropDownList8" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Mensei
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList9" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Banka Bilgisi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="DropDownList10" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Geçerlilik Tarihi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                     <asp:TextBox ID="TextBox5" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+
+                       </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Sevk Adresi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                        <asp:DropDownList ID="DropDownList11" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td width="35%">
+                        Fatura Adresi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="DropDownList12" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="35%">
+                        Ambalajlama
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="DropDownList13" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="35%">
+                        Nakliye Tipi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="DropDownList14" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td width="35%">
+                        Nakliye Firması
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="DropDownList15" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                       
+                       </table>
+
+                    </div>
+                  <div class="ALAN4">
+              <table class="KisiTable" > 
+                  <tr>
+                        <td width="35%">
+                        Siparis No
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                 <asp:TextBox ID="TextBox6" runat="server" Width="100%" Height="22px"></asp:TextBox>
+ 
+                        </td>
+                    </tr>
+                       <tr>
+                        <td width="35%">
+                        Sipariş Tarihi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                <asp:TextBox ID="TextBox7" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Neden Kaybettik
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="DropDownList16" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                        Kazanan Rakip Firma
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="DropDownList17" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                   
+                       </table>
+                      
+                  </div>
+                    
+                    </div>
+                 </div>
             <div id="Ek Form"></div>
         </div>
     </div>

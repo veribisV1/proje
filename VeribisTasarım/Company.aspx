@@ -985,13 +985,13 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Bağlı Firma
+                        Sipariş Yolu
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList5" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="PROFORMA_SIPARIS_YOLU" runat="server" Height="30px" Width="104%">
                               
                              </asp:DropDownList>
                         </td>

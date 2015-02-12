@@ -418,7 +418,7 @@
                                   
                     <table class="KisiTable">
                         <tr>
-                        <td width="35%">
+                        <td width="15%">
                         Rakip Firma Adı
                         </td>
                         <td width="2%">

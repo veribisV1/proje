@@ -849,13 +849,15 @@
                        
                     <tr>
                         <td width="35%">
-                        Firma Adı
+                         Kodu
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox1" MaxLength="200" runat="server"></asp:TextBox>
+                       <asp:DropDownList ID="PROFORMA_COMMERCIAL_CODE" runat="server" Height="30px" Width="50%">
+
+                      </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
@@ -866,8 +868,49 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox2" MaxLength="30" runat="server"></asp:TextBox>
+                      <asp:DropDownList ID="DropDownList11" runat="server" Height="30px" Width="50%">
+
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Kodu
                         </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="DropDownList12" runat="server" Height="30px" Width="50%">
+
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Kodu
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="DropDownList13" runat="server" Height="30px" Width="50%">
+
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Kodu
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="DropDownList14" runat="server" Height="30px" Width="50%">
+
+                      </asp:DropDownList>
+                            </td>
                     </tr>
                     <tr>
                         <td width="35%">

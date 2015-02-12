@@ -875,42 +875,40 @@
                     </tr>
                          <tr>
                         <td width="35%">
-                        Kodu
+                        Kontak
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList12" runat="server" Height="30px" Width="50%">
+                      <asp:DropDownList ID="PROFORMA_CONTACT" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                             </td>
                     </tr>
                          <tr>
                         <td width="35%">
-                        Kodu
+                        Cinsi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList13" runat="server" Height="30px" Width="50%">
+                      <asp:DropDownList ID="PROFORMA_CINSI" runat="server" Height="30px" Width="50%">
 
                       </asp:DropDownList>
                             </td>
                     </tr>
                          <tr>
                         <td width="35%">
-                        Kodu
+                        Evrak No
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList14" runat="server" Height="30px" Width="50%">
-
-                      </asp:DropDownList>
-                            </td>
+                         <asp:TextBox ID="PROFORMA_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="PROFORMA_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
+                        </td>
                     </tr>
                     <tr>
                         <td width="35%">

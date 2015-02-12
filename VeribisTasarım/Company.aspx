@@ -907,20 +907,18 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="PROFORMA_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="PROFORMA_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="PROFORMA_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="PROFORMA_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td width="35%">
-                        Temsilcisi
+                        Evrak Tarihi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="104%">
-
-                      </asp:DropDownList>
+                      <asp:TextBox ID="PROFORMA_DOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>

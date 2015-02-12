@@ -439,7 +439,17 @@
                        <asp:TextBox ID="PRODUCT_NAME" MaxLength="150" Width="50%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-
+                        <tr>
+                        <td width="15%">
+                        Fiyati
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:TextBox ID="PRICE" MaxLength="150" Width="50%" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
 
                 </table>
 

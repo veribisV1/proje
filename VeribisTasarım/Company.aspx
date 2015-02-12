@@ -671,11 +671,7 @@
                         </asp:DropDownList>
                         </td>
                     </tr>
-            </table>
-            </div>
-                    <div class="ALAN6">
-                        <table class="KisiTable">
-                            <tr>
+                        <tr>
                         <td width="15%">
                         Depo
                         </td>
@@ -701,6 +697,11 @@
                          </asp:CheckBoxList>
                         </td>
                     </tr>
+            </table>
+            </div>
+                    <div class="ALAN6">
+                        <table class="KisiTable">
+                            
                             <tr>
                         <td width="15%">
                        Geçerlilik Tarihi
@@ -738,6 +739,82 @@
                         </asp:DropDownList>
                         </td>
                     </tr>
+                            <tr>
+                        <td width="15%">
+                        Takip Aşaması
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="SEARCH_STEP" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+                            <tr>
+                        <td width="15%">
+                        Kimin İçin
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="CURRENT_CODE" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+                            <tr>
+                        <td width="15%">
+                        Sonuç
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="CATEGORY" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+                            <tr>
+                        <td width="15%">
+                        Proje
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="PROJECT_CODE" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+                            <tr>
+                        <td width="15%">
+                        Revizyon
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="REVISION" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>  
+                            <tr>
+                        <td width="15%">
+                       Açıklama
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                            <td>
+                   <asp:TextBox ID="EXPLANATION" runat="server" TextMode="MultiLine" Width="100%" Height="60px" ></asp:TextBox>
+                     </td>
+                      </tr>
 
                         </table>
 

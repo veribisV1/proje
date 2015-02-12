@@ -824,7 +824,12 @@
             </div>
             </div>
             </div>
-            <div id="Proforma"></div>
+            <div id="Proforma" style="min-height:100px">
+
+
+
+
+            </div>
             <div id="Fatura"></div>
             <div id="Ek Form"></div>
         </div>

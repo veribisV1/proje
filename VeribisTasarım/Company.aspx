@@ -37,14 +37,7 @@
                             <asp:Button ID="ButtonSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
-                    <tr> 
-                        <td>
-                       <asp:Label ID="LabelArama" runat="server" CssClass="LabelArama" Text="Arama Yap"></asp:Label>
-                        </td>        
-                        <td>
-                         <asp:TextBox ID="TextBoxArama" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%" ForeColor="White"></asp:TextBox>
-                        </td>
-                    </tr>
+                   
                     
                 <hr />
                 <div class="ALAN4"> 
@@ -364,7 +357,37 @@
                     
                     </div>
                  </div>
-            <div id="ListeAdi"></div>
+            <div id="ListeAdi" style="min-height:100px">
+                <div class="KisiTableHizalama">
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button1" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="Button2" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="Button3" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>
+                       <asp:Label ID="Label1" runat="server" CssClass="LabelArama" Text="Arama Yap"></asp:Label>
+                        </td>        
+                        <td>
+                         <asp:TextBox ID="TextBox1" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%" ForeColor="White"></asp:TextBox>
+                        </td>
+                    </tr>
+                    
+                <hr />
+
+
+
+            </div>
             <div id="MakinaParki"></div>
             <div id="RakipFirma" style="min-height:100px">
                 <div class="KisiTableHizalama">

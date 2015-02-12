@@ -428,6 +428,17 @@
                        <asp:TextBox ID="RIVAL_COMPANY_CODE" Width="50%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
+                        <tr>
+                        <td width="15%">
+                        Ürün Adı
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:TextBox ID="PRODUCT_NAME" Width="50%" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
 
                 </table>
 

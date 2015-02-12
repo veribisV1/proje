@@ -526,7 +526,22 @@
             </div>
             <div id="Kontak"></div>
             <div id="Siparis" style="min-height:100px">
-
+                <div class="KisiTableHizalama">
+                    <tr>
+                        <td>
+                            <asp:Button ID="ButtonSiparisYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonSiparisKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonSiparisSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
 
 
 

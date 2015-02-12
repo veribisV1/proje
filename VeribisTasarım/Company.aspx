@@ -1024,13 +1024,15 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Vergi Numarası
+                        Banka Bilgisi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox5" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:DropDownList ID="PROFORMA_BANKA_BILGISI" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>

@@ -1176,7 +1176,10 @@
                     
                     </div>
                  </div>           
-            <div id="Fatura"></div>
+            <div id="Fatura" style="min-height:100px">
+
+
+            </div>
             <div id="Ek Form"></div>
         </div>
     </div>

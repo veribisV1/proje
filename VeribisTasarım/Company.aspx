@@ -1074,6 +1074,32 @@
                              </asp:DropDownList>
                         </td>
                     </tr>
+                        <tr>
+                        <td width="35%">
+                        Ambalajlama
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="PROFORMA_AMBALAJLAMA" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="35%">
+                        Nakliye Tipi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="PROFORMA_NAKLIYE_TIPI" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
                        
                        </table>
 

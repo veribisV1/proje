@@ -958,7 +958,7 @@
                           :
                         </td>
                         <td>
-                      <asp:TextBox ID="PROFORMA_EXPLANATION" runat="server" Width="102%" Height="50px" TextMode="MultiLine"></asp:TextBox>
+                      <asp:TextBox ID="PROFORMA_EXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
                         
@@ -970,19 +970,7 @@
                 <div class="ALAN4">
                    <table class="KisiTable"> 
                       
-                    <tr>
-                        <td width="35%">
-                        Ödeme Şekli
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                          <asp:DropDownList ID="PROFORMA_PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
-                        
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
+                    
                     <tr>
                         <td width="35%">
                         Sipariş Yolu
@@ -993,6 +981,19 @@
                         <td>
                          <asp:DropDownList ID="PROFORMA_SIPARIS_YOLU" runat="server" Height="30px" Width="104%">
                               
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td width="35%">
+                        Ödeme Şekli
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="PROFORMA_PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
+                        
                              </asp:DropDownList>
                         </td>
                     </tr>
@@ -1045,8 +1046,7 @@
                         <td>
                      <asp:TextBox ID="PROFORMA_CERTIFICATE_DATE" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
 
-
-                        </td>
+                       </td>
                     </tr>
                     <tr>
                         <td width="35%">
@@ -1121,26 +1121,26 @@
               <table class="KisiTable" > 
                   <tr>
                         <td width="35%">
-                        Referans
+                        Siparis No
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList8" runat="server" Height="30px" Width="104%">
-                       
-                             </asp:DropDownList>
+                 <asp:TextBox ID="PROFORMA_SIPARIS_NO" runat="server" Width="100%" Height="22px"></asp:TextBox>
+ 
                         </td>
                     </tr>
                        <tr>
                         <td width="35%">
-                        Yıllık Cirosu
+                        Sipariş Tarihi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                <asp:TextBox ID="PROFORMA_SIPARIS_TARIHI" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+
                         </td>
                     </tr>
                     <tr>

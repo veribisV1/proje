@@ -436,9 +436,10 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="PRODUCT_NAME" Width="50%" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="PRODUCT_NAME" MaxLength="150" Width="50%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
+
 
                 </table>
 

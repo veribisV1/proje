@@ -1228,26 +1228,26 @@
                     </tr>
                          <tr>
                         <td width="35%">
-                        Kontak
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                      <asp:DropDownList ID="DropDownList3" runat="server" Height="30px" Width="104%">
-
-                      </asp:DropDownList>
-                            </td>
-                    </tr>
-                         <tr>
-                        <td width="35%">
                         Cinsi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList4" runat="server" Height="30px" Width="50%">
+                      <asp:DropDownList ID="FATURA_CINSI" runat="server" Height="30px" Width="104%">
+
+                      </asp:DropDownList>
+                            </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Normal/İade
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                      <asp:DropDownList ID="FATURA_NORMAL_IADE" runat="server" Height="30px" Width="50%">
 
                       </asp:DropDownList>
                             </td>

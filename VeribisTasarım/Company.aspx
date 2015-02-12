@@ -725,6 +725,19 @@
                         </asp:DropDownList>
                         </td>
                     </tr>
+                             <tr>
+                        <td width="15%">
+                        Takip Yönetimi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="SEARCH_METHOD" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
 
                         </table>
 

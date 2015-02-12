@@ -554,9 +554,24 @@
                           :
                         </td>
                             <td>
-                                <asp:TextBox ID="NUMUNE_COMPANY_COMMERCIAL_CODE" runat="server" MaxLength="30" Width="25%" Height="20px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_COMPANY_COMMERCIAL_CODE" runat="server" MaxLength="30" Width="25%" Height="20px" ></asp:TextBox>
+                     </td>
+                      </tr>
+                        <tr>
+                        <td width="15%">
+                        Firma Adı
                         </td>
-                      
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="NUMUNE_COMPANY_NAME" runat="server" Height="30px" Width="100%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+
+                   
                    
 
                 </table>

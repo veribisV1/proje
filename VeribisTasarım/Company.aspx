@@ -413,29 +413,26 @@
                     <table class="KisiTable">
                         <tr>
                         <td width="15%">
-                        Rakip Firma Adı
+                        Adı
                         </td>
                         <td width="2%">
                           :
                         </td>
                             <td>
-                         <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="50%">
-                              
-                             </asp:DropDownList>
+                        <asp:TextBox ID="MAKINAPARKI_NAME" runat="server" Width="49%" Height="20px"></asp:TextBox>
                         </td>
                       
                     </tr>
                         <tr>
                         <td width="15%">
-                        Ürün Adı
+                        Marka
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="50%">
-                              
-                        </asp:DropDownList>
+                     <asp:TextBox ID="MAKINAPARKI_MODEL" runat="server" Width="49%" Height="20px"></asp:TextBox>
+
                         </td>
                     </tr>
                         <tr>

@@ -479,7 +479,18 @@
                               
                         </asp:DropDownList>
                         </td>
-                       
+                         </tr>
+                       <tr>
+                        <td width="15%">
+                        Miktar
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:TextBox ID="QUANTITY" Width="5%" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
 
                 </table>
 

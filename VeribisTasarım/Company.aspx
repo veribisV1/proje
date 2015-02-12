@@ -425,7 +425,7 @@
                           :
                         </td>
                             <td>
-                         <asp:DropDownList ID="RIVAL_COMPANY_NAME" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="RIVAL_COMPANY_NAME" runat="server" Height="30px" Width="50%">
                               
                              </asp:DropDownList>
                         </td>
@@ -439,7 +439,9 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="PRODUCT_NAME" MaxLength="150" Width="50%" runat="server"></asp:TextBox>
+                         <asp:DropDownList ID="PRODUCT_NAME" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
                         </td>
                     </tr>
                         <tr>

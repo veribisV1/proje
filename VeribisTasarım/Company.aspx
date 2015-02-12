@@ -688,6 +688,19 @@
                         </asp:DropDownList>
                         </td>
                     </tr>
+                             <tr>
+                        <td width="15%">
+                        Stok Bağımsız
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:CheckBoxList ID="CheckBoxListNumuneStokBagimsiz" runat="server">
+                             <asp:ListItem Text="" Value="1"></asp:ListItem>
+                         </asp:CheckBoxList>
+                        </td>
+                    </tr>
 
                         </table>
 

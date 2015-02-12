@@ -1145,96 +1145,31 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        İskonto Oranı
+                        Neden Kaybettik
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Para Birimi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="DropDownList9" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="PROFORMA_NEDEN_KAYBETTIK" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
                         <td width="35%">
-                        Sahibi
+                        Kazanan Rakip Firma
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox10" MaxLength="30" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Ödeme Yetkilisi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:TextBox ID="TextBox11" MaxLength="30" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Satın Alma Yetkilisi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:TextBox ID="TextBox12" MaxLength="30" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Teslimat Sorumlusu
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:TextBox ID="TextBox13" MaxLength="30" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Ödeme Şekli
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="DropDownList10" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="PROFORMA_KAZANAN_RAKIP_FIRMA" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
                     </tr>
-                    <tr>
-                        <td width="35%">
-                        Ödeme Günü
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:TextBox ID="TextBox14" MaxLength="30" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
+                   
                        </table>
                       
                   </div>

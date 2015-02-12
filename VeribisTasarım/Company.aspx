@@ -952,15 +952,13 @@
                      
                     <tr>
                         <td width="35%">
-                        Tipi
+                        Açıklama
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList3" runat="server" Height="30px" Width="104%">
-                       
-                             </asp:DropDownList>
+                      <asp:TextBox ID="PROFORMA_EXPLANATION" runat="server" Width="102%" Height="50px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
                         

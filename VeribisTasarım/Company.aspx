@@ -366,7 +366,9 @@
                  </div>
             <div id="ListeAdi"></div>
             <div id="MakinaParki"></div>
-            <div id="RakipFirma"></div>
+            <div id="RakipFirma" style="min-height:100px">
+
+            </div>
             <div id="RakipUrun"></div>
             <div id="Kontak"></div>
             <div id="Siparis"></div>

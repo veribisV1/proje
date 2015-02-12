@@ -620,6 +620,17 @@
                          <asp:TextBox ID="DOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
+                         <tr>
+                        <td width="15%">
+                       Evrak Tarihi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                            <td>
+                   <asp:TextBox ID="DOCUMENT_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
+                     </td>
+                      </tr>
 
                         
                    

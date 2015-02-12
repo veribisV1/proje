@@ -1011,13 +1011,15 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Vergi Dairesi
+                        Mensei
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox4" MaxLength="30" runat="server" ></asp:TextBox>
+                            <asp:DropDownList ID="PROFORMA_MENSEI" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>

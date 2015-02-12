@@ -161,6 +161,21 @@ textarea
     width:60px;
 
 }
+.TextBoxArama {
+    position:relative;
+    bottom:5px;
+    left:20%;
+    height:20px;
+    width:60px;
+
+}
+.LabelArama {
+    position:relative;
+    bottom:5px;
+    left:16%;
+   
+}
+
 .MenuDizayn li {
     padding: 12px 16px;
     background: #012353;
@@ -267,6 +282,7 @@ textarea
             position:relative;
             left:5%;
         }
+      
 
     
     

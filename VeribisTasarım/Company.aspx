@@ -9,6 +9,7 @@
         <h3>FİRMA KARTI</h3>
         <div class="tabmenu">
             <ul>
+                <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li><a href="#FirmaEkle">Firma Ekle</a></li>
                 <li><a href="#MakinaParki">Makina Parkı</a></li>
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
@@ -36,6 +37,15 @@
                             <asp:Button ID="ButtonSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
+                    <tr> 
+                        <td>
+                       <asp:Label ID="LabelArama" runat="server" CssClass="LabelArama" Text="Arama Yap"></asp:Label>
+                        </td>        
+                        <td>
+                         <asp:TextBox ID="TextBoxArama" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%" ForeColor="White"></asp:TextBox>
+                        </td>
+                    </tr>
+                    
                 <hr />
                 <div class="ALAN4"> 
                    
@@ -354,6 +364,7 @@
                     
                     </div>
                  </div>
+            <div id="ListeAdi"></div>
             <div id="MakinaParki"></div>
             <div id="RakipFirma"></div>
             <div id="RakipUrun"></div>

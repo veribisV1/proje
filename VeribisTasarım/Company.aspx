@@ -1337,26 +1337,26 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Mensei
+                        Açık/Kapalı
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                            <asp:DropDownList ID="DropDownList9" runat="server" Height="30px" Width="104%">
+                            <asp:DropDownList ID="FATURA_OPENORCLOSE" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
                         <td width="35%">
-                        Banka Bilgisi
+                        Grubu
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList10" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FATURA_GRUBU" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>

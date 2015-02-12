@@ -467,6 +467,18 @@
                               
                         </asp:DropDownList>
                         </td>
+                            <tr>
+                        <td width="15%">
+                        Ödeme Şekli
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="PEYMENT_TYPE" runat="server" Height="30px" Width="21%">
+                              
+                        </asp:DropDownList>
+                        </td>
                        
 
                 </table>

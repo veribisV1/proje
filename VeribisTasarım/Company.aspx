@@ -1063,13 +1063,15 @@
                     </tr>
                        <tr>
                         <td width="35%">
-                        Web Adresi
+                        Fatura Adresi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox7" MaxLength="150" runat="server"></asp:TextBox>
+                       <asp:DropDownList ID="PROFORMA_FATURA_ADRESI" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
                         </td>
                     </tr>
                        

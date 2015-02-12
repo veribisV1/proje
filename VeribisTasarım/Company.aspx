@@ -504,6 +504,19 @@
                         </asp:DropDownList>
                         </td>
                          </tr>
+                        <tr>
+                        <td width="15%">
+                        Dönem
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="PERIOD" runat="server" Height="30px" Width="21%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                         </tr>
 
                 </table>
 

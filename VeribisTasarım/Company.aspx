@@ -1050,13 +1050,15 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Mail
+                        Sevk Adresi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox6" MaxLength="100" runat="server"></asp:TextBox>
+                        <asp:DropDownList ID="PROFORMA_SEVK_ADRESI" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
                         </td>
                     </tr>
                        <tr>

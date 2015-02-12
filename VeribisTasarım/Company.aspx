@@ -1208,7 +1208,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="50%">
+                       <asp:DropDownList ID="FATURA_COMMERCIAL_CODE" runat="server" Height="30px" Width="50%">
 
                       </asp:DropDownList>
                         </td>
@@ -1221,7 +1221,7 @@
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="104%">
+                      <asp:DropDownList ID="FATURA_COMPANY_NAME" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                             </td>

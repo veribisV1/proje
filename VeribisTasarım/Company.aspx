@@ -923,33 +923,32 @@
                     </tr>
                         <tr>
                         <td width="35%">
-                        Sektörü
+                        Temsilcisi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="PROFORMA_APPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
                         </td>
                     </tr>
-                       
-                        
-                       
-                        
-                         <tr>
-                        <td width="35%">
-                        Kuruluş Tarihi
+                        <tr>
+                        <td width="15%">
+                        Stok Bağımsız
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox3" runat="server" Width="101%" Height="25px" TextMode="DateTime"></asp:TextBox>
+                         <asp:CheckBoxList ID="PROFORMA_STOK_BAGIMSIZ" runat="server">
+                             <asp:ListItem Text="" Value="1"></asp:ListItem>
+                         </asp:CheckBoxList>
                         </td>
                     </tr>
+                        
                      
                     <tr>
                         <td width="35%">

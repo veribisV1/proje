@@ -679,7 +679,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="WAREHOUSE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="PROFORMA_WAREHOUSE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -786,7 +786,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="PROJECT_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="PROFORMA_PROJECT_CODE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -1260,7 +1260,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="TextBox2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FATURA_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="FATURA_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -1271,7 +1271,7 @@
                           :
                         </td>
                         <td>
-                      <asp:TextBox ID="TextBox3" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="FATURA_DOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -1282,40 +1282,12 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="DropDownList5" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FATURA_APPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
                         </td>
-                    </tr>
-                        <tr>
-                        <td width="15%">
-                        Stok Bağımsız
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:CheckBoxList ID="CheckBoxList1" runat="server">
-                             <asp:ListItem Text="" Value="1"></asp:ListItem>
-                         </asp:CheckBoxList>
-                        </td>
-                    </tr>
-                        
-                     
-                    <tr>
-                        <td width="35%">
-                        Açıklama
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                      <asp:TextBox ID="TextBox4" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
-                        </td>
-                    </tr>
-                        
-
+                   
                 </table>             
                 
      
@@ -1326,13 +1298,13 @@
                     
                     <tr>
                         <td width="35%">
-                        Sipariş Yolu
+                        Depo
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList6" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FATURA_WAREHOUSE" runat="server" Height="30px" Width="104%">
                               
                              </asp:DropDownList>
                         </td>
@@ -1345,20 +1317,20 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="DropDownList7" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FATURA_PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
                         
                              </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
                         <td width="35%">
-                        Teslim Şekli
+                        Proje
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="DropDownList8" runat="server" Height="30px" Width="104%">
+                        <asp:DropDownList ID="FATURA_PROJECT_CODE" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>

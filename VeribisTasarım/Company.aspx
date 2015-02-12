@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
-<div class="ALAN12">
+    <div class="ALAN12">
         <h3>FİRMA KARTI</h3>
         <div class="tabmenu">
             <ul>
@@ -378,7 +378,33 @@
                     <div class="ALAN12">
                <div class="KisiTableHizalama">
                    <table class="KisiTable">
-
+                     <tr>
+                         <td>
+                       <asp:GridView ID="ListeAdiGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataKeyNames="COMPANY_CODE" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#012353" GridLines="Horizontal">
+                           <AlternatingRowStyle BackColor="White" />
+                           <Columns>
+                               <asp:BoundField DataField="COMPANY_CODE" HeaderText="COMPANY_CODE" ReadOnly="True" SortExpression="COMPANY_CODE" />
+                               <asp:BoundField DataField="COMPANY_NAME" HeaderText="COMPANY_NAME" SortExpression="COMPANY_NAME" />
+                               <asp:BoundField DataField="ADDRESS" HeaderText="ADDRESS" SortExpression="ADDRESS" />
+                               <asp:BoundField DataField="SECTOR" HeaderText="SECTOR" SortExpression="SECTOR" />
+                               <asp:BoundField DataField="PHONE" HeaderText="PHONE" SortExpression="PHONE" />
+                               <asp:BoundField DataField="FAX" HeaderText="FAX" SortExpression="FAX" />
+                               <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
+                           </Columns>
+                             <EditRowStyle BackColor="#2461BF" />
+                           <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                           <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                           <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                           <RowStyle BackColor="#EFF3FB" />
+                           <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                           <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                           <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                           <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                           <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                             </asp:GridView>
+                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_DefaultConnectionString %>" SelectCommand="SELECT [COMPANY_CODE], [COMPANY_NAME], [ADDRESS], [SECTOR], [PHONE], [FAX], [MAIL] FROM [COMPANY]"></asp:SqlDataSource>
+                         </td>
+                     </tr>
 
                    </table>
 
@@ -419,7 +445,7 @@
                           :
                         </td>
                             <td>
-                        <asp:TextBox ID="MAKINAPARKI_NAME" runat="server" Width="49%" Height="20px"></asp:TextBox>
+                        <asp:TextBox ID="MAKINAPARKI_NAME" runat="server" Width="29%" Height="20px"></asp:TextBox>
                         </td>
                       
                     </tr>
@@ -431,84 +457,47 @@
                           :
                         </td>
                         <td>
-                     <asp:TextBox ID="MAKINAPARKI_MODEL" runat="server" Width="49%" Height="20px"></asp:TextBox>
+                     <asp:TextBox ID="MAKINAPARKI_MODEL" runat="server" Width="29%" Height="20px"></asp:TextBox>
 
                         </td>
                     </tr>
                         <tr>
                         <td width="15%">
-                        Fiyati
+                        Adet
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="TextBox1" Width="20%" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="MAKINAPARKI_AMOUNT" runat="server" Width="9%" Height="20px"></asp:TextBox>
+      
                         </td>
                     </tr>
                         <tr>
                         <td width="15%">
-                        Para Birimi
+                        Tip1
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList3" runat="server" Height="30px" Width="21%">
+                         <asp:DropDownList ID="MAKINAPARKI_TYPE1" runat="server" Height="30px" Width="10%">
                               
                         </asp:DropDownList>
                         </td>
                             <tr>
                         <td width="15%">
-                        Ödeme Şekli
+                        Tip2
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="DropDownList4" runat="server" Height="30px" Width="21%">
+                         <asp:DropDownList ID="MAKINAPARKI_TYPE2" runat="server" Height="30px" Width="10%">
                               
                         </asp:DropDownList>
                         </td>
-                         </tr>
-                       <tr>
-                        <td width="15%">
-                        Miktar
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                       <asp:TextBox ID="TextBox2" Width="5%" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                         <tr>
-                        <td width="15%">
-                        Birim
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="DropDownList5" runat="server" Height="30px" Width="21%">
-                              
-                        </asp:DropDownList>
-                        </td>
-                         </tr>
-                        <tr>
-                        <td width="15%">
-                        Dönem
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="DropDownList6" runat="server" Height="30px" Width="21%">
-                              
-                        </asp:DropDownList>
-                        </td>
-                         </tr>
-
+                         
                 </table>
 
             

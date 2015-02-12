@@ -179,6 +179,15 @@ textarea
     color:white;
    
 }
+.ListeAdiGridView { width: 100%; background-color: #ed1d1d; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.ListeAdiGridView td { padding: 2px; border: solid 1px #012353; color:black}
+.ListeAdiGridView th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
+.ListeAdiGridView .alt { background: #000 url(grd_alt.png) repeat-x top; }
+.ListeAdiGridView .pgr {background: #012353 url(grd_pgr.png) repeat-x top; }
+.ListeAdiGridView.pgr table { margin: 5px 0; }
+.ListeAdiGridView.pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #f50909;font-weight: bold; color: #f30b0b; line-height: 12px; }   
+.ListeAdiGridView.pgr a { color: #012353; text-decoration: none; }
+ .ListeAdiGridView.pgr a:hover { color: #f22323; text-decoration: none; }
 
 .MenuDizayn li {
     padding: 12px 16px;

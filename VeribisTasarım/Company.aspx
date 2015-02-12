@@ -583,7 +583,20 @@
                         </asp:DropDownList>
                         </td>
                     </tr>
-
+                         <tr>
+                        <td width="15%">
+                        Cinsi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="NUMUNE_CİNSİ" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+                        
                    
                    
 

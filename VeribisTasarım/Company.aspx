@@ -93,6 +93,48 @@
 
                         </td>
                     </tr>
+                         <tr>
+                        <td width="35%">
+                        Adres
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="ADDRESS" runat="server" Height="30px" Width="104%">
+
+                      </asp:DropDownList>
+
+                        </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Telefon
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="PHONE" runat="server" Height="30px" Width="104%">
+
+                      </asp:DropDownList>
+
+                        </td>
+                    </tr>
+                         <tr>
+                        <td width="35%">
+                        Fax
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="FAX" runat="server" Height="30px" Width="104%">
+
+                      </asp:DropDownList>
+
+                        </td>
+                    </tr>
                        
                         
                        
@@ -109,7 +151,14 @@
                         </td>
                     </tr>
                      
-                    <tr>
+               
+                </table>             
+                
+     
+                </div>                
+                <div class="ALAN4">
+                   <table class="KisiTable" > 
+                      <tr>
                         <td width="35%">
                         Tipi
                         </td>
@@ -122,15 +171,6 @@
                              </asp:DropDownList>
                         </td>
                     </tr>
-                        
-
-                </table>             
-                
-     
-                </div>                
-                <div class="ALAN4">
-                   <table class="KisiTable" > 
-                      
                     <tr>
                         <td width="35%">
                         Aktif
@@ -362,7 +402,7 @@
                     <tr> 
                               
                         <td>
-                         <asp:TextBox ID="TextBoxFirmaArama" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%" ForeColor="White"></asp:TextBox>
+                         <asp:TextBox ID="TextBoxFirmaArama" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%"></asp:TextBox>
                         </td>
                          <td>
                              <asp:Button ID="ButtonFirmaArama" runat="server" CssClass="ButtonArama" Text="Ara" />
@@ -388,8 +428,8 @@
                                <asp:BoundField DataField="ADDRESS" HeaderText="ADDRESS" SortExpression="ADDRESS" />
                                <asp:BoundField DataField="SECTOR" HeaderText="SECTOR" SortExpression="SECTOR" />
                                <asp:BoundField DataField="PHONE" HeaderText="PHONE" SortExpression="PHONE" />
-                               <asp:BoundField DataField="FAX" HeaderText="FAX" SortExpression="FAX" />
                                <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
+                               <asp:BoundField DataField="WEBADDRESS" HeaderText="WEBADDRESS" SortExpression="WEBADDRESS" />
                            </Columns>
                              <EditRowStyle BackColor="#2461BF" />
                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -402,7 +442,7 @@
                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
                              </asp:GridView>
-                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_DefaultConnectionString %>" SelectCommand="SELECT [COMPANY_CODE], [COMPANY_NAME], [ADDRESS], [SECTOR], [PHONE], [FAX], [MAIL] FROM [COMPANY]"></asp:SqlDataSource>
+                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_DefaultConnectionString %>" SelectCommand="SELECT [COMPANY_CODE], [COMPANY_NAME], [ADDRESS], [SECTOR], [PHONE], [MAIL], [WEBADDRESS] FROM [COMPANY]"></asp:SqlDataSource>
                          </td>
                      </tr>
 
@@ -527,6 +567,12 @@
                 <div class="ALAN4"> 
                                   
                     <table class="KisiTable">
+                        <tr>
+                            <td>
+                  <asp:GridView ID="RakipFirmalarGridView" runat="server"></asp:GridView>
+                  <asp:GridView ID="BuFirmadakiRakipFirmalarGridView" runat="server"></asp:GridView>
+                            </td>
+                        </tr>
 
                 </table>     
             </div>

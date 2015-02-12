@@ -15,7 +15,7 @@
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
                 <li><a href="#Kontak">Kontak</a></li>
-                <li><a href="#Siparis">Sipariş</a></li>
+                <li><a href="#Numune">Numune</a></li>
                 <li><a href="#Proforma">Proforma</a></li>
                 <li><a href="#Fatura">Fatura</a></li>
                 <li><a href="#EkForm">Ek Form</a></li>
@@ -525,26 +525,45 @@
             </div>
             </div>
             <div id="Kontak"></div>
-            <div id="Siparis" style="min-height:100px">
+            <div id="Numune" style="min-height:100px">
                 <div class="KisiTableHizalama">
                     <tr>
                         <td>
-                            <asp:Button ID="ButtonSiparisYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonNumuneYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonSiparisKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonNumuneKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonSiparisSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonNumuneSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
+                    <hr />
+                     <div class="ALAN6"> 
+                                  
+                    <table class="KisiTable">
+                        <tr>
+                        <td width="15%">
+                       Ticari Kodu
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                            <td>
+                                <asp:TextBox ID="NUMUNE_COMPANY_COMMERCIAL_CODE" runat="server" MaxLength="30" Width="25%" Height="20px" ></asp:TextBox>
+                        </td>
+                      
+                   
 
+                </table>
 
-
+            
+            </div>
+            </div>
             </div>
             <div id="Proforma"></div>
             <div id="Fatura"></div>

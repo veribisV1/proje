@@ -701,6 +701,30 @@
                          </asp:CheckBoxList>
                         </td>
                     </tr>
+                            <tr>
+                        <td width="15%">
+                       Geçerlilik Tarihi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                            <td>
+                   <asp:TextBox ID="CERTIFICATE_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
+                     </td>
+                      </tr>
+                            <tr>
+                        <td width="15%">
+                        Açık/Kapalı
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="OPEN_CLOSE" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
 
                         </table>
 

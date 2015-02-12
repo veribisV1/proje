@@ -414,9 +414,20 @@
                    
                     
                 <hr />
-                <div class="ALAN4"> 
+                <div class="ALAN12"> 
                                   
                     <table class="KisiTable">
+                        <tr>
+                        <td width="35%">
+                        Rakip Firma Adı
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="RIVAL_COMPANY_CODE" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
 
                 </table>
 

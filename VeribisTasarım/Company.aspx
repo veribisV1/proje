@@ -24,25 +24,24 @@
                 <div class="KisiTableHizalama">
                     <tr>
                         <td>
-                            <asp:Button ID="ButtonYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonFirmaEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonFirmaEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                    
                     
                 <hr />
                 <div class="ALAN4"> 
-                   
-                                   
+                  
                     <table class="KisiTable" id="Table1">
                        
                     <tr>
@@ -361,25 +360,30 @@
                 <div class="KisiTableHizalama">
                     <tr>
                         <td>
-                            <asp:Button ID="Button1" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonListeAdiYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="Button2" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonListeAdiKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="Button3" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonListeAdiSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr> 
                         <td>
-                       <asp:Label ID="Label1" runat="server" CssClass="LabelArama" Text="Arama Yap"></asp:Label>
+                       <asp:Label ID="LabelFirmaArama" runat="server" CssClass="LabelArama" Text="Arama Yap"></asp:Label>
                         </td>        
                         <td>
-                         <asp:TextBox ID="TextBox1" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%" ForeColor="White"></asp:TextBox>
+                         <asp:TextBox ID="TextBoxFirmaArama" runat="server" CssClass="TextBoxArama"  Height="20px" Width="30%" ForeColor="White"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
                         </td>
                     </tr>
                     
@@ -387,7 +391,7 @@
 
 
 
-            </div>
+            </div></div>
             <div id="MakinaParki"></div>
             <div id="RakipFirma" style="min-height:100px">
                 <div class="KisiTableHizalama">
@@ -667,15 +671,29 @@
                         </asp:DropDownList>
                         </td>
                     </tr>
+            </table>
+            </div>
+                    <div class="ALAN6">
+                        <table class="KisiTable">
+                            <tr>
+                        <td width="15%">
+                        Depo
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="WAREHOUSE" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
 
+                        </table>
 
-                        
-                   
-                   
-
-                </table>
-
+                    </div>
             
+                
             </div>
             </div>
             </div>
@@ -683,6 +701,6 @@
             <div id="Fatura"></div>
             <div id="Ek Form"></div>
         </div>
-    </div>
+    
 </asp:Content>
 

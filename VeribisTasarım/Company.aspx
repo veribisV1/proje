@@ -447,7 +447,7 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="PRICE" MaxLength="150" Width="50%" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="PRICE" Width="20%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
 

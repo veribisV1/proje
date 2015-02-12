@@ -1037,15 +1037,14 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Grubu
+                        Geçerlilik Tarihi
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="DropDownList7" runat="server" Height="30px" Width="104%">
-                    
-                             </asp:DropDownList>
+                     <asp:TextBox ID="PROFORMA_CERTIFICATE_DATE" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+
 
                         </td>
                     </tr>

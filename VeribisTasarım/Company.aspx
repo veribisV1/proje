@@ -1363,79 +1363,13 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Geçerlilik Tarihi
+                        Açıklama
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                     <asp:TextBox ID="TextBox5" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
-
-                       </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Sevk Adresi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                        <asp:DropDownList ID="DropDownList11" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                       <tr>
-                        <td width="35%">
-                        Fatura Adresi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                       <asp:DropDownList ID="DropDownList12" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                        <tr>
-                        <td width="35%">
-                        Ambalajlama
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                       <asp:DropDownList ID="DropDownList13" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                        <tr>
-                        <td width="35%">
-                        Nakliye Tipi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                       <asp:DropDownList ID="DropDownList14" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                       <tr>
-                        <td width="35%">
-                        Nakliye Firması
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                       <asp:DropDownList ID="DropDownList15" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
+                      <asp:TextBox ID="FATURA_EXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
                        
@@ -1444,57 +1378,7 @@
                     </div>
                   <div class="ALAN4">
               <table class="KisiTable" > 
-                  <tr>
-                        <td width="35%">
-                        Siparis No
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                 <asp:TextBox ID="TextBox6" runat="server" Width="100%" Height="22px"></asp:TextBox>
- 
-                        </td>
-                    </tr>
-                       <tr>
-                        <td width="35%">
-                        Sipariş Tarihi
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                <asp:TextBox ID="TextBox7" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Neden Kaybettik
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="DropDownList16" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%">
-                        Kazanan Rakip Firma
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="DropDownList17" runat="server" Height="30px" Width="104%">
-
-                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                   
+                 
                        </table>
                       
                   </div>

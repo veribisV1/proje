@@ -862,13 +862,13 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Kodu
+                        Firma Adı
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="DropDownList11" runat="server" Height="30px" Width="50%">
+                      <asp:DropDownList ID="PROFORMA_COMPANY_NAME" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                             </td>

@@ -631,6 +631,20 @@
                    <asp:TextBox ID="DOCUMENT_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
                      </td>
                       </tr>
+                        <tr>
+                        <td width="15%">
+                        Firma Temsilcisi
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="APPOINTED_USER_CODE" runat="server" Height="30px" Width="50%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                    </tr>
+
 
                         
                    

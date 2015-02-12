@@ -998,13 +998,13 @@
                     </tr>
                     <tr>
                         <td width="35%">
-                        Bölgesi
+                        Teslim Şekli
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="DropDownList6" runat="server" Height="30px" Width="104%">
+                        <asp:DropDownList ID="PROFORMA_DELIVERY_TYPE" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>

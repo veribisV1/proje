@@ -425,7 +425,7 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="RIVAL_COMPANY_CODE" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="RIVAL_COMPANY_CODE" Width="50%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
 

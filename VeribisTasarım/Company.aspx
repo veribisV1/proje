@@ -491,6 +491,19 @@
                        <asp:TextBox ID="QUANTITY" Width="5%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
+                         <tr>
+                        <td width="15%">
+                        Birim
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="UNIT" runat="server" Height="30px" Width="21%">
+                              
+                        </asp:DropDownList>
+                        </td>
+                         </tr>
 
                 </table>
 

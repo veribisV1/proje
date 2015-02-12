@@ -1100,6 +1100,19 @@
                              </asp:DropDownList>
                         </td>
                     </tr>
+                       <tr>
+                        <td width="35%">
+                        Nakliye Firması
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                       <asp:DropDownList ID="PROFORMA_NAKLIYE_FIRMASI" runat="server" Height="30px" Width="104%">
+
+                             </asp:DropDownList>
+                        </td>
+                    </tr>
                        
                        </table>
 

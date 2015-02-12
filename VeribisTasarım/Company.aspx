@@ -968,17 +968,17 @@
      
                 </div>                
                 <div class="ALAN4">
-                   <table class="KisiTable" > 
+                   <table class="KisiTable"> 
                       
                     <tr>
                         <td width="35%">
-                        Aktif
+                        Ödeme Şekli
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="DropDownList4" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="PROFORMA_PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
                         
                              </asp:DropDownList>
                         </td>

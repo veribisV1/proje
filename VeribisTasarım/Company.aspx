@@ -424,9 +424,12 @@
                         <td width="2%">
                           :
                         </td>
-                        <td>
-                       <asp:TextBox ID="RIVAL_COMPANY_CODE" Width="50%" runat="server"></asp:TextBox>
+                            <td>
+                         <asp:DropDownList ID="RIVAL_COMPANY_NAME" runat="server" Height="30px" Width="104%">
+                              
+                             </asp:DropDownList>
                         </td>
+                      
                     </tr>
                         <tr>
                         <td width="15%">

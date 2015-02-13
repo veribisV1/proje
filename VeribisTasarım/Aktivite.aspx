@@ -16,17 +16,17 @@
                 <div class="KisiTableHizalama">
                 <tr>         
                         <td>
-                            <asp:Button ID="ButtonYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonAktiviteYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonAktiviteKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="ButtonAktiviteSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                 <hr />
@@ -43,7 +43,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBoxAktiviteAdi" MaxLength="50" Height="22px" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="AKTIVITE_KISI_ADI" MaxLength="50" Height="22px" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -54,7 +54,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBoxAktiviteCalistigiFirma" MaxLength="50" Height="22px" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="AKTIVITE_FIRMA" MaxLength="50" Height="22px" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -65,11 +65,8 @@
                           :
                         </td>
                         <td>
-                            <asp:DropDownList ID="DropDownListAktiviteTipi" Height="30px" runat="server" Width="104%">
-                                <asp:ListItem Text="Ziyaret" Value="1"></asp:ListItem>
-                                <asp:ListItem Text="Yapılacak İş" Value="2"></asp:ListItem>
-                                <asp:ListItem Text="Toplantı" Value="3"></asp:ListItem>
-                                <asp:ListItem Text="İzin" Value="4"></asp:ListItem>
+                            <asp:DropDownList ID="AKTIVITE_TIPI" Height="30px" runat="server" Width="104%">
+                     
                              
                       </asp:DropDownList>
                         </td>
@@ -83,7 +80,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBoxAktiviteEvrakNo1" MaxLength="50" Height="22px" Width="70%" runat="server"></asp:TextBox>  <asp:TextBox ID="TextBoxAktiviteEvrakNo2" MaxLength="50" Height="22px"  Width="24%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="AKTIVITE_EVRAK_NO1" MaxLength="50" Height="22px" Width="70%" runat="server"></asp:TextBox>  <asp:TextBox ID="AKTIVITE_EVRAK_NO2" MaxLength="50" Height="22px"  Width="24%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -94,7 +91,7 @@
                           :
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBoxAktiviteBaslangic" runat="server" TextMode="Date" Height="25px" Width="72%"></asp:TextBox> <asp:TextBox ID="TextBoxAktiviteBaslangıcSaat" runat="server" TextMode="Time" Height="25px" Width="25%"></asp:TextBox>
+                            <asp:TextBox ID="AKTIVITE_BASLANGIC" runat="server" TextMode="Date" Height="25px" Width="72%"></asp:TextBox> <asp:TextBox ID="AKTIVITE_BASLANGIC_SAAT" runat="server" TextMode="Time" Height="25px" Width="25%"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

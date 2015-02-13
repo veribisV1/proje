@@ -704,7 +704,9 @@
             </div>
             </div>
             </div>
-            <div id="Kontak"></div>
+            <div id="Kontak" style="min-height:100px">
+
+            </div>
             <div id="Numune" style="min-height:100px">
                 <div class="KisiTableHizalama">
                     <tr>

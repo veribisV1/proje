@@ -397,6 +397,10 @@
             <div id="Fatura"></div>
             <div id="EkForm"></div>
             <div id="AileBilgileri"style="min-height:100px">
+                <div class="KisiTableHizalama">
+
+
+                </div>
 
 
             </div>

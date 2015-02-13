@@ -487,6 +487,32 @@
                          <asp:TextBox ID="AILE_BILGILERI_CHILD_COUNT" Width="30%" Height="20px" runat="server"></asp:TextBox>
                         </td>
                     </tr>
+                        <tr>
+                        <td width="15%">
+                        Evi var mı?
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="AILE_BILGILERI_HAVE_HOME" runat="server" Height="26px" Width="32%">
+                            
+                         </asp:DropDownList>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="15%">
+                        Ev Skalası
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="AILE_BILGILERI_HOME_RATING" runat="server" Height="26px" Width="32%">
+                            
+                         </asp:DropDownList>
+                        </td>
+                    </tr>
 
                     </table>
 

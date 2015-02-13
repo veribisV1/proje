@@ -493,7 +493,7 @@
                           :
                         </td>
                         <td>
-                     <asp:TextBox ID="MAKINAPARKI_MODEL" runat="server" Width="29%" Height="20px"></asp:TextBox>
+                     <asp:TextBox ID="MAKINAPARKI_MODEL" runat="server" MaxLength="50" Width="29%" Height="20px"></asp:TextBox>
 
                         </td>
                     </tr>

@@ -565,8 +565,8 @@
                     <table class="KisiTable">
                         <tr>
                             <td>
-                  <asp:GridView ID="RakipFirmalarGridView" runat="server"></asp:GridView>
-                  <asp:GridView ID="BuFirmadakiRakipFirmalarGridView" runat="server"></asp:GridView>
+                  <asp:GridView ID="RAKIP_FIRMALAR" runat="server"></asp:GridView>
+                  <asp:GridView ID="BU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>
                             </td>
                         </tr>
 
@@ -784,7 +784,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NORMAL_BACK" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_NORMAL_BACK" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -797,7 +797,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="DOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="NUMUNE_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="NUMUNE_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                          <tr>
@@ -808,7 +808,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="DOCUMENT_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_DOCUMENT_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
                      </td>
                       </tr>
                         <tr>
@@ -819,7 +819,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="APPOINTED_USER_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_APPOINTED_USER_CODE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -832,7 +832,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="PROFORMA_WAREHOUSE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_WAREHOUSE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -845,7 +845,7 @@
                           :
                         </td>
                         <td>
-                         <asp:CheckBoxList ID="CheckBoxListNumuneStokBagimsiz" runat="server">
+                         <asp:CheckBoxList ID="NUMUNE_STOK_BAGIMSIZ" runat="server">
                              <asp:ListItem Text="" Value="1"></asp:ListItem>
                          </asp:CheckBoxList>
                         </td>
@@ -863,7 +863,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="CERTIFICATE_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_CERTIFICATE_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
                      </td>
                       </tr>
                             <tr>
@@ -874,7 +874,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="OPEN_CLOSE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_OPEN_CLOSE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -887,7 +887,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="SEARCH_METHOD" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_SEARCH_METHOD" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -900,7 +900,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="SEARCH_STEP" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_SEARCH_STEP" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -913,7 +913,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="CURRENT_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_CURRENT_CODE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -926,7 +926,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="CATEGORY" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_CATEGORY" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -939,7 +939,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="PROFORMA_PROJECT_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_PROJECT_CODE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -952,7 +952,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="REVISION" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_REVISION" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -965,7 +965,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="EXPLANATION" runat="server" TextMode="MultiLine" Width="100%" Height="60px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_EXPLANATION" runat="server" TextMode="MultiLine" Width="100%" Height="60px" ></asp:TextBox>
                      </td>
                       </tr>
 

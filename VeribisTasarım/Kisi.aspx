@@ -9,25 +9,25 @@
         <h3>KİŞİ KARTI</h3>
         <div class="tabmenu">
             <ul>
-                <li><a href="#Yeni">Kişi Ekle</a></li>
+                <li><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#tab8">İkinci</a></li>
                 <li><a href="#tab9">Üçüncü</a></li>
             </ul>
-            <div id="Yeni" style="min-height:100px">
+            <div id="KisiEkle" style="min-height:100px">
                 <div class="KisiTableHizalama">
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="ButtonKisiEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="ButtonKisiEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="ButtonKisiEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                 <hr />

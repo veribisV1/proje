@@ -358,7 +358,34 @@
                         </td>
                     </tr>
                 <hr />
-                    
+                    <div class="ALAN6">
+                        <table class="KisiTable">
+                            <tr>
+                        <td width="15%">
+                        Tarih
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="NOT_EKLE_TARIH" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                             <tr>
+                        <td width="15%">
+                        Açıklama
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="NOT_EKLE_ACIKLAMA" Width="100%" Height="100px" TextMode="MultiLine" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+
+                        </table>
+
+                    </div>
                 
                 </div>
 

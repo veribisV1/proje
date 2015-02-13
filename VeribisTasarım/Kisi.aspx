@@ -10,8 +10,15 @@
         <div class="tabmenu">
             <ul>
                 <li><a href="#KisiEkle">Kişi Ekle</a></li>
-                <li><a href="#tab8">İkinci</a></li>
-                <li><a href="#tab9">Üçüncü</a></li>
+                <li><a href="#AktivitePlanla">Aktivite Planla</a></li>
+                <li><a href="#NotEkle">Not Ekle</a></li>
+                <li><a href="#Fırsat">Fırsat</a></li>
+                <li><a href="#Teklif">Teklif</a></li>
+                <li><a href="#Numune">Numune</a></li>
+                <li><a href="#Proforma">Proforma</a></li>
+                <li><a href="#Fatura">Fatura</a></li>
+                <li><a href="#EkForm">Ek Form</a></li>
+                <li><a href="#AileBilgileri">Aile Bilgileri</a></li>
             </ul>
             <div id="KisiEkle" style="min-height:100px">
                 <div class="KisiTableHizalama">
@@ -332,8 +339,15 @@
                     
                     </div>
                  </div>
-            <div id="tab8">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-            <div id="tab9">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+            <div id="AktivitePlanla"></div>
+            <div id="NotEkle"></div>
+            <div id="Fırsat"></div>
+            <div id="Teklif"></div>
+            <div id="Numune"></div>
+            <div id="Proforma"></div>
+            <div id="Fatura"></div>
+            <div id="EkForm"></div>
+            <div id="AileBilgileri"></div>
         </div>
     </div>
 </asp:Content>

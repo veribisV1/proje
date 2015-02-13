@@ -396,7 +396,10 @@
             <div id="Proforma"></div>
             <div id="Fatura"></div>
             <div id="EkForm"></div>
-            <div id="AileBilgileri"></div>
+            <div id="AileBilgileri"style="min-height:100px">
+
+
+            </div>
         </div>
     </div>
 </asp:Content>

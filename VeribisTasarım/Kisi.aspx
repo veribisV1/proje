@@ -416,9 +416,29 @@
                 <hr />
 
 
+                
+                <div class="ALAN6">
+                    <table class="KisiTable">
+                        <tr>
+                        <td width="15%">
+                        Medeni Hali
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:DropDownList ID="AILE_BILGILERI_ISMARRIED" runat="server" Height="30px" Width="30%">
+                            
+                         </asp:DropDownList>
+                        </td>
+                    </tr>
+
+
+                    </table>
+
                 </div>
 
-
+             </div>
             </div>
         </div>
     </div>

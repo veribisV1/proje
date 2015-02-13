@@ -101,9 +101,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="ADDRESS" runat="server" Height="30px" Width="104%">
-
-                      </asp:DropDownList>
+                       <asp:TextBox ID="ADDRESS" MaxLength="250" TextMode="MultiLine" Height="50px" runat="server"></asp:TextBox>
 
                         </td>
                     </tr>
@@ -136,9 +134,7 @@
                         </td>
                     </tr>
                        
-                        
-                       
-                        
+              
                          <tr>
                         <td width="35%">
                         Kuruluş Tarihi

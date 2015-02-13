@@ -467,13 +467,13 @@
                     </tr>
                         <tr>
                         <td width="15%">
-                        Evlilik Yıldönümü
+                        Eşinin Soyadı
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TextBox3" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="AILE_BILGILERI_PARTNER_SURNAME" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>

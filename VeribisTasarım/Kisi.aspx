@@ -443,6 +443,50 @@
                          <asp:TextBox ID="AILE_BILGILERI_ANNIVERSARY_DATE" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
                         </td>
                     </tr>
+                        <tr>
+                        <td width="15%">
+                        Eşinin Adı
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="AILE_BILGILERI_PARTNER_NAME" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="15%">
+                        Evlilik Yıldönümü
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="TextBox2" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="15%">
+                        Evlilik Yıldönümü
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="TextBox3" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td width="15%">
+                        Evlilik Yıldönümü
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="TextBox4" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
 
                     </table>
 

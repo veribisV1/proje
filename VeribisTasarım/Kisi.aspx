@@ -342,6 +342,22 @@
             <div id="AktivitePlanla"></div>
             <div id="NotEkle"style="min-height:100px">
                 <div class="KisiTableHizalama">
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonNotEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonNotEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonNotEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
+                        </td>
+                    </tr>
+                <hr />
                     
                 
                 </div>

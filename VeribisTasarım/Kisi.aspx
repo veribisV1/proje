@@ -427,12 +427,22 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="AILE_BILGILERI_ISMARRIED" runat="server" Height="30px" Width="30%">
+                         <asp:DropDownList ID="AILE_BILGILERI_ISMARRIED" runat="server" Height="26px" Width="32%">
                             
                          </asp:DropDownList>
                         </td>
                     </tr>
-
+                          <tr>
+                        <td width="15%">
+                        Evlilik Yıldönümü
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                         <asp:TextBox ID="AILE_BILGILERI_ANNIVERSARY_DATE" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
 
                     </table>
 

@@ -9,10 +9,10 @@
         <h3>AKTİVİTE</h3>
         <div class="tabmenu">
             <ul>
-                <li><a href="#Yeni">Aktivite Ekle</a></li>
+                <li><a href="#AktiviteEkle">Aktivite Ekle</a></li>
                 
             </ul>
-            <div id="Yeni" style="min-height:100px">
+            <div id="AktiviteEkle" style="min-height:100px">
                 <div class="KisiTableHizalama">
                 <tr>         
                         <td>
@@ -43,7 +43,7 @@
                           :
                         </td>
                         <td>
-                            <asp:DropDownList ID="AKTIVITE_CONTACT_CODE" Height="30px" runat="server" Width="104%">
+                            <asp:DropDownList ID="AKTIVITE_KISI_ADI" Height="30px" runat="server" Width="104%">
                      
                              
                       </asp:DropDownList>
@@ -57,7 +57,7 @@
                           :
                         </td>
                         <td>
-                            <asp:DropDownList ID="AKTIVITE_COMPANY_CODE" Height="30px" runat="server" Width="104%">
+                            <asp:DropDownList ID="AKTIVITE_FIRMA" Height="30px" runat="server" Width="104%">
                      
                              
                       </asp:DropDownList>
@@ -71,7 +71,7 @@
                           :
                         </td>
                         <td>
-                            <asp:DropDownList ID="AKTIVITE_ACTIVITY_TYPE" Height="30px" runat="server" Width="104%">
+                            <asp:DropDownList ID="AKTIVITE_AKTIVITE_TIPI" Height="30px" runat="server" Width="104%">
                      
                              
                       </asp:DropDownList>
@@ -86,7 +86,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="AKTIVITE_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="70%" runat="server"></asp:TextBox>  <asp:TextBox ID="AKTIVITE_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="24%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="AKTIVITE_EVRAK_NO1" MaxLength="20" Height="22px" Width="70%" runat="server"></asp:TextBox>  <asp:TextBox ID="AKTIVITE_EVRAK_NO2" MaxLength="20" Height="22px"  Width="24%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

@@ -52,7 +52,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="COMPANY_NAME" MaxLength="200" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_ADI" MaxLength="200" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -63,7 +63,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="COMPANY_COMMERCIAL_CODE" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_TICARI_KODU" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="COMPANY_REPRESENT_CODE" runat="server" Height="30px" Width="104%">
+                       <asp:DropDownList ID="FIRMA_TEMSILCISI" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                         </td>
@@ -87,7 +87,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="SECTOR" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FIRMA_SEKTORU" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
@@ -101,7 +101,7 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="ADDRESS" MaxLength="250" TextMode="MultiLine" Height="50px" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="FIRMA_ADRES" MaxLength="250" TextMode="MultiLine" Height="50px" runat="server"></asp:TextBox>
 
                         </td>
                     </tr>
@@ -113,7 +113,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="PHONE" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FIRMA_TELEFON" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
@@ -127,7 +127,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="FAX" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FIRMA_FAX" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
@@ -143,7 +143,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="FOUNDATION_DATE" runat="server" Width="101%" Height="25px" TextMode="DateTime"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_KURULUS_TARIHI" runat="server" Width="101%" Height="25px" TextMode="DateTime"></asp:TextBox>
                         </td>
                     </tr>
                      
@@ -162,7 +162,7 @@
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="COMPANY_TYPE" runat="server" Height="30px" Width="104%">
+                      <asp:DropDownList ID="FIRMA_TIPI" runat="server" Height="30px" Width="104%">
                        
                              </asp:DropDownList>
                         </td>
@@ -175,7 +175,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="STATUS" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FIRMA_AKTIF" runat="server" Height="30px" Width="104%">
                         
                              </asp:DropDownList>
                         </td>
@@ -188,7 +188,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="UPPER_COMPANY_CODE" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FIRMA_BAGLI_FIRMA" runat="server" Height="30px" Width="104%">
                               
                              </asp:DropDownList>
                         </td>
@@ -201,7 +201,7 @@
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="COMPANY_REGION" runat="server" Height="30px" Width="104%">
+                        <asp:DropDownList ID="FIRMA_BOLGESI" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
@@ -214,7 +214,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TAX_DEPARTMENT" MaxLength="30" runat="server" ></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_VERGI_DAIRESI" MaxLength="30" runat="server" ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -225,7 +225,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="TAX_NO" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_VERGI_NUMARASI" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -236,7 +236,7 @@
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="COMPANYGROUP" runat="server" Height="30px" Width="104%">
+                        <asp:DropDownList ID="FIRMA_GRUBU" runat="server" Height="30px" Width="104%">
                     
                              </asp:DropDownList>
 
@@ -250,7 +250,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="MAIL" MaxLength="100" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_MAIL" MaxLength="100" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                        <tr>
@@ -261,7 +261,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="WEBADDRESS" MaxLength="150" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_WEB_ADRESI" MaxLength="150" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                        
@@ -278,7 +278,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="COMPANY_REFERANCE" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FIRMA_REFERANS" runat="server" Height="30px" Width="104%">
                        
                              </asp:DropDownList>
                         </td>
@@ -291,7 +291,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="ENDORSEMENT" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_YILLIK_CIROSU" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -302,7 +302,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="DISCOUNT_RATIO" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_ISKONTO_ORANI" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -313,7 +313,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="CURRENCY_TYPE" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FIRMA_PARA_BIRIMI" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
@@ -326,7 +326,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="COMPANY_OWNER" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_SAHIBI" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -337,7 +337,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="PAYMENT_PERSON" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_ODEME_YETKILISI" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -348,7 +348,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="PURCHASE_PERSON" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_SATIN_ALMA_YETKILISI" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -359,7 +359,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="WAREHOUSE_PERSON" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_TESLIMAT_SORUMLUSU" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -370,7 +370,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FIRMA_ODEME_SEKLI" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
@@ -383,7 +383,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="PAYMENT_DAY" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FIRMA_ODEME_GUNU" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                        </table>
@@ -481,7 +481,7 @@
                           :
                         </td>
                             <td>
-                        <asp:TextBox ID="MAKINAPARKI_NAME" runat="server" Width="29%" Height="20px"></asp:TextBox>
+                        <asp:TextBox ID="MAKINAPARKI_ADI" runat="server" Width="29%" Height="20px"></asp:TextBox>
                         </td>
                       
                     </tr>
@@ -493,7 +493,7 @@
                           :
                         </td>
                         <td>
-                     <asp:TextBox ID="MAKINAPARKI_MODEL" runat="server" MaxLength="50" Width="29%" Height="20px"></asp:TextBox>
+                     <asp:TextBox ID="MAKINAPARKI_MARKA" runat="server" MaxLength="50" Width="29%" Height="20px"></asp:TextBox>
 
                         </td>
                     </tr>
@@ -505,7 +505,7 @@
                           :
                         </td>
                         <td>
-                  <asp:TextBox ID="MAKINAPARKI_AMOUNT" runat="server" Width="9%" Height="20px"></asp:TextBox>
+                  <asp:TextBox ID="MAKINAPARKI_ADET" runat="server" Width="9%" Height="20px"></asp:TextBox>
       
                         </td>
                     </tr>
@@ -517,7 +517,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="MAKINAPARKI_TYPE1" runat="server" Height="30px" Width="10%">
+                         <asp:DropDownList ID="MAKINAPARKI_TIP1" runat="server" Height="30px" Width="10%">
                               
                         </asp:DropDownList>
                         </td>
@@ -529,7 +529,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="MAKINAPARKI_TYPE2" runat="server" Height="30px" Width="10%">
+                         <asp:DropDownList ID="MAKINAPARKI_TIP2" runat="server" Height="30px" Width="10%">
                               
                         </asp:DropDownList>
                         </td>
@@ -605,7 +605,7 @@
                           :
                         </td>
                             <td>
-                         <asp:DropDownList ID="RIVAL_COMPANY_NAME" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="RAKIP_FIRMA_ADI" runat="server" Height="30px" Width="50%">
                               
                              </asp:DropDownList>
                         </td>
@@ -619,7 +619,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="RIVAL_PRODUCT_NAME" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="RAKIP_URUN_ADI" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -632,7 +632,7 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="RIVAL_PRICE" Width="20%" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="RAKIP_FIYATI" Width="20%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -643,7 +643,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="RIVAL_CUR_TYPE" runat="server" Height="30px" Width="21%">
+                         <asp:DropDownList ID="RAKIP_PARA_BIRIMI" runat="server" Height="30px" Width="21%">
                               
                         </asp:DropDownList>
                         </td>
@@ -655,7 +655,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="RIVAL_PEYMENT_TYPE" runat="server" Height="30px" Width="21%">
+                         <asp:DropDownList ID="RAKIP_ODEME_SEKLI" runat="server" Height="30px" Width="21%">
                               
                         </asp:DropDownList>
                         </td>
@@ -668,7 +668,7 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="RIVAL_QUANTITY" Width="5%" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="RAKIP_MIKTAR" Width="5%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                          <tr>
@@ -679,7 +679,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="RIVAL_UNIT" runat="server" Height="30px" Width="21%">
+                         <asp:DropDownList ID="RAKIP_BIRIM" runat="server" Height="30px" Width="21%">
                               
                         </asp:DropDownList>
                         </td>
@@ -692,7 +692,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="RIVAL_PERIOD" runat="server" Height="30px" Width="21%">
+                         <asp:DropDownList ID="RAKIP_DONEM" runat="server" Height="30px" Width="21%">
                               
                         </asp:DropDownList>
                         </td>
@@ -757,7 +757,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="NUMUNE_COMPANY_COMMERCIAL_CODE" runat="server" MaxLength="30" Width="48%" Height="20px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_TICARI_KODU" runat="server" MaxLength="30" Width="48%" Height="20px" ></asp:TextBox>
                      </td>
                       </tr>
                         <tr>
@@ -768,7 +768,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_COMPANY_NAME" runat="server" Height="30px" Width="100%">
+                         <asp:DropDownList ID="NUMUNE_FIRMA_ADI" runat="server" Height="30px" Width="100%">
                               
                         </asp:DropDownList>
                         </td>
@@ -781,7 +781,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_CONTACT_NAME" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_KISI" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -807,7 +807,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_NORMAL_BACK" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_NORMAL_IADE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -820,7 +820,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="NUMUNE_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="NUMUNE_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="NUMUNE_EVRAK_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>  <asp:TextBox ID="NUMUNE_EVRAK_NO2" MaxLength="20" Height="22px"  Width="12%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                          <tr>
@@ -831,7 +831,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="NUMUNE_DOCUMENT_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_EVRAK_TARIHI" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
                      </td>
                       </tr>
                         <tr>
@@ -842,7 +842,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_APPOINTED_USER_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_FIRMA_TEMSILCISI" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -855,7 +855,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_WAREHOUSE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_DEPO" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -886,7 +886,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="NUMUNE_CERTIFICATE_DATE" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_GECERLILIK_TARIHI" runat="server" TextMode="DateTime" Width="48%" Height="20px" ></asp:TextBox>
                      </td>
                       </tr>
                             <tr>
@@ -897,7 +897,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_OPEN_CLOSE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_ACIK_KAPALI" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -910,7 +910,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_SEARCH_METHOD" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_TAKIP_YONETIMI" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -923,7 +923,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_SEARCH_STEP" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_TAKIP_ASAMASI" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -936,7 +936,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_CURRENT_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_KIMIN_ICIN" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -949,7 +949,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_CATEGORY" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_SONUC" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -962,7 +962,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_PROJECT_CODE" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_PROJE" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -975,7 +975,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="NUMUNE_REVISION" runat="server" Height="30px" Width="50%">
+                         <asp:DropDownList ID="NUMUNE_REVIZYON" runat="server" Height="30px" Width="50%">
                               
                         </asp:DropDownList>
                         </td>
@@ -988,7 +988,7 @@
                           :
                         </td>
                             <td>
-                   <asp:TextBox ID="NUMUNE_EXPLANATION" runat="server" TextMode="MultiLine" Width="100%" Height="60px" ></asp:TextBox>
+                   <asp:TextBox ID="NUMUNE_ACIKLAMA" runat="server" TextMode="MultiLine" Width="100%" Height="60px" ></asp:TextBox>
                      </td>
                       </tr>
 
@@ -1031,7 +1031,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="PROFORMA_COMMERCIAL_CODE" runat="server" Height="30px" Width="50%">
+                       <asp:DropDownList ID="PROFORMA_KODU" runat="server" Height="30px" Width="50%">
 
                       </asp:DropDownList>
                         </td>
@@ -1044,7 +1044,7 @@
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="PROFORMA_COMPANY_NAME" runat="server" Height="30px" Width="104%">
+                      <asp:DropDownList ID="PROFORMA_FIRMA_ADI" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                             </td>
@@ -1057,7 +1057,7 @@
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="PROFORMA_CONTACT" runat="server" Height="30px" Width="104%">
+                      <asp:DropDownList ID="PROFORMA_KONTAK" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                             </td>
@@ -1083,7 +1083,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="PROFORMA_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="PROFORMA_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="PROFORMA_EVRAK_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="PROFORMA_EVRAK_NO2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -1094,7 +1094,7 @@
                           :
                         </td>
                         <td>
-                      <asp:TextBox ID="PROFORMA_DOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="PROFORMA_EVRAK_TARIHI" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -1105,7 +1105,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="PROFORMA_APPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="PROFORMA_TEMSILCISI" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
@@ -1134,7 +1134,7 @@
                           :
                         </td>
                         <td>
-                      <asp:TextBox ID="PROFORMA_EXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                      <asp:TextBox ID="PROFORMA_ACIKLAMA" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
                         
@@ -1168,7 +1168,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="PROFORMA_PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="PROFORMA_ODEME_SEKLI" runat="server" Height="30px" Width="104%">
                         
                              </asp:DropDownList>
                         </td>
@@ -1181,7 +1181,7 @@
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="PROFORMA_DELIVERY_TYPE" runat="server" Height="30px" Width="104%">
+                        <asp:DropDownList ID="PROFORMA_TESLIM_SEKLI" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
@@ -1220,7 +1220,7 @@
                           :
                         </td>
                         <td>
-                     <asp:TextBox ID="PROFORMA_CERTIFICATE_DATE" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+                     <asp:TextBox ID="PROFORMA_GECERLILIK_TARIHI" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
 
                        </td>
                     </tr>
@@ -1384,7 +1384,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="FATURA_COMMERCIAL_CODE" runat="server" Height="30px" Width="50%">
+                       <asp:DropDownList ID="FATURA_KODU" runat="server" Height="30px" Width="50%">
 
                       </asp:DropDownList>
                         </td>
@@ -1397,7 +1397,7 @@
                           :
                         </td>
                         <td>
-                      <asp:DropDownList ID="FATURA_COMPANY_NAME" runat="server" Height="30px" Width="104%">
+                      <asp:DropDownList ID="FATURA_FIRMA_ADI" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
                             </td>
@@ -1436,7 +1436,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="FATURA_DOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="FATURA_DOCUMENT_NO2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
+                         <asp:TextBox ID="FATURA_EVRAK_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>  <asp:TextBox ID="FATURA_EVRAK_NO2" MaxLength="20" Height="22px"  Width="30%"  runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -1447,7 +1447,7 @@
                           :
                         </td>
                         <td>
-                      <asp:TextBox ID="FATURA_DOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="FATURA_EVRAK_TARIHI" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -1458,7 +1458,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="FATURA_APPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FATURA_TEMSILCISI" runat="server" Height="30px" Width="104%">
 
                       </asp:DropDownList>
 
@@ -1480,7 +1480,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="FATURA_WAREHOUSE" runat="server" Height="30px" Width="104%">
+                         <asp:DropDownList ID="FATURA_DEPO" runat="server" Height="30px" Width="104%">
                               
                              </asp:DropDownList>
                         </td>
@@ -1493,7 +1493,7 @@
                           :
                         </td>
                         <td>
-                          <asp:DropDownList ID="FATURA_PAYMENT_TYPE" runat="server" Height="30px" Width="104%">
+                          <asp:DropDownList ID="FATURA_ODEME_SEKLI" runat="server" Height="30px" Width="104%">
                         
                              </asp:DropDownList>
                         </td>
@@ -1506,7 +1506,7 @@
                           :
                         </td>
                         <td>
-                        <asp:DropDownList ID="FATURA_PROJECT_CODE" runat="server" Height="30px" Width="104%">
+                        <asp:DropDownList ID="FATURA_PROJE" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
@@ -1519,7 +1519,7 @@
                           :
                         </td>
                         <td>
-                            <asp:DropDownList ID="FATURA_OPENORCLOSE" runat="server" Height="30px" Width="104%">
+                            <asp:DropDownList ID="FATURA_ACIK_KAPALI" runat="server" Height="30px" Width="104%">
 
                              </asp:DropDownList>
                         </td>
@@ -1545,7 +1545,7 @@
                           :
                         </td>
                         <td>
-                      <asp:TextBox ID="FATURA_EXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                      <asp:TextBox ID="FATURA_ACIKLAMA" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
                        

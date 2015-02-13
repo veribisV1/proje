@@ -398,6 +398,22 @@
             <div id="EkForm"></div>
             <div id="AileBilgileri"style="min-height:100px">
                 <div class="KisiTableHizalama">
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonAileBilgileriYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonAileBilgileriKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                        </td>
+                    </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="ButtonAileBilgileriSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
+                        </td>
+                    </tr>
+                <hr />
 
 
                 </div>

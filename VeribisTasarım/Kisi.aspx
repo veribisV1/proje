@@ -340,7 +340,10 @@
                     </div>
                  </div>
             <div id="AktivitePlanla"></div>
-            <div id="NotEkle"></div>
+            <div id="NotEkle"style="min-height:100px">
+
+
+            </div>
             <div id="Fırsat"></div>
             <div id="Teklif"></div>
             <div id="Numune"></div>

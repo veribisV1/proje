@@ -341,7 +341,10 @@
                  </div>
             <div id="AktivitePlanla"></div>
             <div id="NotEkle"style="min-height:100px">
-
+                <div class="KisiTableHizalama">
+                    
+                
+                </div>
 
             </div>
             <div id="Fırsat"></div>

@@ -346,22 +346,22 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button ButtonMakinaParkiSil;
         
         /// <summary>
-        /// MAKINAPARKI_ADI control.
+        /// MAKINAPARKI_MARKASI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_ADI;
+        protected global::System.Web.UI.WebControls.DropDownList MAKINAPARKI_MARKASI;
         
         /// <summary>
-        /// MAKINAPARKI_MARKA control.
+        /// MAKINAPARKI_MODELI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_MARKA;
+        protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_MODELI;
         
         /// <summary>
         /// MAKINAPARKI_ADET control.

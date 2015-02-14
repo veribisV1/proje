@@ -472,26 +472,25 @@
                     <table class="KisiTable">
                         <tr>
                         <td width="15%">
-                        Adı
+                        Markası
                         </td>
                         <td width="2%">
                           :
                         </td>
                             <td>
-                        <asp:TextBox ID="MAKINAPARKI_ADI" runat="server" Width="29%" Height="20px"></asp:TextBox>
+                    <asp:DropDownList ID="MAKINAPARKI_MARKASI" runat="server" Height="28px" Width="29%"></asp:DropDownList>
                         </td>
                       
                     </tr>
                         <tr>
                         <td width="15%">
-                        Marka
+                        Modeli
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                     <asp:TextBox ID="MAKINAPARKI_MARKA" runat="server" MaxLength="50" Width="29%" Height="20px"></asp:TextBox>
-
+                            <asp:TextBox ID="MAKINAPARKI_MODELI" runat="server" Height="20px" Width="28%"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>

@@ -58,13 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Aktivite.aspx" />
-    <Content Include="Teklif.aspx" />
+    <Content Include="Company.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Firsat.aspx" />
+    <Content Include="Kisi.aspx" />
+    <Content Include="Teklif.aspx" />
     <Content Include="style\responsive.css" />
     <Content Include="style\stil.css" />
     <Content Include="style\uiTabsArrow.png" />
-    <Content Include="Default.aspx" />
-    <Content Include="Company.aspx" />
     <Content Include="image\logo.png" />
     <Content Include="script\jqueryui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="script\jqueryui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -88,34 +89,51 @@
     <Content Include="script\jqueryui\jquery-ui.structure.min.css" />
     <Content Include="script\jqueryui\jquery-ui.theme.css" />
     <Content Include="script\jqueryui\jquery-ui.theme.min.css" />
-    <Content Include="Kisi.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="app_code\SqlProccess.cs" />
     <Compile Include="Aktivite.aspx.cs">
       <DependentUpon>Aktivite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Teklif.aspx.cs">
-      <DependentUpon>Teklif.aspx</DependentUpon>
+    <Compile Include="Aktivite.aspx.designer.cs">
+      <DependentUpon>Aktivite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app_code\SqlProccess.cs" />
+    <Compile Include="Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Firsat.aspx.cs">
-      <DependentUpon>Firsat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Company.aspx.cs">
-      <DependentUpon>Company.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Firsat.aspx.cs">
+      <DependentUpon>Firsat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Firsat.aspx.designer.cs">
+      <DependentUpon>Firsat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kisi.aspx.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kisi.aspx.designer.cs">
+      <DependentUpon>Kisi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif.aspx.cs">
+      <DependentUpon>Teklif.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teklif.aspx.designer.cs">
+      <DependentUpon>Teklif.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.master.cs">
       <DependentUpon>MasterPage.master</DependentUpon>

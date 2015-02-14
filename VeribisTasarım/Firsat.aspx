@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeBehind="Firsat.aspx.cs" Inherits="_Firsat" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> 
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Firsat.aspx.cs" Inherits="VeribisTasarım.Fırsat" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="ALAN12">
         <h3>FIRSAT</h3>
         <div class="tabmenu">
@@ -312,5 +309,5 @@
             
         </div>
     </div>
-</asp:Content>
 
+</asp:Content>

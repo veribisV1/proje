@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeBehind="Teklif.aspx.cs" Inherits="_Teklif" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> 
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Teklif.aspx.cs" Inherits="VeribisTasarım.Teklif" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="ALAN12">
         <h3>TEKLİF</h3>
         <div class="tabmenu">
@@ -316,5 +313,5 @@
             
         </div>
     </div>
-</asp:Content>
 
+</asp:Content>

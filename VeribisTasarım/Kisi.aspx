@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeBehind="Kisi.aspx.cs" Inherits="_Kisi" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> 
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Kisi.aspx.cs" Inherits="VeribisTasarım.Kisi" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="ALAN12">
         <h3>KİŞİ KARTI</h3>
         <div class="tabmenu">
@@ -522,5 +519,5 @@
             </div>
         </div>
     </div>
-</asp:Content>
 
+</asp:Content>

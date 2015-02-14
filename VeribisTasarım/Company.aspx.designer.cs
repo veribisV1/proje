@@ -40,13 +40,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button ButtonFirmaEkleSil;
         
         /// <summary>
-        /// FIRMA_ADI control.
+        /// COMPANY_NAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FIRMA_ADI;
+        protected global::System.Web.UI.WebControls.TextBox COMPANY_NAME;
         
         /// <summary>
         /// FIRMA_TICARI_KODU control.
@@ -364,6 +364,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_MODELI;
         
         /// <summary>
+        /// MAKINAPARKI_YILI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList MAKINAPARKI_YILI;
+        
+        /// <summary>
         /// MAKINAPARKI_ADET control.
         /// </summary>
         /// <remarks>
@@ -371,6 +380,24 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_ADET;
+        
+        /// <summary>
+        /// MAKINAPARKI_DEGER1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_DEGER1;
+        
+        /// <summary>
+        /// MAKINAPARKI_DEGER2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_DEGER2;
         
         /// <summary>
         /// MAKINAPARKI_TIP1 control.
@@ -382,13 +409,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList MAKINAPARKI_TIP1;
         
         /// <summary>
-        /// MAKINAPARKI_TIP2 control.
+        /// MAKINAPARKI_ACIKLAMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList MAKINAPARKI_TIP2;
+        protected global::System.Web.UI.WebControls.TextBox MAKINAPARKI_ACIKLAMA;
         
         /// <summary>
         /// ButtonRakipFirmaYeni control.

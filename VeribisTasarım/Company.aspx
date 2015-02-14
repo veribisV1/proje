@@ -49,7 +49,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="FIRMA_ADI" MaxLength="200" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="COMPANY_NAME" MaxLength="200" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -490,9 +490,20 @@
                           :
                         </td>
                         <td>
-                            <asp:TextBox ID="MAKINAPARKI_MODELI" runat="server" Height="20px" Width="28%"></asp:TextBox>
+                            <asp:TextBox ID="MAKINAPARKI_MODELI" runat="server" Height="20px" Width="27.8%"></asp:TextBox>
                         </td>
                     </tr>
+                        <tr>
+                           <td width="15%">
+                             Yılı
+                            </td>
+                            <td width="2%">
+                               :
+                            </td>
+                            <td>
+                          <asp:DropDownList ID="MAKINAPARKI_YILI" runat="server" Height="28px" Width="9%"></asp:DropDownList>
+                            </td>
+                       </tr>
                         <tr>
                         <td width="15%">
                         Adet
@@ -501,34 +512,57 @@
                           :
                         </td>
                         <td>
-                  <asp:TextBox ID="MAKINAPARKI_ADET" runat="server" Width="9%" Height="20px"></asp:TextBox>
-      
+                  <asp:TextBox ID="MAKINAPARKI_ADET" runat="server" Width="7.8%" Height="20px"></asp:TextBox>    
                         </td>
                     </tr>
                         <tr>
+                            <td width="15%">
+                                Deger1
+                            </td>
+                            <td width="2%">
+                                :
+                            </td>
+                            <td>
+                       <asp:TextBox ID="MAKINAPARKI_DEGER1" runat="server" Width="7.8%" Height="20px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="15%">
+                                Deger2
+                            </td>
+                            <td width="2%">
+                                :
+                            </td>
+                            <td>
+                            <asp:TextBox ID="MAKINAPARKI_DEGER2" runat="server" Width="7.8%" Height="20px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
                         <td width="15%">
-                        Tip1
+                        Tip
                         </td>
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="MAKINAPARKI_TIP1" runat="server" Height="30px" Width="10%">
+                         <asp:DropDownList ID="MAKINAPARKI_TIP1" runat="server" Height="28px" Width="9%">
                               
                         </asp:DropDownList>
                         </td>
-                            <tr>
-                        <td width="15%">
-                        Tip2
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                         <asp:DropDownList ID="MAKINAPARKI_TIP2" runat="server" Height="30px" Width="10%">
-                              
-                        </asp:DropDownList>
-                        </td>
+                        </tr>
+                        <tr>
+                            <td width="15%">
+                                Açıklama
+                            </td>
+                            <td width="2%">
+                                :
+                            </td>
+                            <td>
+                         <asp:TextBox ID="MAKINAPARKI_ACIKLAMA" TextMode="MultiLine" Height="70px" Width="28%" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+
+                        
                          
                 </table>
 

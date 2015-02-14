@@ -128,6 +128,7 @@
     <Compile Include="Kisi.aspx.designer.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ResGetir.cs" />
     <Compile Include="Teklif.aspx.cs">
       <DependentUpon>Teklif.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

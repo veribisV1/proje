@@ -13,210 +13,210 @@ namespace VeribisTasarım {
     public partial class Aktivite {
         
         /// <summary>
-        /// ButtonAktiviteYeni control.
+        /// idButtonAktiviteYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAktiviteYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonAktiviteYeni;
         
         /// <summary>
-        /// ButtonAktiviteKaydet control.
+        /// idButtonAktiviteKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAktiviteKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonAktiviteKaydet;
         
         /// <summary>
-        /// ButtonAktiviteSil control.
+        /// idButtonAktiviteSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAktiviteSil;
+        protected global::System.Web.UI.WebControls.Button idButtonAktiviteSil;
         
         /// <summary>
-        /// AKTIVITE_KISI_ADI control.
+        /// idCONTACT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_KISI_ADI;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// AKTIVITE_FIRMA control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_FIRMA;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// AKTIVITE_AKTIVITE_TIPI control.
+        /// idACTIVITY_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_AKTIVITE_TIPI;
+        protected global::System.Web.UI.WebControls.DropDownList idACTIVITY_TYPE;
         
         /// <summary>
-        /// AKTIVITE_EVRAK_NO1 control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_EVRAK_NO1;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// AKTIVITE_EVRAK_NO2 control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_EVRAK_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// AKTIVITE_BASLANGIC control.
+        /// idSDATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_BASLANGIC;
+        protected global::System.Web.UI.WebControls.TextBox idSDATE;
         
         /// <summary>
-        /// AKTIVITE_BASLANGIC_SAAT control.
+        /// idSDATE_TIME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_BASLANGIC_SAAT;
+        protected global::System.Web.UI.WebControls.TextBox idSDATE_TIME;
         
         /// <summary>
-        /// AKTIVITE_BITIS control.
+        /// idEDATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_BITIS;
+        protected global::System.Web.UI.WebControls.TextBox idEDATE;
         
         /// <summary>
-        /// AKTIVITE_BITIS_SAAT control.
+        /// idEDATE_TIME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_BITIS_SAAT;
+        protected global::System.Web.UI.WebControls.TextBox idEDATE_TIME;
         
         /// <summary>
-        /// AKTIVITE_FIRMADAN_KIMLERLE control.
+        /// idJOINER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_FIRMADAN_KIMLERLE;
+        protected global::System.Web.UI.WebControls.DropDownList idJOINER_CODE;
         
         /// <summary>
-        /// AKTIVITE_KONU_GRUBU control.
+        /// idSUBJECT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_KONU_GRUBU;
+        protected global::System.Web.UI.WebControls.DropDownList idSUBJECT_CODE;
         
         /// <summary>
-        /// AKTIVITE_KONU control.
+        /// idSUBJECT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_KONU;
+        protected global::System.Web.UI.WebControls.TextBox idSUBJECT;
         
         /// <summary>
-        /// AKTIVITE_NEREDE control.
+        /// idLOCATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_NEREDE;
+        protected global::System.Web.UI.WebControls.DropDownList idLOCATION;
         
         /// <summary>
-        /// AKTIVITE_ONCELIK control.
+        /// idPRIORITY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_ONCELIK;
+        protected global::System.Web.UI.WebControls.DropDownList idPRIORITY;
         
         /// <summary>
-        /// AKTIVITE_HATIRLATMA control.
+        /// idREMEMBER control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_HATIRLATMA;
+        protected global::System.Web.UI.WebControls.DropDownList idREMEMBER;
         
         /// <summary>
-        /// AKTIVITE_RENK control.
+        /// idCOLOR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_RENK;
+        protected global::System.Web.UI.WebControls.TextBox idCOLOR;
         
         /// <summary>
-        /// AKTIVITE_GRUBU control.
+        /// idACTIVITY_GROUP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_GRUBU;
+        protected global::System.Web.UI.WebControls.DropDownList idACTIVITY_GROUP;
         
         /// <summary>
-        /// AKTIVITE_TEMSILCISI control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_TEMSILCISI;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// AKTIVITE_PROJE control.
+        /// idPROJECT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AKTIVITE_PROJE;
+        protected global::System.Web.UI.WebControls.DropDownList idPROJECT;
         
         /// <summary>
-        /// AKTIVITE_DETAY control.
+        /// idNOTE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AKTIVITE_DETAY;
+        protected global::System.Web.UI.WebControls.TextBox idNOTE;
     }
 }

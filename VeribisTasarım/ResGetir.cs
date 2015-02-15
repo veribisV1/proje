@@ -23,6 +23,16 @@ namespace VeribisTasarım
             DataTable tablo=db.get(sorgu.ToString());        
             return tablo.Rows[0].ToString();
         }
-      
+
+
+        public static string get(int p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string cs(int p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

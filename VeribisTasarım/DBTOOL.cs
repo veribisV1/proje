@@ -29,10 +29,12 @@ namespace VeribisTasarım
         {
             return new DataTable();
         }
+
         public DataTable get(string storedProcedureAdi,int kod)
         {
             return new DataTable();
         }
+
         public DataTable get(string sorgu)
         {
             adapter = new SqlDataAdapter();

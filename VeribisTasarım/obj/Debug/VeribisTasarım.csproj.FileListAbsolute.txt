@@ -13,3 +13,8 @@ C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.pdb
 C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
 C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.dll
 C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.pdb
+C:\veribisPr\VeribisTasarım\bin\VeribisTasarım.dll
+C:\veribisPr\VeribisTasarım\bin\VeribisTasarım.pdb
+C:\veribisPr\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribisPr\VeribisTasarım\obj\Debug\VeribisTasarım.dll
+C:\veribisPr\VeribisTasarım\obj\Debug\VeribisTasarım.pdb

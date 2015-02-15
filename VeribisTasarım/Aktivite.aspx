@@ -34,7 +34,7 @@
                        
                     <tr>
                         <td width="35%">
-                        <%#Eval(VeribisTasarım.ResGetir.get(1))%>
+                        Adı
                         </td>
                         <td width="2%">
                           :

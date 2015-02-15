@@ -8,6 +8,7 @@ using System.Web;
 
 namespace VeribisTasarım
 {
+
     /// <summary>
     /// hertürlü DB ye erişim için 
     /// gerekli olan metotları içeriri
@@ -15,37 +16,63 @@ namespace VeribisTasarım
     /// </summary>
     public class DBTOOL
     {
+
         SqlConnection connection;
         SqlCommand komut;
         SqlDataAdapter adapter;
-        DataSet dataSet;
-        
+
         public DBTOOL()
         {
-            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);           
+            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);
         }
+
 
         private void init()
-        { 
+        {
 
         }
 
-        public DataTable get(string tabloAdi,string[] sutunAdlari,string filtre)
+        public DataTable get(string tabloAdi, string[] sutunAdlari, string filtre)
         {
             return new DataTable();
         }
-        public DataTable get(string storedProcedureAdi,int kod)
+        public DataTable get(string storedProcedureAdi, int kod)
         {
             return new DataTable();
         }
         public DataTable get(string sorgu)
         {
             adapter = new SqlDataAdapter();
-            komut = new SqlCommand(sorgu,connection);
+            komut = new SqlCommand(sorgu, connection);
             adapter.SelectCommand = komut;
-            DataTable tablo=new DataTable();
+            DataTable tablo = new DataTable();
             adapter.Fill(tablo);
             return tablo;
+        }
+
+        /// <summary>
+        /// store prosedurede bulunan parametreleri ceker
+        /// </summary>
+        /// <param name="prosedurAdi"></param>
+        /// <returns></returns>
+        public Dictionary<string,string> getParameterList(string prosedurAdi)
+        {
+            Dictionary<string, string> list = new Dictionary<string, string>();
+            komut = new SqlCommand();
+            komut.Connection = connection;
+            komut.CommandType = System.Data.CommandType.StoredProcedure;
+            komut.CommandText = prosedurAdi;
+            connection.Open();
+            SqlCommandBuilder.DeriveParameters(komut);
+            foreach (SqlParameter p in komut.Parameters)
+            {
+                if (!p.ParameterName.Equals("@RETURN_VALUE") )//&& !p.ParameterName.Equals("@ReturnValue"))
+                {
+                    list.Add(p.ParameterName,p.SqlDbType.ToString());
+                }
+            }
+            connection.Close();
+            return list;
         }
         /// <summary>
         /// prosedür ile set etme geriye 
@@ -54,18 +81,36 @@ namespace VeribisTasarım
         /// <param name="prosedurAdi">pCompanuInsert</param>
         /// <param name="parametreler"><@comapanyCode,11></param>
         /// <returns></returns>
-        public int set(string prosedurAdi,Dictionary<string,string> parametreler)
-        {            
+        public int set(string prosedurAdi, Dictionary<string, object> parametreler)
+        {
             komut = new SqlCommand();
             komut.Connection = connection;
             komut.CommandType = System.Data.CommandType.StoredProcedure;
             komut.CommandText = prosedurAdi;
-            foreach (KeyValuePair<string,string> item in parametreler)
+            connection.Open();
+
+            foreach (KeyValuePair<string, object> item in parametreler)
             {
-                komut.Parameters.Add(item.Key, item.Value);
+               
+                komut.Parameters.AddWithValue(item.Key, item.Value);
             }
-            komut.ExecuteNonQuery();   
-            return Convert.ToInt16(komut.Parameters["ReturnValue"].Value); // prosedurden gelen veri int türüne dönüşüp gönderilir
+
+            komut.ExecuteNonQuery();
+            connection.Close();
+            return Convert.ToInt16(komut.Parameters["@ReturnValue"].Value);
+            // prosedurden gelen veri int türüne dönüşüp gönderilir
+        }
+        /// <summary>
+        /// Sql sorgu cümlesini kurallarına göre girip gönderin
+        /// Insert ,Update ve Delete için
+        /// </summary>
+        /// <param name="sorgu"></param>
+        public void set(string sorgu)
+        {
+            komut = new SqlCommand(sorgu, connection);
+            connection.Open();
+            komut.ExecuteNonQuery();
+            connection.Close();
         }
 
     }

@@ -107,6 +107,8 @@
     <Compile Include="Company.aspx.designer.cs">
       <DependentUpon>Company.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controller\CONTROL_PARAMETRE_ESLESTIR.cs" />
+    <Compile Include="Controller\FIRMA.cs" />
     <Compile Include="DBTOOL.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

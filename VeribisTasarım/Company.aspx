@@ -26,7 +26,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonFirmaEkleKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -98,12 +98,7 @@
                           :
                         </td>
                         <td>
-                            <asp:ListView ID="ListView1" runat="server">
-                            </asp:ListView>
-                            <asp:DataPager ID="DataPager1" runat="server">
-                            </asp:DataPager>
-
-                        </td>
+                            &nbsp;</td>
                     </tr>
                          <tr>
                         <td width="35%">

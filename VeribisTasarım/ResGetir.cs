@@ -2,28 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Text;
+using System.Data;
 
 namespace VeribisTasarım
 {
     public class ResGetir
-    {     
-
-        public static string resGetir(int id)
-        {           
-            string str = (from icerik in db.RES
-                          where icerik.R_ID == id
-                          select icerik.TR).FirstOrDefault().ToString();
-            return str;
+    {
+        static DBTOOL db = new DBTOOL();
+        /// <summary>
+        /// etiketleri DB deki id ye göre çeken metot
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static string resGetir(int id=0)
+        {            
+            StringBuilder sorgu= new StringBuilder(); 
+            sorgu.Append("SELECT TR FROM RES WHERE R_ID=");
+            sorgu.Append(id);
+            DataTable tablo=db.get(sorgu.ToString());        
+            return tablo.Rows[0].ToString();
         }
-
-        public static string resDesGetir(int id)
-        {
-            if (LogInn.dbName == null)
-                return " ";
-            string str = (from icerik in db.RESDES
-                          where icerik.R_ID == id
-                          select icerik.TR).FirstOrDefault().ToString();
-            return str;
-        }
+      
     }
 }

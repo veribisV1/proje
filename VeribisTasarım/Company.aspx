@@ -98,7 +98,10 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="idADDRESS" MaxLength="250" TextMode="MultiLine" Height="50px" runat="server"></asp:TextBox>
+                            <asp:ListView ID="ListView1" runat="server">
+                            </asp:ListView>
+                            <asp:DataPager ID="DataPager1" runat="server">
+                            </asp:DataPager>
 
                         </td>
                     </tr>

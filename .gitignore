@@ -11,4 +11,7 @@
 app_code/*.*
 bin/*.*
 obj/*.*
+*.pdb
+*.suo
+*.cache
 

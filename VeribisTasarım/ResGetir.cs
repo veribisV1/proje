@@ -6,10 +6,24 @@ using System.Web;
 namespace VeribisTasarım
 {
     public class ResGetir
-    {
-        public static string get(int id)
+    {     
+
+        public static string resGetir(int id)
+        {           
+            string str = (from icerik in db.RES
+                          where icerik.R_ID == id
+                          select icerik.TR).FirstOrDefault().ToString();
+            return str;
+        }
+
+        public static string resDesGetir(int id)
         {
-            return "resden gelecek";
+            if (LogInn.dbName == null)
+                return " ";
+            string str = (from icerik in db.RESDES
+                          where icerik.R_ID == id
+                          select icerik.TR).FirstOrDefault().ToString();
+            return str;
         }
     }
 }

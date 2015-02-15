@@ -1,0 +1,15 @@
+c:\users\emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
+c:\users\emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\bin\VeribisTasarım.dll
+c:\users\emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\bin\VeribisTasarım.pdb
+c:\users\emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\obj\Debug\VeribisTasarım.dll
+c:\users\emre\documents\visual studio 2012\Projects\VeribisTasarım\VeribisTasarım\obj\Debug\VeribisTasarım.pdb
+C:\veribisProjeler\proje\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribisProjeler\proje\VeribisTasarım\bin\VeribisTasarım.dll
+C:\veribisProjeler\proje\VeribisTasarım\bin\VeribisTasarım.pdb
+C:\veribisProjeler\proje\VeribisTasarım\obj\Debug\VeribisTasarım.dll
+C:\veribisProjeler\proje\VeribisTasarım\obj\Debug\VeribisTasarım.pdb
+C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.dll
+C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.pdb
+C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.dll
+C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.pdb

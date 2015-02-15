@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Aktivite.aspx">
+      <publishTime>02/07/2015 15:27:26</publishTime>
+    </File>
+    <File Include="bin/VeribisTasarım.dll">
+      <publishTime>02/11/2015 13:43:11</publishTime>
+    </File>
+    <File Include="Company.aspx">
+      <publishTime>02/07/2015 14:12:38</publishTime>
+    </File>
+    <File Include="css/responsive.css">
+      <publishTime>02/06/2015 02:02:25</publishTime>
+    </File>
+    <File Include="css/stil.css">
+      <publishTime>02/06/2015 23:37:52</publishTime>
+    </File>
+    <File Include="css/uiTabsArrow.png">
+      <publishTime>02/04/2015 16:47:37</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>02/05/2015 11:49:36</publishTime>
+    </File>
+    <File Include="Firsat.aspx">
+      <publishTime>02/06/2015 23:38:12</publishTime>
+    </File>
+    <File Include="IMG/logo.png">
+      <publishTime>02/05/2015 00:20:21</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-icons_222222_256x240.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-icons_228ef1_256x240.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/images/ui-icons_ffffff_256x240.png">
+      <publishTime>02/04/2015 16:49:45</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.css">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.js">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.min.css">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.min.js">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.structure.css">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.structure.min.css">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.theme.css">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="js/jqueryui/jquery-ui.theme.min.css">
+      <publishTime>02/04/2015 16:49:03</publishTime>
+    </File>
+    <File Include="Kisi.aspx">
+      <publishTime>02/06/2015 21:14:26</publishTime>
+    </File>
+    <File Include="MasterPage.master">
+      <publishTime>02/06/2015 02:14:12</publishTime>
+    </File>
+    <File Include="Teklif.aspx">
+      <publishTime>02/07/2015 14:30:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/11/2015 13:43:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

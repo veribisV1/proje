@@ -109,8 +109,9 @@
       <DependentUpon>Company.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controller\CONTROL_PARAMETRE_ESLESTIR.cs" />
+    <Compile Include="Controller\DB_ELEMAN_GETIR.cs" />
     <Compile Include="Controller\FIRMA.cs" />
-    <Compile Include="DBTOOL.cs" />
+    <Compile Include="Controller\DBTOOL.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

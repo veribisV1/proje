@@ -14,16 +14,21 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-             if (!IsPostBack)
-            { 
+            ekranDoldur();
+            if (!IsPostBack)
+            {
                 adresDoldur();
                 telefonDoldur();
-                
+                ekranDoldur();
             }
 
         }
 
+        private void ekranDoldur()
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCOMPANY_REPRESENT_CODE =dbGetir.doldur(idCOMPANY_REPRESENT_CODE,dbGetir.userAdSoyadGetir());            
+        }
 
 
         private void adresDoldur(int companyCode = 34)
@@ -54,7 +59,7 @@ namespace VeribisTasarım
             idPHONE.DataBind();
         }
 
-               
+
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             FIRMA firma = new FIRMA();
@@ -63,7 +68,7 @@ namespace VeribisTasarım
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
             int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
 
-        }        
+        }
 
 
     }

@@ -29,6 +29,8 @@ namespace VeribisTasarım
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             idCOMPANY_REPRESENT_CODE =dbGetir.doldur(idCOMPANY_REPRESENT_CODE,dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
+            idCOMPANY_SPECIAL_TYPE = dbGetir.doldur(idCOMPANY_SPECIAL_TYPE, dbGetir.getFirmaTipi());
+            
           
         }
 

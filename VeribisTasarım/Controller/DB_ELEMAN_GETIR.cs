@@ -41,10 +41,18 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+       
         public Dictionary<string, string> getSektor()
         {
             DBTOOL db = new DBTOOL();
             Dictionary<string, string> liste = db.getDictionary("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=4 ORDER BY ROW_ORDER_NO");
+            return liste;
+        }
+
+        public Dictionary<string, string> getFirmaTipi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=5 ORDER BY ROW_ORDER_NO");
             return liste;
         }
     }

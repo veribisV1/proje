@@ -18,6 +18,10 @@ namespace VeribisTasarım.Controller
             return eleman; 
         }
 
+        /// <summary>
+        /// tüm userların adı soyadı ile user codları gelir
+        /// </summary>
+        /// <returns>key=usercode,value=ausername surname</returns>
         public Dictionary<string, string> userAdSoyadGetir()
         {
             DBTOOL db = new DBTOOL();

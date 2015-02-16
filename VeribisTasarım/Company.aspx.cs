@@ -33,6 +33,7 @@ namespace VeribisTasarım
             idSTATUS = dbGetir.doldur(idSTATUS, dbGetir.getFirmaDurum());
             idUPPER_COMPANY_CODE = dbGetir.doldur(idUPPER_COMPANY_CODE, dbGetir.getFirma());
             idCOMPANY_REGION = dbGetir.doldur(idCOMPANY_REGION, dbGetir.getBolge());
+            idGROUP_CODE = dbGetir.doldur(idGROUP_CODE, dbGetir.getGrup());
         }
 
 

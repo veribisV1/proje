@@ -1227,17 +1227,17 @@
                 <div class="KisiTableHizalama">
                     <tr>
                         <td>
-                            <asp:Button ID="ButtonFaturaYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonFaturaYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="ButtonFaturaKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonFaturaKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="ButtonFaturaSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonFaturaSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
 
@@ -1253,7 +1253,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_KODU" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idFaturaCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1263,7 +1263,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_FIRMA_ADI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaCOMPANY_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1273,7 +1273,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_CINSI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaCINSI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1283,7 +1283,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_NORMAL_IADE" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idFaturaNORMAL_BACK" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1293,8 +1293,8 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="FATURA_EVRAK_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>
-                                    <asp:TextBox ID="FATURA_EVRAK_NO2" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idFaturaDOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idFaturaDOCUMENT_NO2" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -1303,7 +1303,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="FATURA_EVRAK_TARIHI" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idFaturaDOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -1312,7 +1312,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_TEMSILCISI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaAPPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
 
                                 </td>
@@ -1330,7 +1330,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_DEPO" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaWAREHOUSE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1340,7 +1340,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_ODEME_SEKLI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaPAYMENT_TYPE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1350,7 +1350,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_PROJE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaPROJECT_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1360,7 +1360,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_ACIK_KAPALI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaOPEN_CLOSE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1370,7 +1370,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="FATURA_GRUBU" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFaturaGROUPS" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -1380,7 +1380,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="FATURA_ACIKLAMA" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox ID="idFaturaEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine" MaxLength="1000"></asp:TextBox>
                                 </td>
                             </tr>
 

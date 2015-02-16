@@ -26,7 +26,7 @@ namespace VeribisTasarım
 
 
 
-        private void adresDoldur(int companyCode = 34)
+        private void adresDoldur(int companyCode = 2)
         {
             DBTOOL db = new DBTOOL();
 
@@ -41,7 +41,7 @@ namespace VeribisTasarım
 
         }
 
-        private void telefonDoldur(int companyCode = 34)
+        private void telefonDoldur(int companyCode = 2)
         {
             DBTOOL db = new DBTOOL();
 

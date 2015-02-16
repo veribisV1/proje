@@ -27,7 +27,8 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-            idCOMPANY_REPRESENT_CODE =dbGetir.doldur(idCOMPANY_REPRESENT_CODE,dbGetir.userAdSoyadGetir());  
+            idCOMPANY_REPRESENT_CODE =dbGetir.doldur(idCOMPANY_REPRESENT_CODE,dbGetir.userAdSoyadGetir());
+            idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
           
         }
 

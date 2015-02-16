@@ -105,11 +105,12 @@ border:1px solid #00B4ff;
    
 }
 
+
 .KisiTable td
 {
   padding:2px 3px;
   border:0px;
-  white-space:nowrap;
+  white-space:normal;
   position:relative;
   
 
@@ -325,3 +326,25 @@ textarea
 .ALAN10 {width:80%;float:left;margin-left:10px;min-height:10px;}
 .ALAN11 {width:88%;float:left;margin-left:10px;min-height:10px;}
 .ALAN12 {width:96%;float:left;margin-left:10px;min-height:10px;}
+
+
+
+
+
+/* Fatih */
+
+.gridEn
+{
+    width:105%;
+    font-size:12px;
+    background-color:#fff;
+}
+
+.gridDiv
+{
+   max-height:150px; 
+   overflow: auto; 
+   /*overflow-x:hidden;*/
+   width:105%;
+   
+}

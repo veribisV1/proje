@@ -22,6 +22,24 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonFirmaEkleYeni;
         
         /// <summary>
+        /// idButtonAdresYeni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonAdresYeni;
+        
+        /// <summary>
+        /// idButtonTelefonYeni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonTelefonYeni;
+        
+        /// <summary>
         /// idButtonFirmaEkleKaydet control.
         /// </summary>
         /// <remarks>
@@ -74,33 +92,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList idSECTOR;
-        
-        /// <summary>
-        /// idADDRESS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView idADDRESS;
-        
-        /// <summary>
-        /// idPHONE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView idPHONE;
-        
-        /// <summary>
-        /// idFOUNDATION_DATE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFOUNDATION_DATE;
         
         /// <summary>
         /// idCOMPANY_SPECIAL_TYPE control.
@@ -182,6 +173,15 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idWEBADDRESS;
+        
+        /// <summary>
+        /// idFOUNDATION_DATE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idFOUNDATION_DATE;
         
         /// <summary>
         /// idCOMPANY_REFERANCE control.
@@ -272,6 +272,42 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idPAYMENT_DAY;
+        
+        /// <summary>
+        /// idAdresEkle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idAdresEkle;
+        
+        /// <summary>
+        /// idADDRESS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView idADDRESS;
+        
+        /// <summary>
+        /// idTelefonEkle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idTelefonEkle;
+        
+        /// <summary>
+        /// idPHONE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView idPHONE;
         
         /// <summary>
         /// idTextBoxFirmaArama control.

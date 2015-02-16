@@ -13,219 +13,201 @@ namespace VeribisTasarım {
     public partial class Fırsat {
         
         /// <summary>
-        /// ButtonFirsatEkleYeni control.
+        /// idButtonFirsatEkleYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonFirsatEkleYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleYeni;
         
         /// <summary>
-        /// ButtonFirsatEkleKaydet control.
+        /// idButtonFirsatEkleKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonFirsatEkleKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleKaydet;
         
         /// <summary>
-        /// ButtonFirsatEkleSil control.
+        /// idButtonFirsatEkleSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonFirsatEkleSil;
+        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleSil;
         
         /// <summary>
-        /// FIRSAT_KODU control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_KODU;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// FIRSAT_FIRMA_ADI control.
+        /// idCONTACT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_FIRMA_ADI;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// FIRSAT_KONTAK control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_KONTAK;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// FIRSAT_EVRAK_TIPI control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_EVRAK_TIPI;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// FIRSAT_EVRAK_NO1 control.
+        /// idSELLING_BUYING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FIRSAT_EVRAK_NO1;
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
-        /// FIRSAT_EVRAK_NO2 control.
+        /// idDOCUMENT_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FIRSAT_EVRAK_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
         
         /// <summary>
-        /// FIRSAT_CINSI control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_CINSI;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// FIRSAT_EVRAK_TARIHI control.
+        /// idFREE_STOK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FIRSAT_EVRAK_TARIHI;
+        protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
         
         /// <summary>
-        /// FIRSAT_TEMSILCISI control.
+        /// idREVISION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_TEMSILCISI;
+        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
         
         /// <summary>
-        /// FIRSAT_STOK_BAGIMSIZ control.
+        /// idDELIVERY_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList FIRSAT_STOK_BAGIMSIZ;
+        protected global::System.Web.UI.WebControls.DropDownList idDELIVERY_TYPE;
         
         /// <summary>
-        /// FIRSAT_REVIZYON control.
+        /// idPAYMENT_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_REVIZYON;
+        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
         
         /// <summary>
-        /// FIRSAT_TESLIM_SEKLI control.
+        /// idSEARCH_METHOD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_TESLIM_SEKLI;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_METHOD;
         
         /// <summary>
-        /// FIRSAT_ODEME_SEKLI control.
+        /// idSEARCH_STEP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_ODEME_SEKLI;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
         
         /// <summary>
-        /// FIRSAT_TAKIP_YON control.
+        /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_TAKIP_YON;
+        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
         
         /// <summary>
-        /// FIRSAT_TAKIP_ASAMASI control.
+        /// idPROJECT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_TAKIP_ASAMASI;
+        protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
         
         /// <summary>
-        /// FIRSAT_GECERLILIK_TARIHI control.
+        /// idLAST_POSITION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FIRSAT_GECERLILIK_TARIHI;
+        protected global::System.Web.UI.WebControls.DropDownList idLAST_POSITION;
         
         /// <summary>
-        /// FIRSAT_PROJE control.
+        /// idWHY_LOST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_PROJE;
+        protected global::System.Web.UI.WebControls.DropDownList idWHY_LOST;
         
         /// <summary>
-        /// FIRSAT_SON_DURUM control.
+        /// idRIVAL_COMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_SON_DURUM;
+        protected global::System.Web.UI.WebControls.DropDownList idRIVAL_COMPANY_CODE;
         
         /// <summary>
-        /// FIRSAT_NEDEN_KAYBETTIK control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_NEDEN_KAYBETTIK;
-        
-        /// <summary>
-        /// FIRSAT_KAZANAN_RAKIP_FIRMA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FIRSAT_KAZANAN_RAKIP_FIRMA;
-        
-        /// <summary>
-        /// FIRSAT_ACIKLAMA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FIRSAT_ACIKLAMA;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
     }
 }

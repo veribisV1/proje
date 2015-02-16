@@ -329,22 +329,64 @@ textarea
 
 
 
+/* =============================================
+----------------- ADRES-GRÝDVÝEW -------
+==============================================*/
+.gridDivAdres { position:relative; right:1%; width:132%; background-color:black; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.gridDivAdres td { padding:2px 15px; border: solid 1px #012353; color:black}
+.gridDivAdres th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
+.gridDivAdres .alt { background: #000 url(grd_alt.png) repeat-x top; }
+.gridDivAdres .pgr {background: #012353 url(grd_pgr.png) repeat-x top; }
+.gridDivAdres.pgr table { margin: 5px 0; }
+.gridDivAdres.pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #f50909;font-weight: bold; color: #f30b0b; line-height: 22px; }   
+.gridDivAdres.pgr a { color: #012353; text-decoration: none; }
+.gridDivAdres.pgr a:hover { color: #f22323; text-decoration: none; }
+
+/* =============================================
+-----------------Adres Ekle Buton -------
+==============================================*/
+.AdresEkle {
+    width:18%;
+    height:25px;
+    background-color:#012353;
+    color:white;
+
+}
 
 
-/* Fatih */
 
+/* =============================================
+----------------- TELEFON-GRÝDVÝEW -------
+==============================================*/
+.gridDivTelefon { position:relative; left:36%; width:65%; background-color:black; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.gridDivTelefon td { padding:2px 15px; border: solid 1px #012353; color:black}
+.gridDivTelefon th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
+.gridDivTelefon .alt { background: #000 url(grd_alt.png) repeat-x top; }
+.gridDivTelefon .pgr {background: #012353 url(grd_pgr.png) repeat-x top; }
+.gridDivTelefon.pgr table { margin: 5px 0; }
+.gridDivTelefon.pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #f50909;font-weight: bold; color: #f30b0b; line-height: 22px; }   
+.gridDivTelefon.pgr a { color: #012353; text-decoration: none; }
+.gridDivTelefon.pgr a:hover { color: #f22323; text-decoration: none; }
+
+/* =============================================
+----------------- Telefon Ekle Buton-----------
+==============================================*/
+
+.TelefonEkle {
+    width:18%;
+    height:25px;
+    background-color:#012353;
+    color:white;
+    position:relative;
+    left:36%;
+
+}
+
+ 
 .gridEn
 {
     width:105%;
     font-size:12px;
-    background-color:#fff;
+    
 }
 
-.gridDiv
-{
-   max-height:150px; 
-   overflow: auto; 
-   /*overflow-x:hidden;*/
-   width:105%;
-   
-}

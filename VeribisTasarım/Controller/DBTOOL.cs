@@ -55,6 +55,25 @@ namespace VeribisTasarım
             return tablo;
         }
 
+
+        public Dictionary<string,string> getDictionary(string sorgu)
+        {
+            Dictionary<string, string> list = new Dictionary<string, string>();
+            adapter = new SqlDataAdapter();
+            komut = new SqlCommand(sorgu, connection);
+            connection.Open();
+            using (SqlDataReader rdr = komut.ExecuteReader())
+            {
+                list.Add("-1", "");
+                while (rdr.Read())
+                {
+                    list.Add(rdr["col1"].ToString(), rdr["col2"].ToString());
+                }
+            }
+            connection.Close();
+            return list;
+        }
+
         /// <summary>
         /// store prosedurede bulunan parametreleri ceker
         /// </summary>

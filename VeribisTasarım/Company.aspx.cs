@@ -15,15 +15,28 @@ namespace VeribisTasarım
         protected void Page_Load(object sender, EventArgs e)
         {
 
-             if (!IsPostBack)
-            { 
+            if (!IsPostBack)
+            {
                 adresDoldur();
                 telefonDoldur();
-                
+                ekranDoldur();
             }
 
         }
 
+        private void ekranDoldur()
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
+            idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
+            idCOMPANY_SPECIAL_TYPE = dbGetir.doldur(idCOMPANY_SPECIAL_TYPE, dbGetir.getFirmaTipi());
+            idSTATUS = dbGetir.doldur(idSTATUS, dbGetir.getFirmaDurum());
+            idUPPER_COMPANY_CODE = dbGetir.doldur(idUPPER_COMPANY_CODE, dbGetir.getFirma());
+            idCOMPANY_REGION = dbGetir.doldur(idCOMPANY_REGION, dbGetir.getBolge());
+            idGROUP_CODE = dbGetir.doldur(idGROUP_CODE, dbGetir.getGrup());
+            idCOMPANY_REFERANCE = dbGetir.doldur(idCOMPANY_REFERANCE, dbGetir.getReferans());
+            idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
+        }
 
 
         private void adresDoldur(int companyCode = 2)
@@ -54,16 +67,17 @@ namespace VeribisTasarım
             idPHONE.DataBind();
         }
 
-               
+
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             FIRMA firma = new FIRMA();
+            string a = idSECTOR.SelectedValue;
             Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertCompany");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
             int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
 
-        }        
+        }
 
 
     }

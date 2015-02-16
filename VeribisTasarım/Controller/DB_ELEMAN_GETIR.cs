@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace VeribisTasarım.Controller
 {
+    /// <summary>
+    /// DropDownList içeriklerini 
+    /// databasden çeken dolduran sınıf
+    /// </summary>
     public class DB_ELEMAN_GETIR
     {
         public DropDownList doldur(DropDownList eleman, Dictionary<string, string> liste)
@@ -55,5 +59,12 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=5 ORDER BY ROW_ORDER_NO");
             return liste;
         }
+        public Dictionary<string, string> getFirmaDurum()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=9 ORDER BY ROW_ORDER_NO");
+            return liste;
+        }
+
     }
 }

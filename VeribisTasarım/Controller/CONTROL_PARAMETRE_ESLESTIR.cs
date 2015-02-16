@@ -43,13 +43,17 @@ namespace VeribisTasarım.Controller
                         {
                             DropDownList elemanText = (DropDownList)eleman;
                             dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.Text));
-                            
+
+                        }
+                        else
+                        {
+                            dataListesi.Add(item, tipKontrol(dataTipleri[item], null));
                         }
 
                 }
                 else
                 {
-                    dataListesi.Add(item, tipKontrol(dataTipleri[item], null));                   
+                    dataListesi.Add(item, tipKontrol(dataTipleri[item], null));
                 }
             }
             return dataListesi;
@@ -77,7 +81,7 @@ namespace VeribisTasarım.Controller
                     int sonuc = -1;
                     if (!String.IsNullOrEmpty(icerik))
                     {
-                        sonuc=Convert.ToInt16(icerik);
+                        sonuc = Convert.ToInt16(icerik);
                     }
                     return sonuc;
                     break;

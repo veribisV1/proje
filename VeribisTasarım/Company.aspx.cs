@@ -14,7 +14,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ekranDoldur();
+            
             if (!IsPostBack)
             {
                 adresDoldur();
@@ -30,8 +30,7 @@ namespace VeribisTasarım
             idCOMPANY_REPRESENT_CODE =dbGetir.doldur(idCOMPANY_REPRESENT_CODE,dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
             idCOMPANY_SPECIAL_TYPE = dbGetir.doldur(idCOMPANY_SPECIAL_TYPE, dbGetir.getFirmaTipi());
-            
-          
+            idSTATUS = dbGetir.doldur(idSTATUS, dbGetir.getFirmaDurum()); 
         }
 
 
@@ -67,6 +66,7 @@ namespace VeribisTasarım
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             FIRMA firma = new FIRMA();
+            string a = idSECTOR.SelectedValue;
             Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertCompany");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);

@@ -24,24 +24,24 @@ namespace VeribisTasarım
 
         }
 
-      
 
-        private void adresDoldur(int companyCode=1)
+
+        private void adresDoldur(int companyCode = 34)
         {
             DBTOOL db = new DBTOOL();
+
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
             sorgu.Append("SELECT ADDRESS_TYPE_ID AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3 + ' ' + COUNTY1 + ' ' + COUNTY2 + ' ' + CITY) AS ADRES FROM ADDRESS WHERE COMPANY_CODE=");
             sorgu.Append(companyCode);
-
-            DataTable tablo=db.get(sorgu.ToString());
+            DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
             idADDRESS.DataBind();
-            
-            
+
+
         }
 
-        private void telefonDoldur(int companyCode = 1)
+        private void telefonDoldur(int companyCode = 34)
         {
             DBTOOL db = new DBTOOL();
 
@@ -54,14 +54,14 @@ namespace VeribisTasarım
             idPHONE.DataBind();
         }
 
-
-        protected void idButtonFirmaEkleKaydet_Click(object sender, EventArgs e)
+               
+        protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             FIRMA firma = new FIRMA();
             Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertCompany");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
-            int companyCode=firma.firmaKaydet("pInsertCompany", dataListesi);
+            int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
 
         }        
 

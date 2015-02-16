@@ -40,33 +40,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonFirmaEkleSil;
         
         /// <summary>
-        /// idButtonFirmaEkleKaydet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirmaEkleKaydet;
-        
-        /// <summary>
-        /// idButtonFirmaEkleSil control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirmaEkleSil;
-        
-        /// <summary>
-        /// idPHONE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idPHONE;
-        
-        /// <summary>
         /// idCOMPANY_NAME control.
         /// </summary>
         /// <remarks>

@@ -25,29 +25,9 @@
                             <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
-<<<<<<< HEAD
-                    <tr>         
-                        <td>
-                            <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonFirmaEkleKaydet_Click" />
-                        </td>
-                    </tr>
-                    <tr>         
-                        <td>
-                            <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
-                        </td>
-                    </tr>
-                   
-                    
-                <hr />
-                <div class="ALAN4"> 
-                  
-                    <table class="KisiTable" id="Table1">
-                       
-=======
->>>>>>> f3b8cf3666e4223ed3cbe26fc47e127bf8e4052f
                     <tr>
                         <td>
-                            <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonFirmaEkleKaydet_Click1" />
                         </td>
                     </tr>
                     <tr>
@@ -61,29 +41,6 @@
                     <div class="ALAN4">
                         <table class="KisiTable" id="Table1">
 
-<<<<<<< HEAD
-                        </td>
-                    </tr>
-                         <tr>
-                        <td width="35%">
-                        Adres
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                         <tr>
-                        <td width="35%">
-                        Telefon
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                          <asp:DropDownList ID="idPHONE" runat="server" Height="30px" Width="104%">
-=======
                             <tr>
                                 <td width="35%">Firma Adı
                                 </td>
@@ -121,7 +78,6 @@
                                     <asp:DropDownList ID="idSECTOR" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
 
->>>>>>> f3b8cf3666e4223ed3cbe26fc47e127bf8e4052f
 
                                 </td>
                             </tr>

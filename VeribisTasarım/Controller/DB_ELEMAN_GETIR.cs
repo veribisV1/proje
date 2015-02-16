@@ -66,5 +66,22 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+        public Dictionary<string, string> getBolge()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=8 ORDER BY ROW_ORDER_NO");
+            return liste;
+        }
+        /// <summary>
+        /// KAYILI FİRMALARI GETİRİRİ
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, string> getFirma()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary("SELECT COMPANY_CODE as col1, COMPANY_NAME  AS col2 FROM COMPANY  ORDER BY COMPANY_NAME");
+            return liste;
+        }
+
     }
 }

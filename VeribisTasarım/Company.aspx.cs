@@ -14,7 +14,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (!IsPostBack)
             {
                 adresDoldur();
@@ -27,10 +27,12 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-            idCOMPANY_REPRESENT_CODE =dbGetir.doldur(idCOMPANY_REPRESENT_CODE,dbGetir.userAdSoyadGetir());
+            idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
             idCOMPANY_SPECIAL_TYPE = dbGetir.doldur(idCOMPANY_SPECIAL_TYPE, dbGetir.getFirmaTipi());
-            idSTATUS = dbGetir.doldur(idSTATUS, dbGetir.getFirmaDurum()); 
+            idSTATUS = dbGetir.doldur(idSTATUS, dbGetir.getFirmaDurum());
+            idUPPER_COMPANY_CODE = dbGetir.doldur(idUPPER_COMPANY_CODE, dbGetir.getFirma());
+            idCOMPANY_REGION = dbGetir.doldur(idCOMPANY_REGION, dbGetir.getBolge());
         }
 
 

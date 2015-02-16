@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdresEkle.aspx" />
     <Content Include="Aktivite.aspx" />
     <Content Include="Company.aspx" />
     <Content Include="Default.aspx" />
@@ -89,10 +90,18 @@
     <Content Include="script\jqueryui\jquery-ui.structure.min.css" />
     <Content Include="script\jqueryui\jquery-ui.theme.css" />
     <Content Include="script\jqueryui\jquery-ui.theme.min.css" />
+    <Content Include="TelefonEkle.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdresEkle.aspx.cs">
+      <DependentUpon>AdresEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdresEkle.aspx.designer.cs">
+      <DependentUpon>AdresEkle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Aktivite.aspx.cs">
       <DependentUpon>Aktivite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +154,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelefonEkle.aspx.cs">
+      <DependentUpon>TelefonEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelefonEkle.aspx.designer.cs">
+      <DependentUpon>TelefonEkle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

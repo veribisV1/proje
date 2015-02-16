@@ -40,174 +40,174 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleSil;
         
         /// <summary>
-        /// COMPANY_CODE control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList COMPANY_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// CONTACT_CODE control.
+        /// idCONTACT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CONTACT_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// DOCUMENT_NO1 control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DOCUMENT_NO1;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// DOCUMENT_NO2 control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DOCUMENT_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// SELLING_BUYING control.
+        /// idSELLING_BUYING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SELLING_BUYING;
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
-        /// DOCUMENT_DATE control.
+        /// idDOCUMENT_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DOCUMENT_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
         
         /// <summary>
-        /// APPOINTED_USER_CODE control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList APPOINTED_USER_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// FREE_STOK control.
+        /// idFREE_STOK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList FREE_STOK;
+        protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
         
         /// <summary>
-        /// REVISION control.
+        /// idREVISION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList REVISION;
+        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
         
         /// <summary>
-        /// DELIVERY_TYPE control.
+        /// idDELIVERY_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DELIVERY_TYPE;
+        protected global::System.Web.UI.WebControls.DropDownList idDELIVERY_TYPE;
         
         /// <summary>
-        /// PAYMENT_TYPE control.
+        /// idPAYMENT_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PAYMENT_TYPE;
+        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
         
         /// <summary>
-        /// SEARCH_METHOD control.
+        /// idSEARCH_METHOD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SEARCH_METHOD;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_METHOD;
         
         /// <summary>
-        /// SEARCH_STEP control.
+        /// idSEARCH_STEP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SEARCH_STEP;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
         
         /// <summary>
-        /// CERTIFICATE_DATE control.
+        /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CERTIFICATE_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
         
         /// <summary>
-        /// PROJECT_CODE control.
+        /// idPROJECT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROJECT_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
         
         /// <summary>
-        /// LAST_POSITION control.
+        /// idLAST_POSITION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList LAST_POSITION;
+        protected global::System.Web.UI.WebControls.DropDownList idLAST_POSITION;
         
         /// <summary>
-        /// WHY_LOST control.
+        /// idWHY_LOST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList WHY_LOST;
+        protected global::System.Web.UI.WebControls.DropDownList idWHY_LOST;
         
         /// <summary>
-        /// RIVAL_COMPANY_CODE control.
+        /// idRIVAL_COMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList RIVAL_COMPANY_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idRIVAL_COMPANY_CODE;
         
         /// <summary>
-        /// EXPLANATION control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EXPLANATION;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
     }
 }

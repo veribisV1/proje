@@ -26,6 +26,18 @@
                         </td>
                     </tr>
                     <tr>
+                        <tr>
+                        <td>
+                            <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <tr>
+                        <td>
+                            <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="ButtonYeni" Text="Telefon Ekle" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>
                         <td>
                             <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonFirmaEkleKaydet_Click1" />
                         </td>
@@ -81,63 +93,8 @@
 
                                 </td>
                             </tr>
-                            <tr>
-                                <td width="35%">Adres
-                                </td>
-                                <td width="2%">:</td>
-                                <td>
-                                    <div class="gridDiv">
-                                        <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn">
-                                            <AlternatingRowStyle BackColor="White" />
-                                            <EditRowStyle BackColor="#2461BF" />
-                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                            <RowStyle BackColor="#EFF3FB" />
-                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                                        </asp:GridView>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="35%">Telefon
-                                </td>
-                                <td width="2%">:
-                                </td>
-                                <td>
-                                    <div class="gridDiv">
-                                        <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn">
-                                            <AlternatingRowStyle BackColor="White" />
-                                            <EditRowStyle BackColor="#2461BF" />
-                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                            <RowStyle BackColor="#EFF3FB" />
-                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                                        </asp:GridView>
-                                    </div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="35%">Kuruluş Tarihi
-                                </td>
-                                <td width="2%">:
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="idFOUNDATION_DATE" runat="server" Width="101%" Height="25px" TextMode="Date"></asp:TextBox>
-
-                                </td>
-                            </tr>
-
+                            
+                            
 
                             <tr>
                                 <td width="35%">&nbsp;</td>
@@ -239,6 +196,17 @@
                                     <asp:TextBox ID="idWEBADDRESS" MaxLength="150" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
+                            <tr>
+                                <td width="35%">Kuruluş Tarihi
+                                </td>
+                                <td width="2%">:
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="idFOUNDATION_DATE" runat="server" Width="101%" Height="25px" TextMode="Date"></asp:TextBox>
+
+                                </td>
+                            </tr>
+
 
                         </table>
 
@@ -341,6 +309,62 @@
                         </table>
 
                     </div>
+                    <div class="ALAN6"><br />
+                        <asp:Button ID="idAdresEkle" runat="server" CssClass="AdresEkle" Text="Adres Ekle" />
+                        <table class="KisiTable">
+                            <tr>
+                          
+                                <td>
+                                    <div class="gridDivAdres">
+                                        <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn" EmptyDataText="Adres bilgisi mevcut değil.">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px"/>
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        </asp:GridView>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            
+                        </table>
+
+                    </div>
+                    <div class="ALAN6"><br />
+                        <asp:Button ID="idTelefonEkle" runat="server" CssClass="TelefonEkle" Text="Telefon Ekle" />
+                          <table class="KisiTable">
+                              <tr>
+                        
+                                <td>
+                                    <div class="gridDivTelefon">
+                                        <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn" EmptyDataText="İletişim bilgisi mevcut değil.">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <EditRowStyle BackColor="#2461BF" />
+                                             <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px"/>
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        </asp:GridView>
+                                    </div>
+
+                                </td>
+                            </tr>
+                          </table>
+                      </div>
 
                 </div>
             </div>

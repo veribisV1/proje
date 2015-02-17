@@ -68,6 +68,34 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("49"));
             return liste;
         }
+        public Dictionary<string, string> getTip(byte tipNo)
+        {
+            string grupKod="-1";
+            DBTOOL db = new DBTOOL();
+            switch (tipNo)
+            {
+                case 1:
+                    grupKod = "34";
+                    break;
+                case 2:
+                    grupKod = "35";
+                    break;
+                case 3:
+                    grupKod = "36";
+                    break;
+                case 4:
+                    grupKod = "37";
+                    break;
+                case 5:
+                    grupKod = "38";
+                    break;
+                
+                default:
+                    break;
+            }
+            Dictionary<string, string> liste = db.getDictionary(getSQL(grupKod));
+            return liste;
+        }
         public Dictionary<string, string> getSektor()
         {
             DBTOOL db = new DBTOOL();

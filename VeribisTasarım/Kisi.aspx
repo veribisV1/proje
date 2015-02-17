@@ -311,7 +311,57 @@
                        </table>
                       
                   </div>
-                    
+                    <div class="ALAN6"><br />
+                     <asp:Button ID="idAdresEkle" runat="server" CssClass="AdresEkleKisi" Text="Adres Ekle" />
+                        <table class="KisiTable">
+                            <tr>
+                          
+                                <td>
+                                    <div class="gridDivAdresKisi">
+                                        <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        </asp:GridView>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="ALAN6">
+                         <asp:Button ID="idTelefonEkle" runat="server" CssClass="TelefonEkleKisi" Text="Telefon Ekle" />
+                            <table class="KisiTable">
+                                <tr>
+                        
+                                <td>
+                                    <div class="gridDivTelefonKisi">
+                                        <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        </asp:GridView>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
                     </div>
                  </div>
             <div id="AktivitePlanla"></div>

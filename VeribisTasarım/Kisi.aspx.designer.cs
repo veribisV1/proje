@@ -229,6 +229,42 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idLAST_STATE;
         
         /// <summary>
+        /// idAdresEkle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idAdresEkle;
+        
+        /// <summary>
+        /// idADDRESS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView idADDRESS;
+        
+        /// <summary>
+        /// idTelefonEkle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idTelefonEkle;
+        
+        /// <summary>
+        /// idPHONE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView idPHONE;
+        
+        /// <summary>
         /// idButtonNotEkleYeni control.
         /// </summary>
         /// <remarks>

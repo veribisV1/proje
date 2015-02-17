@@ -40,7 +40,8 @@ namespace VeribisTasarım
             #endregion
 
             #region Makina Parkı DropDownları doldur
-
+            idNAME = dbGetir.doldur(idNAME, dbGetir.getMarka());
+            idMAKINAPARKI_YILI = dbGetir.doldur(idMAKINAPARKI_YILI, dbGetir.getModel());
             #endregion
 
         }

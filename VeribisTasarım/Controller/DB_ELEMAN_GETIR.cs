@@ -31,6 +31,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
         }
+
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
         /// </summary>
@@ -54,7 +55,19 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+        public Dictionary<string, string> getMarka()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("23"));          
+            return liste;
+        }
 
+        public Dictionary<string, string> getModel()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("49"));
+            return liste;
+        }
         public Dictionary<string, string> getSektor()
         {
             DBTOOL db = new DBTOOL();

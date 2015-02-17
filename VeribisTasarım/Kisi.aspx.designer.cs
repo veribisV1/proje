@@ -13,238 +13,220 @@ namespace VeribisTasarım {
     public partial class Kisi {
         
         /// <summary>
-        /// ButtonKisiEkleYeni control.
+        /// idButtonKisiEkleYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonKisiEkleYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonKisiEkleYeni;
         
         /// <summary>
-        /// ButtonKisiEkleKaydet control.
+        /// idButtonKisiEkleKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonKisiEkleKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonKisiEkleKaydet;
         
         /// <summary>
-        /// ButtonKisiEkleSil control.
+        /// idButtonKisiEkleSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonKisiEkleSil;
+        protected global::System.Web.UI.WebControls.Button idButtonKisiEkleSil;
         
         /// <summary>
-        /// KISI_ADI control.
+        /// idNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_ADI;
+        protected global::System.Web.UI.WebControls.TextBox idNAME;
         
         /// <summary>
-        /// KISI_IKINCI_ADI control.
+        /// idMIDDLE_NAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_IKINCI_ADI;
+        protected global::System.Web.UI.WebControls.TextBox idMIDDLE_NAME;
         
         /// <summary>
-        /// KISI_SOYADI control.
+        /// idSURNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_SOYADI;
+        protected global::System.Web.UI.WebControls.TextBox idSURNAME;
         
         /// <summary>
-        /// KISI_OZEL_KODU control.
+        /// idSPACIAL_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_OZEL_KODU;
+        protected global::System.Web.UI.WebControls.TextBox idSPACIAL_CODE;
         
         /// <summary>
-        /// KISI_KISA_ADI control.
+        /// idNICNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_KISA_ADI;
+        protected global::System.Web.UI.WebControls.TextBox idNICNAME;
         
         /// <summary>
-        /// KISI_FIRMA control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_FIRMA;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// KISI_CINSIYET control.
+        /// idSEXUALITY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_CINSIYET;
+        protected global::System.Web.UI.WebControls.DropDownList idSEXUALITY;
         
         /// <summary>
-        /// KISI_TELEFON control.
+        /// idDEPARTMENT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_TELEFON;
+        protected global::System.Web.UI.WebControls.DropDownList idDEPARTMENT;
         
         /// <summary>
-        /// KISI_ADRES control.
+        /// idTITLE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_ADRES;
+        protected global::System.Web.UI.WebControls.DropDownList idTITLE;
         
         /// <summary>
-        /// KISI_DEPARTMANI control.
+        /// idGROUP_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_DEPARTMANI;
+        protected global::System.Web.UI.WebControls.DropDownList idGROUP_CODE;
         
         /// <summary>
-        /// KISI_UNVANI control.
+        /// idCONTACT_REPRESENT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_UNVANI;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_REPRESENT_CODE;
         
         /// <summary>
-        /// KISI_GRUBU control.
+        /// idSTATUS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_GRUBU;
+        protected global::System.Web.UI.WebControls.DropDownList idSTATUS;
         
         /// <summary>
-        /// KISI_TEMSILCISI control.
+        /// idBIRTHDATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_TEMSILCISI;
+        protected global::System.Web.UI.WebControls.TextBox idBIRTHDATE;
         
         /// <summary>
-        /// KISI_AKTIF control.
+        /// idLANGUAGE_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_AKTIF;
+        protected global::System.Web.UI.WebControls.DropDownList idLANGUAGE_CODE;
         
         /// <summary>
-        /// KISI_DOGUM_TARIHI control.
+        /// idASSOCIATION_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_DOGUM_TARIHI;
+        protected global::System.Web.UI.WebControls.DropDownList idASSOCIATION_CODE;
         
         /// <summary>
-        /// KISI_BILDIGI_DILLER control.
+        /// idPRETITLE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_BILDIGI_DILLER;
+        protected global::System.Web.UI.WebControls.DropDownList idPRETITLE;
         
         /// <summary>
-        /// KISI_UYE_DERNEKLER control.
+        /// idMAIL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_UYE_DERNEKLER;
+        protected global::System.Web.UI.WebControls.TextBox idMAIL;
         
         /// <summary>
-        /// KISI_HITAP control.
+        /// idPERSONALWEBADDRESS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_HITAP;
+        protected global::System.Web.UI.WebControls.TextBox idPERSONALWEBADDRESS;
         
         /// <summary>
-        /// KISI_MAIL_ADRESI control.
+        /// idCONTACT_REFERANCE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_MAIL_ADRESI;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_REFERANCE;
         
         /// <summary>
-        /// KISI_WEB_ADRESI control.
+        /// idEDUCATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_WEB_ADRESI;
+        protected global::System.Web.UI.WebControls.DropDownList idEDUCATION;
         
         /// <summary>
-        /// KISI_REFERANS control.
+        /// idLAST_STATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_REFERANS;
-        
-        /// <summary>
-        /// KISI_EGITIMI control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KISI_EGITIMI;
-        
-        /// <summary>
-        /// KISI_SON_DURUM control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox KISI_SON_DURUM;
+        protected global::System.Web.UI.WebControls.TextBox idLAST_STATE;
         
         /// <summary>
         /// ButtonNotEkleYeni control.

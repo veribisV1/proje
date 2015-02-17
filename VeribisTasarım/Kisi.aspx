@@ -24,6 +24,17 @@
                             <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <tr>
+                        <td>
+                            <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="ButtonYeni" Text="Telefon Ekle" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
                     <tr>         
                         <td>
                             <asp:Button ID="idButtonKisiEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />

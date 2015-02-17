@@ -22,6 +22,24 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonKisiEkleYeni;
         
         /// <summary>
+        /// idButtonAdresYeni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonAdresYeni;
+        
+        /// <summary>
+        /// idButtonTelefonYeni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonTelefonYeni;
+        
+        /// <summary>
         /// idButtonKisiEkleKaydet control.
         /// </summary>
         /// <remarks>

@@ -13,219 +13,210 @@ namespace VeribisTasarım {
     public partial class Teklif {
         
         /// <summary>
-        /// ButtonTeklifEkleYeni control.
+        /// idButtonTeklifEkleYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonTeklifEkleYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonTeklifEkleYeni;
         
         /// <summary>
-        /// ButtonTeklifEkleKaydet control.
+        /// idButtonTeklifEkleKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonTeklifEkleKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonTeklifEkleKaydet;
         
         /// <summary>
-        /// ButtonTeklifEkleSil control.
+        /// idButtonTeklifEkleSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonTeklifEkleSil;
+        protected global::System.Web.UI.WebControls.Button idButtonTeklifEkleSil;
         
         /// <summary>
-        /// TEKLIF_KODU control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_KODU;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// TEKLIF_FIRMA_ADI control.
+        /// idCONTACT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_FIRMA_ADI;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// TEKLIF_KONTAK control.
+        /// idDOCUMENT_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_KONTAK;
+        protected global::System.Web.UI.WebControls.DropDownList idDOCUMENT_TYPE;
         
         /// <summary>
-        /// TEKLIF_EVRAK_TIPI control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_EVRAK_TIPI;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// TEKLIF_EVRAK_NO1 control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TEKLIF_EVRAK_NO1;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// TEKLIF_EVRAK_NO2 control.
+        /// idSELLING_BUYING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TEKLIF_EVRAK_NO2;
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
-        /// TEKLIF_CINSI control.
+        /// idDOCUMENT_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_CINSI;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
         
         /// <summary>
-        /// TEKLIF_EVRAK_TARIHI control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TEKLIF_EVRAK_TARIHI;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// TEKLIF_TEMSILCISI control.
+        /// idFREE_STOK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_TEMSILCISI;
+        protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
         
         /// <summary>
-        /// TEKLIF_STOK_BAGIMSIZ control.
+        /// idREVISION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList TEKLIF_STOK_BAGIMSIZ;
+        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
         
         /// <summary>
-        /// TEKLIF_REVIZYON control.
+        /// idDELIVERY_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_REVIZYON;
+        protected global::System.Web.UI.WebControls.DropDownList idDELIVERY_TYPE;
         
         /// <summary>
-        /// TEKLIF_TESLIM_SEKLI control.
+        /// idPAYMENT_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_TESLIM_SEKLI;
+        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
         
         /// <summary>
-        /// TEKLIF_ODEME_SEKLI control.
+        /// idSEARCH_METHOD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_ODEME_SEKLI;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_METHOD;
         
         /// <summary>
-        /// TEKLIF_TAKIP_YON control.
+        /// idSEARCH_STEP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_TAKIP_YON;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
         
         /// <summary>
-        /// TEKLIF_TAKIP_ASAMASI control.
+        /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_TAKIP_ASAMASI;
+        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
         
         /// <summary>
-        /// TEKLIF_GECERLILIK_TARIHI control.
+        /// idPROJECT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TEKLIF_GECERLILIK_TARIHI;
+        protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
         
         /// <summary>
-        /// TEKLIF_PROJE control.
+        /// idLAST_POSITION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_PROJE;
+        protected global::System.Web.UI.WebControls.DropDownList idLAST_POSITION;
         
         /// <summary>
-        /// TEKLIF_SON_DURUM control.
+        /// idWHY_LOST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_SON_DURUM;
+        protected global::System.Web.UI.WebControls.DropDownList idWHY_LOST;
         
         /// <summary>
-        /// TEKLIF_NEDEN_KAYBETTIK control.
+        /// idRIVAL_COMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_NEDEN_KAYBETTIK;
+        protected global::System.Web.UI.WebControls.DropDownList idRIVAL_COMPANY_CODE;
         
         /// <summary>
-        /// TEKLIF_KAZANAN_FIRMA control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEKLIF_KAZANAN_FIRMA;
-        
-        /// <summary>
-        /// TEKLIF_ACIKLAMA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TEKLIF_ACIKLAMA;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
     }
 }

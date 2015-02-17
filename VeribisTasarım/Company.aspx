@@ -316,9 +316,10 @@
                           
                                 <td>
                                     <div class="gridDivAdres">
-                                        <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn">
+                                        <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn" EmptyDataText="Adres bilgisi mevcut değil.">
                                             <AlternatingRowStyle BackColor="White" />
                                             <EditRowStyle BackColor="#2461BF" />
+                                            <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px"/>
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
@@ -344,9 +345,10 @@
                         
                                 <td>
                                     <div class="gridDivTelefon">
-                                        <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn">
+                                        <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn" EmptyDataText="İletişim bilgisi mevcut değil.">
                                             <AlternatingRowStyle BackColor="White" />
                                             <EditRowStyle BackColor="#2461BF" />
+                                             <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px"/>
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />

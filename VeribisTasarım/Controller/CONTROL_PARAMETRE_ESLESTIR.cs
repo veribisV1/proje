@@ -42,7 +42,7 @@ namespace VeribisTasarım.Controller
                         if (eleman.GetType() == typeof(DropDownList))
                         {
                             DropDownList elemanText = (DropDownList)eleman;
-                            dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.Text));
+                            dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedValue));
 
                         }
                         else

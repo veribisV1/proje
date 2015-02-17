@@ -332,7 +332,7 @@ textarea
 /* =============================================
 ----------------- ADRES-GRÝDVÝEW -------
 ==============================================*/
-.gridDivAdres { position:relative; right:1%; width:132%; background-color:black; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.gridDivAdres { position:relative; right:1%; width:132%; background-color:black; margin: 5px 0 10px 0; /*border: solid 1px #525252;*/ border-collapse:collapse; }
 .gridDivAdres td { padding:2px 15px; border: solid 1px #012353; color:black}
 .gridDivAdres th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
 .gridDivAdres .alt { background: #000 url(grd_alt.png) repeat-x top; }
@@ -358,7 +358,7 @@ textarea
 /* =============================================
 ----------------- TELEFON-GRÝDVÝEW -------
 ==============================================*/
-.gridDivTelefon { position:relative; left:36%; width:65%; background-color:black; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.gridDivTelefon { position:relative; left:36%; width:65%; background-color:black; margin: 5px 0 10px 0; /*border: solid 1px #525252;*/ border-collapse:collapse; }
 .gridDivTelefon td { padding:2px 15px; border: solid 1px #012353; color:black}
 .gridDivTelefon th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
 .gridDivTelefon .alt { background: #000 url(grd_alt.png) repeat-x top; }

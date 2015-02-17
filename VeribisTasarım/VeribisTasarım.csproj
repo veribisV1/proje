@@ -91,7 +91,9 @@
     <Content Include="script\jqueryui\jquery-ui.theme.css" />
     <Content Include="script\jqueryui\jquery-ui.theme.min.css" />
     <Content Include="TelefonEkle.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -61,10 +62,11 @@ namespace VeribisTasarım
             Dictionary<string, string> list = new Dictionary<string, string>();
             adapter = new SqlDataAdapter();
             komut = new SqlCommand(sorgu, connection);
-            connection.Open();
+            connection.Open(); 
             using (SqlDataReader rdr = komut.ExecuteReader())
             {
-                list.Add("-1", "");
+                
+                //list.Add("-1", "");
                 while (rdr.Read())
                 {
                     list.Add(rdr["col1"].ToString(), rdr["col2"].ToString());

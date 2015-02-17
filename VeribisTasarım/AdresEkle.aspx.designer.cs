@@ -103,13 +103,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idADDRESS2;
         
         /// <summary>
-        /// ADDRESS3 control.
+        /// idADDRESS3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ADDRESS3;
+        protected global::System.Web.UI.WebControls.TextBox idADDRESS3;
         
         /// <summary>
         /// idCOUNTY2 control.

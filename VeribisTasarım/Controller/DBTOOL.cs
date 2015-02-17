@@ -115,7 +115,6 @@ namespace VeribisTasarım
 
             foreach (KeyValuePair<string, object> item in parametreler)
             {
-
                 komut.Parameters.AddWithValue(item.Key, item.Value);
             }
 

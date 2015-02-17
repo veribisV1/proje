@@ -82,7 +82,7 @@ namespace VeribisTasarım
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
             int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
-            int c = companyCode;
+            
 
         }
 

@@ -319,17 +319,17 @@
                 <div class="KisiTableHizalama">
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonNotEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonNotEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonNotEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonNotEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonNotEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonNotEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                 <hr />
@@ -343,7 +343,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="NOT_EKLE_TARIH" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idSDATE" Width="30%" Height="20px" TextMode="Date" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                              <tr>
@@ -354,7 +354,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="NOT_EKLE_ACIKLAMA" Width="100%" Height="100px" TextMode="MultiLine" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idEXPLANATION" Width="100%" Height="100px" TextMode="MultiLine" MaxLength="1000" runat="server"></asp:TextBox>
                         </td>
                     </tr>
 

@@ -229,49 +229,49 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idLAST_STATE;
         
         /// <summary>
-        /// ButtonNotEkleYeni control.
+        /// idButtonNotEkleYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonNotEkleYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonNotEkleYeni;
         
         /// <summary>
-        /// ButtonNotEkleKaydet control.
+        /// idButtonNotEkleKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonNotEkleKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonNotEkleKaydet;
         
         /// <summary>
-        /// ButtonNotEkleSil control.
+        /// idButtonNotEkleSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonNotEkleSil;
+        protected global::System.Web.UI.WebControls.Button idButtonNotEkleSil;
         
         /// <summary>
-        /// NOT_EKLE_TARIH control.
+        /// idSDATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NOT_EKLE_TARIH;
+        protected global::System.Web.UI.WebControls.TextBox idSDATE;
         
         /// <summary>
-        /// NOT_EKLE_ACIKLAMA control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NOT_EKLE_ACIKLAMA;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
         
         /// <summary>
         /// ButtonAileBilgileriYeni control.

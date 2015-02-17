@@ -274,102 +274,102 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
         
         /// <summary>
-        /// ButtonAileBilgileriYeni control.
+        /// idButtonAileBilgileriYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAileBilgileriYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonAileBilgileriYeni;
         
         /// <summary>
-        /// ButtonAileBilgileriKaydet control.
+        /// idButtonAileBilgileriKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAileBilgileriKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonAileBilgileriKaydet;
         
         /// <summary>
-        /// ButtonAileBilgileriSil control.
+        /// idButtonAileBilgileriSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAileBilgileriSil;
+        protected global::System.Web.UI.WebControls.Button idButtonAileBilgileriSil;
         
         /// <summary>
-        /// AILE_BILGILERI_MEDENI_HALI control.
+        /// idISMARRIED control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AILE_BILGILERI_MEDENI_HALI;
+        protected global::System.Web.UI.WebControls.DropDownList idISMARRIED;
         
         /// <summary>
-        /// AILE_BILGILERI_EVLILIK_YILDONUMU control.
+        /// idANNIVERSARY_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AILE_BILGILERI_EVLILIK_YILDONUMU;
+        protected global::System.Web.UI.WebControls.TextBox idANNIVERSARY_DATE;
         
         /// <summary>
-        /// AILE_BILGILERI_ESININ_ADI control.
+        /// idPARTNER_NAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AILE_BILGILERI_ESININ_ADI;
+        protected global::System.Web.UI.WebControls.TextBox idPARTNER_NAME;
         
         /// <summary>
-        /// AILE_BILGILERI_ESININ_IKINCI_ADI control.
+        /// idPARTNER_MIDDLE_NAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AILE_BILGILERI_ESININ_IKINCI_ADI;
+        protected global::System.Web.UI.WebControls.TextBox idPARTNER_MIDDLE_NAME;
         
         /// <summary>
-        /// AILE_BILGILERI_ESININ_SOYADI control.
+        /// idPARTNER_SURNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AILE_BILGILERI_ESININ_SOYADI;
+        protected global::System.Web.UI.WebControls.TextBox idPARTNER_SURNAME;
         
         /// <summary>
-        /// AILE_BILGILERI_COCUK_SAYISI control.
+        /// idCHILD_COUNT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AILE_BILGILERI_COCUK_SAYISI;
+        protected global::System.Web.UI.WebControls.TextBox idCHILD_COUNT;
         
         /// <summary>
-        /// AILE_BILGILERI_EVI_VAR_MI control.
+        /// idHAVE_HOME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AILE_BILGILERI_EVI_VAR_MI;
+        protected global::System.Web.UI.WebControls.DropDownList idHAVE_HOME;
         
         /// <summary>
-        /// AILE_BILGILERI_EV_SKALASI control.
+        /// idHOME_RATING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AILE_BILGILERI_EV_SKALASI;
+        protected global::System.Web.UI.WebControls.DropDownList idHOME_RATING;
     }
 }

@@ -375,17 +375,17 @@
                 <div class="KisiTableHizalama">
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonAileBilgileriYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonAileBilgileriYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonAileBilgileriKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonAileBilgileriKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="ButtonAileBilgileriSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonAileBilgileriSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
                 <hr />
@@ -402,7 +402,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="AILE_BILGILERI_MEDENI_HALI" runat="server" Height="26px" Width="32%">
+                         <asp:DropDownList ID="idISMARRIED" runat="server" Height="26px" Width="32%">
                             
                          </asp:DropDownList>
                         </td>
@@ -415,7 +415,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="AILE_BILGILERI_EVLILIK_YILDONUMU" Width="30%" Height="20px" TextMode="DateTime" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idANNIVERSARY_DATE" Width="30%" Height="20px" TextMode="Date" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -426,7 +426,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="AILE_BILGILERI_ESININ_ADI" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idPARTNER_NAME" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -437,7 +437,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="AILE_BILGILERI_ESININ_IKINCI_ADI" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idPARTNER_MIDDLE_NAME" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -448,7 +448,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="AILE_BILGILERI_ESININ_SOYADI" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idPARTNER_SURNAME" Width="30%" Height="20px" MaxLength="30" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -459,7 +459,7 @@
                           :
                         </td>
                         <td>
-                         <asp:TextBox ID="AILE_BILGILERI_COCUK_SAYISI" Width="30%" Height="20px" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="idCHILD_COUNT" Width="30%" Height="20px" MaxLength="10" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
@@ -470,7 +470,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="AILE_BILGILERI_EVI_VAR_MI" runat="server" Height="26px" Width="32%">
+                         <asp:DropDownList ID="idHAVE_HOME" runat="server" Height="26px" Width="32%">
                             
                          </asp:DropDownList>
                         </td>
@@ -483,7 +483,7 @@
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="AILE_BILGILERI_EV_SKALASI" runat="server" Height="26px" Width="32%">
+                         <asp:DropDownList ID="idHOME_RATING" runat="server" Height="26px" Width="32%">
                             
                          </asp:DropDownList>
                         </td>

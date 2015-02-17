@@ -103,6 +103,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idSEXUALITY;
         
         /// <summary>
+        /// idASSOCIATION_CODE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idASSOCIATION_CODE;
+        
+        /// <summary>
         /// idDEPARTMENT control.
         /// </summary>
         /// <remarks>
@@ -164,15 +173,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList idLANGUAGE_CODE;
-        
-        /// <summary>
-        /// idASSOCIATION_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idASSOCIATION_CODE;
         
         /// <summary>
         /// idPRETITLE control.

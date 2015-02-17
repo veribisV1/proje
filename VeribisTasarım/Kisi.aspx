@@ -120,6 +120,19 @@
                          </asp:DropDownList>
                         </td>
                     </tr>
+                    <tr>
+                        <td width="35%">
+                        Üye Dernekler
+                        </td>
+                        <td width="2%">
+                          :
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="104%">
+                            
+                         </asp:DropDownList>
+                        </td>
+                    </tr>
                    
         </table>
                    
@@ -215,19 +228,7 @@
                          </asp:DropDownList>
                         </td>
                     </tr>
-                    <tr>
-                        <td width="35%">
-                        Üye Dernekler
-                        </td>
-                        <td width="2%">
-                          :
-                        </td>
-                        <td>
-                          <asp:DropDownList ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="104%">
-                            
-                         </asp:DropDownList>
-                        </td>
-                    </tr>
+                    
                         <tr>
                         <td width="35%">
                         Hitap

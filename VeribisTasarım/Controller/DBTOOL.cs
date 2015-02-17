@@ -37,10 +37,10 @@ namespace VeribisTasarım
             return new DataTable();
         }
 
-    
 
 
-        public DataTable get(string storedProcedureAdi,int kod)
+
+        public DataTable get(string storedProcedureAdi, int kod)
         {
             return new DataTable();
         }
@@ -56,7 +56,7 @@ namespace VeribisTasarım
         }
 
 
-        public Dictionary<string,string> getDictionary(string sorgu)
+        public Dictionary<string, string> getDictionary(string sorgu)
         {
             Dictionary<string, string> list = new Dictionary<string, string>();
             adapter = new SqlDataAdapter();
@@ -79,7 +79,7 @@ namespace VeribisTasarım
         /// </summary>
         /// <param name="prosedurAdi"></param>
         /// <returns></returns>
-        public Dictionary<string,string> getParameterList(string prosedurAdi)
+        public Dictionary<string, string> getParameterList(string prosedurAdi)
         {
             Dictionary<string, string> list = new Dictionary<string, string>();
             komut = new SqlCommand();
@@ -90,9 +90,9 @@ namespace VeribisTasarım
             SqlCommandBuilder.DeriveParameters(komut);
             foreach (SqlParameter p in komut.Parameters)
             {
-                if (!p.ParameterName.Equals("@RETURN_VALUE") )//&& !p.ParameterName.Equals("@ReturnValue"))
+                if (!p.ParameterName.Equals("@RETURN_VALUE"))//&& !p.ParameterName.Equals("@ReturnValue"))
                 {
-                    list.Add(p.ParameterName,p.SqlDbType.ToString());
+                    list.Add(p.ParameterName, p.SqlDbType.ToString());
                 }
             }
             connection.Close();
@@ -115,13 +115,16 @@ namespace VeribisTasarım
 
             foreach (KeyValuePair<string, object> item in parametreler)
             {
-               
+
                 komut.Parameters.AddWithValue(item.Key, item.Value);
             }
 
+            SqlParameter retval = komut.Parameters.Add("@return_value", SqlDbType.Int);
+            retval.Direction = ParameterDirection.ReturnValue;
             komut.ExecuteNonQuery();
             connection.Close();
-            return Convert.ToInt16(komut.Parameters["@ReturnValue"].Value);
+            return Convert.ToInt16(komut.Parameters["@return_value"].Value);
+
             // prosedurden gelen veri int türüne dönüşüp gönderilir
         }
         /// <summary>

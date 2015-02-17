@@ -27,6 +27,7 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            #region Firma Ekle DropDownları doldur
             idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
             idCOMPANY_SPECIAL_TYPE = dbGetir.doldur(idCOMPANY_SPECIAL_TYPE, dbGetir.getFirmaTipi());
@@ -36,6 +37,12 @@ namespace VeribisTasarım
             idGROUP_CODE = dbGetir.doldur(idGROUP_CODE, dbGetir.getGrup());
             idCOMPANY_REFERANCE = dbGetir.doldur(idCOMPANY_REFERANCE, dbGetir.getReferans());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
+            #endregion
+
+            #region Makina Parkı DropDownları doldur
+
+            #endregion
+
         }
 
 
@@ -70,12 +77,12 @@ namespace VeribisTasarım
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            string a = idSECTOR.SelectedValue;
+            FIRMA firma = new FIRMA();            
             Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertCompany");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
             int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
+            int c = companyCode;
 
         }
 

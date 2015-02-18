@@ -49,85 +49,85 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonGeriDon;
         
         /// <summary>
-        /// idFaturaCOMPANY_CODE control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaCOMPANY_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// idFaturaSELLING_BUYING control.
+        /// idSELLING_BUYING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaSELLING_BUYING;
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
-        /// idFaturaNORMAL_BACK control.
+        /// idNORMAL_BACK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaNORMAL_BACK;
+        protected global::System.Web.UI.WebControls.DropDownList idNORMAL_BACK;
         
         /// <summary>
-        /// idFaturaDOCUMENT_NO1 control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFaturaDOCUMENT_NO1;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// idFaturaDOCUMENT_NO2 control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFaturaDOCUMENT_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// idFaturaDOCUMENT_DATE control.
+        /// idDOCUMENT_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFaturaDOCUMENT_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
         
         /// <summary>
-        /// idFaturaAPPOINTED_USER_CODE control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaAPPOINTED_USER_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// idFaturaWAREHOUSE control.
+        /// idWAREHOUSE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaWAREHOUSE;
+        protected global::System.Web.UI.WebControls.DropDownList idWAREHOUSE;
         
         /// <summary>
-        /// idFaturaPAYMENT_TYPE control.
+        /// idPAYMENT_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaPAYMENT_TYPE;
+        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
         
         /// <summary>
         /// idPROJECT_CODE control.
@@ -139,30 +139,30 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
         
         /// <summary>
-        /// idFaturaOPEN_CLOSE control.
+        /// idOPEN_CLOSE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaOPEN_CLOSE;
+        protected global::System.Web.UI.WebControls.DropDownList idOPEN_CLOSE;
         
         /// <summary>
-        /// idFaturaGROUPS control.
+        /// idGROUPS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idFaturaGROUPS;
+        protected global::System.Web.UI.WebControls.DropDownList idGROUPS;
         
         /// <summary>
-        /// idFaturaEXPLANATION control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFaturaEXPLANATION;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
     }
 }

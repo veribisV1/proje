@@ -33,17 +33,7 @@
                 <hr />
                     <div class="ALAN4">
                         <table class="KisiTable">
-                            <tr>
-                                <td width="15%">Kodu
-                                </td>
-                                <td width="2%">:
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="idCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-
+                            
                             <tr>
                                 <td width="15%">Firma Adı
                                 </td>

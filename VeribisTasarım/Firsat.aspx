@@ -6,6 +6,7 @@
         <h3>FIRSAT</h3>
         <div class="tabmenu">
             <ul>
+                <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li><a href="#FirsatEkle">Fırsat Ekle</a></li>
                 
             </ul>
@@ -281,6 +282,44 @@
                     </div>
                 
                  </div>
+                <div id="ListeAdi"style="min-height: 100px">
+                    <div class="KisiTableHizalama">
+                        <tr>
+
+                        <td>
+                            <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="TextBoxArama" Height="20px" Width="30%"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="ButtonArama" Text="Ara" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+
+                    <hr />
+                        <div class="ALAN12">
+                            <div class="KisiTableHizalama">
+                                <table class="KisiTable">
+                                    <tr>
+                                        <td>
+                                   <asp:GridView ID="idFirsatGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                                       <Columns>
+                                           <asp:BoundField DataField="FİRMA" HeaderText="FİRMA" ReadOnly="True" SortExpression="FİRMA" />
+                                           <asp:BoundField DataField="KİŞİ" HeaderText="KİŞİ" ReadOnly="True" SortExpression="KİŞİ" />
+                                           <asp:BoundField DataField="TEMSİLCİ" HeaderText="TEMSİLCİ" SortExpression="TEMSİLCİ" ReadOnly="True" />
+                                           <asp:BoundField DataField="DOCUMENT_DATE" HeaderText="DOCUMENT_DATE" SortExpression="DOCUMENT_DATE" />
+                                           <asp:BoundField DataField="OPEN_CLOSE" HeaderText="OPEN_CLOSE" SortExpression="OPEN_CLOSE" />
+                                       </Columns>
+                                            </asp:GridView>
+                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [FİRMA], [KİŞİ], [TEMSİLCİ], [DOCUMENT_DATE], [OPEN_CLOSE] FROM [VOTASK]"></asp:SqlDataSource>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             
         </div>
     </div>

@@ -33,16 +33,7 @@
                 <hr />
                     <div class="ALAN4">
                         <table class="KisiTable">
-                            <tr>
-                                <td width="35%">Kodu
-                                </td>
-                                <td width="2%">:
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="idCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="104%">
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
+                           
 
                             <tr>
                                 <td width="35%">Firma Adı
@@ -123,7 +114,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox ID="idEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine" MaxLength="1000"></asp:TextBox>
                                 </td>
                             </tr>
 
@@ -278,7 +269,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNEDEN_KAYBETTIK" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idWHY_LOST" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -288,7 +279,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idKAZANAN_RAKIP_FIRMA" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idRIVAL_COMPANY_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>

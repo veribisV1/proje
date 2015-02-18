@@ -39,7 +39,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaCOMPANY_CODE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -49,7 +49,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaSELLING_BUYING" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idSELLING_BUYING" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -59,7 +59,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaNORMAL_BACK" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idNORMAL_BACK" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -69,8 +69,8 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idFaturaDOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>
-                                    <asp:TextBox ID="idFaturaDOCUMENT_NO2" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_NO2" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -79,7 +79,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idFaturaDOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_DATE" TextMode="DateTime" Height="22px" Width="63%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -88,7 +88,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaAPPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idAPPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
 
                                 </td>
@@ -106,7 +106,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaWAREHOUSE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idWAREHOUSE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -116,7 +116,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaPAYMENT_TYPE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -136,7 +136,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaOPEN_CLOSE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idOPEN_CLOSE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -146,7 +146,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idFaturaGROUPS" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idGROUPS" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -156,7 +156,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idFaturaEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox ID="idEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                             </tr>
 
@@ -168,11 +168,11 @@
                         </table>
 
                     </div>
-                        </table>
+                       
                     </div>
                 </div>
 
             </div>
         </div>
-    </div>
+    
 </asp:Content>

@@ -49,15 +49,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonGeriDon;
         
         /// <summary>
-        /// idCOMPANY_COMMERCIAL_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_COMMERCIAL_CODE;
-        
-        /// <summary>
         /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>

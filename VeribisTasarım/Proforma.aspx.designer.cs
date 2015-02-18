@@ -49,15 +49,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonGeriDon;
         
         /// <summary>
-        /// idCOMPANY_COMMERCIAL_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_COMMERCIAL_CODE;
-        
-        /// <summary>
         /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
@@ -256,21 +247,21 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idSIPARIS_TARIHI;
         
         /// <summary>
-        /// idNEDEN_KAYBETTIK control.
+        /// idWHY_LOST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNEDEN_KAYBETTIK;
+        protected global::System.Web.UI.WebControls.DropDownList idWHY_LOST;
         
         /// <summary>
-        /// idKAZANAN_RAKIP_FIRMA control.
+        /// idRIVAL_COMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idKAZANAN_RAKIP_FIRMA;
+        protected global::System.Web.UI.WebControls.DropDownList idRIVAL_COMPANY_CODE;
     }
 }

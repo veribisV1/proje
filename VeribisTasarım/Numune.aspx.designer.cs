@@ -10,34 +10,43 @@
 namespace VeribisTasarım {
     
     
-    public partial class Fırsat {
+    public partial class Numune {
         
         /// <summary>
-        /// idButtonFirsatEkleYeni control.
+        /// idButtonNumuneEkleYeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleYeni;
+        protected global::System.Web.UI.WebControls.Button idButtonNumuneEkleYeni;
         
         /// <summary>
-        /// idButtonFirsatEkleKaydet control.
+        /// idButtonNumuneEkleKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleKaydet;
+        protected global::System.Web.UI.WebControls.Button idButtonNumuneEkleKaydet;
         
         /// <summary>
-        /// idButtonFirsatEkleSil control.
+        /// idButtonNumuneEkleSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleSil;
+        protected global::System.Web.UI.WebControls.Button idButtonNumuneEkleSil;
+        
+        /// <summary>
+        /// idButtonGeriDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonGeriDon;
         
         /// <summary>
         /// idCOMPANY_CODE control.
@@ -58,6 +67,24 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
+        /// idSELLING_BUYING control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
+        
+        /// <summary>
+        /// idNORMAL_BACK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idNORMAL_BACK;
+        
+        /// <summary>
         /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
@@ -74,15 +101,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
-        
-        /// <summary>
-        /// idSELLING_BUYING control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
         /// idDOCUMENT_DATE control.
@@ -103,6 +121,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
+        /// idWAREHOUSE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idWAREHOUSE;
+        
+        /// <summary>
         /// idFREE_STOK control.
         /// </summary>
         /// <remarks>
@@ -112,31 +139,22 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
         
         /// <summary>
-        /// idREVISION control.
+        /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
+        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
         
         /// <summary>
-        /// idDELIVERY_TYPE control.
+        /// idOPEN_CLOSE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDELIVERY_TYPE;
-        
-        /// <summary>
-        /// idPAYMENT_TYPE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
+        protected global::System.Web.UI.WebControls.DropDownList idOPEN_CLOSE;
         
         /// <summary>
         /// idSEARCH_METHOD control.
@@ -157,13 +175,22 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
         
         /// <summary>
-        /// idCERTIFICATE_DATE control.
+        /// idCURRENT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
+        protected global::System.Web.UI.WebControls.DropDownList idCURRENT_CODE;
+        
+        /// <summary>
+        /// idCATEGORY control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idCATEGORY;
         
         /// <summary>
         /// idPROJECT_CODE control.
@@ -175,31 +202,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
         
         /// <summary>
-        /// idLAST_POSITION control.
+        /// idREVISION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idLAST_POSITION;
-        
-        /// <summary>
-        /// idWHY_LOST control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idWHY_LOST;
-        
-        /// <summary>
-        /// idRIVAL_COMPANY_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idRIVAL_COMPANY_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
         
         /// <summary>
         /// idEXPLANATION control.
@@ -209,95 +218,5 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
-        
-        /// <summary>
-        /// idTextBoxFirsatArama control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTextBoxFirsatArama;
-        
-        /// <summary>
-        /// idButtonFirsatArama control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatArama;
-        
-        /// <summary>
-        /// idLabelFirsatDurum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelFirsatDurum;
-        
-        /// <summary>
-        /// idDropDownFirsatDurum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDropDownFirsatDurum;
-        
-        /// <summary>
-        /// idLabelFirsatBaslangic control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelFirsatBaslangic;
-        
-        /// <summary>
-        /// idFirsatBaslangicTarih control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFirsatBaslangicTarih;
-        
-        /// <summary>
-        /// idLabelFirsatBitis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelFirsatBitis;
-        
-        /// <summary>
-        /// idFirsatBitisTarih control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFirsatBitisTarih;
-        
-        /// <summary>
-        /// idFirsatGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView idFirsatGridView;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

@@ -63,6 +63,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Firsat.aspx" />
     <Content Include="Kisi.aspx" />
+    <Content Include="Numune.aspx" />
     <Content Include="Teklif.aspx" />
     <Content Include="style\responsive.css" />
     <Content Include="style\stil.css" />
@@ -143,6 +144,13 @@
     </Compile>
     <Compile Include="Kisi.aspx.designer.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Numune.aspx.cs">
+      <DependentUpon>Numune.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Numune.aspx.designer.cs">
+      <DependentUpon>Numune.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResGetir.cs" />
     <Compile Include="Teklif.aspx.cs">

@@ -139,8 +139,13 @@ namespace VeribisTasarım.Controller
         public Dictionary<string, string> getGrup()
         {
             DBTOOL db = new DBTOOL();
-            Dictionary<string, string> liste = db.getDictionary(getSQL("20"));
-            //"SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=20 ORDER BY ROW_ORDER_NO");
+            Dictionary<string, string> liste = db.getDictionary(getSQL("20"));            
+            return liste;
+        }
+        public Dictionary<string, string> getGrupKisi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("53"));
             return liste;
         }
         public Dictionary<string, string> getReferans()
@@ -255,6 +260,12 @@ namespace VeribisTasarım.Controller
         {
             DBTOOL db = new DBTOOL();
             Dictionary<string, string> liste = db.getDictionary(getSQL("97"));
+            return liste;
+        }
+        public Dictionary<string, string> getUnvanlar()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("12"));
             return liste;
         }
         public Dictionary<string, string> getUnvanlar()

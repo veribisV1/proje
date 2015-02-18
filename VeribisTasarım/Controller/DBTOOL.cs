@@ -64,14 +64,23 @@ namespace VeribisTasarım.Controller
             komut = new SqlCommand(sorgu, connection);
             connection.Open(); 
             using (SqlDataReader rdr = komut.ExecuteReader())
-            {
-                
-                //list.Add("-1", "");
+            {               
+               
                 while (rdr.Read())
                 {
                     list.Add(rdr["col1"].ToString(), rdr["col2"].ToString());
                 }
-            }
+                if (list.ContainsKey("-1"))
+                {
+                    list["-1"] = "";
+                }
+                else
+                {
+                    list.Add("-1", "");
+                }
+            }        
+
+
             connection.Close();
             return list;
         }

@@ -20,6 +20,7 @@ namespace VeribisTasarım.Controller
             eleman.DataTextField = "Value";
             eleman.DataValueField = "Key";
             eleman.DataBind();
+            eleman.SelectedValue = "-1";
             return eleman;
         }
 
@@ -207,6 +208,31 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
             return liste;
         }
+
+        public Dictionary<string, string> getProje(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("select PROJECT_CODE as col1,NAME as col2 from PROJECTS where COMPANY_CODE=");
+            sorgu.Append(companyCode);
+            sorgu.Append(" order by col2");
+            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            return liste;
+        }
+        public Dictionary<string, string> getFaturaGrubu()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("68"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getFaturaAcikKapali()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("8"));
+            return liste;
+        }
+
         public Dictionary<string, string> getBirim()
         {
             DBTOOL db = new DBTOOL();

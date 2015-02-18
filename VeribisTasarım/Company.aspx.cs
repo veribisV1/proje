@@ -27,6 +27,7 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+         
             #region Firma Ekle DropDownları doldur
             idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
@@ -49,16 +50,17 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
 
+
         }
 
 
-        private void adresDoldur(int companyCode = 2)
+        private void adresDoldur(int companyCode = 34)
         {
             DBTOOL db = new DBTOOL();
 
             StringBuilder sorgu = new StringBuilder();
-            sorgu.Append("SELECT GROUPS.EXP_TR AS TÜR,(ADDRESS.ADDRESS1+ADDRESS.ADDRESS2+ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ÜLKE, CITY AS İL, ADDRESS.COUNTY1+ADDRESS.COUNTY2 AS İLÇE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_CODE=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
-            //sorgu.Append("SELECT ADDRESS_TYPE_ID AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3 + ' ' + COUNTY1 + ' ' + COUNTY2 + ' ' + CITY) AS ADRES FROM ADDRESS WHERE COMPANY_CODE=");
+            //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
+            sorgu.Append("SELECT ADDRESS_TYPE_ID AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3 + ' ' + COUNTY1 + ' ' + COUNTY2 + ' ' + CITY) AS ADRES FROM ADDRESS WHERE COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
@@ -67,12 +69,13 @@ namespace VeribisTasarım
 
         }
 
-        private void telefonDoldur(int companyCode = 2)
+        private void telefonDoldur(int companyCode = 34)
         {
             DBTOOL db = new DBTOOL();
 
             StringBuilder sorgu = new StringBuilder();
-            sorgu.Append("SELECT GROUPS.EXP_TR AS TÜR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON GROUPS.ROW_ORDER_NO= PHONE.PHONE_TYPE_ID WHERE GROUPS.GROUP_CODE=3 AND PHONE.COMPANY_CODE=");
+            //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
+            sorgu.Append("SELECT PHONE_TYPE_ID AS TUR,(COUNTRY_CODE+ ' (' + AREA_CODE + ') ' + PHONE_NUMBER) AS TELEFON FROM PHONE WHERE COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             idPHONE.DataSource = tablo;

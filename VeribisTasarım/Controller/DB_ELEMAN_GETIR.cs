@@ -150,6 +150,18 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+        /// <summary>
+        /// curtype tablosundaki parabirimlerini
+        /// Sembol (USD) ve Tam adı şeklide geri döndürür
+        /// burada key string tir
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, string> getParaBirimi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary("SELECT CUR_SYMBOL as col1,CUR_NAME as col2,ROW_ORDER_NO FROM CURTYPE order by ROW_ORDER_NO");            
+            return liste;
+        }
 
         /// <summary>
         /// KAYILI FİRMALARI GETİRİRİ
@@ -161,6 +173,35 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary("SELECT COMPANY_CODE as col1, COMPANY_NAME  AS col2 FROM COMPANY  ORDER BY COMPANY_NAME");
             return liste;
         }
+
+
+        /// <summary>
+        /// KAYILI FİRMALARI GETİRİRİ
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, string> getKisi(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT CONTACT_CODE as col1, NAME+' '+SURNAME  AS col2 FROM CONTACT  where COMPANY_CODE=");
+            sorgu.Append(companyCode);
+            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            return liste;
+        }
+        public Dictionary<string, string> getBirim()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("59"));        
+            return liste;
+        }
+
+        public Dictionary<string, string> getDonem()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("52"));           
+            return liste;
+        }
+   
 
     }
 }

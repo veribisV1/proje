@@ -295,6 +295,36 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("25"));
             return liste;
         }
+        public Dictionary<string, string> getAktiviteSonucGrubu()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("72"));
+            return liste;
+        }
+        public Dictionary<string, string> getAktiviteGrubu()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("32"));
+            return liste;
+        }
+        public Dictionary<string, string> getAktiviteKonuGrubu()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("26"));
+            return liste;
+        }
+        public Dictionary<string, string> getAktiviteNerede()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("27"));
+            return liste;
+        }
+        public Dictionary<string, string> getAktiviteOncelik()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("28"));
+            return liste;
+        }
+        public Dictionary<string, string> getAktiviteHatirlatma()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("52"));
+            return liste;
+        }
         public Dictionary<string, string> getMensei()
         {
             Dictionary<string, string> liste = db.getDictionary(getSQL("81"));

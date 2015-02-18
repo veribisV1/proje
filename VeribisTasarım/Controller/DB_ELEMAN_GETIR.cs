@@ -275,6 +275,13 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("55"));
             return liste;
         }
+
+        public Dictionary<string, string> getDepo()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("39"));
+            return liste;
+        }
         public Dictionary<string, string> getProformaCinsi(string companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -288,6 +295,11 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("12"));
             return liste;
         }
-
+        public Dictionary<string, string> getFaturaNormal(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("6"));
+            return liste;
+        }
     }
 }

@@ -280,6 +280,21 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("69"));
             return liste;
         }
+        public Dictionary<string, string> getTeslimSekliFirsat()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("42"));
+            return liste;
+        }
+        public Dictionary<string, string> getSonuc()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("72"));
+            return liste;
+        }
+        public Dictionary<string, string> getAktiviteTipi()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("25"));
+            return liste;
+        }
         public Dictionary<string, string> getMensei()
         {
             Dictionary<string, string> liste = db.getDictionary(getSQL("81"));
@@ -348,6 +363,11 @@ namespace VeribisTasarım.Controller
         public Dictionary<string, string> getFirsatCinsi()
         {
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("44"));
+            return liste;
+        }
+        public Dictionary<string, string> getRevizyon()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("43"));
             return liste;
         }
         public Dictionary<string, string> getProformaCinsi(string companyCode)

@@ -49,139 +49,139 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonGeriDon;
         
         /// <summary>
-        /// idNumuneCOMPANY_COMMERCIAL_CODE control.
+        /// idCOMPANY_COMMERCIAL_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneCOMPANY_COMMERCIAL_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_COMMERCIAL_CODE;
         
         /// <summary>
-        /// idNumuneCOMPANY_CODE control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneCOMPANY_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// idNumuneCONTACT_CODE control.
+        /// idCONTACT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneCONTACT_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// idNumuneSELLING_BUYING control.
+        /// idSELLING_BUYING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneSELLING_BUYING;
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
-        /// idNumuneNORMAL_BACK control.
+        /// idNORMAL_BACK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneNORMAL_BACK;
+        protected global::System.Web.UI.WebControls.DropDownList idNORMAL_BACK;
         
         /// <summary>
-        /// idNumuneDOCUMENT_NO1 control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idNumuneDOCUMENT_NO1;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// idNumuneDOCUMENT_NO2 control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idNumuneDOCUMENT_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// idNumuneDOCUMENT_DATE control.
+        /// idDOCUMENT_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idNumuneDOCUMENT_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
         
         /// <summary>
-        /// idNumuneAPPOINTED_USER_CODE control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneAPPOINTED_USER_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// idNumuneWAREHOUSE control.
+        /// idWAREHOUSE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneWAREHOUSE;
+        protected global::System.Web.UI.WebControls.DropDownList idWAREHOUSE;
         
         /// <summary>
-        /// idNumuneFREE_STOK control.
+        /// idFREE_STOK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList idNumuneFREE_STOK;
+        protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
         
         /// <summary>
-        /// idNumuneCERTIFICATE_DATE control.
+        /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idNumuneCERTIFICATE_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
         
         /// <summary>
-        /// idNumuneOPEN_CLOSE control.
+        /// idOPEN_CLOSE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneOPEN_CLOSE;
+        protected global::System.Web.UI.WebControls.DropDownList idOPEN_CLOSE;
         
         /// <summary>
-        /// idNumuneSEARCH_METHOD control.
+        /// idSEARCH_METHOD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneSEARCH_METHOD;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_METHOD;
         
         /// <summary>
-        /// idNumuneSEARCH_STEP control.
+        /// idSEARCH_STEP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneSEARCH_STEP;
+        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
         
         /// <summary>
         /// idCURRENT_CODE control.
@@ -202,30 +202,30 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idCATEGORY;
         
         /// <summary>
-        /// idNumunePROJECT_CODE control.
+        /// idPROJECT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumunePROJECT_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
         
         /// <summary>
-        /// idNumuneREVISION control.
+        /// idREVISION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNumuneREVISION;
+        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
         
         /// <summary>
-        /// idNumuneEXPLANATION control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idNumuneEXPLANATION;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
     }
 }

@@ -39,7 +39,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="100%">
+                                    <asp:DropDownList ID="idCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="100%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -50,7 +50,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneCOMPANY_CODE" runat="server" Height="30px" Width="100%">
+                                    <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="100%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -60,7 +60,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneCONTACT_CODE" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idCONTACT_CODE" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -70,7 +70,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneSELLING_BUYING" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idSELLING_BUYING" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -80,7 +80,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneNORMAL_BACK" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idNORMAL_BACK" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -90,8 +90,8 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idNumuneDOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
-                                    <asp:TextBox ID="idNumuneDOCUMENT_NO2" MaxLength="20" Height="22px" Width="12%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_NO1" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_NO2" MaxLength="20" Height="22px" Width="12%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -100,7 +100,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idNumuneDOCUMENT_DATE" runat="server" TextMode="Date" Width="48%" Height="25px"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_DATE" runat="server" TextMode="Date" Width="48%" Height="25px"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -109,7 +109,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneAPPOINTED_USER_CODE" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idAPPOINTED_USER_CODE" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -119,7 +119,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneWAREHOUSE" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idWAREHOUSE" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -129,7 +129,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:CheckBoxList ID="idNumuneFREE_STOK" runat="server">
+                                    <asp:CheckBoxList ID="idFREE_STOK" runat="server">
                                         <asp:ListItem Text="" Value="1"></asp:ListItem>
                                     </asp:CheckBoxList>
                                 </td>
@@ -145,7 +145,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idNumuneCERTIFICATE_DATE" runat="server" TextMode="Date" Width="48%" Height="25px"></asp:TextBox>
+                                    <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" TextMode="Date" Width="48%" Height="25px"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -154,7 +154,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneOPEN_CLOSE" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idOPEN_CLOSE" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -164,7 +164,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneSEARCH_METHOD" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idSEARCH_METHOD" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -174,7 +174,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneSEARCH_STEP" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idSEARCH_STEP" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -204,7 +204,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumunePROJECT_CODE" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idPROJECT_CODE" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -214,7 +214,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idNumuneREVISION" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idREVISION" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -224,7 +224,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idNumuneEXPLANATION" runat="server" MaxLength="1000" TextMode="MultiLine" Width="100%" Height="60px"></asp:TextBox>
+                                    <asp:TextBox ID="idEXPLANATION" runat="server" MaxLength="1000" TextMode="MultiLine" Width="100%" Height="60px"></asp:TextBox>
                                 </td>
                             </tr>
 

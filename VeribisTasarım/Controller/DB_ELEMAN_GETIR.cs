@@ -217,6 +217,18 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("78"));
             return liste;
         }
+        public Dictionary<string, string> getTeslimSekli()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("69"));
+            return liste;
+        }
+        public Dictionary<string, string> getMensei()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("81"));
+            return liste;
+        }
         public Dictionary<string, string> getProformaCinsi(string companyCode)
         {
             DBTOOL db = new DBTOOL();

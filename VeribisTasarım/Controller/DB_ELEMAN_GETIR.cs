@@ -182,8 +182,7 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
-       
-        public Dictionary<string, string> getFirmaKodu(string firmaKodu)
+       public Dictionary<string, string> getFirmaKodu(string firmaKodu)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
@@ -280,6 +279,13 @@ namespace VeribisTasarım.Controller
         {
             DBTOOL db = new DBTOOL();
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("32"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getFaturaCinsi(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("12"));
             return liste;
         }
 

@@ -31,6 +31,14 @@ namespace VeribisTasarım.Controller
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
         }
+        private string getSQLCitems(string grupKodu)
+        {
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM CITEMS WHERE GROUP_CODE=");
+            sorgu.Append(grupKodu);
+            sorgu.Append(" ORDER BY ROW_ORDER_NO");
+            return sorgu.ToString();
+        }
 
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
@@ -185,6 +193,7 @@ namespace VeribisTasarım.Controller
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT CONTACT_CODE as col1, NAME+' '+SURNAME  AS col2 FROM CONTACT  where COMPANY_CODE=");
             sorgu.Append(companyCode);
+            sorgu.Append(" order by col2");
             Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
             return liste;
         }
@@ -201,7 +210,19 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("52"));           
             return liste;
         }
-   
+
+        public Dictionary<string, string> getSiparisYolu()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("78"));
+            return liste;
+        }
+        public Dictionary<string, string> getProformaCinsi(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("32"));
+            return liste;
+        }
 
     }
 }

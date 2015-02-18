@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
-namespace VeribisTasarım
+namespace VeribisTasarım.Controller
 {
 
     /// <summary>

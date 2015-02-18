@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Text;
 using System.Data;
+using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {

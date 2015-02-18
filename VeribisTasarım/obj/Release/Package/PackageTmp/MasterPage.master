@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,11 +6,11 @@
 <title>VERIBIS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1254" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="stylesheet" type="text/css" href="css/stil.css"/>
- <link href="js/jqueryui/jquery-ui.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="style/stil.css"/>
+ <link href="script/jqueryui/jquery-ui.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="style/responsive.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/jqueryui/jquery-ui.js"></script>
+    <script src="script/jqueryui/jquery-ui.js"></script>
     <script>
         $(document).ready(function () {
             $(".menubutton").click(function () {
@@ -25,7 +25,7 @@
 <body>
 <form id="form1" runat="server">
 <div class="header">
- <img src="IMG/logo.png" />
+ <img src="image/logo.png" />
 <div class="menubutton"><hr><hr><hr></div>
 <div class="menuhiddencontainer">
     <div class="menuhidden">

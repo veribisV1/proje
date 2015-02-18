@@ -49,228 +49,228 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonGeriDon;
         
         /// <summary>
-        /// idProformaCOMPANY_COMMERCIAL_CODE control.
+        /// idCOMPANY_COMMERCIAL_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaCOMPANY_COMMERCIAL_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_COMMERCIAL_CODE;
         
         /// <summary>
-        /// idProformaCOMPANY_CODE control.
+        /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaCOMPANY_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
-        /// idProformaCONTACT_CODE control.
+        /// idCONTACT_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaCONTACT_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// idProformaSELLING_BUYING control.
+        /// idSELLING_BUYING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaSELLING_BUYING;
+        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
         
         /// <summary>
-        /// idProformaDOCUMENT_NO1 control.
+        /// idDOCUMENT_NO1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idProformaDOCUMENT_NO1;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
         
         /// <summary>
-        /// idProformaDOCUMENT_NO2 control.
+        /// idDOCUMENT_NO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idProformaDOCUMENT_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// idProformaDOCUMENT_DATE control.
+        /// idDOCUMENT_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idProformaDOCUMENT_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
         
         /// <summary>
-        /// idProformaAPPOINTED_USER_CODE control.
+        /// idAPPOINTED_USER_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaAPPOINTED_USER_CODE;
+        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
         
         /// <summary>
-        /// idProformaFREE_STOK control.
+        /// idFREE_STOK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList idProformaFREE_STOK;
+        protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
         
         /// <summary>
-        /// idProformaEXPLANATION control.
+        /// idEXPLANATION control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idProformaEXPLANATION;
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
         
         /// <summary>
-        /// idProformaSIPARIS_YOLU control.
+        /// idSIPARIS_YOLU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaSIPARIS_YOLU;
+        protected global::System.Web.UI.WebControls.DropDownList idSIPARIS_YOLU;
         
         /// <summary>
-        /// idProformaPAYMENT_TYPE control.
+        /// idPAYMENT_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaPAYMENT_TYPE;
+        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
         
         /// <summary>
-        /// idProformaDELIVERY_TYPE control.
+        /// idDELIVERY_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProformaDELIVERY_TYPE;
+        protected global::System.Web.UI.WebControls.DropDownList idDELIVERY_TYPE;
         
         /// <summary>
-        /// idProforma_MENSEI control.
+        /// idMENSEI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idProforma_MENSEI;
+        protected global::System.Web.UI.WebControls.DropDownList idMENSEI;
         
         /// <summary>
-        /// PROFORMA_BANKA_BILGISI control.
+        /// idBANKA_BILGISI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_BANKA_BILGISI;
+        protected global::System.Web.UI.WebControls.DropDownList idBANKA_BILGISI;
         
         /// <summary>
-        /// PROFORMA_GECERLILIK_TARIHI control.
+        /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PROFORMA_GECERLILIK_TARIHI;
+        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
         
         /// <summary>
-        /// PROFORMA_SEVK_ADRESI control.
+        /// idSEVK_ADRESI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_SEVK_ADRESI;
+        protected global::System.Web.UI.WebControls.DropDownList idSEVK_ADRESI;
         
         /// <summary>
-        /// PROFORMA_FATURA_ADRESI control.
+        /// idFATURA_ADRESI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_FATURA_ADRESI;
+        protected global::System.Web.UI.WebControls.DropDownList idFATURA_ADRESI;
         
         /// <summary>
-        /// PROFORMA_AMBALAJLAMA control.
+        /// idAMBALAJLAMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_AMBALAJLAMA;
+        protected global::System.Web.UI.WebControls.DropDownList idAMBALAJLAMA;
         
         /// <summary>
-        /// PROFORMA_NAKLIYE_TIPI control.
+        /// idNAKLIYE_TIPI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_NAKLIYE_TIPI;
+        protected global::System.Web.UI.WebControls.DropDownList idNAKLIYE_TIPI;
         
         /// <summary>
-        /// PROFORMA_NAKLIYE_FIRMASI control.
+        /// idNAKLIYE_FIRMASI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_NAKLIYE_FIRMASI;
+        protected global::System.Web.UI.WebControls.DropDownList idNAKLIYE_FIRMASI;
         
         /// <summary>
-        /// PROFORMA_SIPARIS_NO control.
+        /// idSIPARIS_NO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PROFORMA_SIPARIS_NO;
+        protected global::System.Web.UI.WebControls.TextBox idSIPARIS_NO;
         
         /// <summary>
-        /// PROFORMA_SIPARIS_TARIHI control.
+        /// idSIPARIS_TARIHI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PROFORMA_SIPARIS_TARIHI;
+        protected global::System.Web.UI.WebControls.TextBox idSIPARIS_TARIHI;
         
         /// <summary>
-        /// PROFORMA_NEDEN_KAYBETTIK control.
+        /// idNEDEN_KAYBETTIK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_NEDEN_KAYBETTIK;
+        protected global::System.Web.UI.WebControls.DropDownList idNEDEN_KAYBETTIK;
         
         /// <summary>
-        /// PROFORMA_KAZANAN_RAKIP_FIRMA control.
+        /// idKAZANAN_RAKIP_FIRMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PROFORMA_KAZANAN_RAKIP_FIRMA;
+        protected global::System.Web.UI.WebControls.DropDownList idKAZANAN_RAKIP_FIRMA;
     }
 }

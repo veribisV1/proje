@@ -39,7 +39,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idCOMPANY_COMMERCIAL_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -50,7 +50,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaCOMPANY_CODE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -60,7 +60,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaCONTACT_CODE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idCONTACT_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -70,7 +70,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaSELLING_BUYING" runat="server" Height="30px" Width="50%">
+                                    <asp:DropDownList ID="idSELLING_BUYING" runat="server" Height="30px" Width="50%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -80,8 +80,8 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idProformaDOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>
-                                    <asp:TextBox ID="idProformaDOCUMENT_NO2" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_NO1" MaxLength="20" Height="22px" Width="62%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_NO2" MaxLength="20" Height="22px" Width="30%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -90,7 +90,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idProformaDOCUMENT_DATE" TextMode="Date" Height="25px" Width="63%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idDOCUMENT_DATE" TextMode="Date" Height="25px" Width="63%" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -99,7 +99,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaAPPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idAPPOINTED_USER_CODE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
 
                                 </td>
@@ -110,7 +110,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:CheckBoxList ID="idProformaFREE_STOK" runat="server">
+                                    <asp:CheckBoxList ID="idFREE_STOK" runat="server">
                                         <asp:ListItem Text="" Value="1"></asp:ListItem>
                                     </asp:CheckBoxList>
                                 </td>
@@ -123,7 +123,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idProformaEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox ID="idEXPLANATION" runat="server" Width="102%" Height="90px" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                             </tr>
 
@@ -142,7 +142,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaSIPARIS_YOLU" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idSIPARIS_YOLU" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -152,7 +152,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaPAYMENT_TYPE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -162,7 +162,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProformaDELIVERY_TYPE" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idDELIVERY_TYPE" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -172,7 +172,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idProforma_MENSEI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idMENSEI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -182,7 +182,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_BANKA_BILGISI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idBANKA_BILGISI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -192,7 +192,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="PROFORMA_GECERLILIK_TARIHI" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+                                    <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
 
                                 </td>
                             </tr>
@@ -202,7 +202,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_SEVK_ADRESI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idSEVK_ADRESI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -212,7 +212,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_FATURA_ADRESI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idFATURA_ADRESI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -222,7 +222,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_AMBALAJLAMA" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idAMBALAJLAMA" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -232,7 +232,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_NAKLIYE_TIPI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idNAKLIYE_TIPI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -242,7 +242,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_NAKLIYE_FIRMASI" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idNAKLIYE_FIRMASI" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -258,7 +258,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="PROFORMA_SIPARIS_NO" runat="server" Width="100%" Height="22px"></asp:TextBox>
+                                    <asp:TextBox ID="idSIPARIS_NO" runat="server" Width="100%" Height="22px"></asp:TextBox>
 
                                 </td>
                             </tr>
@@ -268,7 +268,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="PROFORMA_SIPARIS_TARIHI" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
+                                    <asp:TextBox ID="idSIPARIS_TARIHI" runat="server" Width="102%" TextMode="DateTime" Height="22px"></asp:TextBox>
 
                                 </td>
                             </tr>
@@ -278,7 +278,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_NEDEN_KAYBETTIK" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idNEDEN_KAYBETTIK" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -288,7 +288,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="PROFORMA_KAZANAN_RAKIP_FIRMA" runat="server" Height="30px" Width="104%">
+                                    <asp:DropDownList ID="idKAZANAN_RAKIP_FIRMA" runat="server" Height="30px" Width="104%">
                                     </asp:DropDownList>
                                 </td>
                             </tr>

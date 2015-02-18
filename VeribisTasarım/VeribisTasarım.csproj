@@ -61,6 +61,7 @@
     <Content Include="Aktivite.aspx" />
     <Content Include="Company.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Fatura.aspx" />
     <Content Include="Firsat.aspx" />
     <Content Include="Kisi.aspx" />
     <Content Include="Numune.aspx" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura.aspx.cs">
+      <DependentUpon>Fatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fatura.aspx.designer.cs">
+      <DependentUpon>Fatura.aspx</DependentUpon>
     </Compile>
     <Compile Include="Firsat.aspx.cs">
       <DependentUpon>Firsat.aspx</DependentUpon>

@@ -287,15 +287,16 @@
                         <tr>
 
                         <td>
-                            <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="TextBoxArama" Height="20px" Width="30%"></asp:TextBox>
+                            <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="TextBoxFirsatArama" Height="20px" Width="13%" ></asp:TextBox>
                         </td>
                         <td>
-                            <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="ButtonArama" Text="Ara" />
+                            <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="ButtonFirsatArama" Text="Ara" />
                         </td>
                     </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
+                   <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="LabelFirsatDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="DropDownFirsatDurum"></asp:DropDownList>
+                   <asp:Label ID="idLabelFirsatBaslangic" runat="server" Text="Başlangıç" CssClass="LabelBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="FirsatBaslangicTarih"></asp:TextBox><br />
+                   <asp:Label ID="idLabelFirsatBitis" runat="server" Text="Bitiş" CssClass="LabelBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="FirsatBitisTarih"></asp:TextBox>
+
 
                     <hr />
                         <div class="ALAN12">

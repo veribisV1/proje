@@ -27,7 +27,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonAnaMenuyeDon" runat="server" CssClass="ButtonAnaMenuyeDon" Text="Ana Menüye Dön" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonGeriDon" runat="server" CssClass="ButtonGeriDon" Text="Geri Dön" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
                 <hr />

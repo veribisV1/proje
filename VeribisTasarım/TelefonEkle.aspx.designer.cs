@@ -94,12 +94,12 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idPHONE_NUMBER;
         
         /// <summary>
-        /// INTERNAL_CODE control.
+        /// idINTERNAL_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox INTERNAL_CODE;
+        protected global::System.Web.UI.WebControls.TextBox idINTERNAL_CODE;
     }
 }

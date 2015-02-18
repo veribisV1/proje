@@ -162,6 +162,14 @@ textarea
     width:60px;
 
 }
+
+.ButtonAnaMenuyeDon {
+    position:relative;
+    bottom:5px;
+    left:22px;
+    height:20px;
+    width:110px;
+}
 .TextBoxArama {
     position:relative;
     bottom:5px;

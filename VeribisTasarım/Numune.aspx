@@ -25,6 +25,11 @@
                             <asp:Button ID="idButtonNumuneEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
+                    <tr>         
+                        <td>
+                            <asp:Button ID="idButtonAnaMenuyeDon" runat="server" CssClass="ButtonAnaMenuyeDon" Text="Ana Menüye Dön" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
                 <hr />
                     <div class="ALAN4">
                         <table class="KisiTable">

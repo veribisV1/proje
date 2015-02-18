@@ -182,10 +182,7 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
-        /// <summary>
-        /// KAYILI FİRMALARI GETİRİRİ
-        /// </summary>
-        /// <returns></returns>
+       
         public Dictionary<string, string> getFirmaKodu(string firmaKodu)
         {
             DBTOOL db = new DBTOOL();
@@ -193,9 +190,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append("SELECT COMPANY_CODE as col1, COMPANY_COMMERCIAL_CODE  AS col2 FROM COMPANY where COMPANY_CODE=");
             sorgu.Append(firmaKodu);
             Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
-            return liste;
-
-            
+            return liste;            
         }
 
 

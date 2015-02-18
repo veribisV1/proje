@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
-namespace VeribisTasarım
+namespace VeribisTasarım.Controller
 {
 
     /// <summary>
@@ -64,17 +64,36 @@ namespace VeribisTasarım
             komut = new SqlCommand(sorgu, connection);
             connection.Open(); 
             using (SqlDataReader rdr = komut.ExecuteReader())
+<<<<<<< HEAD
+            {               
+               
+=======
             {
               //  list.Add("-1", "");
 
                 
                 //list.Add("-1", "");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2552bba098a05730aedaa48a3c67dc3df4d52cb6
+>>>>>>> 5e09cbace6849306a677d261993405625a78dab2
+>>>>>>> 24c146cf8c2d98a0112cfab96d7cef27d2901824
                 while (rdr.Read())
                 {
                     list.Add(rdr["col1"].ToString(), rdr["col2"].ToString());
                 }
-            }
+                if (list.ContainsKey("-1"))
+                {
+                    list["-1"] = "";
+                }
+                else
+                {
+                    list.Add("-1", "");
+                }
+            }        
+
+
             connection.Close();
             return list;
         }

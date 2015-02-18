@@ -8,3 +8,8 @@ C:\veribisProjeler\proje\VeribisTasarım\bin\VeribisTasarım.pdb
 C:\veribisProjeler\proje\VeribisTasarım\obj\Release\VeribisTasarım.csprojResolveAssemblyReference.cache
 C:\veribisProjeler\proje\VeribisTasarım\obj\Release\VeribisTasarım.dll
 C:\veribisProjeler\proje\VeribisTasarım\obj\Release\VeribisTasarım.pdb
+C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.dll
+C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.pdb
+C:\veribis\proje\VeribisTasarım\obj\Release\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribis\proje\VeribisTasarım\obj\Release\VeribisTasarım.dll
+C:\veribis\proje\VeribisTasarım\obj\Release\VeribisTasarım.pdb

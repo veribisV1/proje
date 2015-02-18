@@ -20,6 +20,7 @@ namespace VeribisTasarım.Controller
             eleman.DataTextField = "Value";
             eleman.DataValueField = "Key";
             eleman.DataBind();
+            eleman.SelectedValue = "-1";
             return eleman;
         }
 
@@ -27,6 +28,14 @@ namespace VeribisTasarım.Controller
         {
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=");
+            sorgu.Append(grupKodu);
+            sorgu.Append(" ORDER BY ROW_ORDER_NO");
+            return sorgu.ToString();
+        }
+        private string getSQLCitems(string grupKodu)
+        {
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM CITEMS WHERE GROUP_CODE=");
             sorgu.Append(grupKodu);
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
@@ -150,6 +159,18 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+        /// <summary>
+        /// curtype tablosundaki parabirimlerini
+        /// Sembol (USD) ve Tam adı şeklide geri döndürür
+        /// burada key string tir
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, string> getParaBirimi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary("SELECT CUR_SYMBOL as col1,CUR_NAME as col2,ROW_ORDER_NO FROM CURTYPE order by ROW_ORDER_NO");            
+            return liste;
+        }
 
         /// <summary>
         /// KAYILI FİRMALARI GETİRİRİ
@@ -162,5 +183,160 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+       public Dictionary<string, string> getFirmaKodu(string firmaKodu)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT COMPANY_CODE as col1, COMPANY_COMMERCIAL_CODE  AS col2 FROM COMPANY where COMPANY_CODE=");
+            sorgu.Append(firmaKodu);
+            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            return liste;            
+        }
+
+
+        /// <summary>
+        /// KAYILI FİRMALARI GETİRİRİ
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, string> getKisi(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT CONTACT_CODE as col1, NAME+' '+SURNAME  AS col2 FROM CONTACT  where COMPANY_CODE=");
+            sorgu.Append(companyCode);
+            sorgu.Append(" order by col2");
+            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            return liste;
+        }
+
+        public Dictionary<string, string> getProje(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("select PROJECT_CODE as col1,NAME as col2 from PROJECTS where COMPANY_CODE=");
+            sorgu.Append(companyCode);
+            sorgu.Append(" order by col2");
+            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            return liste;
+        }
+        public Dictionary<string, string> getFaturaGrubu()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("68"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getFaturaAcikKapali()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("8"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getBirim()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("59"));        
+            return liste;
+        }
+
+        public Dictionary<string, string> getDonem()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("52"));           
+            return liste;
+        }
+
+        public Dictionary<string, string> getSiparisYolu()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("78"));
+            return liste;
+        }
+        public Dictionary<string, string> getTeslimSekli()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("69"));
+            return liste;
+        }
+        public Dictionary<string, string> getMensei()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("81"));
+            return liste;
+        }
+        public Dictionary<string, string> getBankaBilgisi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("80"));
+            return liste;
+        }
+        public Dictionary<string, string> getAmbalaj()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("82"));
+            return liste;
+        }
+        public Dictionary<string, string> getNakliyeTipi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("83"));
+            return liste;
+        }
+        public Dictionary<string, string> getNakliyeFirma()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("78"));
+            return liste;
+        }
+        public Dictionary<string, string> getNedenKaybettik()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("57"));
+            return liste;
+        }
+        public Dictionary<string, string> getRakipFirma()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("55"));
+            return liste;
+        }
+        public Dictionary<string, string> getTakipAsamalari()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("42"));
+            return liste;
+        }
+        public Dictionary<string, string> getTakipYontemi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("41"));
+            return liste;
+        }
+        public Dictionary<string, string> getDepo()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("39"));
+            return liste;
+        }
+        public Dictionary<string, string> getProformaCinsi(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("32"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getFaturaCinsi(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("12"));
+            return liste;
+        }
+        public Dictionary<string, string> getFaturaNormal(string companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("6"));
+            return liste;
+        }
     }
 }

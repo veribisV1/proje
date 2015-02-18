@@ -335,6 +335,21 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("60"));
             return liste;
         }
+        public Dictionary<string, string> getEvVarMi()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("62"));
+            return liste;
+        }
+        public Dictionary<string, string> getEvSkalasi()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQL("61"));
+            return liste;
+        }
+        public Dictionary<string, string> getFirsatCinsi()
+        {
+            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("44"));
+            return liste;
+        }
         public Dictionary<string, string> getProformaCinsi(string companyCode)
         {
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("32"));

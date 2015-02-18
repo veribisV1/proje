@@ -148,6 +148,12 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("53"));
             return liste;
         }
+        public Dictionary<string, string> getAkifPasifKisi()
+        {
+            DBTOOL db = new DBTOOL();
+            Dictionary<string, string> liste = db.getDictionary(getSQL("13"));
+            return liste;
+        }
         public Dictionary<string, string> getReferans()
         {
             DBTOOL db = new DBTOOL();

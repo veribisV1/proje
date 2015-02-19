@@ -19,7 +19,7 @@ namespace VeribisTasarım.Controller
         /// <param name="sayfa">Viev aspx </param>
         /// <param name="paramtereListesi">store prosedur listesi </param>
         /// <returns>sql parametre ye hazır liste</returns>
-        public Dictionary<string, object> eslestir(Page sayfa, Dictionary<string, string> paramtereListesi, Dictionary<string, string> dataTipleri)
+        public Dictionary<string, object> eslestir(Page sayfa, Dictionary<string, string> dataTipleri)
         {
             Dictionary<string, object> dataListesi = new Dictionary<string, object>();
 
@@ -27,7 +27,7 @@ namespace VeribisTasarım.Controller
             MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
             ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
 
-            foreach (string item in paramtereListesi.Keys)
+            foreach (string item in dataTipleri.Keys)
             {
                 string okunacakElemanId = item.Replace("@", "id");
                 Control eleman = MainContent.FindControl(okunacakElemanId);

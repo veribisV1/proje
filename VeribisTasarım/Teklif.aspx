@@ -325,7 +325,7 @@
                            <table class="KisiTable">
                                <tr>
                                    <td>
-                              <asp:GridView ID="idTeklifGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                            <%--  <asp:GridView ID="idTeklifGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                                   <Columns>
                                       <asp:BoundField DataField="FİRMA" HeaderText="FİRMA" ReadOnly="True" SortExpression="FİRMA" />
                                       <asp:BoundField DataField="KİŞİ" HeaderText="KİŞİ" ReadOnly="True" SortExpression="KİŞİ" />
@@ -334,7 +334,7 @@
                                       <asp:BoundField DataField="OPEN_CLOSE" HeaderText="OPEN_CLOSE" SortExpression="OPEN_CLOSE" />
                                   </Columns>
                                        </asp:GridView>
-                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [FİRMA], [KİŞİ], [TEMSİLCİ], [DOCUMENT_DATE], [OPEN_CLOSE] FROM [VOTASK]"></asp:SqlDataSource>
+                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [FİRMA], [KİŞİ], [TEMSİLCİ], [DOCUMENT_DATE], [OPEN_CLOSE] FROM [VOTASK]"></asp:SqlDataSource>--%>
                                    </td>
                                </tr>
                            </table>

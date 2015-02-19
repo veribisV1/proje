@@ -34,7 +34,7 @@ namespace VeribisTasarım
             FIRMA firma = new FIRMA();
             Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertOppMaster");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
+            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
             int companyCode = firma.firmaKaydet("pInsertOppMaster", dataListesi);
         }
     }

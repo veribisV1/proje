@@ -247,13 +247,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Label idLabelTeklifDurum;
         
         /// <summary>
-        /// idDropDownFirsatDurum control.
+        /// idDropDownTeklifDurum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDropDownFirsatDurum;
+        protected global::System.Web.UI.WebControls.DropDownList idDropDownTeklifDurum;
         
         /// <summary>
         /// idLabelTeklifBaslangic control.
@@ -265,13 +265,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Label idLabelTeklifBaslangic;
         
         /// <summary>
-        /// idFirsatBaslangicTarih control.
+        /// idTeklifBaslangicTarih control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFirsatBaslangicTarih;
+        protected global::System.Web.UI.WebControls.TextBox idTeklifBaslangicTarih;
         
         /// <summary>
         /// idLabelTeklifBitis control.
@@ -283,12 +283,30 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Label idLabelTeklifBitis;
         
         /// <summary>
-        /// idFirsatBitisTarih control.
+        /// idTeklifBitisTarih control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFirsatBitisTarih;
+        protected global::System.Web.UI.WebControls.TextBox idTeklifBitisTarih;
+        
+        /// <summary>
+        /// idTeklifGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView idTeklifGridView;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

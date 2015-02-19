@@ -293,9 +293,9 @@
                             <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="EvrakListesiButonArama" Text="Ara" />
                         </td>
                     </tr>
-                   <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="LabelFirsatDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="DropDownFirsatDurum"></asp:DropDownList>
-                   <asp:Label ID="idLabelFirsatBaslangic" runat="server" Text="Başlangıç" CssClass="LabelBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="FirsatBaslangicTarih"></asp:TextBox><br />
-                   <asp:Label ID="idLabelFirsatBitis" runat="server" Text="Bitiş" CssClass="LabelBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="FirsatBitisTarih"></asp:TextBox>
+                   <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="EvrakListesiDropdownDurum"></asp:DropDownList>
+                   <asp:Label ID="idLabelFirsatBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBaslangicTarih"></asp:TextBox><br />
+                   <asp:Label ID="idLabelFirsatBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBitisTarih"></asp:TextBox>
 
 
                     <hr />

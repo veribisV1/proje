@@ -6,6 +6,7 @@
         <h3>TEKLİF</h3>
         <div class="tabmenu">
             <ul>
+                <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li><a href="#TeklifEkle">Teklif Ekle</a></li>
                 
             </ul>
@@ -295,7 +296,7 @@
                   </div>
                   
                     </div>
-                
+                   
                  </div>
             
         </div>

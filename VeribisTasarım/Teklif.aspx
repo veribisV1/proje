@@ -308,7 +308,15 @@
                         <td>
                         <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="EvrakListesiButonArama" Text="Button" />
                         </td>
+
                     </tr>
+                   <asp:Label ID="idLabelTeklifDurum" runat="server" Text="Açık/Kapalı" CssClass="LabelFirsatDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="DropDownFirsatDurum"></asp:DropDownList>
+                   <asp:Label ID="idLabelTeklifBaslangic" runat="server" Text="Başlangıç" CssClass="LabelBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="FirsatBaslangicTarih"></asp:TextBox><br />
+                   <asp:Label ID="idLabelTeklifBitis" runat="server" Text="Bitiş" CssClass="LabelBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="FirsatBitisTarih"></asp:TextBox>
+
+
+                    <hr />
+  
                 </div>
 
             </div>

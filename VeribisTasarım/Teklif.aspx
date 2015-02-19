@@ -6,7 +6,7 @@
         <h3>TEKLİF</h3>
         <div class="tabmenu">
             <ul>
-                <li><a href="#TeklifEkle">Teklif Ekle</a></li>
+                <li><a href="#TeklifEkle">TeklTeklif Ekle</a></li>
                 
             </ul>
             <div id="TeklifEkle" style="min-height:100px">
@@ -18,7 +18,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonTeklifEkleKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -35,7 +35,7 @@
                     <tr>
                         <td width="35%">
                         Firma Adı
-                        </td>
+                        >
                         <td width="2%">
                           :
                         </td>

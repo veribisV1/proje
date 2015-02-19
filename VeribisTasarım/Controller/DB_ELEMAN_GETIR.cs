@@ -35,7 +35,7 @@ namespace VeribisTasarım.Controller
         private string getSQLCitems(string grupKodu)
         {
             StringBuilder sorgu = new StringBuilder();
-            sorgu.Append("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM CITEMS WHERE GROUP_CODE=");
+            sorgu.Append("SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM CITEMS WHERE CODE=");
             sorgu.Append(grupKodu);
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
@@ -221,7 +221,7 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
             return liste;
         }
-        public Dictionary<string, string> getProje(string companyCode)
+        public Dictionary<string, string> getProje(string companyCode="1")
         {
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("select PROJECT_CODE as col1,NAME as col2 from PROJECTS where COMPANY_CODE=");
@@ -400,17 +400,17 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getDictionary(getSQL("43"));
             return liste;
         }
-        public Dictionary<string, string> getProformaCinsi(string companyCode)
+        public Dictionary<string, string> getProformaCinsi()
         {
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("32"));
             return liste;
         }
-        public Dictionary<string, string> getFaturaCinsi(string companyCode)
+        public Dictionary<string, string> getFaturaCinsi()
         {
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("12"));
             return liste;
         }
-        public Dictionary<string, string> getFaturaNormal(string companyCode)
+        public Dictionary<string, string> getFaturaNormal()
         {
             Dictionary<string, string> liste = db.getDictionary(getSQLCitems("6"));
             return liste;

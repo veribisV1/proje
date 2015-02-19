@@ -37,7 +37,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonTelefonKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonTelefonKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonTelefonKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         

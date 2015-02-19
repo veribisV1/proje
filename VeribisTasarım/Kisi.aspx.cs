@@ -22,15 +22,6 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-
-<<<<<<< HEAD
-            #region Firma Ekle DropDownları doldur
-            idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-            idSEXUALITY = dbGetir.doldur(idSEXUALITY, dbGetir.getCinsiyet());
-            #endregion
-        }
-
-=======
             #region Kişi Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSEXUALITY = dbGetir.doldur(idSEXUALITY, dbGetir.getCinsiyet());
@@ -66,7 +57,7 @@ namespace VeribisTasarım
 
     
 
->>>>>>> 98020c9538f56fa5fdbfe3c8e69785f5701778e5
+
        
     }
 }

@@ -97,6 +97,10 @@ namespace VeribisTasarım.Controller
                     double dec = (!String.IsNullOrEmpty(icerik)) ? Convert.ToDouble(icerik) : -1;
                     return dec;
                     break;
+                case "VarBinary":
+                    int decf = (!String.IsNullOrEmpty(icerik)) ? Convert.ToInt32(icerik) : -1;
+                    return decf;
+                    break;
                 default:
                     break;
             }

@@ -23,12 +23,50 @@ namespace VeribisTasarım
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
 
+<<<<<<< HEAD
             #region Firma Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSEXUALITY = dbGetir.doldur(idSEXUALITY, dbGetir.getCinsiyet());
             #endregion
         }
 
+=======
+            #region Kişi Ekle DropDownları doldur
+            idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
+            idSEXUALITY = dbGetir.doldur(idSEXUALITY, dbGetir.getCinsiyet());
+            idASSOCIATION_CODE = dbGetir.doldur(idASSOCIATION_CODE, dbGetir.getDernekler());
+            idDEPARTMENT = dbGetir.doldur(idDEPARTMENT, dbGetir.getDepartmanlar());
+            idTITLE = dbGetir.doldur(idTITLE, dbGetir.getUnvanlar());
+            idGROUP_CODE = dbGetir.doldur(idGROUP_CODE, dbGetir.getGrupKisi());
+            idCONTACT_REPRESENT_CODE = dbGetir.doldur(idCONTACT_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
+            idSTATUS = dbGetir.doldur(idSTATUS, dbGetir.getAkifPasifKisi());
+            idLANGUAGE_CODE = dbGetir.doldur(idLANGUAGE_CODE, dbGetir.getDiller());
+            idPRETITLE = dbGetir.doldur(idPRETITLE, dbGetir.getHitap());
+            idCONTACT_REFERANCE = dbGetir.doldur(idCONTACT_REFERANCE, dbGetir.getReferansKisi());
+            idEDUCATION = dbGetir.doldur(idEDUCATION, dbGetir.getEgitimDuzeyi());
+            idHAVE_HOME = dbGetir.doldur(idHAVE_HOME, dbGetir.getEvVarMi());
+            idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
+            #endregion
+
+        }
+
+        protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
+        {
+            FIRMA firma = new FIRMA();
+            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertContact");
+            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi, paramtereListesi);
+            int companyCode = firma.firmaKaydet("pInsertContact", dataListesi);
+        }
+
+        protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
+        {
+   
+        }
+
+    
+
+>>>>>>> 98020c9538f56fa5fdbfe3c8e69785f5701778e5
        
     }
 }

@@ -6,7 +6,7 @@
         <h3>AKTİVİTE</h3>
         <div class="tabmenu">
             <ul>
-                <li><a href="#AktiviteEkle">Aktivite Ekle</a></li>
+                <li><a href="#AktiviteEkle">AktiAktivite Ekle</a></li>
                 
             </ul>
             <div id="AktiviteEkle" style="min-height:100px">
@@ -18,7 +18,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonAktiviteKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonAktiviteKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonAktiviteKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -35,7 +35,7 @@
                     <tr>
                         <td width="35%">
                         Adı
-                        </td>
+                        >
                         <td width="2%">
                           :
                         </td>

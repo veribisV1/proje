@@ -15,7 +15,7 @@
                 <li><a href="#Proforma">Proforma</a></li>
                 <li><a href="#Fatura">Fatura</a></li>
                 <li><a href="#EkForm">Ek Form</a></li>
-                <li><a href="#AileBilgileri">Aile Bilgileri</a></li>
+                <li><a href="#AileBilgileri">AileAile Bilgileri</a></li>
             </ul>
             <div id="KisiEkle" style="min-height:100px">
                 <div class="KisiTableHizalama">
@@ -37,7 +37,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonKisiEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonKisiEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" OnClick="idButtonKisiEkleKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -53,7 +53,7 @@
                     <tr>
                         <td width="35%">
                         Adı
-                        </td>
+                        >
                         <td width="2%">
                           :
                         </td>
@@ -413,6 +413,7 @@
                         </td>
                         <td width="2%">
                           :
+ :
                         </td>
                         <td>
                          <asp:TextBox ID="idEXPLANATION" Width="100%" Height="100px" TextMode="MultiLine" MaxLength="1000" runat="server"></asp:TextBox>
@@ -441,7 +442,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonAileBilgileriKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" />
+                            <asp:Button ID="idButtonAileBilgileriKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" BackColor="#012353" ForeColor="White" Height="30px" OnClick="idButtonAileBilgileriKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -458,12 +459,12 @@
                         <tr>
                         <td width="15%">
                         Medeni Hali
-                        </td>
+                        >
                         <td width="2%">
                           :
                         </td>
                         <td>
-                         <asp:DropDownList ID="idISMARRIED" runat="server" Height="26px" Width="32%">
+                         <%--<asp:DropDownList ID="idISMARRIED" runat="server" Height="26px" Width="32%" OnSelectedIndexChanged="idISMARRIED_SelectedIndexChanged">--%>
                             
                          </asp:DropDownList>
                         </td>

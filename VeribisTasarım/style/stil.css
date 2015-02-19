@@ -145,7 +145,6 @@ textarea
     position:relative;
     bottom:5px;
     left:9px;
-    height:20%;
     width:60px;
 }
 .ButtonYeni {
@@ -189,7 +188,7 @@ textarea
     color:white;
    
 }
-.TextBoxFirsatArama {
+.EvrakListesiArama {
     position:relative;
     bottom:5px;
     left:2%;
@@ -197,7 +196,7 @@ textarea
 
 
 }
-.ButtonFirsatArama {
+.EvrakListesiButonArama {
     position:relative;
     bottom:5px;
     left:2%;
@@ -206,7 +205,7 @@ textarea
     background: #012353;
     color:white;
 }
-.LabelFirsatDurum {
+.EvrakListesiDurum {
     position:relative;
     bottom:5px;
     left:7%;
@@ -214,7 +213,7 @@ textarea
     height:30px;
     
 }
-.DropDownFirsatDurum {
+.EvrakListesiDropdownDurum {
     position:relative;
     bottom:5px;
     left:8%;
@@ -223,7 +222,7 @@ textarea
    
 
 }
-.LabelBaslangic {
+.LabelEvrakListesiBaslangic {
     position:relative;
     bottom:5px;
     left:12%;
@@ -231,21 +230,21 @@ textarea
     height:20px;
 
 }
-.FirsatBaslangicTarih {
+.EvrakListesiBaslangicTarih {
     position:relative;
     bottom:5px;
     left:13%;
     width:15%;
     height:20px;
 }
-.LabelBitis {
+.LabelEvrakListesiBitis {
     position:relative;
     bottom:5px;
     left:47.9%;
     width:15%;
     height:20px;
 }
-.FirsatBitisTarih {
+.EvrakListesiBitisTarih {
     position:relative;
     bottom:5px;
     left:51.7%;

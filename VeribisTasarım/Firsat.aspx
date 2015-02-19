@@ -287,10 +287,10 @@
                         <tr>
 
                         <td>
-                            <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="TextBoxFirsatArama" Height="20px" Width="13%" ></asp:TextBox>
+                            <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="EvrakListesiArama" Height="20px" Width="13%" ></asp:TextBox>
                         </td>
                         <td>
-                            <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="ButtonFirsatArama" Text="Ara" />
+                            <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="EvrakListesiButonArama" Text="Ara" />
                         </td>
                     </tr>
                    <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="LabelFirsatDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="DropDownFirsatDurum"></asp:DropDownList>

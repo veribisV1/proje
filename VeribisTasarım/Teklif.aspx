@@ -298,7 +298,20 @@
                     </div>
                    
                  </div>
-            
+            <div id="ListeAdi" style="min-height:100px">
+                <div class="KisiTableHizalama">
+                    <tr>
+                        <td>
+                       <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="EvrakListesiArama"  Height="20px" Width="13%" ></asp:TextBox>
+
+                        </td>
+                        <td>
+                        <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="EvrakListesiButonArama" Text="Button" />
+                        </td>
+                    </tr>
+                </div>
+
+            </div>
         </div>
     </div>
 

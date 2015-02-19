@@ -189,7 +189,7 @@ textarea
     color:white;
    
 }
-.TextBoxFirsatArama {
+.EvrakListesiArama {
     position:relative;
     bottom:5px;
     left:2%;
@@ -197,7 +197,7 @@ textarea
 
 
 }
-.ButtonFirsatArama {
+.EvrakListesiButonArama {
     position:relative;
     bottom:5px;
     left:2%;

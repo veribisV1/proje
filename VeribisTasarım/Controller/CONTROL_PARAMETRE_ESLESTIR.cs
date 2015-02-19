@@ -101,6 +101,10 @@ namespace VeribisTasarım.Controller
                     int decf = (!String.IsNullOrEmpty(icerik)) ? Convert.ToInt32(icerik) : -1;
                     return decf;
                     break;
+                case "Real":
+                    double real = (!String.IsNullOrEmpty(icerik)) ? Convert.ToDouble(icerik) : -1;
+                    return real;
+                    break;
                 default:
                     break;
             }

@@ -34,7 +34,13 @@ namespace VeribisTasarım.Controller
             return  firma.setStore(storeProsedurAdi, dataListesi);         
 
         }
-
+        /// <summary>
+        /// id ye gore elaman getirir
+        /// </summary>
+        /// <param name="sayfa">this</param>
+        /// <param name="tablo">TABLO NAME</param>
+        /// <param name="filitre"> COLUM NAME</param>
+        /// <param name="filitreEleman">PK</param>
         public void secilenElemanDetayiGetir(Page sayfa,string tablo,string filitre,string filitreEleman)
         {
             DBARACISI adapter = new DBARACISI();

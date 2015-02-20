@@ -45,6 +45,7 @@
                             <asp:Button ID="idButtonKisiEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
+                    <asp:TextBox ID="idCONTACT_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
 
                 

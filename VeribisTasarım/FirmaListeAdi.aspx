@@ -15,39 +15,48 @@
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <div>
-          <asp:Label ID="lblAlert" runat="server" CssClass="ListeAdiGridView" Visible="false" Text="Aradığınız Şartlara Uygun Kayıt Bulunamadı."></asp:Label>
-               <asp:GridView ID="GridView1" runat="server" 
+          <asp:Label ID="lblAlert" runat="server" Visible="false" Text="Aradığınız Şartlara Uygun Kayıt Bulunamadı."></asp:Label>
+               <asp:GridView ID="GridView1" runat="server" CssClass="ListeAdiGridView" 
                          AutoGenerateColumns="false" AllowPaging="false"
-                        DataKeyNames="COMPANY_CODE" OnRowCommand="GridView1_RowCommand" 
+                        DataKeyNames="FIRMA_ADI" OnRowCommand="GridView1_RowCommand" 
                     ShowFooter="true" >
          
                         <Columns>
                           
-                            <asp:BoundField DataField="COMPANY_CODE" HeaderText="COMPANY_CODE" />
+                           
                             <asp:TemplateField HeaderText="FİRMA ADI">
                     <ItemTemplate>
-                    <asp:Label ID="ADI" runat="server" Text='<%# Highlight(Eval("COMPANY_NAME").ToString()) %>'>
+                    <asp:Label ID="ADI" runat="server" Text='<%# Highlight(Eval("FIRMA_ADI").ToString()) %>'>
                     </asp:Label>
                     </ItemTemplate>
                     <FooterTemplate>
-                    <asp:TextBox ID="txtara" runat="server"
-                         ></asp:TextBox>
-                    <asp:Button ID="btnara"
+                  
+                       <asp:TextBox ID="txtara" CssClass="TextBoxArama" runat="server"
+                         Width="200%"></asp:TextBox>
+                    <asp:Button ID="btnara" CssClass="ButtonArama"
                                 CommandName="Ara"
                                 runat="server" Text="Ara"
                                  />
+
+
                     <asp:Button ID="btngeri"
-                                CommandName="Geri"
+                                CommandName="Geri" CssClass="GridGeri"
                                 runat="server" Text="Geri" Visible="false"
                                 Width="60px" />
                     </FooterTemplate>
+
                     </asp:TemplateField>
-                            
-                            <asp:BoundField DataField="ADDRESS" HeaderText="ADRES" />
-                            <asp:BoundField DataField="SECTOR" HeaderText="SEKTÖR" />
-                            <asp:BoundField DataField="PHONE" HeaderText="TELEFON" />
+                            <asp:BoundField DataField="TEMSILCISI" HeaderText="TEMSİLCİSİ" />
+                            <asp:BoundField DataField="ACIK_ADRES" HeaderText="ADRES" />
+                            <asp:BoundField DataField="ILCE" HeaderText="İLCE" />
+                            <asp:BoundField DataField="IL" HeaderText="İL" />
+                            <asp:BoundField DataField="TELEFON" HeaderText="TELEFON" />
+                            <asp:BoundField DataField="MAIL" HeaderText="MAİL" />
+                            <asp:BoundField DataField="WEBADDRESS" HeaderText="WEB ADRESİ" />
+
                             
                         </Columns>
+
                     </asp:GridView>
 
                 </div>

@@ -26,7 +26,7 @@ namespace VeribisTasarım
         {
             SqlConnection baglanti = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);
             baglanti.Open();
-            string komut = "Select * from COMPANY";
+            string komut = "Select * from CompanyView";
             SqlDataAdapter dAdapter = new SqlDataAdapter(komut, baglanti);
             DataSet ds = new DataSet();
             dAdapter.Fill(ds);
@@ -41,7 +41,7 @@ namespace VeribisTasarım
 
             SqlConnection baglanti = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);
             baglanti.Open();
-            string komut = "Select * from COMPANY";
+            string komut = "Select * from CompanyView";
             SqlDataAdapter dAdapter = new SqlDataAdapter(komut, baglanti);
             DataSet ds = new DataSet();
             dAdapter.Fill(ds);
@@ -54,7 +54,7 @@ namespace VeribisTasarım
                 GridView1.SortExpression, straranan);
 
             }
-            dv.RowFilter = "COMPANY_NAME like" + aranacak;
+            dv.RowFilter = "FIRMA_ADI like" +  aranacak;
             if (dv.Count > 0)
             {
                 GridView1.DataSource = dv;
@@ -68,6 +68,9 @@ namespace VeribisTasarım
 
                 lblAlert.Visible = true;
             }
+          
+            
+           
         }
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {

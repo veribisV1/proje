@@ -171,22 +171,28 @@ textarea
 }
 .TextBoxArama {
     position:relative;
-    bottom:5px;
-    left:24%;
+    bottom:1730px;
+    left:234%;
     height:20px;
-    width:60px;
+    width:250px;
     border-color:#012353;
 
 }
 .ButtonArama {
     position:relative;
-    bottom:5px;
-    left:26%;
-    width:10%;
+    bottom:1760px;
+    left:500%;
+    width:80%;
     height:30px;
     background: #012353;
     color:white;
    
+}
+.GridGeri {
+    background: #012353;
+    color:white;
+     width:10%;
+    height:30px;
 }
 .EvrakListesiArama {
     position:relative;
@@ -268,7 +274,7 @@ textarea
 
 }
 
-.ListeAdiGridView { width: 100%; background-color:white; margin: 5px 0 10px 0; border: solid 1px black; border-collapse:collapse; }
+.ListeAdiGridView { width: 70%; background-color:white; margin: 40px 0 35px 200px; border: solid 1px black; border-collapse:collapse; }
 .ListeAdiGridView td { padding: 2px; border: solid 1px #012353; color:black}
 .ListeAdiGridView th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
 .ListeAdiGridView .alt { background: #000 url(grd_alt.png) repeat-x top; }

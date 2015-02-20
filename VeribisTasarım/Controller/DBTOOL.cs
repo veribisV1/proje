@@ -56,6 +56,34 @@ namespace VeribisTasarım.Controller
             return tablo;
         }
 
+        /// <summary>
+        /// teksatırlık iceriği alanadları ile
+        /// dictinary olarak geri gönderir
+        /// </summary>
+        /// <param name="sorgu"></param>
+        /// <returns></returns>
+        public Dictionary<string, string> getDictionaryTable(string sorgu)
+        {
+            Dictionary<string, string> list = new Dictionary<string, string>();
+            adapter = new SqlDataAdapter();
+            komut = new SqlCommand(sorgu, connection);
+            adapter.SelectCommand = komut;
+            DataTable tablo = new DataTable();
+            adapter.Fill(tablo);
+            connection.Close();
+
+            if (tablo != null)
+            {
+                var columns = tablo.Columns.Cast<DataColumn>();
+                foreach (DataColumn col in tablo.Columns)
+                {
+                    list.Add(col.ColumnName, tablo.Rows[0][col].ToString());
+                }
+            }
+
+            return list;
+        }
+
 
         public Dictionary<string, string> getDictionary(string sorgu)
         {

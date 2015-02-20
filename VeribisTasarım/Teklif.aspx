@@ -32,6 +32,7 @@
                         </td>
                     </tr>
                 <hr />
+                 <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
                 <div class="ALAN4"> 
                    
                                    

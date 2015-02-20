@@ -111,5 +111,79 @@ namespace VeribisTasarım.Controller
             return null;
 
         }
+
+
+        /// <summary>
+        /// Ekran daki elamanların içini temizler
+        /// </summary>
+        /// <param name="sayfa"></param>
+        /// <param name="paramtereListesi"></param>
+        /// <param name="dataTipleri"></param>
+        /// <returns></returns>
+        public void ekranTemizle(Page sayfa)
+        {
+
+            MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
+            ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+
+
+
+            foreach (Control c in sayfa.Controls)
+            {
+                foreach (Control childc in c.Controls)
+                {
+                    if (childc is TextBox)
+                    {
+                        TextBox elemanText = (TextBox)childc;
+                        elemanText.Text = "";
+                    }
+                    else if (childc is DropDownList)
+                    {
+                        DropDownList elemanText = (DropDownList)childc;
+                        elemanText.SelectedValue = "-1";
+                    }
+                }
+            }
+
+        }
+        /// <summary>
+        /// Storeprosedureden parametreleri alıp sayfadaki 
+        /// kontrollerle eşleştirip iclerini
+        /// dolduran
+        /// </summary>
+        /// <param name="sayfa">Viev aspx </param>
+        /// <param name="paramtereListesi">store prosedur listesi </param>
+        /// <returns>sql parametre ye hazır liste</returns>
+        public void eslestirDoldur(Page sayfa, Dictionary<string, string> paramtereListesi)
+        {
+            MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
+            ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            foreach (string item in paramtereListesi.Keys)
+            {
+                string okunacakElemanId = "id" + item;
+                Control eleman = sayfa.FindControl(okunacakElemanId);
+                if (eleman != null)
+                {
+                    if (eleman.GetType() == typeof(TextBox))
+                    {
+                        TextBox elemanText = (TextBox)eleman;
+                        elemanText.Text = paramtereListesi[item];
+                    }
+                    else
+                        if (eleman.GetType() == typeof(DropDownList))
+                        {
+                            DropDownList elemanText = (DropDownList)eleman;
+                            elemanText.SelectedValue = paramtereListesi[item];
+
+                        }
+                        else
+                        {
+
+                        }
+                }
+
+            }
+
+        }
     }
 }

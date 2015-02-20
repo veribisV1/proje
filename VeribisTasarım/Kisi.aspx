@@ -394,6 +394,7 @@
                             <asp:Button ID="idButtonNotEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
+                    <asp:TextBox ID="idNOTE_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
                     <div class="ALAN6">
                         <table class="KisiTable">
@@ -451,6 +452,7 @@
                             <asp:Button ID="idButtonAileBilgileriSil" runat="server" CssClass="ButtonSil" Text="Sil" BackColor="#012353" ForeColor="White" Height="30px" />
                         </td>
                     </tr>
+                    <asp:TextBox ID="idAileBilgileriCONTACT_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
 
 

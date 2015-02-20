@@ -157,11 +157,13 @@ namespace VeribisTasarım.Controller
             foreach (string item in paramtereListesi.Keys)
             {
                 string okunacakElemanId = "id" + item;
-                Control eleman = sayfa.FindControl(okunacakElemanId);
+                Control eleman = MainContent.FindControl(okunacakElemanId);
                 if (eleman != null)
                 {
                     if (eleman.GetType() == typeof(TextBox))
                     {
+                        if (paramtereListesi[item].Equals("-1"))
+                            continue;
                         TextBox elemanText = (TextBox)eleman;
                         elemanText.Text = paramtereListesi[item];
                     }

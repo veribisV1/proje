@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 
@@ -27,11 +28,26 @@ namespace VeribisTasarım.Controller
         public int kaydet(string storeProsedurAdi)
         {
             DBARACISI firma = new DBARACISI();
-            Dictionary<string, string> paramtereListesi = firma.storeParametreGetir(storeProsedurAdi);
+            Dictionary<string, string> paramtereListesi = firma.getStoreParametre(storeProsedurAdi);
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            return  firma.storeKaydet(storeProsedurAdi, dataListesi);         
+            return  firma.setStore(storeProsedurAdi, dataListesi);         
 
+        }
+
+        public void secilenElemanDetayiGetir(Page sayfa,string tablo,string filitre,string filitreEleman)
+        {
+            DBARACISI adapter = new DBARACISI();
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("select * from ");
+            sorgu.Append(tablo);
+            sorgu.Append(" where ");
+            sorgu.Append(filitre);
+            sorgu.Append("=");
+            sorgu.Append(filitreEleman);
+            Dictionary<string, string> icerikListesi = adapter.getEleman(sorgu.ToString());
+            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            controlEslestir.eslestirDoldur(sayfa, icerikListesi);
         }
     }
 }

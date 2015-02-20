@@ -84,19 +84,23 @@ namespace VeribisTasarım
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             int Company_Code = -1;
-            if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+            if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
             {
-                Company_Code = kaydet("pInsertCompany");
+                if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+                {
+                    Company_Code = kaydet("pInsertCompany");
+                }
+                else
+                {
+                    Company_Code = kaydet("pUpdateCompany");
+                }
+                if (Company_Code != -1)
+                {
+                    formTemizle(this);
+                }
             }
-            else
-            {
-                Company_Code = kaydet("pUpdateCompany");
-            }
-            if (Company_Code != -1)
-            {
-                formTemizle(this);
-            }
-
+            secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
+            idFOUNDATION_DATE.Text = DateTime.Now.ToString();
         }
 
 

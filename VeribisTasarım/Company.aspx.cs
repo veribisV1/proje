@@ -27,7 +27,7 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-         
+
             #region Firma Ekle DropDownları doldur
             idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
@@ -83,14 +83,19 @@ namespace VeribisTasarım
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
-            kaydet("pInsertCompany");
-            formTemizle(this);
-        //{
-        //    DBARACISI firma = new DBARACISI();            
-        //    Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertCompany");
-        //    CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-        //    Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
-        //    int companyCode = firma.storeKaydet("pInsertCompany", dataListesi);           
+            int Company_Code = -1;
+            if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+            {
+                Company_Code = kaydet("pInsertCompany");
+            }
+            else
+            {
+                Company_Code = kaydet("pUpdateCompany");
+            }
+            if (Company_Code != -1)
+            {
+                formTemizle(this);
+            }
 
         }
 

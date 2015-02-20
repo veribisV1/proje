@@ -27,6 +27,7 @@
                             <asp:Button ID="idButtonFirsatEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
+                  <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
                 <div class="ALAN4"> 
                    

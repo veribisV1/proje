@@ -46,5 +46,7 @@ namespace VeribisTasarım
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
             int companyCode = firma.firmaKaydet("pInsertOppMaster", dataListesi);
         }
+
+     
     }
 }

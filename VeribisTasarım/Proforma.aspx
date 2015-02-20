@@ -17,7 +17,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonProformaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonProformaEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonProformaEkleKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         

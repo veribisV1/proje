@@ -6,8 +6,12 @@
         <h3>TEKLİF</h3>
         <div class="tabmenu">
             <ul>
+<<<<<<< HEAD
+                <li><a href="#TeklifEkle">TeklTeklif Ekle</a></li>
+=======
                 <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li><a href="#TeklifEkle">Teklif Ekle</a></li>
+>>>>>>> 0712d1ebd72374934a5c5d3c1c1f9ac9aa6de9dc
                 
             </ul>
             <div id="TeklifEkle" style="min-height:100px">
@@ -19,7 +23,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonTeklifEkleKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -36,7 +40,7 @@
                     <tr>
                         <td width="35%">
                         Firma Adı
-                        </td>
+                        >
                         <td width="2%">
                           :
                         </td>
@@ -321,7 +325,7 @@
                            <table class="KisiTable">
                                <tr>
                                    <td>
-                              <asp:GridView ID="idTeklifGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                            <%--  <asp:GridView ID="idTeklifGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                                   <Columns>
                                       <asp:BoundField DataField="FİRMA" HeaderText="FİRMA" ReadOnly="True" SortExpression="FİRMA" />
                                       <asp:BoundField DataField="KİŞİ" HeaderText="KİŞİ" ReadOnly="True" SortExpression="KİŞİ" />
@@ -330,7 +334,7 @@
                                       <asp:BoundField DataField="OPEN_CLOSE" HeaderText="OPEN_CLOSE" SortExpression="OPEN_CLOSE" />
                                   </Columns>
                                        </asp:GridView>
-                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [FİRMA], [KİŞİ], [TEMSİLCİ], [DOCUMENT_DATE], [OPEN_CLOSE] FROM [VOTASK]"></asp:SqlDataSource>
+                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [FİRMA], [KİŞİ], [TEMSİLCİ], [DOCUMENT_DATE], [OPEN_CLOSE] FROM [VOTASK]"></asp:SqlDataSource>--%>
                                    </td>
                                </tr>
                            </table>

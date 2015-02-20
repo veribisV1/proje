@@ -125,9 +125,6 @@ namespace VeribisTasarım.Controller
 
             MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
             ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
-
-
-
             foreach (Control c in sayfa.Controls)
             {
                 foreach (Control childc in c.Controls)

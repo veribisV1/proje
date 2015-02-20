@@ -36,11 +36,11 @@ namespace VeribisTasarım
 
         protected void idButtonFaturaEkleKaydet_Click(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertOppMaster");
+            DBARACISI firma = new DBARACISI();
+            Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertOppMaster");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);                                 
-            int companyCode = firma.firmaKaydet("pInsertOppMaster", dataListesi);
+            int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
         }
     }
 }

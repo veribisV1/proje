@@ -85,11 +85,11 @@ namespace VeribisTasarım
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();            
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertCompany");
+            DBARACISI firma = new DBARACISI();            
+            Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertCompany");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
-            int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
+            int companyCode = firma.storeKaydet("pInsertCompany", dataListesi);
             
 
         }

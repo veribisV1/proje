@@ -17,11 +17,11 @@ namespace VeribisTasarım
 
         protected void idButtonTelefonKaydet_Click(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertPhone");
+            DBARACISI firma = new DBARACISI();
+            Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertPhone");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            int companyCode = firma.firmaKaydet("pInsertPhone", dataListesi);
+            int companyCode = firma.storeKaydet("pInsertPhone", dataListesi);
         }
     }
 }

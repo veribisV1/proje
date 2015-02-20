@@ -5,14 +5,14 @@ using System.Web;
 
 namespace VeribisTasarım.Controller
 {
-    public class FIRMA
+    public class DBARACISI
     {
-        public Dictionary<string, string> firmaParametreGetir(string parametreAdi)
+        public Dictionary<string, string> storeParametreGetir(string parametreAdi)
         {
              DBTOOL db = new DBTOOL();
              return db.getParameterList(parametreAdi);
         }
-        public int firmaKaydet(string prosedurAdi, Dictionary<string, object> prosedurParametreleri)
+        public int storeKaydet(string prosedurAdi, Dictionary<string, object> prosedurParametreleri)
         {            
             DBTOOL db = new DBTOOL();
             return db.set(prosedurAdi, prosedurParametreleri);                  

@@ -38,11 +38,11 @@ namespace VeribisTasarım
 
         protected void idButtonAktiviteKaydet_Click(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertActivity");
+            DBARACISI firma = new DBARACISI();
+            Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertActivity");
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            int companyCode = firma.firmaKaydet("pInsertActivity", dataListesi);
+            int companyCode = firma.storeKaydet("pInsertActivity", dataListesi);
         }
     }
 }

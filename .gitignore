@@ -1,5 +1,4 @@
 *pyc
-
 *swp
 
 *swo
@@ -8,10 +7,11 @@
 
 *.db
 
-app_code/*.*
-bin/*.*
-obj/*.*
+/app_code
+/bin
+/obj
 *.pdb
 *.suo
 *.cache
-
+*.dll
+*.config

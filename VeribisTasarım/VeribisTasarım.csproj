@@ -122,6 +122,9 @@
     <Compile Include="Company.aspx.designer.cs">
       <DependentUpon>Company.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controller\BASECONTROLLER.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Controller\CONTROL_PARAMETRE_ESLESTIR.cs" />
     <Compile Include="Controller\DB_ELEMAN_GETIR.cs" />
     <Compile Include="Controller\DBARACISI.cs" />

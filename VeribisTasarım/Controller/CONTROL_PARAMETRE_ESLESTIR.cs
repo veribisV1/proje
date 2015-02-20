@@ -122,26 +122,25 @@ namespace VeribisTasarım.Controller
         /// <returns></returns>
         public void ekranTemizle(Page sayfa)
         {
+            recursiveEkranTEmizle(sayfa);                 
+        }
 
-            MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
-            ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
-            foreach (Control c in sayfa.Controls)
+        private void recursiveEkranTEmizle(Control childc)
+        {
+            if (childc is TextBox)
             {
-                foreach (Control childc in c.Controls)
-                {
-                    if (childc is TextBox)
-                    {
-                        TextBox elemanText = (TextBox)childc;
-                        elemanText.Text = "";
-                    }
-                    else if (childc is DropDownList)
-                    {
-                        DropDownList elemanText = (DropDownList)childc;
-                        elemanText.SelectedValue = "-1";
-                    }
-                }
+                TextBox elemanText = (TextBox)childc;
+                elemanText.Text = "";
             }
-
+            else if (childc is DropDownList)
+            {
+                DropDownList elemanText = (DropDownList)childc;
+                elemanText.SelectedValue = "-1";
+            }
+            foreach (Control c in childc.Controls)
+            {
+                recursiveEkranTEmizle(c);
+            }
         }
         /// <summary>
         /// Storeprosedureden parametreleri alıp sayfadaki 

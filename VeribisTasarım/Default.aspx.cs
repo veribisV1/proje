@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {

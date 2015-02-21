@@ -11,16 +11,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdresEkle.aspx">
-      <publishTime>02/17/2015 12:01:55</publishTime>
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="Aktivite.aspx">
-      <publishTime>02/15/2015 20:13:02</publishTime>
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="bin/VeribisTasarım.dll">
-      <publishTime>02/18/2015 10:57:32</publishTime>
+      <publishTime>02/19/2015 19:35:27</publishTime>
     </File>
     <File Include="Company.aspx">
-      <publishTime>02/17/2015 12:01:55</publishTime>
+      <publishTime>02/18/2015 21:19:12</publishTime>
     </File>
     <File Include="css/responsive.css">
       <publishTime>02/06/2015 02:02:25</publishTime>
@@ -34,8 +34,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Default.aspx">
       <publishTime>02/15/2015 10:50:47</publishTime>
     </File>
+    <File Include="Fatura.aspx">
+      <publishTime>02/19/2015 18:57:39</publishTime>
+    </File>
     <File Include="Firsat.aspx">
-      <publishTime>02/17/2015 12:01:55</publishTime>
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="image/logo.png">
       <publishTime>02/15/2015 10:50:48</publishTime>
@@ -110,10 +113,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/04/2015 16:49:03</publishTime>
     </File>
     <File Include="Kisi.aspx">
-      <publishTime>02/15/2015 10:50:48</publishTime>
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="MasterPage.master">
       <publishTime>02/15/2015 10:50:48</publishTime>
+    </File>
+    <File Include="Numune.aspx">
+      <publishTime>02/19/2015 18:57:39</publishTime>
+    </File>
+    <File Include="Proforma.aspx">
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="script/jqueryui/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
       <publishTime>02/15/2015 10:50:48</publishTime>
@@ -185,19 +194,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/15/2015 10:50:48</publishTime>
     </File>
     <File Include="style/stil.css">
-      <publishTime>02/17/2015 12:01:55</publishTime>
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="style/uiTabsArrow.png">
       <publishTime>02/15/2015 10:50:48</publishTime>
     </File>
     <File Include="Teklif.aspx">
-      <publishTime>02/15/2015 10:50:48</publishTime>
+      <publishTime>02/19/2015 19:17:07</publishTime>
     </File>
     <File Include="TelefonEkle.aspx">
-      <publishTime>02/17/2015 12:01:55</publishTime>
+      <publishTime>02/19/2015 18:57:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/18/2015 10:57:32</publishTime>
+      <publishTime>02/19/2015 19:36:26</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>02/15/2015 20:13:02</publishTime>

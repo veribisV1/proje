@@ -203,7 +203,7 @@
                                 </td>
                                 <td>
                                     <asp:TextBox ID="idFOUNDATION_DATE" runat="server" Width="101%" Height="25px" TextMode="Date"></asp:TextBox>
-
+                                   <div hidden="hidden">   <asp:TextBox ID="idCOMPANY_CODE" MaxLength="200" runat="server"></asp:TextBox> </div>
                                 </td>
                             </tr>
 

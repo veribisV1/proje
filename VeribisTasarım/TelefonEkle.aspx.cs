@@ -8,7 +8,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class TelefonEkle : System.Web.UI.Page
+    public partial class TelefonEkle : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,11 +17,11 @@ namespace VeribisTasarım
 
         protected void idButtonTelefonKaydet_Click(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertPhone");
-            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            int companyCode = firma.firmaKaydet("pInsertPhone", dataListesi);
+            //DBARACISI firma = new DBARACISI();
+            //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertPhone");
+            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
+            //int companyCode = firma.storeKaydet("pInsertPhone", dataListesi);
         }
     }
 }

@@ -8,7 +8,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Fatura : System.Web.UI.Page
+    public partial class Fatura : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,11 +36,11 @@ namespace VeribisTasarım
 
         protected void idButtonFaturaEkleKaydet_Click(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertOppMaster");
-            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);                                 
-            int companyCode = firma.firmaKaydet("pInsertOppMaster", dataListesi);
+            //DBARACISI firma = new DBARACISI();
+            //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertOppMaster");
+            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);                                 
+            //int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
         }
     }
 }

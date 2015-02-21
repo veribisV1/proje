@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
-using System.Web;
 
 namespace VeribisTasarım.Controller
 {
-
     /// <summary>
     /// hertürlü DB ye erişim için 
     /// gerekli olan metotları içeriri
     /// connectionu=webConfig ten alır
-    /// </summary>
-    public class DBTOOL
+    /// </summary>   
+    public class DBTOOL:IDisposable
     {
 
         SqlConnection connection;
@@ -26,26 +23,42 @@ namespace VeribisTasarım.Controller
         {
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);
         }
+        ~DBTOOL()
+        {
+            Dispose(false);
+        }
+        bool disposed = false;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed)
+                return;
 
+            if (disposing)
+            {
+                if (connection != null) { connection.Dispose(); connection = null; }
+                if (komut != null) { komut.Dispose(); komut = null; }
+                if (adapter != null) { adapter.Dispose(); adapter = null; }
+            }            
+            disposed = true;
+        }
+        public void Dispose()
+        {            
+            Dispose(true);           
+            GC.SuppressFinalize(this);
+        }
 
         private void init()
         {
-
         }
 
         public DataTable get(string tabloAdi, string[] sutunAdlari, string filtre)
         {
             return new DataTable();
         }
-
-
-
-
         public DataTable get(string storedProcedureAdi, int kod)
         {
             return new DataTable();
         }
-
         public DataTable get(string sorgu)
         {
             adapter = new SqlDataAdapter();
@@ -56,13 +69,41 @@ namespace VeribisTasarım.Controller
             return tablo;
         }
 
+        /// <summary>
+        /// teksatırlık iceriği alanadları ile
+        /// dictinary olarak geri gönderir
+        /// </summary>
+        /// <param name="sorgu"></param>
+        /// <returns></returns>
+        public Dictionary<string, string> getDictionaryTable(string sorgu)
+        {
+            Dictionary<string, string> list = new Dictionary<string, string>();
+            adapter = new SqlDataAdapter();
+            komut = new SqlCommand(sorgu, connection);
+            adapter.SelectCommand = komut;
+            DataTable tablo = new DataTable();
+            adapter.Fill(tablo);
+            connection.Close();
+
+            if (tablo != null)
+            {
+                var columns = tablo.Columns.Cast<DataColumn>();
+                foreach (DataColumn col in tablo.Columns)
+                {
+                    list.Add(col.ColumnName, tablo.Rows[0][col].ToString());
+                }
+            }
+
+            return list;
+        }
+
 
         public Dictionary<string, string> getDictionary(string sorgu)
         {
             Dictionary<string, string> list = new Dictionary<string, string>();
             adapter = new SqlDataAdapter();
             komut = new SqlCommand(sorgu, connection);
-            connection.Open(); 
+            connection.Open();
             using (SqlDataReader rdr = komut.ExecuteReader())
             {
 
@@ -78,7 +119,7 @@ namespace VeribisTasarım.Controller
                 {
                     list.Add("-1", "");
                 }
-            }        
+            }
 
 
             connection.Close();

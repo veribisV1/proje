@@ -37,7 +37,7 @@
                     </tr>
                     <tr>         
                         <td>
-                            <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" />
+                            <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonAdresKaydet_Click" />
                         </td>
                     </tr>
                     <tr>         
@@ -122,7 +122,7 @@
                           :
                         </td>
                         <td>
-                       <asp:TextBox ID="ADDRESS3" MaxLength="200" Height="22px" Width="520%" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="idADDRESS3" MaxLength="200" Height="22px" Width="520%" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                             <tr>

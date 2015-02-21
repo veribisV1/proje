@@ -14,7 +14,7 @@ namespace VeribisTasarım.Controller
     /// </summary>
     public class DB_ELEMAN_GETIR
     {
-        DBTOOL db = new DBTOOL();
+        DBARACISI db = new DBARACISI();
         public DropDownList doldur(DropDownList eleman, Dictionary<string, string> liste)
         {
             eleman.DataSource = liste;
@@ -39,7 +39,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append(grupKodu);
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
-        }
+        }       
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
         /// </summary>
@@ -54,22 +54,22 @@ namespace VeribisTasarım.Controller
             //ts = DateTime.Now - d;
             //string tabS = ts.ToString();
             //d = DateTime.Now;
-            //Dictionary<string, string> liste = db.getDictionary("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
+            //Dictionary<string, string> liste = db.getListEleman("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
             //ts = DateTime.Now - d;
             //string tabS1 = ts.ToString();
             ////ts.
 
-            Dictionary<string, string> liste = db.getDictionary("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
+            Dictionary<string, string> liste = db.getListEleman("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
             return liste;
         }
         public Dictionary<string, string> getMarka()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("23"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("23"));
             return liste;
         }
         public Dictionary<string, string> getModel()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("49"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("49"));
             return liste;
         }
         public Dictionary<string, string> getTip(byte tipNo)
@@ -97,82 +97,82 @@ namespace VeribisTasarım.Controller
                 default:
                     break;
             }
-            Dictionary<string, string> liste = db.getDictionary(getSQL(grupKod));
+            Dictionary<string, string> liste = db.getListEleman(getSQL(grupKod));
             return liste;
         }
         public Dictionary<string, string> getSektor()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("4"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("4"));
             return liste;
         }
         public Dictionary<string, string> getFirmaTipi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("5"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("5"));
             return liste;
         }
         public Dictionary<string, string> getFirmaDurum()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("9"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("9"));
             return liste;
         }
         public Dictionary<string, string> getBolge()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("8"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("8"));
             return liste;
         }
         public Dictionary<string, string> getGrup()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("20"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("20"));
             return liste;
         }
         public Dictionary<string, string> getGrupKisi()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("53"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("53"));
             return liste;
         }
         public Dictionary<string, string> getAkifPasifKisi()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("13"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("13"));
             return liste;
         }
         public Dictionary<string, string> getDiller()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("18"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("18"));
             return liste;
         }
         public Dictionary<string, string> getHitap()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("86"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("86"));
             return liste;
         }
         public Dictionary<string, string> getReferansKisi()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("98"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("98"));
             return liste;
         }
         public Dictionary<string, string> getEgitimDuzeyi()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("15"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("15"));
             return liste;
         }
         public Dictionary<string, string> getReferans()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("58"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("58"));
             //"SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=58 ORDER BY ROW_ORDER_NO");
             return liste;
         }
         public Dictionary<string, string> getOdemeSekli()
         {
 
-            Dictionary<string, string> liste = db.getDictionary(getSQL("6"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("6"));
             //"SELECT ROW_ORDER_NO as col1, EXP_TR  AS col2 FROM GROUPS WHERE GROUP_CODE=58 ORDER BY ROW_ORDER_NO");
             return liste;
         }
@@ -185,7 +185,7 @@ namespace VeribisTasarım.Controller
         public Dictionary<string, string> getParaBirimi()
         {
 
-            Dictionary<string, string> liste = db.getDictionary("SELECT CUR_SYMBOL as col1,CUR_NAME as col2,ROW_ORDER_NO FROM CURTYPE order by ROW_ORDER_NO");
+            Dictionary<string, string> liste = db.getListEleman("SELECT CUR_SYMBOL as col1,CUR_NAME as col2,ROW_ORDER_NO FROM CURTYPE order by ROW_ORDER_NO");
             return liste;
         }
         /// <summary>
@@ -195,7 +195,7 @@ namespace VeribisTasarım.Controller
         public Dictionary<string, string> getFirma()
         {
 
-            Dictionary<string, string> liste = db.getDictionary("SELECT COMPANY_CODE as col1, COMPANY_NAME  AS col2 FROM COMPANY  ORDER BY COMPANY_NAME");
+            Dictionary<string, string> liste = db.getListEleman("SELECT COMPANY_CODE as col1, COMPANY_NAME  AS col2 FROM COMPANY  ORDER BY COMPANY_NAME");
             return liste;
         }
         public Dictionary<string, string> getFirmaKodu(string firmaKodu)
@@ -204,7 +204,7 @@ namespace VeribisTasarım.Controller
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT COMPANY_CODE as col1, COMPANY_COMMERCIAL_CODE  AS col2 FROM COMPANY where COMPANY_CODE=");
             sorgu.Append(firmaKodu);
-            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            Dictionary<string, string> liste = db.getListEleman(sorgu.ToString());
             return liste;
         }
         /// <summary>
@@ -218,207 +218,208 @@ namespace VeribisTasarım.Controller
             sorgu.Append("SELECT CONTACT_CODE as col1, NAME+' '+SURNAME  AS col2 FROM CONTACT  where COMPANY_CODE=");
             sorgu.Append(companyCode);
             sorgu.Append(" order by col2");
-            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            Dictionary<string, string> liste = db.getListEleman(sorgu.ToString());
             return liste;
         }
-        public Dictionary<string, string> getProje(string companyCode="1")
+        public Dictionary<string, string> getProje(string companyCode = "1")
         {
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("select PROJECT_CODE as col1,NAME as col2 from PROJECTS where COMPANY_CODE=");
             sorgu.Append(companyCode);
             sorgu.Append(" order by col2");
-            Dictionary<string, string> liste = db.getDictionary(sorgu.ToString());
+            Dictionary<string, string> liste = db.getListEleman(sorgu.ToString());
             return liste;
         }
         public Dictionary<string, string> getFaturaGrubu()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("68"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("68"));
             return liste;
         }
         public Dictionary<string, string> getFaturaAcikKapali()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("8"));
+            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("8"));
             return liste;
         }
         public Dictionary<string, string> getBirim()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("59"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("59"));
             return liste;
         }
         public Dictionary<string, string> getCinsiyet()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("85"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("85"));
             return liste;
         }
         public Dictionary<string, string> getDernekler()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("20"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("20"));
             return liste;
         }
         public Dictionary<string, string> getDepartmanlar()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("97"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("97"));
             return liste;
         }
         public Dictionary<string, string> getUnvanlar()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("12"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("12"));
             return liste;
         }
         public Dictionary<string, string> getDonem()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("52"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("52"));
             return liste;
         }
         public Dictionary<string, string> getSiparisYolu()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("78"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("78"));
             return liste;
         }
         public Dictionary<string, string> getTeslimSekli()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("69"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("69"));
             return liste;
         }
         public Dictionary<string, string> getTeslimSekliFirsat()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("42"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("42"));
             return liste;
         }
         public Dictionary<string, string> getSonuc()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("72"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("72"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteTipi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("25"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("25"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteSonucGrubu()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("72"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("72"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteAcikKapali()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("50"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("50"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteGrubu()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("32"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("32"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteKonuGrubu()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("26"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("26"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteNerede()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("27"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("27"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteOncelik()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("28"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("28"));
             return liste;
         }
         public Dictionary<string, string> getAktiviteHatirlatma()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("52"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("52"));
             return liste;
         }
         public Dictionary<string, string> getMensei()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("81"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("81"));
             return liste;
         }
         public Dictionary<string, string> getBankaBilgisi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("80"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("80"));
             return liste;
         }
         public Dictionary<string, string> getAmbalaj()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("82"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("82"));
             return liste;
         }
         public Dictionary<string, string> getNakliyeTipi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("83"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("83"));
             return liste;
         }
         public Dictionary<string, string> getNakliyeFirma()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("78"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("78"));
             return liste;
         }
         public Dictionary<string, string> getNedenKaybettik()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("57"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("57"));
             return liste;
         }
         public Dictionary<string, string> getRakipFirma()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("55"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("55"));
             return liste;
         }
         public Dictionary<string, string> getTakipAsamalari()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("42"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("42"));
             return liste;
         }
         public Dictionary<string, string> getTakipYontemi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("41"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("41"));
             return liste;
         }
         public Dictionary<string, string> getDepo()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("39"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("39"));
             return liste;
         }
         public Dictionary<string, string> getMedeniHal()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("60"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("60"));
             return liste;
         }
         public Dictionary<string, string> getEvVarMi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("62"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("62"));
             return liste;
         }
         public Dictionary<string, string> getEvSkalasi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("61"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("61"));
             return liste;
         }
         public Dictionary<string, string> getFirsatCinsi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("44"));
+            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("44"));
             return liste;
         }
         public Dictionary<string, string> getRevizyon()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQL("43"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("43"));
             return liste;
         }
         public Dictionary<string, string> getProformaCinsi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("32"));
+            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("32"));
             return liste;
         }
         public Dictionary<string, string> getFaturaCinsi()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("12"));
+            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("12"));
             return liste;
         }
         public Dictionary<string, string> getFaturaNormal()
         {
-            Dictionary<string, string> liste = db.getDictionary(getSQLCitems("6"));
+            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("6"));
             return liste;
         }
+        
     }
 }

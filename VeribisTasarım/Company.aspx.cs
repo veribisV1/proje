@@ -10,7 +10,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Company : System.Web.UI.Page
+    public partial class Company : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,7 +27,7 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-         
+
             #region Firma Ekle DropDownları doldur
             idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
@@ -57,7 +57,6 @@ namespace VeribisTasarım
         private void adresDoldur(int companyCode = 34)
         {
             DBTOOL db = new DBTOOL();
-
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
             sorgu.Append("SELECT ADDRESS_TYPE_ID AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3 + ' ' + COUNTY1 + ' ' + COUNTY2 + ' ' + CITY) AS ADRES FROM ADDRESS WHERE COMPANY_CODE=");
@@ -65,7 +64,6 @@ namespace VeribisTasarım
             DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
             idADDRESS.DataBind();
-
 
         }
 
@@ -85,13 +83,24 @@ namespace VeribisTasarım
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();            
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertCompany");
-            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
-            int companyCode = firma.firmaKaydet("pInsertCompany", dataListesi);
+            int Company_Code = -1;
+            if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
+            {
+                if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+                {
+                    Company_Code = kaydet("pInsertCompany");
+                }
+                else
+                {
+                    Company_Code = kaydet("pUpdateCompany");
+                }
+                if (Company_Code != -1)
+                {
+                    formTemizle(this);
+                }
+            }
+            //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
             
-
         }
 
      

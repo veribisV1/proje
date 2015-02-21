@@ -145,7 +145,6 @@ textarea
     position:relative;
     bottom:5px;
     left:9px;
-    height:20%;
     width:60px;
 }
 .ButtonYeni {
@@ -161,6 +160,14 @@ textarea
     height:20px;
     width:60px;
 
+}
+
+.ButtonGeriDon {
+    position:relative;
+    bottom:5px;
+    left:22px;
+    height:20px;
+    width:150px;
 }
 .TextBoxArama {
     position:relative;
@@ -181,7 +188,71 @@ textarea
     color:white;
    
 }
-.ListeAdiGridView { width: 100%; background-color: #ed1d1d; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.EvrakListesiArama {
+    position:relative;
+    bottom:5px;
+    left:2%;
+    border-color:#012353;
+
+
+}
+.EvrakListesiButonArama {
+    position:relative;
+    bottom:5px;
+    left:2%;
+    width:7%;
+    height:30px;
+    background: #012353;
+    color:white;
+}
+.EvrakListesiDurum {
+    position:relative;
+    bottom:5px;
+    left:7%;
+    width:7%;
+    height:30px;
+    
+}
+.EvrakListesiDropdownDurum {
+    position:relative;
+    bottom:5px;
+    left:8%;
+    width:7%;
+    height:20px;
+   
+
+}
+.LabelEvrakListesiBaslangic {
+    position:relative;
+    bottom:5px;
+    left:12%;
+    width:7%;
+    height:20px;
+
+}
+.EvrakListesiBaslangicTarih {
+    position:relative;
+    bottom:5px;
+    left:13%;
+    width:15%;
+    height:20px;
+}
+.LabelEvrakListesiBitis {
+    position:relative;
+    bottom:5px;
+    left:47.9%;
+    width:15%;
+    height:20px;
+}
+.EvrakListesiBitisTarih {
+    position:relative;
+    bottom:5px;
+    left:51.7%;
+    width:15%;
+    height:20px;
+}
+
+.ListeAdiGridView { width: 100%; background-color:white; margin: 5px 0 10px 0; border: solid 1px black; border-collapse:collapse; }
 .ListeAdiGridView td { padding: 2px; border: solid 1px #012353; color:black}
 .ListeAdiGridView th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
 .ListeAdiGridView .alt { background: #000 url(grd_alt.png) repeat-x top; }
@@ -330,7 +401,7 @@ textarea
 
 
 /* =============================================
------------------ ADRES-GRÝDVÝEW -------
+----------------- ADRES-GRÝDVÝEW(COMPANY) -------
 ==============================================*/
 .gridDivAdres { position:relative; right:1%; width:132%; background-color:black; margin: 5px 0 10px 0; /*border: solid 1px #525252;*/ border-collapse:collapse; }
 .gridDivAdres td { padding:2px 15px; border: solid 1px #012353; color:black}
@@ -343,9 +414,32 @@ textarea
 .gridDivAdres.pgr a:hover { color: #f22323; text-decoration: none; }
 
 /* =============================================
------------------Adres Ekle Buton -------
+----------------- ADRES-GRÝDVÝEW(KÝÞÝ) -------
+==============================================*/
+.gridDivAdresKisi { position:relative; right:1%; width:139%; background-color:black; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.gridDivAdresKisi td { padding:2px 15px; border: solid 1px #012353; color:black}
+.gridDivAdresKisi th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
+.gridDivAdresKisi .alt { background: #000 url(grd_alt.png) repeat-x top; }
+.gridDivAdresKisi .pgr {background: #012353 url(grd_pgr.png) repeat-x top; }
+.gridDivAdresKisi.pgr table { margin: 5px 0; }
+.gridDivAdresKisi.pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #f50909;font-weight: bold; color: #f30b0b; line-height: 22px; }   
+.gridDivAdresKisi.pgr a { color: #012353; text-decoration: none; }
+.gridDivAdresKisi.pgr a:hover { color: #f22323; text-decoration: none; }
+
+/* =============================================
+-----------------Adres Ekle Buton(COMPANY) -------
 ==============================================*/
 .AdresEkle {
+    width:18%;
+    height:25px;
+    background-color:#012353;
+    color:white;
+
+}
+/* =============================================
+-----------------Adres Ekle Buton(KÝÞÝ) -------
+==============================================*/
+.AdresEkleKisi {
     width:18%;
     height:25px;
     background-color:#012353;
@@ -356,7 +450,7 @@ textarea
 
 
 /* =============================================
------------------ TELEFON-GRÝDVÝEW -------
+----------------- TELEFON-GRÝDVÝEW(COMPANY) -------
 ==============================================*/
 .gridDivTelefon { position:relative; left:36%; width:65%; background-color:black; margin: 5px 0 10px 0; /*border: solid 1px #525252;*/ border-collapse:collapse; }
 .gridDivTelefon td { padding:2px 15px; border: solid 1px #012353; color:black}
@@ -369,7 +463,20 @@ textarea
 .gridDivTelefon.pgr a:hover { color: #f22323; text-decoration: none; }
 
 /* =============================================
------------------ Telefon Ekle Buton-----------
+----------------- TELEFON-GRÝDVÝEW(KÝÞÝ) -------
+==============================================*/
+.gridDivTelefonKisi { position:relative; left:300%; bottom:50px; width:138%; background-color:black; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.gridDivTelefonKisi td { padding:2px 15px; border: solid 1px #012353; color:black}
+.gridDivTelefonKisi th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
+.gridDivTelefonKisi .alt { background: #000 url(grd_alt.png) repeat-x top; }
+.gridDivTelefonKisi .pgr {background: #012353 url(grd_pgr.png) repeat-x top; }
+.gridDivTelefonKisi.pgr table { margin: 5px 0; }
+.gridDivTelefonKisi.pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #f50909;font-weight: bold; color: #f30b0b; line-height: 22px; }   
+.gridDivTelefonKisi.pgr a { color: #012353; text-decoration: none; }
+.gridDivTelefonKisi.pgr a:hover { color: #f22323; text-decoration: none; }
+
+/* =============================================
+----------------- Telefon Ekle Buton(COMPANY)-----------
 ==============================================*/
 
 .TelefonEkle {
@@ -379,6 +486,20 @@ textarea
     color:white;
     position:relative;
     left:36%;
+
+}
+/* =============================================
+----------------- Telefon Ekle Buton(KÝÞÝ)-----------
+==============================================*/
+
+.TelefonEkleKisi {
+    width:40%;
+    height:25px;
+    background-color:#012353;
+    color:white;
+    position:relative;
+    left:290%;
+    bottom:50px;
 
 }
 

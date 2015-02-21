@@ -8,7 +8,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Kisi : System.Web.UI.Page
+    public partial class Kisi : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,11 +43,14 @@ namespace VeribisTasarım
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
-            FIRMA firma = new FIRMA();
-            Dictionary<string, string> paramtereListesi = firma.firmaParametreGetir("pInsertContact");
-            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            int companyCode = firma.firmaKaydet("pInsertContact", dataListesi);
+            //DBARACISI firma = new DBARACISI();
+            //Dictionary<string, string> paramtereListesi = firma.getStoreParametre("pInsertContact");
+            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
+            //int companyCode = firma.setStore("pInsertContact", dataListesi);
+
+
+
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)

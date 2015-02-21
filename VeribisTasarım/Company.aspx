@@ -411,7 +411,26 @@
                 </div>
             </div>
             <div id="ListeAdi">
-               
+                <div class="KisiTableHizalama">
+                    <div>
+                        <div class="menu">
+                            <asp:TextBox ID="txtSearch" runat="server" CssClass="searchText" /></div>
+
+                        <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false">
+                            <Columns>
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_CODE" HeaderText="COMPANY CODE"
+                                    ItemStyle-CssClass="ContactName" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_NAME" HeaderText="COMPANY NAME" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="ADDRESS" HeaderText="ADDRESS" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="SECTOR" HeaderText="SECTOR" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="PHONE" HeaderText="ADDRESS" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="MAIL" HeaderText="MAIL" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="WEBADDRESS" HeaderText="WEB ADDRESS" />
+                            </Columns>
+                        </asp:GridView>
+
+                        <div class="Pager"></div>
+                    </div>
 
                 </div>
 

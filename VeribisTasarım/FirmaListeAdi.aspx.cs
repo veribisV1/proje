@@ -19,6 +19,7 @@ namespace VeribisTasarım
         {
             if (!IsPostBack)
             {
+               
                 griddoldur();
             }
         }
@@ -116,6 +117,14 @@ namespace VeribisTasarım
         public string belirt(Match m)
         {
             return "<span class='highlight'>" + m.Value + "</span>";
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            
+            int yeniSayfaIndex = e.NewPageIndex;
+            GridView1.PageIndex = yeniSayfaIndex;
+            griddoldur();
         }
 
     }

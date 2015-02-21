@@ -45,7 +45,7 @@
                             <asp:Button ID="idButtonTelefonSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
-                    <asp:TextBox ID="idPHONE_CODE" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="idPHONE_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
                     <div class="ALAN4">
                         <table class="KisiTable">

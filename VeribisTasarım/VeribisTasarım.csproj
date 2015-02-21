@@ -64,6 +64,7 @@
     <Content Include="Fatura.aspx" />
     <Content Include="FirmaListeAdi.aspx" />
     <Content Include="Firsat.aspx" />
+    <Content Include="Giris.aspx" />
     <Content Include="Kisi.aspx" />
     <Content Include="Numune.aspx" />
     <Content Include="Proforma.aspx" />
@@ -103,12 +104,14 @@
   <ItemGroup>
     <Compile Include="AdresEkle.aspx.cs">
       <DependentUpon>AdresEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdresEkle.aspx.designer.cs">
       <DependentUpon>AdresEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Aktivite.aspx.cs">
       <DependentUpon>Aktivite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Aktivite.aspx.designer.cs">
       <DependentUpon>Aktivite.aspx</DependentUpon>
@@ -137,6 +140,7 @@
     </Compile>
     <Compile Include="Fatura.aspx.cs">
       <DependentUpon>Fatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Fatura.aspx.designer.cs">
       <DependentUpon>Fatura.aspx</DependentUpon>
@@ -150,24 +154,35 @@
     </Compile>
     <Compile Include="Firsat.aspx.cs">
       <DependentUpon>Firsat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Firsat.aspx.designer.cs">
       <DependentUpon>Firsat.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Kisi.aspx.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Kisi.aspx.designer.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Numune.aspx.cs">
       <DependentUpon>Numune.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Numune.aspx.designer.cs">
       <DependentUpon>Numune.aspx</DependentUpon>
     </Compile>
     <Compile Include="Proforma.aspx.cs">
       <DependentUpon>Proforma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Proforma.aspx.designer.cs">
       <DependentUpon>Proforma.aspx</DependentUpon>
@@ -175,6 +190,7 @@
     <Compile Include="ResGetir.cs" />
     <Compile Include="Teklif.aspx.cs">
       <DependentUpon>Teklif.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Teklif.aspx.designer.cs">
       <DependentUpon>Teklif.aspx</DependentUpon>
@@ -193,6 +209,7 @@
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

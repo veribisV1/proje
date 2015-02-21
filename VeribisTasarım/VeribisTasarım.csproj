@@ -79,6 +79,7 @@
     <Content Include="Fatura.aspx" />
     <Content Include="FirmaListeAdi.aspx" />
     <Content Include="Firsat.aspx" />
+    <Content Include="Giris.aspx" />
     <Content Include="Kisi.aspx" />
     <Content Include="Numune.aspx" />
     <Content Include="Proforma.aspx" />
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="Firsat.aspx.designer.cs">
       <DependentUpon>Firsat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kisi.aspx.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>

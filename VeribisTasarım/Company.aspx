@@ -368,63 +368,7 @@
 
                 </div>
             </div>
-            <div id="ListeAdi" style="min-height: 100px">
-                <div class="KisiTableHizalama">
-
-                    <tr>
-
-                        <td>
-                            <asp:TextBox ID="idTextBoxFirmaArama" runat="server" CssClass="TextBoxArama" Height="20px" Width="30%"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Button ID="idButtonFirmaArama" runat="server" CssClass="ButtonArama" Text="Ara" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-
-                    <hr />
-                    <div class="ALAN12">
-                        <div class="KisiTableHizalama">
-                            <table class="KisiTable">
-                                <tr>
-                                    <td>
-                                        <asp:GridView ID="idListeAdiGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataKeyNames="COMPANY_CODE" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#012353" GridLines="Horizontal">
-                                            <AlternatingRowStyle BackColor="White" />
-                                            <Columns>
-                                                <asp:BoundField DataField="COMPANY_CODE" HeaderText="COMPANY_CODE" ReadOnly="True" SortExpression="COMPANY_CODE" />
-                                                <asp:BoundField DataField="COMPANY_NAME" HeaderText="COMPANY_NAME" SortExpression="COMPANY_NAME" />
-                                                <asp:BoundField DataField="ADDRESS" HeaderText="ADDRESS" SortExpression="ADDRESS" />
-                                                <asp:BoundField DataField="SECTOR" HeaderText="SECTOR" SortExpression="SECTOR" />
-                                                <asp:BoundField DataField="PHONE" HeaderText="PHONE" SortExpression="PHONE" />
-                                                <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
-                                                <asp:BoundField DataField="WEBADDRESS" HeaderText="WEBADDRESS" SortExpression="WEBADDRESS" />
-                                            </Columns>
-                                            <EditRowStyle BackColor="#2461BF" />
-                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                            <RowStyle BackColor="#EFF3FB" />
-                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                                        </asp:GridView>
-                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:veribis %>" SelectCommand="SELECT [COMPANY_CODE], [COMPANY_NAME], [ADDRESS], [SECTOR], [PHONE], [MAIL], [WEBADDRESS] FROM [COMPANY]"></asp:SqlDataSource>
-                                    </td>
-                                </tr>
-
-                            </table>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
+            <div id="ListeAdi"></div>
             <div id="MakinaParki" style="min-height: 100px">
                 <div class="KisiTableHizalama">
                     <tr>

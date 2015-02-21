@@ -22,5 +22,4 @@ C:\Users\Veribis\Desktop\proje\VeribisTasarım\obj\Debug\VeribisTasarım.dll
 C:\Users\Veribis\Desktop\proje\VeribisTasarım\bin\VeribisTasarım.dll
 C:\Users\Veribis\Desktop\proje\VeribisTasarım\bin\VeribisTasarım.pdb
 C:\Users\Veribis\Desktop\proje\VeribisTasarım\obj\Debug\VeribisTasarım.pdb
-C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.dll.CodeAnalysisLog.xml
-C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.dll.lastcodeanalysissucceeded
+C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache

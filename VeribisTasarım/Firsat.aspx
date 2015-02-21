@@ -27,6 +27,7 @@
                             <asp:Button ID="idButtonFirsatEkleSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
+                  <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
                 <div class="ALAN4"> 
                    
@@ -296,6 +297,7 @@
                    <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="EvrakListesiDropdownDurum"></asp:DropDownList>
                    <asp:Label ID="idLabelFirsatBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBaslangicTarih"></asp:TextBox><br />
                    <asp:Label ID="idLabelFirsatBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBitisTarih"></asp:TextBox>
+                   <asp:Button ID="idUrunHizmetDetayli" runat="server" Text="Ürün Hizmet Detaylı" CssClass="UrunHizmetDetayli" />
 
 
                     <hr />

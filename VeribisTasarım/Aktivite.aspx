@@ -26,6 +26,7 @@
                             <asp:Button ID="idButtonAktiviteSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
+                    <asp:TextBox ID="idACTIVITY_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
                 <div class="ALAN4"> 
                    

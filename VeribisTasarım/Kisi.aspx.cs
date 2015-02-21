@@ -43,11 +43,14 @@ namespace VeribisTasarım
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
-            DBARACISI firma = new DBARACISI();
-            Dictionary<string, string> paramtereListesi = firma.getStoreParametre("pInsertContact");
-            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            int companyCode = firma.setStore("pInsertContact", dataListesi);
+            //DBARACISI firma = new DBARACISI();
+            //Dictionary<string, string> paramtereListesi = firma.getStoreParametre("pInsertContact");
+            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
+            //int companyCode = firma.setStore("pInsertContact", dataListesi);
+
+
+
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)

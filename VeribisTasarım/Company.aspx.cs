@@ -82,7 +82,7 @@ namespace VeribisTasarım
 
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
-        {
+        {            
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
             {
@@ -99,6 +99,8 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             }
+
+
             //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
             
         }

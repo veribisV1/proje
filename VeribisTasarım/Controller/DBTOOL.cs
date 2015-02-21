@@ -56,7 +56,7 @@ namespace VeribisTasarım.Controller
 
             return new DataTable();
         }
-        public DataTable getXML(string prosedurAdi, Dictionary<string, object> parametreler)
+        public DataTable getDataTable(string prosedurAdi, Dictionary<string, object> parametreler)
         {
             komut = new SqlCommand();
             komut.Connection = connection;

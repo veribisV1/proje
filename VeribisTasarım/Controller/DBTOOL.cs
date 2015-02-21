@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 
 namespace VeribisTasarım.Controller
 {
@@ -206,6 +207,27 @@ namespace VeribisTasarım.Controller
             connection.Open();
             komut.ExecuteNonQuery();
             connection.Close();
+        }
+
+        /// <summary>
+        /// Login olurken girilen ticari koda karşılık gelen veritabanının
+        /// adını getiriyor.
+        /// </summary>
+        public string getDatabaseName(string customerCode)
+        {
+            SqlConnection connectionName = new SqlConnection(ConfigurationManager.ConnectionStrings["ticarikod"].ConnectionString);
+            StringBuilder sorgu = new StringBuilder();
+
+            sorgu.Append("SELECT DB_NAME FROM LOGIN WHERE CUSTOMER_CODE='");
+            sorgu.Append(customerCode);
+            sorgu.Append("'");
+
+            komut = new SqlCommand(sorgu.ToString(), connectionName);
+            
+            connectionName.Open();
+            var databaseName=komut.ExecuteScalar();
+            connectionName.Close();
+            return databaseName.ToString();
         }
 
     }

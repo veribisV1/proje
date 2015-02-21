@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -15,6 +17,9 @@ namespace VeribisTasarım.Controller
     public class DB_ELEMAN_GETIR
     {
         DBARACISI db = new DBARACISI();
+        SqlConnection connection;
+        DBTOOL tool = new DBTOOL();
+
         public DropDownList doldur(DropDownList eleman, Dictionary<string, string> liste)
         {
             eleman.DataSource = liste;
@@ -39,7 +44,10 @@ namespace VeribisTasarım.Controller
             sorgu.Append(grupKodu);
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
-        }       
+        }
+
+      
+
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
         /// </summary>

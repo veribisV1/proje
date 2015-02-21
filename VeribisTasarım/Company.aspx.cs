@@ -99,8 +99,8 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             }
-            secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
-            idFOUNDATION_DATE.Text = DateTime.Now.ToString();
+            //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
+            
         }
 
 

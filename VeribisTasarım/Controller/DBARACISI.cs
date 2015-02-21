@@ -7,19 +7,36 @@ namespace VeribisTasarım.Controller
 {
     public class DBARACISI
     {
-        DBTOOL db = new DBTOOL();
+
         public Dictionary<string, string> getStoreParametre(string parametreAdi)
-        {             
-             return db.getParameterList(parametreAdi);
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.getParameterList(parametreAdi);
+            }
         }
         public int setStore(string prosedurAdi, Dictionary<string, object> prosedurParametreleri)
-        {    
-            return db.set(prosedurAdi, prosedurParametreleri);                  
-        }        
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.set(prosedurAdi, prosedurParametreleri);
+            }
+        }
 
         public Dictionary<string, string> getEleman(string sorgu)
         {
-            return db.getDictionaryTable(sorgu);
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.getDictionaryTable(sorgu);
+            }
+        }
+
+        public Dictionary<string, string> getListEleman(string sorgu)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.getDictionary(sorgu);
+            }
         }
     }
 }

@@ -117,7 +117,14 @@ public class SqlProccess
         }
         catch (SqlException exp)
         {
-            throw exp;
+            return null;
+        }
+        finally
+        {
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Close();
+            }
         }
 
 

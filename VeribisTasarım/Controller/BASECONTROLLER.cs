@@ -9,8 +9,7 @@ namespace VeribisTasarım.Controller
 {
     public abstract class BASECONTROLLER : System.Web.UI.Page
     {
-        CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-      
+        CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();      
         /// <summary>
         /// ekrandaki tüm form elemanlarının
         /// içeriğini temizler
@@ -43,14 +42,9 @@ namespace VeribisTasarım.Controller
         /// <param name="filitreEleman">PK</param>
         public void secilenElemanDetayiGetir(Page sayfa,string tablo,string filitre,string filitreEleman)
         {
-            DBARACISI adapter = new DBARACISI();
-            StringBuilder sorgu = new StringBuilder();
-            sorgu.Append("select * from ");
-            sorgu.Append(tablo);
-            sorgu.Append(" where ");
-            sorgu.Append(filitre);
-            sorgu.Append("=");
-            sorgu.Append(filitreEleman);
+            DBARACISI adapter = new DBARACISI();         
+
+            string sorgu = String.Format("SELECT * FROM {0} WHERE {1}={2}", tablo,filitre,filitreEleman);
             Dictionary<string, string> icerikListesi = adapter.getEleman(sorgu.ToString());
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             controlEslestir.eslestirDoldur(sayfa, icerikListesi);

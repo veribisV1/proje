@@ -9,10 +9,11 @@ using System.Data.OleDb;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using System.Configuration;
+using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class FirmaListeAdi : System.Web.UI.Page
+    public partial class FirmaListeAdi : BASECONTROLLER
     {
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)

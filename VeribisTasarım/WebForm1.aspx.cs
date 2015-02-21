@@ -10,7 +10,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm1 : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {

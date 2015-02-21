@@ -8,7 +8,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Numune : System.Web.UI.Page
+    public partial class Numune : BASECONTROLLER
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -39,16 +39,32 @@ namespace VeribisTasarım.Controller
 
         /// <summary>
         /// gird içerisine gelecek bilgileri 
-        /// store procedur gondererek XML olarak alınabilir
+        /// store procedur gondererek 
         /// </summary>
         /// <param name="prosedurAdi"></param>
         /// <returns></returns>
-        public DataTable getGridIcerik(string prosedurAdi)
+        public DataTable getGridIcerik(string prosedurAdi,Dictionary<string, object> parametreIcerik)
         {
             using (DBTOOL db = new DBTOOL())
             {
-                return db.getDataTable(prosedurAdi, new Dictionary<string, string>());
+                return db.getDataTable(prosedurAdi, parametreIcerik);
             }
         }
+
+        /// <summary>
+        /// gird içerisine gelecek bilgileri 
+        /// sorgu gondererek datatable donus elde edebilir
+        /// </summary>
+        /// <param name="prosedurAdi"></param>
+        /// <returns></returns>
+        public DataTable getGridIcerik(string sorgu)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.get(sorgu);
+            }
+        }
+
+
     }
 }

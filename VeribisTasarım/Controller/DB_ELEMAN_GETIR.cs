@@ -230,6 +230,20 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(sorgu.ToString());
             return liste;
         }
+
+        public DataTable getFirsatAcik()
+        {
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT OPPORTUNITYMASTER.OPPORTUNITY_CODE as 'AÇIKLAMA',COMPANY.COMPANY_NAME as 'FİRMA ADI',OPPORTUNITYMASTER.EXPLANATION as 'FIRSAT',OPPORTUNITYMASTER.TOTAL_UPB as 'TUTAR'FROM OPPORTUNITYMASTER INNER JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE  WHERE DOCUMENT_TYPE=1 AND OPEN_CLOSE=1");
+            return db.getGridIcerik(sorgu.ToString());            
+        }
+
+        public DataTable getProjeAcik()
+        {
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("select PROJECTS.PROJECT_CODE as 'PROJE KODU', COMPANY.COMPANY_NAME as 'FİRMA ADI',PROJECTS.NAME as 'PROJE ADI' from PROJECTS INNER JOIN COMPANY ON COMPANY.COMPANY_CODE=PROJECTS.COMPANY_CODE where CLOSED_DATE!='1900-01-01 00:00:00.000'");
+            return db.getGridIcerik(sorgu.ToString());
+        }
         public Dictionary<string, string> getFaturaGrubu()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("68"));

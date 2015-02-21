@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
@@ -27,7 +22,6 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-
             #region Firma Ekle DropDownları doldur
             idCOMPANY_REPRESENT_CODE = dbGetir.doldur(idCOMPANY_REPRESENT_CODE, dbGetir.userAdSoyadGetir());
             idSECTOR = dbGetir.doldur(idSECTOR, dbGetir.getSektor());
@@ -49,8 +43,7 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-
-
+            
         }
 
 
@@ -70,7 +63,6 @@ namespace VeribisTasarım
         private void telefonDoldur(int companyCode = 34)
         {
             DBTOOL db = new DBTOOL();
-
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
             sorgu.Append("SELECT PHONE_TYPE_ID AS TUR,(COUNTRY_CODE+ ' (' + AREA_CODE + ') ' + PHONE_NUMBER) AS TELEFON FROM PHONE WHERE COMPANY_CODE=");
@@ -104,10 +96,6 @@ namespace VeribisTasarım
             //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
             
         }
-
-     
-      
-
 
     }
 }

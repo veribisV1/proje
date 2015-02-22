@@ -64,7 +64,7 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
-
+        
 
     }
 }

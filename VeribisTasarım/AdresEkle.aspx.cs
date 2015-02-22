@@ -12,7 +12,11 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ekranDoldur();
+            if (!IsPostBack)
+            {
+                ekranDoldur();
+            }
+            
         }
 
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
@@ -32,11 +36,18 @@ namespace VeribisTasarım
 
             idADDRESS_TYPE_ID = dbGetir.doldur(idADDRESS_TYPE_ID, dbGetir.getAdresTipi());
             idCOUNTY = dbGetir.doldur(idCOUNTY, dbGetir.getUlke());
-            idCITY = dbGetir.doldur(idCITY, dbGetir.getSehir());
+            
+         
             #endregion
 
            
 
+        }
+
+        protected void idCOUNTY_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCITY = dbGetir.doldur(idCITY, dbGetir.getSehir(idCOUNTY.SelectedItem.Value));
         }
     }
 }

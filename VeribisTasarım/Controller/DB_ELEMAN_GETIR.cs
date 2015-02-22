@@ -312,7 +312,17 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
-       
+        public Dictionary<string, string> getSehir(string ulkeKodu)
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY.CITY_CODE AS col1, CITY.CITY_NAME AS col2 FROM CITY INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=CITY.COUNTRY_CODE WHERE CITY.COUNTRY_CODE='"+ulkeKodu+"'");
+            return liste;
+        }
+
+        public Dictionary<string, string> getIlce()
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, CITY_NAME AS col2 FROM CITY");
+            return liste;
+        }
 
         public Dictionary<string, string> getTeslimSekli()
         {

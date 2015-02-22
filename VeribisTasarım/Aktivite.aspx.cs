@@ -43,6 +43,22 @@ namespace VeribisTasarım
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.storeKaydet("pInsertActivity", dataListesi);
+            int activiteCode = -1;
+            if (!String.IsNullOrEmpty(idSUBJECT.Text))
+            {
+                if (String.IsNullOrEmpty(idACTIVITY_CODE.Text))
+                {
+                    activiteCode = kaydet("pInsertActivity");
+                }
+                else
+                {
+                    activiteCode = kaydet("pUpdateActivity");
+                }
+                if (activiteCode != -1)
+                {
+                    formTemizle(this);
+                }
+            }
         }
     }
 }

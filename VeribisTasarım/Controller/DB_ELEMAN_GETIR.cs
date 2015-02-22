@@ -70,6 +70,26 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
             return liste;
         }
+
+
+        //kullanıcı giriş kontrol
+        public bool validateUser(string username, string password)
+        {
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS WHERE USER_NAME='");
+            sorgu.Append(username);
+            sorgu.Append("'");
+            sorgu.Append(" AND USER_PASSWORD='");
+            sorgu.Append(password);
+            sorgu.Append("'");
+
+            Dictionary<string, string> liste = db.getEleman(sorgu.ToString());
+            if (liste.Count != 0)
+                return true;
+            else
+                return false;
+        }
+
         public Dictionary<string, string> getMarka()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("23"));

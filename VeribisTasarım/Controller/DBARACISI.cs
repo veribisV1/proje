@@ -37,9 +37,7 @@ namespace VeribisTasarım.Controller
             }
         }
 
-<<<<<<< HEAD
-       
-=======
+
         /// <summary>
         /// gird içerisine gelecek bilgileri 
         /// store procedur gondererek 
@@ -69,6 +67,19 @@ namespace VeribisTasarım.Controller
         }
 
 
->>>>>>> 13c31f07132f0d54ff9cd31f23520e3171e190dd
+        //kullanacağımız veritabanının adı.
+        public string getDatabase(string customerCode)
+        {
+           
+            using (DBTOOL db = new DBTOOL())
+            {
+                var dbName = db.getDatabaseName(customerCode);
+                return dbName;
+            }
+           
+        }
+
+      
+
     }
 }

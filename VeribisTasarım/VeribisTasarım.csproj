@@ -137,6 +137,7 @@
     <Compile Include="app_code\SqlProccess.cs" />
     <Compile Include="Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Company.aspx.designer.cs">
       <DependentUpon>Company.aspx</DependentUpon>

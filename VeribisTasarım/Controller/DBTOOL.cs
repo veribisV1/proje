@@ -105,11 +105,15 @@ namespace VeribisTasarım.Controller
 
             if (tablo != null)
             {
-                var columns = tablo.Columns.Cast<DataColumn>();
-                foreach (DataColumn col in tablo.Columns)
+                if (tablo.Rows.Count != 0)
                 {
-                    list.Add(col.ColumnName, tablo.Rows[0][col].ToString());
+                    var columns = tablo.Columns.Cast<DataColumn>();
+                    foreach (DataColumn col in tablo.Columns)
+                    {
+                        list.Add(col.ColumnName, tablo.Rows[0][col].ToString());
+                    }
                 }
+             
             }
 
             return list;
@@ -229,6 +233,5 @@ namespace VeribisTasarım.Controller
             connectionName.Close();
             return databaseName.ToString();
         }
-
     }
 }

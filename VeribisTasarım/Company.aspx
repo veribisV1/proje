@@ -37,6 +37,8 @@
             }
 
         }
+
+       
     </script>
 
     <%--fancy_box stil tanımı--%>
@@ -73,7 +75,7 @@
                     <tr>
                         <tr>
                             <td>
-                                <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" BackColor="#012353" ForeColor="White" />
+                                <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" BackColor="#012353" ForeColor="White"  />
                             </td>
                         </tr>
                         <tr>

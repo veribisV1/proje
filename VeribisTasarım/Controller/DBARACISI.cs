@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +8,6 @@ namespace VeribisTasarım.Controller
 {
     public class DBARACISI
     {
-
         public Dictionary<string, string> getStoreParametre(string parametreAdi)
         {
             using (DBTOOL db = new DBTOOL())
@@ -22,7 +22,6 @@ namespace VeribisTasarım.Controller
                 return db.set(prosedurAdi, prosedurParametreleri);
             }
         }
-
         public Dictionary<string, string> getEleman(string sorgu)
         {
             using (DBTOOL db = new DBTOOL())
@@ -30,7 +29,6 @@ namespace VeribisTasarım.Controller
                 return db.getDictionaryTable(sorgu);
             }
         }
-
         public Dictionary<string, string> getListEleman(string sorgu)
         {
             using (DBTOOL db = new DBTOOL())
@@ -38,5 +36,39 @@ namespace VeribisTasarım.Controller
                 return db.getDictionary(sorgu);
             }
         }
+
+<<<<<<< HEAD
+       
+=======
+        /// <summary>
+        /// gird içerisine gelecek bilgileri 
+        /// store procedur gondererek 
+        /// </summary>
+        /// <param name="prosedurAdi"></param>
+        /// <returns></returns>
+        public DataTable getGridIcerik(string prosedurAdi,Dictionary<string, object> parametreIcerik)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.getDataTable(prosedurAdi, parametreIcerik);
+            }
+        }
+
+        /// <summary>
+        /// gird içerisine gelecek bilgileri 
+        /// sorgu gondererek datatable donus elde edebilir
+        /// </summary>
+        /// <param name="prosedurAdi"></param>
+        /// <returns></returns>
+        public DataTable getGridIcerik(string sorgu)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.get(sorgu);
+            }
+        }
+
+
+>>>>>>> 13c31f07132f0d54ff9cd31f23520e3171e190dd
     }
 }

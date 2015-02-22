@@ -336,6 +336,12 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+        public Dictionary<string, string> getAlanKodu(int alanKodu)
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, NAME AS col2 FROM PHONECODE WHERE COUNTRY_CODE=" + alanKodu);
+            return liste;
+        }
+
         public Dictionary<string, string> getTeslimSekli()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("69"));

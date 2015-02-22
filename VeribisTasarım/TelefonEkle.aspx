@@ -69,7 +69,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="idCOUNTRY_CODE" Height="25px" runat="server" Width="150%"></asp:DropDownList>
+                       <asp:DropDownList ID="idCOUNTRY_CODE" Height="25px" runat="server" Width="150%" AutoPostBack="True" OnSelectedIndexChanged="idCOUNTRY_CODE_SelectedIndexChanged" ViewStateMode="Enabled"></asp:DropDownList>
                         </td>
                     </tr>
                             <tr>

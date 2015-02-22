@@ -41,5 +41,11 @@ namespace VeribisTasarım
            
 
         }
+
+        protected void idCOUNTRY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idAREA_CODE = dbGetir.doldur(idAREA_CODE, dbGetir.getAlanKodu(Convert.ToInt32(idCOUNTRY_CODE.SelectedItem.Value)));
+        }
     }
 }

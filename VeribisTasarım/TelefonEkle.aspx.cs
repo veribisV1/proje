@@ -12,7 +12,10 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ekranDoldur();
+            }
         }
 
         protected void idButtonTelefonKaydet_Click(object sender, EventArgs e)
@@ -22,6 +25,20 @@ namespace VeribisTasarım
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.storeKaydet("pInsertPhone", dataListesi);
+        }
+
+        private void ekranDoldur()
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            #region Telefon Ekle DropDownları doldur
+
+            idPHONE_TYPE_ID = dbGetir.doldur(idPHONE_TYPE_ID, dbGetir.getTelefonTipi());
+          
+           
+            #endregion
+
+           
+
         }
     }
 }

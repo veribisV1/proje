@@ -324,6 +324,12 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
+        public Dictionary<string, string> getTelefonTipi()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("3"));
+            return liste;
+        }
+
         public Dictionary<string, string> getTeslimSekli()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("69"));

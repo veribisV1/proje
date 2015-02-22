@@ -26,8 +26,11 @@ namespace VeribisTasarım
                 telefonDoldur();
                 ekranDoldur();
                 //BindDummyRow();
+<<<<<<< HEAD
                 
                 
+=======
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
             }
 
         }
@@ -105,6 +108,7 @@ namespace VeribisTasarım
                     //formTemizle(this);
                 }
             }
+<<<<<<< HEAD
             
         }
 
@@ -112,6 +116,13 @@ namespace VeribisTasarım
         //adres listesinde arama yapan bölüm
 
         //private static int PageSize = 15;
+=======
+
+  }
+            //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
+
+        private static int PageSize = 15;
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
 
         //private void BindDummyRow()
         //{
@@ -168,6 +179,10 @@ namespace VeribisTasarım
         //            }
         //        }
         //    }
+<<<<<<< HEAD
         //}
+=======
+        //}            
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
     }
 }

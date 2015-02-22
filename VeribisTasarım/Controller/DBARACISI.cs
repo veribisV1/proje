@@ -65,6 +65,25 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
+<<<<<<< HEAD
+=======
+
+
+        //kullanacağımız veritabanının adı.
+        public string getDatabase(string customerCode)
+        {
+           
+            using (DBTOOL db = new DBTOOL())
+            {
+                var dbName = db.getDatabaseName(customerCode);
+                return dbName;
+            }
+           
+        }
+
+      
+
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
     }
 }
 

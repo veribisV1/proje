@@ -37,16 +37,14 @@ namespace VeribisTasarım.Controller
             }
         }
 
-<<<<<<< HEAD
-       
-=======
+
         /// <summary>
         /// gird içerisine gelecek bilgileri 
         /// store procedur gondererek 
         /// </summary>
         /// <param name="prosedurAdi"></param>
         /// <returns></returns>
-        public DataTable getGridIcerik(string prosedurAdi,Dictionary<string, object> parametreIcerik)
+        public DataTable getGridIcerik(string prosedurAdi, Dictionary<string, object> parametreIcerik)
         {
             using (DBTOOL db = new DBTOOL())
             {
@@ -67,8 +65,6 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
-
-
->>>>>>> 13c31f07132f0d54ff9cd31f23520e3171e190dd
     }
 }
+

@@ -12,7 +12,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ekranDoldur();
         }
 
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
@@ -22,6 +22,19 @@ namespace VeribisTasarım
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.storeKaydet("pInsertAddress", dataListesi);
+        }
+
+
+        private void ekranDoldur()
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            #region Firma Ekle DropDownları doldur
+
+            idADDRESS_TYPE_ID = dbGetir.doldur(idADDRESS_TYPE_ID, dbGetir.getAdresTipi());
+            #endregion
+
+           
+
         }
     }
 }

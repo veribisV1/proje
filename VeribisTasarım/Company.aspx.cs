@@ -103,7 +103,7 @@ namespace VeribisTasarım
             }
 
   }
-            //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
+            //adres listesinde arama yapan bölüm
 
         private static int PageSize = 15;
 

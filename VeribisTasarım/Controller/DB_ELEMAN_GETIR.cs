@@ -317,6 +317,11 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("25"));
             return liste;
         }
+        public Dictionary<string, string> getAdresTipi()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("1"));
+            return liste;
+        }
         public Dictionary<string, string> getAktiviteSonucGrubu()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("72"));

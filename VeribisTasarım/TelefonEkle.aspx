@@ -114,6 +114,8 @@
                 </div>
     
     </div>
+         </div>
+         <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
     </form>
 </body>
 </html>

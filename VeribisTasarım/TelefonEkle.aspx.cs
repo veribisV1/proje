@@ -15,6 +15,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+                idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
             }
         }
 
@@ -25,6 +26,23 @@ namespace VeribisTasarım
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.storeKaydet("pInsertPhone", dataListesi);
+
+            int Company_Code = -1;
+            if (!String.IsNullOrEmpty(idPHONE_NUMBER.Text))
+            {
+                if (String.IsNullOrEmpty(idPHONE_CODE.Text))
+                {
+                    Company_Code = kaydet("pInsertPhone");
+                }
+                else
+                {
+                    Company_Code = kaydet("pUpdatePhone");
+                }
+                if (Company_Code != -1)
+                {
+                    formTemizle(this);
+                }
+            }
         }
 
         private void ekranDoldur()

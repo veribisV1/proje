@@ -1,42 +1,51 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
-	<script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
     <script type="text/javascript">
 
-        
-        function baslat(siraNo) {          
-            switch (siraNo) {
-                case 1:
-                    adres = 'AdresEkle.aspx';
-                    break;
-                case 2:
-                    adres = 'TelefonEkle.aspx';
-                    break;
 
-                default:
+        function baslat(siraNo) {
+            var firmaKodu = $('#ContentPlaceHolder1_idCOMPANY_CODE').val();
+            
+         
+            if (firmaKodu != null) {
+                switch (siraNo) {
+                    case 1:
+                        adres = 'AdresEkle.aspx?firma=' + firmaKodu;
+                        break;
+                    case 2:
+                        adres = 'TelefonEkle.aspx?firma=' + firmaKodu;
+                        break;
 
+                    default:
+
+                }
+                $.fancybox.open({
+                    href: adres,
+                    type: 'iframe',
+                    padding: 5,
+
+
+
+                });
             }
-            $.fancybox.open({
-                href: adres,
-                type: 'iframe',
-                padding: 5,
-                
-                
-                        
-                    });
+            else {
+                alert("Firmayı kaydetmeniz gerekli!");
+            }
+
         }
-	</script>
-    
-   <%--fancy_box stil tanımı--%>
-	<style type="text/css">
-		.fancybox-custom .fancybox-skin {
-			box-shadow: 0 0 50px #222;
-		}
-	
-	</style>
+    </script>
+
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin
+        {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
@@ -64,7 +73,7 @@
                     <tr>
                         <tr>
                             <td>
-                                <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" Height="30px" BackColor="#012353" ForeColor="White" />
+                                <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" BackColor="#012353" ForeColor="White" />
                             </td>
                         </tr>
                         <tr>
@@ -135,7 +144,9 @@
                                     <tr>
                                         <td width="35%">&nbsp;</td>
                                         <td width="2%"></td>
-                                        <td>&nbsp;</td>
+                                        <td>
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
+                                        </td>
                                     </tr>
 
 
@@ -239,9 +250,6 @@
                                         </td>
                                         <td>
                                             <asp:TextBox ID="idFOUNDATION_DATE" runat="server" Width="101%" Height="25px" TextMode="Date"></asp:TextBox>
-                                            <div hidden="hidden">
-                                                <asp:TextBox ID="idCOMPANY_CODE" MaxLength="200" runat="server"></asp:TextBox>
-                                            </div>
                                         </td>
                                     </tr>
 
@@ -349,10 +357,10 @@
                             </div>
                             <div class="ALAN6">
                                 <br />
-         
-                               
+
+
                                 <asp:Button ID="idAdresEkle" runat="server" CssClass="AdresEkle" Text="Adres Ekle" OnClientClick="baslat(1);return false;" />
-                                
+
                                 <table class="KisiTable">
                                     <tr>
 
@@ -414,7 +422,8 @@
                 <div class="KisiTableHizalama">
                     <div>
                         <div class="menu">
-                            <asp:TextBox ID="txtSearch" runat="server" CssClass="searchText" /></div>
+                            <asp:TextBox ID="txtSearch" runat="server" CssClass="searchText" />
+                        </div>
 
                         <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false">
                             <Columns>

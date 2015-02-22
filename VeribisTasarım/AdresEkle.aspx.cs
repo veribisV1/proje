@@ -15,17 +15,36 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+                idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
             }
             
         }
 
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
         {
+            
             //DBARACISI firma = new DBARACISI();
             //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertAddress");
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.storeKaydet("pInsertAddress", dataListesi);
+
+            int Company_Code = -1;
+            if (!String.IsNullOrEmpty(idADDRESS1.Text))
+            {
+                if (String.IsNullOrEmpty(idADDRESS_CODE.Text))
+                {
+                    Company_Code = kaydet("pInsertAddress");
+                }
+                else
+                {
+                    Company_Code = kaydet("pUpdateAddress");
+                }
+                if (Company_Code != -1)
+                {
+                    formTemizle(this);
+                }
+            }
         }
 
 

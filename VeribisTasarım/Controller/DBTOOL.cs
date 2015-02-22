@@ -13,7 +13,7 @@ namespace VeribisTasarım.Controller
     /// gerekli olan metotları içeriri
     /// connectionu=webConfig ten alır
     /// </summary>   
-    public class DBTOOL:IDisposable
+    public class DBTOOL : IDisposable
     {
 
         SqlConnection connection;
@@ -39,12 +39,12 @@ namespace VeribisTasarım.Controller
                 if (connection != null) { connection.Dispose(); connection = null; }
                 if (komut != null) { komut.Dispose(); komut = null; }
                 if (adapter != null) { adapter.Dispose(); adapter = null; }
-            }            
+            }
             disposed = true;
         }
         public void Dispose()
-        {            
-            Dispose(true);           
+        {
+            Dispose(true);
             GC.SuppressFinalize(this);
         }
 
@@ -54,11 +54,28 @@ namespace VeribisTasarım.Controller
 
         public DataTable get(string tabloAdi, string[] sutunAdlari, string filtre)
         {
+
             return new DataTable();
         }
-        public DataTable get(string storedProcedureAdi, int kod)
+        public DataTable getDataTable(string prosedurAdi, Dictionary<string, object> parametreler)
         {
-            return new DataTable();
+            komut = new SqlCommand();
+            komut.Connection = connection;
+            komut.CommandType = System.Data.CommandType.StoredProcedure;
+            komut.CommandText = prosedurAdi;
+            connection.Open();
+
+            foreach (KeyValuePair<string, object> item in parametreler)
+            {
+                komut.Parameters.AddWithValue(item.Key, item.Value);
+            }
+            DataTable tb = new DataTable();
+            using (SqlDataReader dr = komut.ExecuteReader())
+            {
+                tb.Load(dr);
+            }            
+            connection.Close();
+            return tb;
         }
         public DataTable get(string sorgu)
         {

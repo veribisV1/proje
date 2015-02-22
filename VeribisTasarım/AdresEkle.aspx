@@ -18,10 +18,12 @@
             $(".tabmenu").tabs();
         });
     </script>
+
+    
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="ALAN4">
+    <div>
         <h3>Adres Ekle</h3>
         <div class="tabmenu">
             <ul>

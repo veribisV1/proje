@@ -60,13 +60,11 @@ namespace VeribisTasarım
             {
                 GridView1.DataSource = dv;
                 GridView1.DataBind();
-
                 Button backbutton = (Button)GridView1.FooterRow.FindControl("btngeri");
                 backbutton.Visible = true;
             }
             else
             {
-
                 lblAlert.Visible = true;
             }
           

@@ -38,18 +38,18 @@ namespace VeribisTasarım
 
         protected void idButtonAktiviteKaydet_Click(object sender, EventArgs e)
         {
-            int Company_Code = -1;
-            if (!String.IsNullOrEmpty(idCONTACT_CODE.Text))
+            int activiteCode = -1;
+            if (!String.IsNullOrEmpty(idSUBJECT.Text))
             {
                 if (String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
-                    Company_Code = kaydet("pInsertActivity");
+                    activiteCode = kaydet("pInsertActivity");
                 }
                 else
                 {
-                    Company_Code = kaydet("pInsertActivity");
+                    activiteCode = kaydet("pUpdateActivity");
                 }
-                if (Company_Code != -1)
+                if (activiteCode != -1)
                 {
                     formTemizle(this);
                 }

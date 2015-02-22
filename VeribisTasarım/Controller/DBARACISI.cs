@@ -38,5 +38,7 @@ namespace VeribisTasarım.Controller
                 return db.getDictionary(sorgu);
             }
         }
+
+       
     }
 }

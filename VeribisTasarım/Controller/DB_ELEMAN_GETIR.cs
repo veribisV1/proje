@@ -45,8 +45,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
         }
-
-      
+    
 
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir

@@ -37,6 +37,7 @@ namespace VeribisTasarım.Controller
             }
         }
 
+
         /// <summary>
         /// gird içerisine gelecek bilgileri 
         /// store procedur gondererek 
@@ -64,7 +65,6 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
-        
 
     }
 }

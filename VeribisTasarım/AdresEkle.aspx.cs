@@ -31,6 +31,8 @@ namespace VeribisTasarım
             #region Firma Ekle DropDownları doldur
 
             idADDRESS_TYPE_ID = dbGetir.doldur(idADDRESS_TYPE_ID, dbGetir.getAdresTipi());
+            idCOUNTY = dbGetir.doldur(idCOUNTY, dbGetir.getUlke());
+            
             #endregion
 
            

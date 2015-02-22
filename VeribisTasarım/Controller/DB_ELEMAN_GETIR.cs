@@ -128,6 +128,8 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("8"));
             return liste;
         }
+
+       
         public Dictionary<string, string> getGrup()
         {
 
@@ -297,6 +299,21 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("78"));
             return liste;
         }
+
+        public Dictionary<string, string> getAdresTipi()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("1"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getUlke()
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  COUNTRY_CODE AS col1, COUNTRY_NAME AS col2 FROM COUNTRY");
+            return liste;
+        }
+
+       
+
         public Dictionary<string, string> getTeslimSekli()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("69"));
@@ -317,11 +334,7 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("25"));
             return liste;
         }
-        public Dictionary<string, string> getAdresTipi()
-        {
-            Dictionary<string, string> liste = db.getListEleman(getSQL("1"));
-            return liste;
-        }
+        
         public Dictionary<string, string> getAktiviteSonucGrubu()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("72"));

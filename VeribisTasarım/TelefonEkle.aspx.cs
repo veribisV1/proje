@@ -33,6 +33,7 @@ namespace VeribisTasarım
             #region Telefon Ekle DropDownları doldur
 
             idPHONE_TYPE_ID = dbGetir.doldur(idPHONE_TYPE_ID, dbGetir.getTelefonTipi());
+            idCOUNTRY_CODE = dbGetir.doldur(idCOUNTRY_CODE, dbGetir.getUlkeKodu());
           
            
             #endregion

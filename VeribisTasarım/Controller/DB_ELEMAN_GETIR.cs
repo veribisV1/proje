@@ -318,9 +318,9 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
-        public Dictionary<string, string> getIlce()
+        public Dictionary<string, string> getIlce(int sehirKodu)
         {
-            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, CITY_NAME AS col2 FROM CITY");
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY2.ORDER_NO AS col1, CITY2.NAME AS col2 FROM CITY2 INNER JOIN CITY ON CITY2.CITY_CODE=CITY.CITY_CODE WHERE CITY2.CITY_CODE="+sehirKodu);
             return liste;
         }
 

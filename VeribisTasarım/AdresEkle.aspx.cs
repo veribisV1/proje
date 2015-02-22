@@ -36,8 +36,7 @@ namespace VeribisTasarım
 
             idADDRESS_TYPE_ID = dbGetir.doldur(idADDRESS_TYPE_ID, dbGetir.getAdresTipi());
             idCOUNTY = dbGetir.doldur(idCOUNTY, dbGetir.getUlke());
-            
-         
+           
             #endregion
 
            
@@ -48,6 +47,12 @@ namespace VeribisTasarım
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             idCITY = dbGetir.doldur(idCITY, dbGetir.getSehir(idCOUNTY.SelectedItem.Value));
+        }
+
+        protected void idCITY_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCOUNTY1 = dbGetir.doldur(idCOUNTY1, dbGetir.getIlce(Convert.ToInt32(idCITY.SelectedItem.Value)));
         }
     }
 }

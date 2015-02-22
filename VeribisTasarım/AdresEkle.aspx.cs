@@ -28,11 +28,11 @@ namespace VeribisTasarım
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-            #region Firma Ekle DropDownları doldur
+            #region Adres Ekle DropDownları doldur
 
             idADDRESS_TYPE_ID = dbGetir.doldur(idADDRESS_TYPE_ID, dbGetir.getAdresTipi());
             idCOUNTY = dbGetir.doldur(idCOUNTY, dbGetir.getUlke());
-            
+            idCITY = dbGetir.doldur(idCITY, dbGetir.getSehir());
             #endregion
 
            

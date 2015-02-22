@@ -15,7 +15,11 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
-                idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
+                if (Request.QueryString["firma"]!=null)
+                {
+                    idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
+                }
+                
             }
             
         }
@@ -23,11 +27,7 @@ namespace VeribisTasarım
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
         {
             
-            //DBARACISI firma = new DBARACISI();
-            //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertAddress");
-            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            //int companyCode = firma.storeKaydet("pInsertAddress", dataListesi);
+           
 
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idADDRESS1.Text))
@@ -55,7 +55,8 @@ namespace VeribisTasarım
 
             idADDRESS_TYPE_ID = dbGetir.doldur(idADDRESS_TYPE_ID, dbGetir.getAdresTipi());
             idCOUNTY = dbGetir.doldur(idCOUNTY, dbGetir.getUlke());
-           
+            idCOUNTY.SelectedIndex = 224;
+            idCOUNTY_SelectedIndexChanged(new object(), new EventArgs());
             #endregion
 
            

@@ -196,7 +196,7 @@
     
     </div>
         </div>
-        <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
+        <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>
         <asp:TextBox ID="idCONTACT_CODE" runat="server"></asp:TextBox>
     </form>
 </body>

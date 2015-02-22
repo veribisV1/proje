@@ -99,10 +99,11 @@ idCOMPANY_CODE.Text = "12";
                 }
                 if (Company_Code != -1)
                 {
-                    formTemizle(this);
+                    idCOMPANY_CODE.Text = Company_Code.ToString();
+                    //formTemizle(this);
                 }
             }
-
+            
         }
         //adres listesinde arama yapan bölüm
 

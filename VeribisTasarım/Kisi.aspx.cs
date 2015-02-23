@@ -60,10 +60,7 @@ namespace VeribisTasarım
                 }
             }
             else
-                BosMesaji();   
-
-
-
+                BosMesaji();  
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)

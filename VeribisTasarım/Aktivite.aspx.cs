@@ -38,10 +38,22 @@ namespace VeribisTasarım
 
         protected void idButtonAktiviteKaydet_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             int activiteCode = -1;
             if (!String.IsNullOrEmpty(idSUBJECT.Text))
             {
                 if (String.IsNullOrEmpty(idCONTACT_CODE.Text))
+=======
+            //DBARACISI firma = new DBARACISI();
+            //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertActivity");
+            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
+            //int companyCode = firma.storeKaydet("pInsertActivity", dataListesi);
+            int activiteCode = -1;
+            if (!String.IsNullOrEmpty(idSUBJECT.Text))
+            {
+                if (String.IsNullOrEmpty(idACTIVITY_CODE.Text))
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
                 {
                     activiteCode = kaydet("pInsertActivity");
                 }
@@ -54,9 +66,12 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             }
+<<<<<<< HEAD
             else
                 BosMesaji();
 
+=======
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
         }
     }
 }

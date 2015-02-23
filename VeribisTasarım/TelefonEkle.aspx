@@ -46,7 +46,7 @@
                             <asp:Button ID="idButtonTelefonSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
                         </td>
                     </tr>
-                    <asp:TextBox ID="idPHONE_CODE" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="idPHONE_CODE" runat="server" Visible="False"></asp:TextBox>
                 <hr />
                     <div class="ALAN4">
                         <table class="KisiTable">
@@ -69,7 +69,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="idCOUNTRY_CODE" Height="25px" runat="server" Width="150%"></asp:DropDownList>
+                       <asp:DropDownList ID="idCOUNTRY_CODE" Height="25px" runat="server" Width="150%" AutoPostBack="True" OnSelectedIndexChanged="idCOUNTRY_CODE_SelectedIndexChanged" ViewStateMode="Enabled"></asp:DropDownList>
                         </td>
                     </tr>
                             <tr>
@@ -114,6 +114,8 @@
                 </div>
     
     </div>
+         </div>
+         <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>
     </form>
 </body>
 </html>

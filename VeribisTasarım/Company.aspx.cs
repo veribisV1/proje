@@ -18,12 +18,23 @@ namespace VeribisTasarım
         protected void Page_Load(object sender, EventArgs e)
         {
 
+          
+           
             if (!IsPostBack)
             {
                 adresDoldur();
                 telefonDoldur();
                 ekranDoldur();
+<<<<<<< HEAD
               //  BindDummyRow();
+=======
+                //BindDummyRow();
+<<<<<<< HEAD
+                
+                
+=======
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
             }
 
         }
@@ -52,16 +63,16 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-            
+
         }
 
 
-        private void adresDoldur(int companyCode = 34)
+        private void adresDoldur(int companyCode = 2)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT ADDRESS_TYPE_ID AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3 + ' ' + COUNTY1 + ' ' + COUNTY2 + ' ' + CITY) AS ADRES FROM ADDRESS WHERE COMPANY_CODE=");
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ÜLKE,  ADDRESS.CITY AS İL ,ADDRESS.COUNTY1 AS İLÇE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_CODE=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
@@ -69,12 +80,12 @@ namespace VeribisTasarım
 
         }
 
-        private void telefonDoldur(int companyCode = 34)
+        private void telefonDoldur(int companyCode = 2)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT PHONE_TYPE_ID AS TUR,(COUNTRY_CODE+ ' (' + AREA_CODE + ') ' + PHONE_NUMBER) AS TELEFON FROM PHONE WHERE COMPANY_CODE=");
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             idPHONE.DataSource = tablo;
@@ -83,7 +94,7 @@ namespace VeribisTasarım
 
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
-        {            
+        {
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
             {
@@ -97,14 +108,29 @@ namespace VeribisTasarım
                 }
                 if (Company_Code != -1)
                 {
-                    formTemizle(this);
+                    idCOMPANY_CODE.Text = Company_Code.ToString();
+                    //formTemizle(this);
                 }
             }
+<<<<<<< HEAD
+            
+        }
+
+        
+        //adres listesinde arama yapan bölüm
+
+        //private static int PageSize = 15;
+=======
 
   }
             //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
 
+<<<<<<< HEAD
         //private static int PageSize = 15;
+=======
+        private static int PageSize = 15;
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
 
         //private void BindDummyRow()
         //{
@@ -117,6 +143,10 @@ namespace VeribisTasarım
         //    dummy.Columns.Add("MAIL");
         //    dummy.Columns.Add("WEBADDRESS");
         //    dummy.Rows.Add();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
         //    gvCustomers.DataSource = dummy;
         //    gvCustomers.DataBind();
         //}
@@ -160,8 +190,16 @@ namespace VeribisTasarım
         //            }
         //        }
         //    }
+<<<<<<< HEAD
         //}            
    
 
+=======
+<<<<<<< HEAD
+        //}
+=======
+        //}            
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
     }
 }

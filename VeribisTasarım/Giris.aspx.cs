@@ -25,17 +25,15 @@ namespace VeribisTasarım
            
             if (!String.IsNullOrEmpty(_txtTicariKod.Text))
             {
-                //Hangi veritabaninin kullanilacagi bilgisi alindiktan sonra web.config'deki Connection String de 
-                //Initial Catalog alani degistiriliyor.
-                DBTOOL dbTool = new DBTOOL();
-                var databaseName = dbTool.getDatabaseName(_txtTicariKod.Text);
+                //Hangi veritabaninin kullanilacagi bilgisi 
 
-                var configuration = WebConfigurationManager.OpenWebConfiguration("~");
-                var section = (ConnectionStringsSection)configuration.GetSection("connectionStrings");
-                section.ConnectionStrings["veribis"].ConnectionString = "Data Source=.;Initial Catalog=" + databaseName + ";User ID=sa;Password=P@ssw0rd";
-                configuration.Save();
+                //DBARACISI dbAraci = new DBARACISI();
+                //Session["DB_NAME"] = dbAraci.getDatabase(_txtTicariKod.Text);
 
-                if (Membership.ValidateUser(_txtKullaniciAdi.Text, _txtSifre.Text))
+               
+                //Kullanıcı girişi kontrol
+                DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();
+                if (db.validateUser(_txtKullaniciAdi.Text, _txtSifre.Text))
                 {
                     FormsAuthentication.RedirectFromLoginPage(_txtKullaniciAdi.Text, false);
                 }

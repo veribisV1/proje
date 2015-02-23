@@ -44,7 +44,7 @@ namespace VeribisTasarım.Controller
         /// </summary>
         /// <param name="prosedurAdi"></param>
         /// <returns></returns>
-        public DataTable getGridIcerik(string prosedurAdi,Dictionary<string, object> parametreIcerik)
+        public DataTable getGridIcerik(string prosedurAdi, Dictionary<string, object> parametreIcerik)
         {
             using (DBTOOL db = new DBTOOL())
             {
@@ -65,6 +65,28 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+        //kullanacağımız veritabanının adı.
+        public string getDatabase(string customerCode)
+        {
+           
+            using (DBTOOL db = new DBTOOL())
+            {
+                var dbName = db.getDatabaseName(customerCode);
+                return dbName;
+            }
+           
+        }
+
+      
+
+>>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
+>>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
     }
 }
+

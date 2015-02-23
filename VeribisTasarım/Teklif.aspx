@@ -6,12 +6,12 @@
         <h3>TEKLİF</h3>
         <div class="tabmenu">
             <ul>
-<<<<<<< HEAD
+
                 <li><a href="#TeklifEkle">TeklTeklif Ekle</a></li>
-=======
+
                 <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li><a href="#TeklifEkle">Teklif Ekle</a></li>
->>>>>>> 0712d1ebd72374934a5c5d3c1c1f9ac9aa6de9dc
+
                 
             </ul>
             <div id="TeklifEkle" style="min-height:100px">
@@ -41,7 +41,7 @@
                     <tr>
                         <td width="35%">
                         Firma Adı
-                        >
+                        
                         <td width="2%">
                           :
                         </td>

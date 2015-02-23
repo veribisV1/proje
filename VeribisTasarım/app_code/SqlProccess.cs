@@ -21,6 +21,7 @@ public class SqlProccess
     public SqlProccess()
     {
         connectionString = ConfigurationManager.ConnectionStrings["veribis"].ConnectionString;
+      
     }
 
     public int ExecuteNonQuery(string sqlString, CommandType type, SqlParameter[] paramArray)

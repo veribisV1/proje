@@ -18,23 +18,13 @@ namespace VeribisTasarım
         protected void Page_Load(object sender, EventArgs e)
         {
 
-          
-           
+
+
             if (!IsPostBack)
             {
                 adresDoldur();
                 telefonDoldur();
                 ekranDoldur();
-<<<<<<< HEAD
-              //  BindDummyRow();
-=======
-                //BindDummyRow();
-<<<<<<< HEAD
-                
-                
-=======
->>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
->>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
             }
 
         }
@@ -112,94 +102,9 @@ namespace VeribisTasarım
                     //formTemizle(this);
                 }
             }
-<<<<<<< HEAD
-            
+
+
         }
 
-        
-        //adres listesinde arama yapan bölüm
-
-        //private static int PageSize = 15;
-=======
-
-  }
-            //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
-
-<<<<<<< HEAD
-        //private static int PageSize = 15;
-=======
-        private static int PageSize = 15;
->>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
->>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
-
-        //private void BindDummyRow()
-        //{
-        //    DataTable dummy = new DataTable();
-        //    dummy.Columns.Add("COMPANY_CODE");
-        //    dummy.Columns.Add("COMPANY_NAME");
-        //    dummy.Columns.Add("ADDRESS");
-        //    dummy.Columns.Add("SECTOR");
-        //    dummy.Columns.Add("PHONE");
-        //    dummy.Columns.Add("MAIL");
-        //    dummy.Columns.Add("WEBADDRESS");
-        //    dummy.Rows.Add();
-<<<<<<< HEAD
-=======
-
->>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
-        //    gvCustomers.DataSource = dummy;
-        //    gvCustomers.DataBind();
-        //}
-
-        //[WebMethod]
-        //public static string GetCustomers(string searchTerm, int pageIndex)
-        //{
-        //    string query = "[GetCustomers_Pager]";
-        //    SqlCommand cmd = new SqlCommand(query);
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Parameters.AddWithValue("@SearchTerm", searchTerm);
-        //    cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
-        //    cmd.Parameters.AddWithValue("@PageSize", PageSize);
-        //    cmd.Parameters.Add("@RecordCount", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
-        //    return GetData(cmd, pageIndex).GetXml();
-        //}
-
-
-        //private static DataSet GetData(SqlCommand cmd, int pageIndex)
-        //{
-        //    string strConnString = "Server=SAHINBAS\\SQLEXPRESS;Initial Catalog=Vdb_Master2014;Integrated Security=true";
-        //    using (SqlConnection con = new SqlConnection(strConnString))
-        //    {
-        //        using (SqlDataAdapter sda = new SqlDataAdapter())
-        //        {
-        //            cmd.Connection = con;
-        //            sda.SelectCommand = cmd;
-        //            using (DataSet ds = new DataSet())
-        //            {
-        //                sda.Fill(ds, "Customers");
-        //                DataTable dt = new DataTable("Pager");
-        //                dt.Columns.Add("PageIndex");
-        //                dt.Columns.Add("PageSize");
-        //                dt.Columns.Add("RecordCount");
-        //                dt.Rows.Add();
-        //                dt.Rows[0]["PageIndex"] = pageIndex;
-        //                dt.Rows[0]["PageSize"] = PageSize;
-        //                dt.Rows[0]["RecordCount"] = cmd.Parameters["@RecordCount"].Value;
-        //                ds.Tables.Add(dt);
-        //                return ds;
-        //            }
-        //        }
-        //    }
-<<<<<<< HEAD
-        //}            
-   
-
-=======
-<<<<<<< HEAD
-        //}
-=======
-        //}            
->>>>>>> 9d05bae08bd6cc3dbc7076a32e8432fea8de3b71
->>>>>>> 63f4b5a46bf76868085aa275d42c86be48efd8e2
     }
 }

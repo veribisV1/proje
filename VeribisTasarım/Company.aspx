@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" MaintainScrollPositionOnPostback="true"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -147,7 +147,7 @@
                                         <td width="35%">&nbsp;</td>
                                         <td width="2%"></td>
                                         <td>
-                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" ></asp:TextBox>
                                         </td>
                                     </tr>
 

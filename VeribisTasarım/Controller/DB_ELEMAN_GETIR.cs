@@ -16,8 +16,7 @@ namespace VeribisTasarım.Controller
     /// </summary>
     public class DB_ELEMAN_GETIR
     {
-        DBARACISI db = new DBARACISI();
-        SqlConnection connection;
+        DBARACISI db = new DBARACISI();      
         DBTOOL tool = new DBTOOL();
 
         public DropDownList doldur(DropDownList eleman, Dictionary<string, string> liste)

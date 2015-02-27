@@ -86,18 +86,7 @@ namespace VeribisTasarım
 
         }
 
-        //private DataTable GetData(SqlCommand cmd)
-        //{
-        //    DataTable dt = new DataTable();
-        //    //SqlConnection con = new SqlConnection(strConnString);
-        //    //SqlDataAdapter sda = new SqlDataAdapter();
-        //    //cmd.CommandType = CommandType.Text;
-        //    //cmd.Connection = con;
-        //    //con.Open();
-        //    //sda.SelectCommand = cmd;
-        //    //sda.Fill(dt);
-        //    return dt;
-        //}
+       
 
         protected void AddNewCustomer(object sender, EventArgs e)
         {

@@ -64,7 +64,7 @@
         
     <div style="width:100%;float:left;margin-left:10px;">
         <h3>FİRMA KARTI</h3>
-        <%--<div class="tabmenu">--%>
+    
         <div class="tab-control" data-role="tab-control">
              <ul class="tabs">
                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
@@ -171,13 +171,8 @@
                                     <td>
                                         <asp:DropDownList ID="idSECTOR" runat="server" Width="100%" Height="30px">
                                         </asp:DropDownList>
-
-
                                     </td>
                                 </tr>
-
-
-
                                 <tr>
                                     <td width="35%">&nbsp;</td>
                                     <td width="2%"></td>

@@ -16,7 +16,7 @@ namespace VeribisTasarım.Controller
     /// </summary>
     public class DB_ELEMAN_GETIR
     {
-        DBARACISI db = new DBARACISI();      
+        DBARACISI db = new DBARACISI();
         DBTOOL tool = new DBTOOL();
 
         public DropDownList doldur(DropDownList eleman, Dictionary<string, string> liste)
@@ -44,7 +44,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
         }
-    
+
 
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
@@ -52,18 +52,6 @@ namespace VeribisTasarım.Controller
         /// <returns>key=usercode,value=ausername surname</returns>
         public Dictionary<string, string> userAdSoyadGetir()
         {
-
-            //TimeSpan ts = new TimeSpan();
-            ////dataTAble ile dictionary  zaman karşılaştırlması yaptım ikiside eşit çıktı
-            //DateTime d = DateTime.Now;
-            //DataTable tablo = db.get("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
-            //ts = DateTime.Now - d;
-            //string tabS = ts.ToString();
-            //d = DateTime.Now;
-            //Dictionary<string, string> liste = db.getListEleman("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
-            //ts = DateTime.Now - d;
-            //string tabS1 = ts.ToString();
-            ////ts.
 
             Dictionary<string, string> liste = db.getListEleman("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS");
             return liste;
@@ -147,7 +135,7 @@ namespace VeribisTasarım.Controller
             return liste;
         }
 
-       
+
         public Dictionary<string, string> getGrup()
         {
 
@@ -263,7 +251,7 @@ namespace VeribisTasarım.Controller
         {
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT OPPORTUNITYMASTER.OPPORTUNITY_CODE as 'AÇIKLAMA',COMPANY.COMPANY_NAME as 'FİRMA ADI',OPPORTUNITYMASTER.EXPLANATION as 'FIRSAT',OPPORTUNITYMASTER.TOTAL_UPB as 'TUTAR'FROM OPPORTUNITYMASTER INNER JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE  WHERE DOCUMENT_TYPE=1 AND OPEN_CLOSE=1");
-            return db.getGridIcerik(sorgu.ToString());            
+            return db.getGridIcerik(sorgu.ToString());
         }
 
         public DataTable getProjeAcik()
@@ -332,13 +320,13 @@ namespace VeribisTasarım.Controller
 
         public Dictionary<string, string> getSehir(string ulkeKodu)
         {
-            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY.CITY_CODE AS col1, CITY.CITY_NAME AS col2 FROM CITY INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=CITY.COUNTRY_CODE WHERE CITY.COUNTRY_CODE='"+ulkeKodu+"'");
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY.CITY_CODE AS col1, CITY.CITY_NAME AS col2 FROM CITY INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=CITY.COUNTRY_CODE WHERE CITY.COUNTRY_CODE='" + ulkeKodu + "'");
             return liste;
         }
 
         public Dictionary<string, string> getIlce(int sehirKodu)
         {
-            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY2.ORDER_NO AS col1, CITY2.NAME AS col2 FROM CITY2 INNER JOIN CITY ON CITY2.CITY_CODE=CITY.CITY_CODE WHERE CITY2.CITY_CODE="+sehirKodu);
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY2.ORDER_NO AS col1, CITY2.NAME AS col2 FROM CITY2 INNER JOIN CITY ON CITY2.CITY_CODE=CITY.CITY_CODE WHERE CITY2.CITY_CODE=" + sehirKodu);
             return liste;
         }
 
@@ -380,7 +368,7 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("25"));
             return liste;
         }
-        
+
         public Dictionary<string, string> getAktiviteSonucGrubu()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("72"));
@@ -506,10 +494,10 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQLCitems("6"));
             return liste;
         }
-        
+
         public DataTable getOppDetail(string oppCode)
         {
-            return db.getGridIcerik("select ROW_ORDER_NO,PRODUCT_NAME,CUR_TYPE,TOTAL_UPBK from OPPORTUNITYDETAIL where OPPORTUNITY_CODE="+oppCode);
+            return db.getGridIcerik("select ROW_ORDER_NO,PRODUCT_NAME,CUR_TYPE,TOTAL_UPBK from OPPORTUNITYDETAIL where OPPORTUNITY_CODE=" + oppCode);
         }
     }
 }

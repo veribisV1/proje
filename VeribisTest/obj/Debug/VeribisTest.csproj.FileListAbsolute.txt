@@ -5,3 +5,5 @@ C:\veribis\proje\VeribisTest\bin\Debug\VeribisTasarım.pdb
 C:\veribis\proje\VeribisTest\obj\Debug\VeribisTest.csprojResolveAssemblyReference.cache
 C:\veribis\proje\VeribisTest\obj\Debug\VeribisTest.dll
 C:\veribis\proje\VeribisTest\obj\Debug\VeribisTest.pdb
+C:\veribis\proje\VeribisTest\bin\Debug\VeribisTest.dll.CodeAnalysisLog.xml
+C:\veribis\proje\VeribisTest\bin\Debug\VeribisTest.dll.lastcodeanalysissucceeded

@@ -23,7 +23,6 @@ namespace VeribisTasarım.Controller
                 return db.getDictionaryTable(sorgu);
             }
         }
-
         /// <summary>
         /// stok Elemanlarını getirir ada gore
         /// </summary>
@@ -38,7 +37,11 @@ namespace VeribisTasarım.Controller
                 return db.getDictionaryTable(sorgu);
             }
         }
-
+        /// <summary>
+        /// OppMaster a ait tüm ürünleri getirir.
+        /// </summary>
+        /// <param name="oppMasterCode"></param>
+        /// <returns></returns>
         public DataTable getGridEleman(string oppMasterCode)
         {
             string sorgu = String.Format("select * from OPPORTUNITYDETAIL where OPPORTUNITY_CODE={0}", oppMasterCode);
@@ -47,7 +50,18 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
-
+        /// <summary>
+        /// gelen satiri update eder
+        /// </summary>
+        /// <param name="oppMasterCode"></param>
+        /// <returns></returns>
+        public void updateGridSatir(Dictionary<string, object> satir)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                db.set("pUpdateOppDetail", satir);
+            }
+        }
         /// <summary>
         /// kur tiplerini DB_ELEMAN_GETIR clasından parabirimi olarak getirir
         /// </summary>
@@ -58,7 +72,6 @@ namespace VeribisTasarım.Controller
             DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();
             return db.getParaBirimi();
         }
-
         /// <summary>
         /// gelen kur tipine gore bugunkü kuru dondurur
         /// </summary>
@@ -66,11 +79,11 @@ namespace VeribisTasarım.Controller
         /// <returns></returns>
         public string getKurTutari(string kurTipi, DateTime tarih)
         {
-            string sorgu = String.Format("SELECT BANKNOTE_SELING from CUR where CURDATE='{0}' and CURSYMBOL='{1}'",tarih.ToString("yyyy-mm-dd"), kurTipi);
+            string sorgu = String.Format("SELECT BANKNOTE_SELING from CUR where CURDATE='{0}' and CURSYMBOL='{1}'", tarih.ToString("yyyy-mm-dd"), kurTipi);
             using (DBTOOL db = new DBTOOL())
             {
-               Dictionary<string, string> list =db.getDictionaryTable(sorgu);
-               return list["BANKNOTE_SELING"];
+                Dictionary<string, string> list = db.getDictionaryTable(sorgu);
+                return list["BANKNOTE_SELING"];
             }
         }
         /// <summary>
@@ -78,20 +91,19 @@ namespace VeribisTasarım.Controller
         /// geriye ROW ORDER NO dönderir
         /// </summary>
         /// <param name="satir"></param>
-        public string setGrid(Dictionary<string,object> satir)
+        public string setGrid(Dictionary<string, object> satir)
         {
             using (DBTOOL db = new DBTOOL())
             {
-              return  db.set("pInsertOppDetail", satir).ToString();
+                return db.set("pInsertOppDetail", satir).ToString();
             }
         }
-
         /// <summary>
         /// satir bilgisi gelen kaydı siler
         /// </summary>
         /// <param name="oppMasterCode"></param>
         /// <param name="satirKodu"></param>
-        public void delGrid(string oppMasterCode,string satirKodu)
+        public void delGrid(string oppMasterCode, string satirKodu)
         {
             string sorgu = String.Format("DELETE FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", oppMasterCode, satirKodu);
             using (DBTOOL db = new DBTOOL())

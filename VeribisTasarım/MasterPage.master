@@ -57,7 +57,7 @@
         </ul>
     </nav>
 
-    <div style="float:left;margin-left:auto;">
+    <div style="float:left;margin-left:auto;width:85%;">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>

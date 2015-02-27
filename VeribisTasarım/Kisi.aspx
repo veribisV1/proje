@@ -377,28 +377,26 @@
                 <div class="frame" id="EkForm"></div>
                 <div class="frame" id="AileBilgileri">
                     <div class="KisiTableHizalama">
-                        <tr>
-                            <td>
-                                <asp:Button ID="idButtonAileBilgileriYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Button ID="idButtonAileBilgileriKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonAileBilgileriKaydet_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Button ID="idButtonAileBilgileriSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
-                            </td>
-                        </tr>
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:Button ID="idButtonAileBilgileriYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="idButtonAileBilgileriKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonAileBilgileriKaydet_Click" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="idButtonAileBilgileriSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                </td>
+                            </tr>
+                        </table>
                         <asp:TextBox ID="idAileBilgileriCONTACT_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
 
                         <div style="width: 48%; float: left; margin-left: 10px;">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="15%">Medeni Hali
+                                    <td width="40%">Medeni Hali
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -408,7 +406,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Evlilik Yıldönümü
+                                    <td width="40%">Evlilik Yıldönümü
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -417,7 +415,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Eşinin Adı
+                                    <td width="40%">Eşinin Adı
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -426,7 +424,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Eşinin İkinci Adı
+                                    <td width="40%">Eşinin İkinci Adı
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -435,7 +433,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Eşinin Soyadı
+                                    <td width="40%">Eşinin Soyadı
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -444,7 +442,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Çocuk Sayısı
+                                    <td width="40%">Çocuk Sayısı
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -453,7 +451,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Evi var mı?
+                                    <td width="40%">Evi var mı?
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -463,7 +461,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Ev Skalası
+                                    <td width="40%">Ev Skalası
                                     </td>
                                     <td width="2%">:
                                     </td>

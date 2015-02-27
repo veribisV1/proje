@@ -4,8 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   
     <script src="Content/js/metro/metro-tab-control.js"></script>
-   <%-- <script src="Content/js/metro/metro-calendar.js"></script>
-    <script src="Content/js/metro/metro-datepicker.js"></script>--%>
+  
 
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
@@ -63,16 +62,16 @@
     
         <div class="tab-control" data-role="tab-control">
              <ul class="tabs">
-                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#FirmaEkle">Firma Ekle</a></li>
-               <li><a href="#MakinaParki">Makina Parkı</a></li>
-                <li><a href="#RakipFirma">Rakip Firma</a></li>
-                <li><a href="#RakipUrun">Rakip Ürün</a></li>
-                <li><a href="#Kontak">Kontak</a></li>
-                <li><a href="#Numune">Numune</a></li>
-                <li><a href="#Proforma">Proforma</a></li>
-                <li><a href="#Fatura">Fatura</a></li>
-                <li><a href="#EkForm">Ek Form</a></li>
+                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
+                 <li><a href="#FirmaEkle">Firma Ekle</a></li>
+                 <li><a href="#MakinaParki">Makina Parkı</a></li>
+                 <li><a href="#RakipFirma">Rakip Firma</a></li>
+                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
+                 <li><a href="#Kontak">Kontak</a></li>
+                 <li><a href="#Numune">Numune</a></li>
+                 <li><a href="#Proforma">Proforma</a></li>
+                 <li><a href="#Fatura">Fatura</a></li>
+                 <li><a href="#EkForm">Ek Form</a></li>
             </ul>
 
             <div class="frames" style="float:left;width:100%">

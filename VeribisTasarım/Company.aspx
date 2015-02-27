@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" MaintainScrollPositionOnPostback="true"%>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  
+
     <script src="Content/js/metro/metro-tab-control.js"></script>
     <script src="Content/js/metro/metro-calendar.js"></script>
     <script src="Content/js/metro/metro-datepicker.js"></script>
@@ -49,27 +49,27 @@
         $("#datepicker").datepicker();
     </script>
 
-  
+
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin
-        {
+        .fancybox-custom .fancybox-skin {
             box-shadow: 0 0 50px #222;
         }
     </style>
-   
+
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        
-    <div style="width:100%;float:left;margin-left:10px;">
+
+    <div style="width: 100%; float: left; margin-left: 10px;">
         <h3>FİRMA KARTI</h3>
-    
+
         <div class="tab-control" data-role="tab-control">
-             <ul class="tabs">
-                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#FirmaEkle">Firma Ekle</a></li>
-               <li><a href="#MakinaParki">Makina Parkı</a></li>
+            <ul class="tabs">
+                <%--<li class="active"><a href="#ListeAdi">Liste Adı</a></li>--%>
+                <li><a href="#ListeAdi">Liste Adı</a></li>
+                <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
+                <li><a href="#MakinaParki">Makina Parkı</a></li>
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
                 <li><a href="#Kontak">Kontak</a></li>
@@ -79,8 +79,8 @@
                 <li><a href="#EkForm">Ek Form</a></li>
             </ul>
 
-            <div class="frames" style="float:left;width:100%">
-               
+            <div class="frames" style="float: left; width: 100%">
+
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
                         <div>
@@ -113,7 +113,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white"  PostBackUrl="#FirmaEkle" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" />
@@ -181,8 +181,6 @@
                                         <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
 
                                         <%--   <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>--%>
-
-
                             </table>
 
 
@@ -283,7 +281,7 @@
                                     </td>
                                     <td>
                                         <div class="input-control text" id="datepicker">
-                                            <input type="text" id="idFOUNDATION_DATE" runat="server" style="width:100%;height:30px;" />
+                                            <input type="text" id="idFOUNDATION_DATE" runat="server" style="width: 100%; height: 30px;" />
                                             <button class="btn-date"></button>
                                         </div>
                                         <script>
@@ -474,9 +472,9 @@
                                 </td>
                             </tr>
                         </table>
-               
+
                         <hr />
-                        <div style="width:100%;margin-left:10px;">
+                        <div style="width: 100%; margin-left: 10px;">
 
                             <table class="KisiTable">
                                 <tr>
@@ -513,7 +511,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idAMOUNT" runat="server" MaxLength="20" Width="60%" Height="30px" ></asp:TextBox>
+                                        <asp:TextBox ID="idAMOUNT" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -645,7 +643,7 @@
                                 </td>
                             </tr>
                         </table>
-                     
+
                         <hr />
                         <div class="ALAN12">
 
@@ -739,10 +737,10 @@
                 <div class="frame" id="Proforma"></div>
                 <div class="frame" id="Fatura"></div>
                 <div class="frame" id="Ek Form"></div>
-            
+
             </div>
         </div>
     </div>
 
-   
+
 </asp:Content>

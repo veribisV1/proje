@@ -22,8 +22,8 @@ namespace VeribisTasarım
 
             if (!IsPostBack)
             {
-              //  adresDoldur();
-               // telefonDoldur();
+                //  adresDoldur();
+                // telefonDoldur();
                 ekranDoldur();
             }
 
@@ -91,24 +91,23 @@ namespace VeribisTasarım
                 if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
                 {
                     Company_Code = kaydet("pInsertCompany");
+                    if (Company_Code != -1)
+                    {
+                        idCOMPANY_CODE.Text = Company_Code.ToString();
+
+                    }
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdateCompany");
                 }
-                if (Company_Code != -1)
-                {
-                    idCOMPANY_CODE.Text = Company_Code.ToString();
-                    //formTemizle(this);
-                }
+
             }
+            //formTemizle(this);
 
-
-        }      
-
-        private static int PageSize = 15;
-
-     
         }
 
+
     }
+
+}

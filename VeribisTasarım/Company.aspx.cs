@@ -53,7 +53,7 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-            
+
         }
 
 
@@ -84,7 +84,7 @@ namespace VeribisTasarım
 
 
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
-        {            
+        {
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
             {
@@ -102,8 +102,8 @@ namespace VeribisTasarım
                 }
             }
 
-  }
-            //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
+        }
+        //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
 
         private static int PageSize = 15;
 

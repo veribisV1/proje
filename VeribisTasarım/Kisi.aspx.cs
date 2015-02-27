@@ -49,8 +49,6 @@ namespace VeribisTasarım
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.setStore("pInsertContact", dataListesi);
 
-
-
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)

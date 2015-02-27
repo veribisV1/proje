@@ -8,14 +8,16 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Fırsat : BASECONTROLLER
+    public partial class Fırsat : GRIDPAGE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                ekranDoldur();
+                ekranDoldur();               
             }
+            idOPPORTUNITY_CODE.Text = "0";
+            gridDoldur(GridView1,idOPPORTUNITY_CODE.Text);
         }
         private void ekranDoldur()
         {
@@ -37,14 +39,9 @@ namespace VeribisTasarım
             idRIVAL_COMPANY_CODE = dbGetir.doldur(idRIVAL_COMPANY_CODE, dbGetir.getRakipFirma());
             #endregion
         }
-
+   
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
-        {
-        //    DBARACISI firma = new DBARACISI();
-        //    Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertOppMaster");
-        //    CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-        //    Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
-        //    int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
+        {   
 
                 int oppurtunityCode = -1;
                 //Tipi kontrol edilecek
@@ -61,8 +58,6 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             
-        }
-
-     
+        }       
     }
 }

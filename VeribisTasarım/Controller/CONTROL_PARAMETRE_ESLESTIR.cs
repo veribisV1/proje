@@ -54,6 +54,7 @@ namespace VeribisTasarım.Controller
                         }
                         else
                         {
+                            string tip = eleman.GetType().ToString();
                             dataListesi.Add(item, tipKontrol(dataTipleri[item], null));
                         }
 
@@ -129,7 +130,7 @@ namespace VeribisTasarım.Controller
         /// <returns></returns>
         public void ekranTemizle(Page sayfa)
         {
-            recursiveEkranTEmizle(sayfa);                 
+            recursiveEkranTEmizle(sayfa);
         }
 
         private void recursiveEkranTEmizle(Control childc)

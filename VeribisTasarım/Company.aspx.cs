@@ -17,9 +17,6 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-
             if (!IsPostBack)
             {
                 adresDoldur();
@@ -47,7 +44,6 @@ namespace VeribisTasarım
             idCOMPANY_REFERANCE = dbGetir.doldur(idCOMPANY_REFERANCE, dbGetir.getReferans());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
             #endregion
-
             #region Makina Parkı DropDownları doldur
             idNAME = dbGetir.doldur(idNAME, dbGetir.getMarka());
             idMAKINAPARKI_YILI = dbGetir.doldur(idMAKINAPARKI_YILI, dbGetir.getModel());
@@ -57,7 +53,6 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-
         }
 
 
@@ -95,18 +90,19 @@ namespace VeribisTasarım
                 if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
                 {
                     Company_Code = kaydet("pInsertCompany");
+                    if (Company_Code != -1)
+                    {
+                        idCOMPANY_CODE.Text = Company_Code.ToString();
+
+                    }
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdateCompany");
                 }
-                if (Company_Code != -1)
-                {
-                    idCOMPANY_CODE.Text = Company_Code.ToString();
-                    //formTemizle(this);
-                }
-            }
 
+            }
+            //formTemizle(this);
 
             
         }
@@ -121,6 +117,7 @@ namespace VeribisTasarım
 
 
         }
+<<<<<<< HEAD
         //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
 
         //private static int PageSize = 15;
@@ -194,3 +191,10 @@ namespace VeribisTasarım
 
 
     
+=======
+
+
+    }
+
+}
+>>>>>>> 2c66ba40dba0ad5e6d6395fcddf7719619bc3adf

@@ -208,7 +208,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText idFOUNDATION_DATE;
+        protected global::System.Web.UI.WebControls.TextBox idFOUNDATION_DATE;
         
         /// <summary>
         /// idCOMPANY_REFERANCE control.

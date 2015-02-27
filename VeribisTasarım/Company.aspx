@@ -4,8 +4,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   
     <script src="Content/js/metro/metro-tab-control.js"></script>
-    <script src="Content/js/metro/metro-calendar.js"></script>
-    <script src="Content/js/metro/metro-datepicker.js"></script>
+   <%-- <script src="Content/js/metro/metro-calendar.js"></script>
+    <script src="Content/js/metro/metro-datepicker.js"></script>--%>
 
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
@@ -43,10 +43,6 @@
         }
 
 
-    </script>
-
-    <script>
-        $("#datepicker").datepicker();
     </script>
 
   
@@ -285,13 +281,14 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <div class="input-control text" id="datepicker">
+                                         <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
+                                       <%-- <div class="input-control text" id="datepicker">
                                             <input type="text" id="idFOUNDATION_DATE" runat="server" style="width:100%;height:30px;" />
                                             <button class="btn-date"></button>
                                         </div>
                                         <script>
                                             $("#datepicker").datepicker();
-                                        </script>
+                                        </script>--%>
                                     </td>
                                 </tr>
 

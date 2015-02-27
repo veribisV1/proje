@@ -163,6 +163,10 @@
     <Compile Include="Controller\DB_ELEMAN_GETIR.cs" />
     <Compile Include="Controller\DBARACISI.cs" />
     <Compile Include="Controller\DBTOOL.cs" />
+    <Compile Include="Controller\GRID.cs" />
+    <Compile Include="Controller\GridPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

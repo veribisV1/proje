@@ -17,9 +17,6 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-
             if (!IsPostBack)
             {
                 adresDoldur();
@@ -43,7 +40,6 @@ namespace VeribisTasarım
             idCOMPANY_REFERANCE = dbGetir.doldur(idCOMPANY_REFERANCE, dbGetir.getReferans());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
             #endregion
-
             #region Makina Parkı DropDownları doldur
             idNAME = dbGetir.doldur(idNAME, dbGetir.getMarka());
             idMAKINAPARKI_YILI = dbGetir.doldur(idMAKINAPARKI_YILI, dbGetir.getModel());
@@ -53,7 +49,6 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-
         }
 
 
@@ -91,81 +86,23 @@ namespace VeribisTasarım
                 if (String.IsNullOrEmpty(idCOMPANY_CODE.Text))
                 {
                     Company_Code = kaydet("pInsertCompany");
+                    if (Company_Code != -1)
+                    {
+                        idCOMPANY_CODE.Text = Company_Code.ToString();
+
+                    }
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdateCompany");
                 }
-                if (Company_Code != -1)
-                {
-                    idCOMPANY_CODE.Text = Company_Code.ToString();
-                    //formTemizle(this);
-                }
+
             }
-
-
-        }
-        //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
-
-        private static int PageSize = 15;
-
-        //private void BindDummyRow()
-        //{
-        //    DataTable dummy = new DataTable();
-        //    dummy.Columns.Add("COMPANY_CODE");
-        //    dummy.Columns.Add("COMPANY_NAME");
-        //    dummy.Columns.Add("ADDRESS");
-        //    dummy.Columns.Add("SECTOR");
-        //    dummy.Columns.Add("PHONE");
-        //    dummy.Columns.Add("MAIL");
-        //    dummy.Columns.Add("WEBADDRESS");
-        //    dummy.Rows.Add();
-
-        //    gvCustomers.DataSource = dummy;
-        //    gvCustomers.DataBind();
-        //}
-
-        //[WebMethod]
-        //public static string GetCustomers(string searchTerm, int pageIndex)
-        //{
-        //    string query = "[GetCustomers_Pager]";
-        //    SqlCommand cmd = new SqlCommand(query);
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Parameters.AddWithValue("@SearchTerm", searchTerm);
-        //    cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
-        //    cmd.Parameters.AddWithValue("@PageSize", PageSize);
-        //    cmd.Parameters.Add("@RecordCount", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
-        //    return GetData(cmd, pageIndex).GetXml();
-        //}
-
-
-        //private static DataSet GetData(SqlCommand cmd, int pageIndex)
-        //{
-        //    string strConnString = "Server=SAHINBAS\\SQLEXPRESS;Initial Catalog=Vdb_Master2014;Integrated Security=true";
-        //    using (SqlConnection con = new SqlConnection(strConnString))
-        //    {
-        //        using (SqlDataAdapter sda = new SqlDataAdapter())
-        //        {
-        //            cmd.Connection = con;
-        //            sda.SelectCommand = cmd;
-        //            using (DataSet ds = new DataSet())
-        //            {
-        //                sda.Fill(ds, "Customers");
-        //                DataTable dt = new DataTable("Pager");
-        //                dt.Columns.Add("PageIndex");
-        //                dt.Columns.Add("PageSize");
-        //                dt.Columns.Add("RecordCount");
-        //                dt.Rows.Add();
-        //                dt.Rows[0]["PageIndex"] = pageIndex;
-        //                dt.Rows[0]["PageSize"] = PageSize;
-        //                dt.Rows[0]["RecordCount"] = cmd.Parameters["@RecordCount"].Value;
-        //                ds.Tables.Add(dt);
-        //                return ds;
-        //            }
-        //        }
-        //    }
-        //}            
+            //formTemizle(this);
 
         }
+
 
     }
+
+}

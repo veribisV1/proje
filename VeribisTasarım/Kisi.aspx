@@ -3,7 +3,7 @@
      <script src="Content/js/metro/metro-tab-control.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="width: 100%; float: left; margin-left: 10px;">
+    <div class="ALAN12">
         <h3>KİŞİ KARTI</h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
@@ -45,7 +45,7 @@
                         <asp:TextBox ID="idCONTACT_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
 
-                        <div style="width: 32%; float: left; margin-left: 10px;">
+                        <div class="ALAN4">
                             <table class="KisiTable" id="Tablo1">
                                 <tr>
                                     <td width="35%">Adı
@@ -126,7 +126,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 32%; float: left; margin-left: 10px;">
+                        <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
                                     <td width="35%">Departmanı
@@ -212,7 +212,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 32%; float: left; margin-left: 10px;">
+                        <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
                                     <td width="35%">Mail Adresi
@@ -265,7 +265,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 48%; float: left; margin-left: 10px;">
+                        <div class="ALAN6">
                             <br />
                             <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" />
                             <table class="KisiTable">
@@ -292,7 +292,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 48%; float: left; margin-left: 10px;">
+                        <div class="ALAN6">
                             <br />
                             <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" />
                             <table class="KisiTable">
@@ -341,7 +341,7 @@
                         <asp:TextBox ID="idNOTE_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
 
-                        <div style="width: 48%; float: left; margin-left: 10px;">
+                        <div class="ALAN6">
                             <table class="KisiTable">
                                 <tr>
                                     <td width="15%">Tarih
@@ -393,7 +393,7 @@
                         <asp:TextBox ID="idAileBilgileriCONTACT_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
 
-                        <div style="width: 48%; float: left; margin-left: 10px;">
+                        <div class="ALAN6">
                             <table class="KisiTable">
                                 <tr>
                                     <td width="40%">Medeni Hali

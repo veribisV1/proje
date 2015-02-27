@@ -65,8 +65,7 @@
         <h3>FİRMA KARTI</h3>
 
         <div class="tab-control" data-role="tab-control">
-            <ul class="tabs">
-                <%--<li class="active"><a href="#ListeAdi">Liste Adı</a></li>--%>
+            <ul class="tabs">               
                 <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
                 <li><a href="#MakinaParki">Makina Parkı</a></li>

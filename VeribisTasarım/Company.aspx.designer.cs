@@ -210,6 +210,7 @@ namespace VeribisTasarım {
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idFOUNDATION_DATE;
         
+        
         /// <summary>
         /// idCOMPANY_REFERANCE control.
         /// </summary>

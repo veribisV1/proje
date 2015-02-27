@@ -103,7 +103,7 @@ namespace VeribisTasarım
                 }
             }
 
-<<<<<<< HEAD
+
         }
         //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
 
@@ -165,10 +165,7 @@ namespace VeribisTasarım
         //        }
         //    }
         //}            
-=======
 
         }
 
->>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
     }
-}

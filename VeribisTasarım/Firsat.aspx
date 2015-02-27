@@ -455,7 +455,7 @@
 
                         <asp:TemplateField ItemStyle-Width="100px">
                             <ItemTemplate>
-                                <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="idButtonFirsatEkleKaydet_Click"></asp:Button>
+                                <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="gridSatirSil"></asp:Button>
                             </ItemTemplate>
                             <FooterTemplate>
                                 <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClick="gridSatirEkle" Width="75px" />

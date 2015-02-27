@@ -14,8 +14,7 @@ namespace VeribisTasarım
         {
             if (!IsPostBack)
             {
-                ekranDoldur();
-               
+                ekranDoldur();               
             }
             idOPPORTUNITY_CODE.Text = "2";
             gridDoldur(GridView1,idOPPORTUNITY_CODE.Text);
@@ -42,7 +41,7 @@ namespace VeribisTasarım
         }
    
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
-        {    
+        {   
 
                 int oppurtunityCode = -1;
                 //Tipi kontrol edilecek

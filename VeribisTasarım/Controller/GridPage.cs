@@ -18,13 +18,13 @@ namespace VeribisTasarım.Controller
         public void gridSatirEkle(object sender, EventArgs e)
         { 
         }
-        public void gridSatirDuzenle(object sender, GridViewEditEventArgs e) 
+        public void gridSatirDuzenle(object sender, EventArgs e) 
         { 
         }
-        public void gridSatirSil(object sender, GridViewCancelEditEventArgs e)
+        public void gridSatirSil(object sender, EventArgs e)
         { 
         }
-        public void gridSayfala(object sender, GridViewPageEventArgs e) 
+        public void gridSayfala(object sender, EventArgs e) 
         { 
         }
 

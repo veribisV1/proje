@@ -8,7 +8,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Teklif : BASECONTROLLER
+    public partial class Teklif : GRIDPAGE
     {
         protected void Page_Load(object sender, EventArgs e)
         {

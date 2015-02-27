@@ -76,11 +76,17 @@ namespace VeribisTasarım.Controller
             }
         }
 
+        /// <summary>
+        /// satir bilgisi gelen kaydı siler
+        /// </summary>
+        /// <param name="oppMasterCode"></param>
+        /// <param name="satirKodu"></param>
         public void delGrid(string oppMasterCode,string satirKodu)
         {
+            string sorgu = String.Format("DELETE FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", oppMasterCode, satirKodu);
             using (DBTOOL db = new DBTOOL())
             {
-               // db.set("pInsertOppDetail", satir);
+                db.set("");
             }
         }
     }

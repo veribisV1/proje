@@ -3,7 +3,6 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -19,12 +18,13 @@ namespace VeribisTasarım
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
             if (!IsPostBack)
             {
                 adresDoldur();
                 telefonDoldur();
                 ekranDoldur();
-                //BindDummyRow();
             }
 
         }
@@ -57,12 +57,12 @@ namespace VeribisTasarım
         }
 
 
-        private void adresDoldur(int companyCode = 34)
+        private void adresDoldur(int companyCode = 2)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT ADDRESS_TYPE_ID AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3 + ' ' + COUNTY1 + ' ' + COUNTY2 + ' ' + CITY) AS ADRES FROM ADDRESS WHERE COMPANY_CODE=");
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ÜLKE,  ADDRESS.CITY AS İL ,ADDRESS.COUNTY1 AS İLÇE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_CODE=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
@@ -70,12 +70,12 @@ namespace VeribisTasarım
 
         }
 
-        private void telefonDoldur(int companyCode = 34)
+        private void telefonDoldur(int companyCode = 2)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT PHONE_TYPE_ID AS TUR,(COUNTRY_CODE+ ' (' + AREA_CODE + ') ' + PHONE_NUMBER) AS TELEFON FROM PHONE WHERE COMPANY_CODE=");
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             idPHONE.DataSource = tablo;
@@ -98,10 +98,12 @@ namespace VeribisTasarım
                 }
                 if (Company_Code != -1)
                 {
-                    formTemizle(this);
+                    idCOMPANY_CODE.Text = Company_Code.ToString();
+                    //formTemizle(this);
                 }
             }
 
+<<<<<<< HEAD
         }
         //secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", "100");
 
@@ -163,5 +165,10 @@ namespace VeribisTasarım
         //        }
         //    }
         //}            
+=======
+
+        }
+
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
     }
 }

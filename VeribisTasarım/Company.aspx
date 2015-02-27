@@ -2,9 +2,13 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<<<<<<< HEAD
     <script src="Content/js/metro/metro-tab-control.js"></script>
     <script src="Content/js/metro/metro-calendar.js"></script>
     <script src="Content/js/metro/metro-datepicker.js"></script>
+=======
+
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
     <script type="text/javascript">
@@ -12,8 +16,13 @@
 
         function baslat(siraNo) {
             var firmaKodu = $('#ContentPlaceHolder1_idCOMPANY_CODE').val();
+<<<<<<< HEAD
 
 
+=======
+            
+         
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
             if (firmaKodu != null) {
                 switch (siraNo) {
                     case 1:
@@ -24,6 +33,7 @@
                         break;
 
                     default:
+<<<<<<< HEAD
 
                 }
                 $.fancybox.open({
@@ -32,6 +42,16 @@
                     padding: 5,
 
 
+=======
+
+                }
+                $.fancybox.open({
+                    href: adres,
+                    type: 'iframe',
+                    padding: 5,
+
+
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
 
                 });
             }
@@ -39,6 +59,7 @@
                 alert("Firmayı kaydetmeniz gerekli!");
             }
 
+<<<<<<< HEAD
         }
 
 
@@ -55,6 +76,20 @@
             box-shadow: 0 0 50px #222;
         }
     </style>--%>
+=======
+        }
+
+       
+    </script>
+
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin
+        {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         
@@ -74,6 +109,7 @@
                 <li><a href="#Fatura">Fatura</a></li>
                 <li><a href="#EkForm">Ek Form</a></li>
             </ul>
+<<<<<<< HEAD
 
             <div class="frames" style="float:left;width:100%">
                
@@ -106,6 +142,22 @@
                 <div class="frame" id="FirmaEkle">
                     <div class="KisiTableHizalama">
                         <table>
+=======
+            <div id="FirmaEkle" style="min-height: 100px">
+                <div class="KisiTableHizalama">
+                    <tr>
+                        <td>
+                            <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td>
+                                <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Adres Ekle" BackColor="#012353" ForeColor="White"  />
+                            </td>
+                        </tr>
+                        <tr>
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
                             <tr>
                                 <td>
                                     <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
@@ -178,7 +230,11 @@
                                         <td width="35%">&nbsp;</td>
                                         <td width="2%"></td>
                                         <td>
+<<<<<<< HEAD
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="True"></asp:TextBox>
+=======
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
                                         </td>
                                     </tr>
 
@@ -282,8 +338,12 @@
                                         <td width="2%">:
                                         </td>
                                         <td>
+<<<<<<< HEAD
 
                                             <asp:TextBox ID="idFOUNDATION_DATE" runat="server" Width="100%" Height="30px" TextMode="Date"></asp:TextBox>
+=======
+                                            <asp:TextBox ID="idFOUNDATION_DATE" runat="server" Width="101%" Height="25px" TextMode="Date"></asp:TextBox>
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
                                         </td>
                                     </tr>
 
@@ -450,7 +510,33 @@
                                     </tr>
                                 </table>
                             </div>
+<<<<<<< HEAD
                       
+=======
+                </div>
+            </div>
+            <div id="ListeAdi">
+                <div class="KisiTableHizalama">
+                    <div>
+                        <div class="menu">
+                            <asp:TextBox ID="txtSearch" runat="server" CssClass="searchText" />
+                        </div>
+
+                        <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false">
+                            <Columns>
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_CODE" HeaderText="COMPANY CODE"
+                                    ItemStyle-CssClass="ContactName" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_NAME" HeaderText="COMPANY NAME" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="ADDRESS" HeaderText="ADDRESS" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="SECTOR" HeaderText="SECTOR" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="PHONE" HeaderText="ADDRESS" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="MAIL" HeaderText="MAIL" />
+                                <asp:BoundField HeaderStyle-Width="150px" DataField="WEBADDRESS" HeaderText="WEB ADDRESS" />
+                            </Columns>
+                        </asp:GridView>
+
+                        <div class="Pager"></div>
+>>>>>>> c3bd97317c0cf089cea5be31f36888d3bb4cd03f
                     </div>
                 </div>
 

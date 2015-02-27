@@ -44,7 +44,7 @@ namespace VeribisTasarım.Controller
         /// </summary>
         /// <param name="prosedurAdi"></param>
         /// <returns></returns>
-        public DataTable getGridIcerik(string prosedurAdi,Dictionary<string, object> parametreIcerik)
+        public DataTable getGridIcerik(string prosedurAdi, Dictionary<string, object> parametreIcerik)
         {
             using (DBTOOL db = new DBTOOL())
             {
@@ -78,8 +78,7 @@ namespace VeribisTasarım.Controller
             }
            
         }
-
-      
-
+  
     }
 }
+

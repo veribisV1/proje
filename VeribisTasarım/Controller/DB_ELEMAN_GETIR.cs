@@ -45,8 +45,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
         }
-
-      
+    
 
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
@@ -148,6 +147,8 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("8"));
             return liste;
         }
+
+       
         public Dictionary<string, string> getGrup()
         {
 
@@ -317,6 +318,49 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("78"));
             return liste;
         }
+
+        public Dictionary<string, string> getAdresTipi()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("1"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getUlke()
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  COUNTRY_CODE AS col1, COUNTRY_NAME AS col2 FROM COUNTRY");
+            return liste;
+        }
+
+        public Dictionary<string, string> getSehir(string ulkeKodu)
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY.CITY_CODE AS col1, CITY.CITY_NAME AS col2 FROM CITY INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=CITY.COUNTRY_CODE WHERE CITY.COUNTRY_CODE='"+ulkeKodu+"'");
+            return liste;
+        }
+
+        public Dictionary<string, string> getIlce(int sehirKodu)
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY2.ORDER_NO AS col1, CITY2.NAME AS col2 FROM CITY2 INNER JOIN CITY ON CITY2.CITY_CODE=CITY.CITY_CODE WHERE CITY2.CITY_CODE="+sehirKodu);
+            return liste;
+        }
+
+        public Dictionary<string, string> getTelefonTipi()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("3"));
+            return liste;
+        }
+
+        public Dictionary<string, string> getUlkeKodu()
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, NAME AS col2 FROM PHONECODE WHERE COUNTRY_CODE=-1");
+            return liste;
+        }
+
+        public Dictionary<string, string> getAlanKodu(int alanKodu)
+        {
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, NAME AS col2 FROM PHONECODE WHERE COUNTRY_CODE=" + alanKodu);
+            return liste;
+        }
+
         public Dictionary<string, string> getTeslimSekli()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("69"));
@@ -337,6 +381,7 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("25"));
             return liste;
         }
+        
         public Dictionary<string, string> getAktiviteSonucGrubu()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("72"));
@@ -463,5 +508,9 @@ namespace VeribisTasarım.Controller
             return liste;
         }
         
+        public DataTable getOppDetail(string oppCode)
+        {
+            return db.getGridIcerik("select ROW_ORDER_NO,PRODUCT_NAME,CUR_TYPE,TOTAL_UPBK from OPPORTUNITYDETAIL where OPPORTUNITY_CODE="+oppCode);
+        }
     }
 }

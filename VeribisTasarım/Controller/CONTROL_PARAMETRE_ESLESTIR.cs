@@ -22,10 +22,17 @@ namespace VeribisTasarım.Controller
         public Dictionary<string, object> eslestir(Page sayfa, Dictionary<string, string> dataTipleri)
         {
             Dictionary<string, object> dataListesi = new Dictionary<string, object>();
-
+            Control MainContent;
 
             MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
-            ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            if (ctl00 == null)
+            {
+                MainContent = sayfa;
+            }
+            else
+            {
+                MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            }
 
             foreach (string item in dataTipleri.Keys)
             {

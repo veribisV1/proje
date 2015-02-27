@@ -38,7 +38,6 @@ namespace VeribisTasarım.Controller
             }
         }
 
-
         /// <summary>
         /// kur tiplerini DB_ELEMAN_GETIR clasından parabirimi olarak getirir
         /// </summary>
@@ -62,6 +61,26 @@ namespace VeribisTasarım.Controller
             {
                Dictionary<string, string> list =db.getDictionaryTable(sorgu);
                return list["BANKNOTE_SELING"];
+            }
+        }
+        /// <summary>
+        /// gelen satiri oppDetaile Kaydeeder
+        /// geriye ROW ORDER NO dönderir
+        /// </summary>
+        /// <param name="satir"></param>
+        public string setGrid(Dictionary<string,object> satir)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+              return  db.set("pInsertOppDetail", satir).ToString();
+            }
+        }
+
+        public void delGrid(string oppMasterCode,string satirKodu)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+               // db.set("pInsertOppDetail", satir);
             }
         }
     }

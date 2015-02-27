@@ -8,7 +8,7 @@ namespace VeribisTest
     [TestClass]
     public class GridTest
     {
-        [TestMethod]
+        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void TestgetStokElemanByKod()
         {
             GRID gd = new GRID();
@@ -17,16 +17,6 @@ namespace VeribisTest
             {
                 Console.WriteLine(item);
             }
-        }
-
-        [TestMethod]
-        public void Testeleman()
-        {
-            GRID gd = new GRID();
-            string eleman = gd.getEleman();
-
-            Console.WriteLine(eleman);
-            
-        }
+        }      
     }
 }

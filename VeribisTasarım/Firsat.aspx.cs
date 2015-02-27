@@ -15,7 +15,9 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+               
             }
+            BindGrid();
         }
         private void ekranDoldur()
         {
@@ -63,6 +65,120 @@ namespace VeribisTasarım
             
         }
 
-     
+
+        private void BindGrid()
+        {
+            GRID girdData = new GRID();
+            GridView1.DataSource = girdData.getGridEleman("2");
+            GridView1.DataBind();
+        }
+
+        protected void BindList()
+        {
+
+            //string strQuery = "SELECT DISTINCT CompanyName FROM customers";
+            //SqlCommand cmd = new SqlCommand(strQuery);
+            //DropDownList lstCopmany = GridView1.FooterRow.FindControl("lstCompany") as DropDownList;
+            //lstCopmany.DataSource = GetData(cmd);
+            //lstCopmany.DataTextField = "CompanyName";
+            //lstCopmany.DataValueField = "CompanyName";
+            //lstCopmany.DataBind();
+
+        }
+
+        //private DataTable GetData(SqlCommand cmd)
+        //{
+        //    DataTable dt = new DataTable();
+        //    //SqlConnection con = new SqlConnection(strConnString);
+        //    //SqlDataAdapter sda = new SqlDataAdapter();
+        //    //cmd.CommandType = CommandType.Text;
+        //    //cmd.Connection = con;
+        //    //con.Open();
+        //    //sda.SelectCommand = cmd;
+        //    //sda.Fill(dt);
+        //    return dt;
+        //}
+
+        protected void AddNewCustomer(object sender, EventArgs e)
+        {
+            //string CustomerID = ((TextBox)GridView1.FooterRow.FindControl("txtCustomerID")).Text;
+            //string Name = ((TextBox)GridView1.FooterRow.FindControl("txtContactName")).Text;
+            //string Company = ((DropDownList)GridView1.FooterRow.FindControl("lstCompany")).Text;
+            //SqlConnection con = new SqlConnection(strConnString);
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "INSERT INTO customers(CustomerID, ContactName, CompanyName) " +
+            //"VALUES(@CustomerID, @ContactName, @CompanyName);" +
+            //"SELECT CustomerID,ContactName,CompanyName FROM customers";
+            //cmd.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = CustomerID;
+            //cmd.Parameters.Add("@ContactName", SqlDbType.VarChar).Value = Name;
+            //cmd.Parameters.Add("@CompanyName", SqlDbType.VarChar).Value = Company;
+            //GridView1.DataSource = GetData(cmd);
+            //GridView1.DataBind();
+            //BindList();
+        }
+
+
+        protected void EditCustomer(object sender, GridViewEditEventArgs e)
+        {
+            //GridView1.EditIndex = e.NewEditIndex;
+            //BindGrid();
+            //BindList();
+        }
+
+        protected void CancelEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            //GridView1.EditIndex = -1;
+            //BindGrid();
+            //BindList();
+        }
+
+        protected void UpdateCustomer(object sender, GridViewUpdateEventArgs e)
+        {
+            //string CustomerID = ((Label)GridView1.Rows[e.RowIndex]
+            //                    .FindControl("lblCustomerID")).Text;
+            //string Name = ((TextBox)GridView1.Rows[e.RowIndex]
+            //                    .FindControl("txtContactName")).Text;
+            //string Company = ((TextBox)GridView1.Rows[e.RowIndex]
+            //                    .FindControl("txtCompany")).Text;
+            //SqlConnection con = new SqlConnection(strConnString);
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "UPDATE customers SET ContactName=@ContactName," +
+            // "CompanyName=@CompanyName where CustomerID=@CustomerID;" +
+            // "SELECT CustomerID,ContactName,CompanyName FROM customers";
+            //cmd.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = CustomerID;
+            //cmd.Parameters.Add("@ContactName", SqlDbType.VarChar).Value = Name;
+            //cmd.Parameters.Add("@CompanyName", SqlDbType.VarChar).Value = Company;
+            //GridView1.EditIndex = -1;
+            //GridView1.DataSource = GetData(cmd);
+            //GridView1.DataBind();
+            //BindList();
+        }
+
+
+        protected void DeleteCustomer(object sender, EventArgs e)
+        {
+            //Button btnRemove = (Button)sender;
+            //SqlConnection con = new SqlConnection(strConnString);
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "DELETE FROM customers WHERE CustomerID=@CustomerID;" +
+            // "SELECT CustomerID,ContactName,CompanyName FROM customers";
+            //cmd.Parameters.Add("@CustomerID", SqlDbType.Int).Value
+            //    = btnRemove.CommandArgument;
+            //GridView1.DataSource = GetData(cmd);
+            //GridView1.DataBind();
+            //BindList();
+        }
+
+        protected void OnPaging(object sender, GridViewPageEventArgs e)
+        {
+            //BindGrid();
+            //GridView1.PageIndex = e.NewPageIndex;
+            //GridView1.DataBind();
+            //BindList();
+
+        }
     }
 }

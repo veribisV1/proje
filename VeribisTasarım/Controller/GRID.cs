@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -35,6 +36,15 @@ namespace VeribisTasarım.Controller
             using (DBTOOL db = new DBTOOL())
             {
                 return db.getDictionaryTable(sorgu);
+            }
+        }
+
+        public DataTable getGridEleman(string oppMasterCode)
+        {
+            string sorgu = String.Format("select * from OPPORTUNITYDETAIL where OPPORTUNITY_CODE={0}", oppMasterCode);
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.get(sorgu);
             }
         }
 

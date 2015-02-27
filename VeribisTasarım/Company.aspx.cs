@@ -17,9 +17,6 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-
             if (!IsPostBack)
             {
                 //  adresDoldur();
@@ -43,7 +40,6 @@ namespace VeribisTasarım
             idCOMPANY_REFERANCE = dbGetir.doldur(idCOMPANY_REFERANCE, dbGetir.getReferans());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
             #endregion
-
             #region Makina Parkı DropDownları doldur
             idNAME = dbGetir.doldur(idNAME, dbGetir.getMarka());
             idMAKINAPARKI_YILI = dbGetir.doldur(idMAKINAPARKI_YILI, dbGetir.getModel());
@@ -53,7 +49,6 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-
         }
 
 

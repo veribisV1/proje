@@ -237,9 +237,12 @@
                     </div>
 
                 </div>
+
+              <%--   <asp:GridView ID="GridView2" runat="server"
+                    AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" OnPageIndexChanging="OnPaging" OnRowEditing="EditCustomer" OnRowUpdating="UpdateCustomer" OnRowCancelingEdit="CancelEdit" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">--%>
                 <%-- gridle ilgili işlemler başlıyor --%>
                 <asp:GridView ID="GridView1" runat="server"
-                    AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" OnPageIndexChanging="OnPaging" OnRowEditing="EditCustomer" OnRowUpdating="UpdateCustomer" OnRowCancelingEdit="CancelEdit" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">
+                    AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">
                     <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
                     <Columns>
 
@@ -452,10 +455,10 @@
 
                         <asp:TemplateField ItemStyle-Width="100px">
                             <ItemTemplate>
-                                <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="DeleteCustomer"></asp:Button>
+                                <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="idButtonFirsatEkleKaydet_Click"></asp:Button>
                             </ItemTemplate>
                             <FooterTemplate>
-                                <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClick="AddNewCustomer" Width="75px" />
+                                <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClick="gridSatirEkle" Width="75px" />
                             </FooterTemplate>
 
                             <ItemStyle Width="100px"></ItemStyle>

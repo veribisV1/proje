@@ -9,16 +9,25 @@ namespace VeribisTasarım.Controller
 {
     public abstract class GRIDPAGE : BASECONTROLLER
     {
-        protected void gridDoldur(GridView grid,string oppCode)
+        public void gridDoldur(GridView grid, string oppCode)
         {
             GRID girdData = new GRID();
             grid.DataSource = girdData.getGridEleman(oppCode);
             grid.DataBind();
         }
-        protected void gridSatirEkle(object sender, EventArgs e);
-        protected void gridSatirDuzenle(object sender, GridViewEditEventArgs e);
-        protected void gridSatirSil(object sender, GridViewCancelEditEventArgs e);
-        protected void gridSayfala(object sender, GridViewPageEventArgs e);
+        public void gridSatirEkle(object sender, EventArgs e)
+        { 
+        }
+        public void gridSatirDuzenle(object sender, GridViewEditEventArgs e) 
+        { 
+        }
+        public void gridSatirSil(object sender, GridViewCancelEditEventArgs e)
+        { 
+        }
+        public void gridSayfala(object sender, GridViewPageEventArgs e) 
+        { 
+        }
+
 
     }
 }

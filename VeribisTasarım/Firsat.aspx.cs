@@ -17,6 +17,7 @@ namespace VeribisTasarım
                 ekranDoldur();
                
             }
+            idOPPORTUNITY_CODE.Text = "2";
             gridDoldur(GridView1,idOPPORTUNITY_CODE.Text);
         }
         private void ekranDoldur()

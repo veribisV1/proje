@@ -65,10 +65,7 @@ namespace VeribisTasarım.Controller
                 return db.get(sorgu);
             }
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> ff81451a3d6a697edbf14c128c14b743fdebaf3a
 
 
         //kullanacağımız veritabanının adı.
@@ -82,14 +79,12 @@ namespace VeribisTasarım.Controller
             }
            
         }
-<<<<<<< HEAD
+
 
       
 
 
-=======
-  
->>>>>>> ff81451a3d6a697edbf14c128c14b743fdebaf3a
+
     }
 }
 

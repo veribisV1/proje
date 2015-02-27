@@ -22,8 +22,8 @@ namespace VeribisTasarım
 
             if (!IsPostBack)
             {
-                adresDoldur();
-                telefonDoldur();
+              //  adresDoldur();
+               // telefonDoldur();
                 ekranDoldur();
             }
 
@@ -104,7 +104,11 @@ namespace VeribisTasarım
             }
 
 
+        }      
+
+        private static int PageSize = 15;
+
+     
         }
 
     }
-}

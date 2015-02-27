@@ -45,8 +45,7 @@ namespace VeribisTasarım.Controller
             sorgu.Append(" ORDER BY ROW_ORDER_NO");
             return sorgu.ToString();
         }
-
-      
+    
 
         /// <summary>
         /// tüm userların adı soyadı ile user codları gelir
@@ -509,5 +508,9 @@ namespace VeribisTasarım.Controller
             return liste;
         }
         
+        public DataTable getOppDetail(string oppCode)
+        {
+            return db.getGridIcerik("select ROW_ORDER_NO,PRODUCT_NAME,CUR_TYPE,TOTAL_UPBK from OPPORTUNITYDETAIL where OPPORTUNITY_CODE="+oppCode);
+        }
     }
 }

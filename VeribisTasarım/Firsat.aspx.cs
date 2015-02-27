@@ -47,7 +47,7 @@ namespace VeribisTasarım
         //    int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
 
                 int oppurtunityCode = -1;
-          
+                //Tipi kontrol edilecek
                 if (String.IsNullOrEmpty(idOPPORTUNITY_CODE.Text))
                 {
                     oppurtunityCode = kaydet("pInsertOppMaster");

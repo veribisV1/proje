@@ -43,6 +43,7 @@ namespace VeribisTasarım
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
+
             //DBARACISI firma = new DBARACISI();
             //Dictionary<string, string> paramtereListesi = firma.getStoreParametre("pInsertContact");
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
@@ -50,7 +51,24 @@ namespace VeribisTasarım
             //int companyCode = firma.setStore("pInsertContact", dataListesi);
 
 
-
+            int contactCode = -1;
+            if (!String.IsNullOrEmpty(idNAME.Text))
+            {
+                if (!String.IsNullOrEmpty(idNAME.Text))
+                {
+                    contactCode = kaydet("pInsertContact");
+                }
+                else
+                {
+                    contactCode = kaydet("pUpdateContact");
+                }
+                if (contactCode != -1)
+                {
+                    formTemizle(this);
+                }
+            }
+            else
+                BosMesaji();  
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)

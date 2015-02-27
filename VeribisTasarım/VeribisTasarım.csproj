@@ -61,12 +61,31 @@
     <Content Include="Aktivite.aspx" />
     <Content Include="Company.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="fancyBox\lib\jquery-1.10.1.min.js" />
+    <Content Include="fancyBox\source\blank.gif" />
+    <Content Include="fancyBox\source\fancybox_loading%402x.gif" />
+    <Content Include="fancyBox\source\fancybox_loading.gif" />
+    <Content Include="fancyBox\source\fancybox_overlay.png" />
+    <Content Include="fancyBox\source\fancybox_sprite%402x.png" />
+    <Content Include="fancyBox\source\fancybox_sprite.png" />
+    <Content Include="fancyBox\source\helpers\fancybox_buttons.png" />
+    <Content Include="fancyBox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="fancyBox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="fancyBox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="fancyBox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="fancyBox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="fancyBox\source\jquery.fancybox.css" />
+    <Content Include="fancyBox\source\jquery.fancybox.js" />
     <Content Include="Fatura.aspx" />
     <Content Include="FirmaListeAdi.aspx" />
     <Content Include="Firsat.aspx" />
+    <Content Include="Giris.aspx" />
     <Content Include="Kisi.aspx" />
     <Content Include="Numune.aspx" />
     <Content Include="Proforma.aspx" />
+    <Content Include="script\ASPSnippets_Pager.min.js" />
+    <Content Include="script\scriptForAraGrid.js" />
+    <Content Include="style\styleForAraGrid.css" />
     <Content Include="Teklif.aspx" />
     <Content Include="style\responsive.css" />
     <Content Include="style\stil.css" />
@@ -158,6 +177,13 @@
     <Compile Include="Firsat.aspx.designer.cs">
       <DependentUpon>Firsat.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Kisi.aspx.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,6 +235,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.master" />
+    <Content Include="fancyBox\source\helpers\Thumbs.db" />
+    <Content Include="fancyBox\source\Thumbs.db" />
     <None Include="Properties\PublishProfiles\VeribisTasarım.pubxml" />
     <None Include="Properties\PublishProfiles\VeribisWeb.pubxml" />
     <None Include="Web.Debug.config">
@@ -218,6 +246,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -21,7 +21,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="ALAN4">
+   
+         <div> 
         <h3>Telefon Ekle</h3>
         <div class="tabmenu">
             <ul>
@@ -68,7 +69,7 @@
                           :
                         </td>
                         <td>
-                       <asp:DropDownList ID="idCOUNTRY_CODE" Height="25px" runat="server" Width="150%"></asp:DropDownList>
+                       <asp:DropDownList ID="idCOUNTRY_CODE" Height="25px" runat="server" Width="150%" AutoPostBack="True" OnSelectedIndexChanged="idCOUNTRY_CODE_SelectedIndexChanged" ViewStateMode="Enabled"></asp:DropDownList>
                         </td>
                     </tr>
                             <tr>
@@ -113,6 +114,8 @@
                 </div>
     
     </div>
+         </div>
+         <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>
     </form>
 </body>
 </html>

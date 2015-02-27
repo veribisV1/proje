@@ -26,13 +26,12 @@ namespace VeribisTasarım.Controller
         /// <returns> PK döndürür </returns>
         public int kaydet(string storeProsedurAdi)
         {
-            string Role = Session["Role"].ToString();
-            if (true)//(!Role.Equals(""))
-            {
-                rolHatasiMesaji();
-                return -1;
-            }
-
+            //string Role = Session["Role"].ToString();
+            //if (true)//(!Role.Equals(""))
+            //{
+            //    rolHatasiMesaji();
+            //    return -1;
+            //}
             DBARACISI firma = new DBARACISI();
             Dictionary<string, string> paramtereListesi = firma.getStoreParametre(storeProsedurAdi);
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();

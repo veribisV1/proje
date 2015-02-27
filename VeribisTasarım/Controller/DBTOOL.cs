@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 
 namespace VeribisTasarım.Controller
 {
@@ -12,7 +13,7 @@ namespace VeribisTasarım.Controller
     /// gerekli olan metotları içeriri
     /// connectionu=webConfig ten alır
     /// </summary>   
-    public class DBTOOL:IDisposable
+    public class DBTOOL : IDisposable
     {
 
         SqlConnection connection;
@@ -38,12 +39,12 @@ namespace VeribisTasarım.Controller
                 if (connection != null) { connection.Dispose(); connection = null; }
                 if (komut != null) { komut.Dispose(); komut = null; }
                 if (adapter != null) { adapter.Dispose(); adapter = null; }
-            }            
+            }
             disposed = true;
         }
         public void Dispose()
-        {            
-            Dispose(true);           
+        {
+            Dispose(true);
             GC.SuppressFinalize(this);
         }
 
@@ -53,11 +54,28 @@ namespace VeribisTasarım.Controller
 
         public DataTable get(string tabloAdi, string[] sutunAdlari, string filtre)
         {
+
             return new DataTable();
         }
-        public DataTable get(string storedProcedureAdi, int kod)
+        public DataTable getDataTable(string prosedurAdi, Dictionary<string, object> parametreler)
         {
-            return new DataTable();
+            komut = new SqlCommand();
+            komut.Connection = connection;
+            komut.CommandType = System.Data.CommandType.StoredProcedure;
+            komut.CommandText = prosedurAdi;
+            connection.Open();
+
+            foreach (KeyValuePair<string, object> item in parametreler)
+            {
+                komut.Parameters.AddWithValue(item.Key, item.Value);
+            }
+            DataTable tb = new DataTable();
+            using (SqlDataReader dr = komut.ExecuteReader())
+            {
+                tb.Load(dr);
+            }            
+            connection.Close();
+            return tb;
         }
         public DataTable get(string sorgu)
         {
@@ -87,11 +105,15 @@ namespace VeribisTasarım.Controller
 
             if (tablo != null)
             {
-                var columns = tablo.Columns.Cast<DataColumn>();
-                foreach (DataColumn col in tablo.Columns)
+                if (tablo.Rows.Count != 0)
                 {
-                    list.Add(col.ColumnName, tablo.Rows[0][col].ToString());
+                    var columns = tablo.Columns.Cast<DataColumn>();
+                    foreach (DataColumn col in tablo.Columns)
+                    {
+                        list.Add(col.ColumnName, tablo.Rows[0][col].ToString());
+                    }
                 }
+             
             }
 
             return list;
@@ -191,5 +213,25 @@ namespace VeribisTasarım.Controller
             connection.Close();
         }
 
+        /// <summary>
+        /// Login olurken girilen ticari koda karşılık gelen veritabanının
+        /// adını getiriyor.
+        /// </summary>
+        public string getDatabaseName(string customerCode)
+        {
+            SqlConnection connectionName = new SqlConnection(ConfigurationManager.ConnectionStrings["ticarikod"].ConnectionString);
+            StringBuilder sorgu = new StringBuilder();
+
+            sorgu.Append("SELECT DB_NAME FROM LOGIN WHERE CUSTOMER_CODE='");
+            sorgu.Append(customerCode);
+            sorgu.Append("'");
+
+            komut = new SqlCommand(sorgu.ToString(), connectionName);
+            
+            connectionName.Open();
+            var databaseName=komut.ExecuteScalar();
+            connectionName.Close();
+            return databaseName.ToString();
+        }
     }
 }

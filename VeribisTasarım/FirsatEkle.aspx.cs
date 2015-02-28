@@ -32,7 +32,7 @@ namespace VeribisTasarım
                 {
                     formTemizle(this);
                 }
-            }
+           // }
             //else
             //    BosMesaji();
         }

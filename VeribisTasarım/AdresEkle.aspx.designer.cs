@@ -22,33 +22,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// idButtonAdresYeni control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonAdresYeni;
-        
-        /// <summary>
-        /// idButtonAdresKaydet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonAdresKaydet;
-        
-        /// <summary>
-        /// idButtonAdresSil control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonAdresSil;
-        
-        /// <summary>
         /// idADDRESS_CODE control.
         /// </summary>
         /// <remarks>
@@ -164,6 +137,24 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idGPS_LONGITUDE;
+        
+        /// <summary>
+        /// idButtonAdresKaydet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonAdresKaydet;
+        
+        /// <summary>
+        /// idButtonAdresIptal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonAdresIptal;
         
         /// <summary>
         /// idCOMPANY_CODE control.

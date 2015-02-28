@@ -49,6 +49,10 @@ namespace VeribisTasarım.Controller
                         if (eleman.GetType() == typeof(DropDownList))
                         {
                             DropDownList elemanText = (DropDownList)eleman;
+                            if (elemanText.ID.Equals("idPRODUCT_NAME"))
+                            {
+                                dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedItem.ToString()));
+                            }else
                             dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedValue));
 
                         }

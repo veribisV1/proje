@@ -66,7 +66,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                       <asp:TextBox ID="idUNIT_PRICE" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox> 
+                                       <asp:TextBox ID="idUNIT_PRICE" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim" AutoPostBack="True"></asp:TextBox> 
                                     </td>
                                 </tr>
                                
@@ -76,7 +76,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                        <asp:DropDownList ID="idCUR_TYPE" Height="30px" runat="server" Width="100%"></asp:DropDownList>
+                                        <asp:DropDownList ID="idCUR_TYPE" Height="30px" runat="server" Width="100%" OnSelectedIndexChanged="paraBirimiDegis" AutoPostBack="True"></asp:DropDownList>
                                     </td>
                                 </tr>
                                

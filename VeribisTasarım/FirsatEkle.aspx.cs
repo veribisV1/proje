@@ -33,8 +33,8 @@ namespace VeribisTasarım
                 rowOrderCode = kaydet("pUpdateOppDetail");
             }
             if (rowOrderCode != -1)
-            {
-                formTemizle(this);
+            {                
+               formTemizle(this);
             }
             // }
             //else
@@ -55,6 +55,12 @@ namespace VeribisTasarım
             idSTOK_CODE = dbelemanGetir.doldur(idSTOK_CODE, dbelemanGetir.getStokKartByNameKod(txtStokAdi.Text));
         }
 
+        protected void paraBirimiDegis(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
+            idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
+            alanlariHesapla();
+        }
         protected void elamnlariYuke(object sender, EventArgs e)
         {
             DropDownList liste = (DropDownList)sender;
@@ -105,7 +111,7 @@ namespace VeribisTasarım
             else// fiyat değişirse diye yüzde sabit tutar değişsin diye
             {
                 double TOTAL_UNTAX = (String.IsNullOrEmpty(idTOTAL_UNTAX.Text)) ? 0 : Convert.ToDouble(idTOTAL_UNTAX.Text);
-                double yuzde = Convert.ToDouble(eleman.Text);
+                double yuzde = (String.IsNullOrEmpty(eleman1.Text)) ? 0 : Convert.ToDouble(eleman1.Text);
                 double hesap = yuzde * TOTAL_UNTAX / 100;
                 eleman2.Text = hesap.ToString();
             }

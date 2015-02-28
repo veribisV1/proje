@@ -108,12 +108,18 @@ namespace VeribisTasarım
         }
 
 
-
-
+    
     }
-
+            
 
 }
+
+
+    
+
+
+
+  
 
 
 

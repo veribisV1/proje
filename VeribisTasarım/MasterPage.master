@@ -33,9 +33,9 @@
 
     <nav class="navigation-bar">
         <nav class="navigation-bar-content">
-            <a class="element" style="font-size: x-large;" href="Default.aspx">
-                <img src="image/logo1.png" />
-                 
+            <a class="element" style="font-size: 36px;" href="Default.aspx">
+               <%-- <img src="image/logo1.png" />--%>
+                VeribisCRM 
             </a>
 
             <a class="element place-right" href="#"><span class="icon-switch" style="margin-top:20px;"></span></a>

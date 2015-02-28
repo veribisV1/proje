@@ -2,7 +2,50 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <script src="Content/js/metro/metro-tab-control.js"></script>
-    
+       <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
+    <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript">
+
+
+        function baslat(siraNo) {
+            //var firmaKodu = $('#ContentPlaceHolder1_idCOMPANY_CODE').val();
+
+            //if (firmaKodu != null) {
+                switch (siraNo) {
+                    case 1:
+                        adres = 'FirsatEkle.aspx';
+                        break;
+                    case 2:
+                        adres = '' ;
+                        break;
+
+                    default:
+
+
+                }
+                $.fancybox.open({
+                    href: adres,
+                    type: 'iframe',
+                    padding: 5,
+                });
+            //}
+            //else {
+            //    alert("Firmayı kaydetmeniz gerekli!");
+            //}
+
+
+        }
+
+
+    </script>
+
+
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -459,7 +502,7 @@
                                 <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="gridSatirSil"></asp:Button>
                             </ItemTemplate>
                             <FooterTemplate>
-                                <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClick="gridSatirEkle" Width="75px" />
+                                <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClientClick="baslat(1);return false;" Width="75px" />
                             </FooterTemplate>
 
                             <ItemStyle Width="100px"></ItemStyle>

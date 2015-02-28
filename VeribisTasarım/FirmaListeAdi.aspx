@@ -16,10 +16,10 @@
             <ContentTemplate>
                 <div>
           <asp:Label ID="lblAlert" runat="server" Visible="false" Text="Aradığınız Şartlara Uygun Kayıt Bulunamadı."></asp:Label>
-               <asp:GridView ID="GridView1" runat="server" CssClass="ListeAdiGridView" 
-                         AutoGenerateColumns="false" AllowPaging="false"
+               <asp:GridView ID="GridView1" runat="server" AllowPaging="true" PageSize="20" CssClass="ListeAdiGridView" 
+                         AutoGenerateColumns="False"
                         DataKeyNames="FIRMA_ADI" OnRowCommand="GridView1_RowCommand" 
-                    ShowFooter="true" >
+                    ShowFooter="True" OnPageIndexChanging="GridView1_PageIndexChanging" >
          
                         <Columns>
                           

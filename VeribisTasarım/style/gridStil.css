@@ -4,7 +4,8 @@
     margin: 10px auto;   
     border: solid 1px #c1c1c1;  
     border:none; 
-    border-collapse:collapse;   
+    border-collapse:collapse;  
+    border-radius:10px;
 }  
 .mGrid td {   
     padding: 2px;   

@@ -22,10 +22,6 @@ namespace VeribisTasarım
                 adresDoldur();
                 telefonDoldur();
                 ekranDoldur();
-
-                //BindDummyRow();
-
-
             }
 
         }

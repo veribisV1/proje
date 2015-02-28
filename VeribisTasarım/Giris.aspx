@@ -335,17 +335,17 @@
 
                                     <div id="ticarikod" class="input-group">
                                         <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtTicariKod" runat="server" Text="Ticari Kod"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="_txtTicariKod" runat="server" placeholder="Ticari Kod"></asp:TextBox>
                                     </div>
 
                                     <div id="kullaniciadi" class="input-group">
                                         <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtKullaniciAdi" runat="server" Text="Kullanıcı Adı"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="_txtKullaniciAdi" runat="server" placeholder="Kullanıcı Adı"></asp:TextBox>
                                     </div>
 
                                     <div id="sifre" class="input-group">
                                         <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password" placeholder="Şifre"></asp:TextBox>
                                     </div>
 
                                     <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />

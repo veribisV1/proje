@@ -3,6 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="Content/js/metro/metro-tab-control.js"></script>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+
+
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -250,7 +259,7 @@
 
                                         <%-- gridle ilgili işlemler başlıyor --%>
 
-                                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idOPPORTUNITY_CODE').val(),700,500);return false;" Width="75px" />
+                                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx','',700,500);return false;" Width="75px" />
 
                                         <asp:GridView ID="GridView1" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
@@ -266,9 +275,16 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idOPPORTUNITY_CODE').val());return false;"></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idROW_ORDER_NO').val());return false;"></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
+
+                                                <asp:TemplateField HeaderText="ROW_ORDER_NO" ItemStyle-Width="5%" Visible="true">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblROW_ORDER_NO" runat="server" Text='<%# Eval("ROW_ORDER_NO")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
                                                 <asp:TemplateField HeaderText="KOD" ItemStyle-Width="5%">
                                                     <ItemTemplate>
                                                         <asp:Label ID="lblSTOK_CODE" runat="server" Text='<%# Eval("STOK_CODE")%>'></asp:Label>

@@ -151,6 +151,7 @@ textarea
     position:relative;
     bottom:5px;
     left:4px;
+    height: 30px;
 }
    
 .ButtonSil {
@@ -171,27 +172,34 @@ textarea
 }
 .TextBoxArama {
     position:relative;
-    bottom:5px;
-    left:24%;
+    bottom:745px;
+    left:234%;
     height:20px;
-    width:60px;
+    width:250px;
     border-color:#012353;
 
 }
 .ButtonArama {
     position:relative;
-    bottom:5px;
-    left:26%;
-    width:10%;
+    bottom:775px;
+    left:480%;
+    width:80%;
     height:30px;
     background: #012353;
     color:white;
    
 }
+.GridGeri {
+    background: #012353;
+    color:white;
+     width:10%;
+    height:30px;
+}
 .EvrakListesiArama {
     position:relative;
     bottom:5px;
-    left:2%;
+    left:1%;
+    top:20px;
     border-color:#012353;
 
 
@@ -199,6 +207,7 @@ textarea
 .EvrakListesiButonArama {
     position:relative;
     bottom:5px;
+    top:20px;
     left:2%;
     width:7%;
     height:30px;
@@ -208,7 +217,8 @@ textarea
 .EvrakListesiDurum {
     position:relative;
     bottom:5px;
-    left:7%;
+    top:20px;
+    left:10%;
     width:7%;
     height:30px;
     
@@ -216,7 +226,8 @@ textarea
 .EvrakListesiDropdownDurum {
     position:relative;
     bottom:5px;
-    left:8%;
+    top:20px;
+    left:11%;
     width:7%;
     height:20px;
    
@@ -225,7 +236,8 @@ textarea
 .LabelEvrakListesiBaslangic {
     position:relative;
     bottom:5px;
-    left:12%;
+    top:7px;
+    left:20%;
     width:7%;
     height:20px;
 
@@ -233,26 +245,37 @@ textarea
 .EvrakListesiBaslangicTarih {
     position:relative;
     bottom:5px;
-    left:13%;
+    top:7px;
+    left:21%;
     width:15%;
     height:20px;
 }
 .LabelEvrakListesiBitis {
     position:relative;
     bottom:5px;
-    left:47.9%;
+    left:55.9%;
     width:15%;
     height:20px;
 }
 .EvrakListesiBitisTarih {
     position:relative;
     bottom:5px;
-    left:51.7%;
+    left:59.7%;
     width:15%;
     height:20px;
 }
+.UrunHizmetDetayli {
+    position:relative;
+    bottom:20px;
+    left:66.7%;
+    width:15%;
+    height:50px;
+    background: #012353;
+    color:white;
 
-.ListeAdiGridView { width: 100%; background-color:white; margin: 5px 0 10px 0; border: solid 1px black; border-collapse:collapse; }
+}
+
+.ListeAdiGridView { width: 70%; background-color:white; margin: 40px 0 35px 200px; border: solid 1px black; border-collapse:collapse; }
 .ListeAdiGridView td { padding: 2px; border: solid 1px #012353; color:black}
 .ListeAdiGridView th { padding: 4px 2px; color:white; background: #012353 url(grd_head.png) repeat-x top; border-left: solid 1px #012353; font-size: 0.9em; }
 .ListeAdiGridView .alt { background: #000 url(grd_alt.png) repeat-x top; }

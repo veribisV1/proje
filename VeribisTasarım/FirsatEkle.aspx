@@ -18,7 +18,6 @@
     <form id="form1" runat="server">
         <div class="ALAN12">
             <h3>Fırsat Ekle</h3>
-
             <div class="KisiTableHizalama">
                 <asp:TextBox ID="idROW_ORDER_NO" runat="server" Visible="False"></asp:TextBox>
                 <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
@@ -227,7 +226,6 @@
 
                     </table>
                 </div>
-
             </div>
         </div>
     </form>

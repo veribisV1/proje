@@ -269,8 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.master" />
-    <Content Include="fancyBox\source\helpers\Thumbs.db" />
-    <Content Include="fancyBox\source\Thumbs.db" />
     <Content Include="Content\fonts\iconFont.eot" />
     <Content Include="Content\fonts\iconFont.json" />
     <Content Include="Content\fonts\iconFont.ttf" />

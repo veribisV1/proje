@@ -68,6 +68,8 @@ namespace VeribisTasarım
             {
                 idSTOK_CODE.SelectedValue = idPRODUCT_NAME.SelectedValue;
             }
+            DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
+            idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
             alanlariHesapla();
         }
 
@@ -88,17 +90,29 @@ namespace VeribisTasarım
         {
             if (eleman.ID == eleman1.ID)
             {
-                eleman2.Text = eleman1.Text;
+                double TOTAL_UNTAX = (String.IsNullOrEmpty(idTOTAL_UNTAX.Text)) ? 0 : Convert.ToDouble(idTOTAL_UNTAX.Text);
+                double yuzde = Convert.ToDouble(eleman.Text);
+                double hesap = yuzde * TOTAL_UNTAX / 100;
+                eleman2.Text = hesap.ToString();
             }
             else if (eleman.ID == eleman2.ID)
             {
-                eleman1.Text = eleman2.Text;
+                double TOTAL_UNTAX = (String.IsNullOrEmpty(idTOTAL_UNTAX.Text)) ? 0 : Convert.ToDouble(idTOTAL_UNTAX.Text);
+                double tutar = Convert.ToDouble(eleman.Text);
+                double hesap = tutar * 100 / TOTAL_UNTAX;
+                eleman1.Text = hesap.ToString();
+            }
+            else// fiyat değişirse diye yüzde sabit tutar değişsin diye
+            {
+                double TOTAL_UNTAX = (String.IsNullOrEmpty(idTOTAL_UNTAX.Text)) ? 0 : Convert.ToDouble(idTOTAL_UNTAX.Text);
+                double yuzde = Convert.ToDouble(eleman.Text);
+                double hesap = yuzde * TOTAL_UNTAX / 100;
+                eleman2.Text = hesap.ToString();
             }
         }
         private void alanlariHesapla()
         {
-            DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
-            idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
+            
             double kurTutari = (String.IsNullOrEmpty(idCUR_VALUE.Text)) ? 1 : Convert.ToDouble(idCUR_VALUE.Text);
             double miktar = (String.IsNullOrEmpty(idQUANTITY.Text)) ? 1 : Convert.ToDouble(idQUANTITY.Text);
             double PRICE = (String.IsNullOrEmpty(idUNIT_PRICE.Text)) ? 1 : Convert.ToDouble(idUNIT_PRICE.Text);            

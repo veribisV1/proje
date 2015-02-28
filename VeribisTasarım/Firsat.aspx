@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <script src="Content/js/metro/metro-tab-control.js"></script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -467,6 +468,8 @@
                             <ItemStyle Width="200px"></ItemStyle>
                         </asp:CommandField>
                     </Columns>
+
+<FooterStyle CssClass="footer"></FooterStyle>
 
                     <PagerStyle CssClass="pgr"></PagerStyle>
 

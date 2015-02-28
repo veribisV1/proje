@@ -1,4 +1,4 @@
-﻿function OpenPage(url,parametre) {
+﻿function OpenPage(url,parametre,genislik,yukseklik) {
   
     var adres = url;
     if (parametre != null) {
@@ -10,7 +10,8 @@
         href: adres,
         type: 'iframe',
         padding: 5,
-        height: 500,
+        width: genislik,
+        height: yukseklik,
         autoSize: false,
         overflow: 'hidden',
         scrolling: 'no',

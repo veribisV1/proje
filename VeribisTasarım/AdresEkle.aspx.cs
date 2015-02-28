@@ -15,9 +15,14 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
-                if (Request.QueryString["firma"]!=null)
+                //if (Request.QueryString["firma"]!=null)
+                //{
+                //    idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
+                //}
+
+                if (Request.QueryString["param"] != null)
                 {
-                    idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
+                    idCOMPANY_CODE.Text = Request.QueryString["param"].ToString();
                 }
                 
             }

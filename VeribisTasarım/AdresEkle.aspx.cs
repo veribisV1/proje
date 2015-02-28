@@ -26,9 +26,6 @@ namespace VeribisTasarım
 
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
         {
-            
-           
-
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idADDRESS1.Text))
             {

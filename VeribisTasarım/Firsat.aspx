@@ -4,51 +4,7 @@
      <script src="Content/js/metro/metro-tab-control.js"></script>
        <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
-    <script type="text/javascript">
-
-      
-
-        function baslat(siraNo) {
-            //var firmaKodu = $('#ContentPlaceHolder1_idCOMPANY_CODE').val();
-
-            //if (firmaKodu != null) {
-                switch (siraNo) {
-                    case 1:
-                        adres = 'FirsatEkle.aspx';
-                        break;
-                    case 2:
-                        adres = '' ;
-                        break;
-
-                    default:
-
-
-                }
-              
-             
-              
-                $.fancybox.open({
-                    href: adres,
-                    type: 'iframe',
-                    padding: 5,
-                    height: 500,
-                    autoSize: false,
-                    overflow: 'hidden',
-                    scrolling: 'no',
-                   
-                });
-            //}
-            //else {
-            //    alert("Firmayı kaydetmeniz gerekli!");
-            //}
-
-
-        }
-
-
-    </script>
-
-
+    <script src="Content/js/navigate.js"></script>
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
         .fancybox-custom .fancybox-skin {
@@ -296,7 +252,7 @@
                     AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" OnPageIndexChanging="OnPaging" OnRowEditing="EditCustomer" OnRowUpdating="UpdateCustomer" OnRowCancelingEdit="CancelEdit" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">--%>
                 <%-- gridle ilgili işlemler başlıyor --%>
 
-                 <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="baslat(1);return false;" Width="75px" />
+                 <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx');return false;" Width="75px" />
                 <asp:GridView ID="GridView1" runat="server"
                     AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">
                     <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>

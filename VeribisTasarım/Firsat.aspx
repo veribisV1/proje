@@ -238,241 +238,150 @@
 
                 </div>
 
-              <%--   <asp:GridView ID="GridView2" runat="server"
-                    AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" OnPageIndexChanging="OnPaging" OnRowEditing="EditCustomer" OnRowUpdating="UpdateCustomer" OnRowCancelingEdit="CancelEdit" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">--%>
-                <%-- gridle ilgili işlemler başlıyor --%>
+             
+                <%-- ******* GRIDVIEW *******--%>
+               <div class="ALAN12">
+                            <div class="KisiTableHizalama">
+                                <table class="KisiTable">
+                                    <tr>
+                                        <td>
                 <asp:GridView ID="GridView1" runat="server"
-                    AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">
-                    <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
+                    AutoGenerateColumns="False" CssClass="mGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
+                  
                     <Columns>
 
-                        <asp:TemplateField HeaderText="KOD">
+                        <asp:TemplateField ItemStyle-Width="3%">
+                            <ItemTemplate>
+                                <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="gridSatirSil"></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                       
+         
+                        <asp:TemplateField ItemStyle-Width="3%">
+                            <ItemTemplate>
+                                <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" Text="Düzenle" OnClick="gridSatirSil"></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="KOD" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblSTOK_CODE" runat="server" Text='<%# Eval("STOK_CODE")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:DropDownList ID="lstSTOK_CODE" runat="server" Text='<%# Eval("STOK_CODE")%>'></asp:DropDownList>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:DropDownList ID="lstSTOK_CODE" MaxLength="5" runat="server"></asp:DropDownList>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
 
-                        <asp:TemplateField HeaderText="STOK ADI">
+                        <asp:TemplateField HeaderText="STOK ADI" ItemStyle-Width="15%">
                             <ItemTemplate>
                                 <asp:Label ID="lblPRODUCT_NAME" runat="server"
                                     Text='<%# Eval("PRODUCT_NAME")%>'></asp:Label>
-                            </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:DropDownList ID="lstContactName" runat="server" Text='<%# Eval("PRODUCT_NAME")%>'></asp:DropDownList>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:DropDownList ID="lstPRODUCT_NAME" runat="server"></asp:DropDownList>
-                            </FooterTemplate>
+                            </ItemTemplate>  
                         </asp:TemplateField>
 
 
-                        <asp:TemplateField HeaderText="MİKTAR">
+                        <asp:TemplateField HeaderText="MİKTAR" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblQUANTITY" runat="server" Text='<%# Eval("QUANTITY")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtCompany" runat="server" Text='<%# Eval("QUANTITY")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtQUANTITY" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="UNIT">
+                        <asp:TemplateField HeaderText="BİRİM" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblUNIT" runat="server" Text='<%# Eval("UNIT")%>'></asp:Label>
                             </ItemTemplate>
-                            <FooterTemplate>
-                                <asp:Label ID="lblUNIT" runat="server"></asp:Label>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="FİYAT">
+                        <asp:TemplateField HeaderText="FİYAT" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblUNIT_PRICE" runat="server" Text='<%# Eval("UNIT_PRICE")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtUNIT_PRICE" runat="server" Text='<%# Eval("UNIT_PRICE")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtUNIT_PRICE" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="VERGİ(%)">
+                        <asp:TemplateField HeaderText="VERGİ(%)" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblTAX_PERCENT" runat="server" Text='<%# Eval("TAX_PERCENT")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtTAX_PERCENT" runat="server" Text='<%# Eval("TAX_PERCENT")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtTAX_PERCENT" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="PARA BİRİMİ">
+                        <asp:TemplateField HeaderText="PARA BİRİMİ" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblCUR_TYPE" runat="server" Text='<%# Eval("CUR_TYPE")%>'></asp:Label>
-                            </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:DropDownList ID="lstCUR_TYPE" runat="server" Text='<%# Eval("TAX_PERCENT")%>'></asp:DropDownList>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:DropDownList ID="lstCUR_TYPE" runat="server"></asp:DropDownList>
-                            </FooterTemplate>
+                            </ItemTemplate> 
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="KUR">
+                        <asp:TemplateField HeaderText="KUR" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblCUR_VALUE" runat="server" Text='<%# Eval("CUR_VALUE")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtCUR_VALUE" runat="server" Text='<%# Eval("CUR_VALUE")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtCUR_VALUE" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
 
-                        <asp:TemplateField HeaderText="DÖVİZ TUTARI">
+                        <asp:TemplateField HeaderText="DÖVİZ TUTARI" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblTOTAL" runat="server" Text='<%# Eval("TOTAL")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtTOTAL" runat="server" Text='<%# Eval("TOTAL")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtTOTAL" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
 
-                        <asp:TemplateField HeaderText="TL TUTARI">
+                        <asp:TemplateField HeaderText="TL TUTARI" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblTOTAL_UPBK" runat="server" Text='<%# Eval("TOTAL_UPBK")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtTOTAL_UPBK" runat="server" Text='<%# Eval("TOTAL_UPBK")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtTOTAL_UPBK" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="İSKONTO(%)">
+                        <asp:TemplateField HeaderText="İSKONTO(%)" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblDISCOUNT_PERCENT" runat="server" Text='<%# Eval("DISCOUNT_PERCENT")%>'></asp:Label>
-                            </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtDISCOUNT_PERCENT" runat="server" Text='<%# Eval("DISCOUNT_PERCENT")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtDISCOUNT_PERCENT" runat="server"></asp:TextBox>
-                            </FooterTemplate>
+                            </ItemTemplate> 
                         </asp:TemplateField>
 
 
-                        <asp:TemplateField HeaderText="İSKONTO MİKTARI">
+                        <asp:TemplateField HeaderText="İSKONTO MİKTARI" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblDISCOUNT_TOTAL" runat="server" Text='<%# Eval("DISCOUNT_TOTAL")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtDISCOUNT_TOTAL" runat="server" Text='<%# Eval("DISCOUNT_TOTAL")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtDISCOUNT_TOTAL" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="MASRAF(%)">
+                        <asp:TemplateField HeaderText="MASRAF(%)" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblEXPENSE_PERCENT" runat="server" Text='<%# Eval("EXPENSE_PERCENT")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtEXPENSE_PERCENT" runat="server" Text='<%# Eval("EXPENSE_PERCENT")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtEXPENSE_PERCENT" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="MASRAF MİKTARI">
+                        <asp:TemplateField HeaderText="MASRAF MİKTARI" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblEXPENSE_TOTAL" runat="server" Text='<%# Eval("EXPENSE_TOTAL")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtEXPENSE_TOTAL" runat="server" Text='<%# Eval("EXPENSE_TOTAL")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtEXPENSE_TOTAL" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="DÖVİZ NET TUTAR">
+                        <asp:TemplateField HeaderText="DÖVİZ NET TUTAR" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblTOTAL_UNTAX" runat="server" Text='<%# Eval("TOTAL_UNTAX")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtTOTAL_UNTAX" runat="server" Text='<%# Eval("TOTAL_UNTAX")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtTOTAL_UNTAX" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="TL NET TUTAR">
+                        <asp:TemplateField HeaderText="TL NET TUTAR" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblTOTAL_UPBK_UNTAX" runat="server" Text='<%# Eval("TOTAL_UPBK_UNTAX")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtTOTAL_UPBK_UNTAX" runat="server" Text='<%# Eval("TOTAL_UPBK_UNTAX")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtTOTAL_UPBK_UNTAX" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="AÇIKLAMA">
+                        <asp:TemplateField HeaderText="AÇIKLAMA" ItemStyle-Width="5%">
                             <ItemTemplate>
                                 <asp:Label ID="lblEXPLANATION" runat="server" Text='<%# Eval("EXPLANATION")%>'></asp:Label>
                             </ItemTemplate>
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txtEXPLANATION" runat="server" Text='<%# Eval("EXPLANATION")%>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtEXPLANATION" runat="server"></asp:TextBox>
-                            </FooterTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField ItemStyle-Width="100px">
-                            <ItemTemplate>
-                                <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="gridSatirSil"></asp:Button>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClick="gridSatirEkle" Width="75px" />
-                            </FooterTemplate>
-
-                            <ItemStyle Width="100px"></ItemStyle>
-                        </asp:TemplateField>
-                        <asp:CommandField ShowEditButton="True" ItemStyle-Width="200px" ButtonType="Button">
-                            <ItemStyle Width="200px"></ItemStyle>
-                        </asp:CommandField>
                     </Columns>
 
-                    <PagerStyle CssClass="pgr"></PagerStyle>
+                   
 
                 </asp:GridView>
 
-
+                 </td>
+              </tr>
+         </table>
+      </div>
+ </div>
+               
                 <%-- gridle ilgili işlemler bitiyor --%>
             </div>
            <div class="frame" id="ListeAdi">

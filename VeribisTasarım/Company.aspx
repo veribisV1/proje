@@ -9,40 +9,6 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
-    <script type="text/javascript">
-
-
-        function baslat(siraNo) {
-            var firmaKodu = $('#ContentPlaceHolder1_idCOMPANY_CODE').val();
-
-            if (firmaKodu != null) {
-                switch (siraNo) {
-                    case 1:
-                        adres = 'AdresEkle.aspx?firma=' + firmaKodu;
-                        break;
-                    case 2:
-                        adres = 'TelefonEkle.aspx?firma=' + firmaKodu;
-                        break;
-
-                    default:
-
-
-                }
-                $.fancybox.open({
-                    href: adres,
-                    type: 'iframe',
-                    padding: 5,
-                });
-            }
-            else {
-                alert("Firmayı kaydetmeniz gerekli!");
-            }
-
-
-        }
-
-
-    </script>
 
 
     <%--fancy_box stil tanımı--%>
@@ -174,7 +140,8 @@
                                     <td>
 
                                         <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
-
+                                    </td>
+                                </tr>
                                         <%--   <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>--%>
                             </table>
 
@@ -387,7 +354,7 @@
                             <br />
 
 
-                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="baslat(1);return false;" />
+                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
 
                             <table class="KisiTable">
                                 <tr>
@@ -418,7 +385,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="baslat(2);return false;" />
+                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
 

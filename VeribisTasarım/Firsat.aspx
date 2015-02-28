@@ -252,7 +252,7 @@
                     AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" OnPageIndexChanging="OnPaging" OnRowEditing="EditCustomer" OnRowUpdating="UpdateCustomer" OnRowCancelingEdit="CancelEdit" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">--%>
                 <%-- gridle ilgili işlemler başlıyor --%>
 
-                 <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx');return false;" Width="75px" />
+                 <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx','',700,500);return false;" Width="75px" />
                 <asp:GridView ID="GridView1" runat="server"
                     AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">
                     <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>

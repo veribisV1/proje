@@ -73,6 +73,7 @@
     <Content Include="Content\js\metro\metro-datepicker.js" />
     <Content Include="Content\js\metro\metro-tab-control.js" />
     <Content Include="Content\js\metro\metro.min.js" />
+    <Content Include="Content\js\navigate.js" />
     <Content Include="Default.aspx" />
     <Content Include="fancyBox\lib\jquery-1.10.1.min.js" />
     <Content Include="fancyBox\source\blank.gif" />

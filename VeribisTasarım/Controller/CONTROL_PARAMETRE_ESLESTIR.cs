@@ -160,10 +160,29 @@ namespace VeribisTasarım.Controller
         /// <returns>sql parametre ye hazır liste</returns>
         public void eslestirDoldur(Page sayfa, Dictionary<string, string> paramtereListesi)
         {
+
+            Dictionary<string, object> dataListesi = new Dictionary<string, object>();
+            Control MainContent;
+
             MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
-            ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            if (ctl00 == null)
+            {
+                MainContent = sayfa;
+            }
+            else
+            {
+                MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            }
+
+            //MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
+            //ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
             foreach (string item in paramtereListesi.Keys)
             {
+                if (String.IsNullOrEmpty(paramtereListesi[item]))
+                {
+                    continue; // eğer veri yoksa boş geç
+                }
+
                 string okunacakElemanId = "id" + item;
                 Control eleman = MainContent.FindControl(okunacakElemanId);
                 if (eleman != null)

@@ -198,6 +198,7 @@
     </Compile>
     <Compile Include="FirsatEkle.aspx.cs">
       <DependentUpon>FirsatEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FirsatEkle.aspx.designer.cs">
       <DependentUpon>FirsatEkle.aspx</DependentUpon>

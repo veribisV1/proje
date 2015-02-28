@@ -40,6 +40,60 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idOPPORTUNITY_CODE;
         
         /// <summary>
+        /// txtStokKod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtStokKod;
+        
+        /// <summary>
+        /// btnStokKodAra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStokKodAra;
+        
+        /// <summary>
+        /// idSTOK_CODE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idSTOK_CODE;
+        
+        /// <summary>
+        /// txtStokAdi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtStokAdi;
+        
+        /// <summary>
+        /// btnStokAdiAra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStokAdiAra;
+        
+        /// <summary>
+        /// idPRODUCT_NAME control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idPRODUCT_NAME;
+        
+        /// <summary>
         /// idQUANTITY control.
         /// </summary>
         /// <remarks>

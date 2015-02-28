@@ -18,5 +18,15 @@ namespace VeribisTasarım
         {
 
         }
+
+        protected void btnStokKodAra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnStokAdiAra_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,7 +41,7 @@
                             <td></td>
                             <td></td>
                             <td colspan="2">
-                                <asp:DropDownList ID="idSTOK_CODE" Height="30px" runat="server" Width="100%"></asp:DropDownList>
+                                <asp:DropDownList ID="idSTOK_CODE" Height="30px" runat="server" Width="100%" AutoPostBack="True"></asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
@@ -50,7 +50,7 @@
                             <td>:
                             </td>
                             <td colspan="2">
-                                <asp:TextBox ID="idQUANTITY" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="idQUANTITY" MaxLength="200" Height="30px" Width="100%" runat="server" AutoPostBack="True" OnTextChanged="masraf_degisim"></asp:TextBox>
                             </td>
                         </tr>
 
@@ -60,7 +60,7 @@
                             <td>:
                             </td>
                             <td colspan="2">
-                                <asp:TextBox ID="idUNIT_PRICE" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="idUNIT_PRICE" MaxLength="200" Height="30px" Width="100%" runat="server" AutoPostBack="True"></asp:TextBox>
                             </td>
                         </tr>
 
@@ -90,7 +90,7 @@
                             <td>:
                             </td>
                             <td colspan="2">
-                                <asp:TextBox ID="idDISCOUNT_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="idDISCOUNT_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server" AutoPostBack="True" OnTextChanged="iskonto_degisim"></asp:TextBox>
                             </td>
                         </tr>
 
@@ -100,7 +100,7 @@
                             <td>:
                             </td>
                             <td colspan="2">
-                                <asp:TextBox ID="idEXPENSE_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="idEXPENSE_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server" AutoPostBack="True" OnTextChanged="masraf_degisim"></asp:TextBox>
                             </td>
                         </tr>
 
@@ -145,7 +145,7 @@
                             <td></td>
                             <td></td>
                             <td colspan="2">
-                                <asp:DropDownList ID="idPRODUCT_NAME" Height="30px" runat="server" Width="100%"></asp:DropDownList>
+                                <asp:DropDownList ID="idPRODUCT_NAME" Height="30px" runat="server" Width="100%" AutoPostBack="True"></asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
@@ -190,7 +190,7 @@
                             <td>:
                             </td>
                             <td colspan="2">
-                                <asp:TextBox ID="idDISCOUNT_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="idDISCOUNT_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server" AutoPostBack="True" OnTextChanged="iskonto_degisim"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -199,7 +199,7 @@
                             <td>:
                             </td>
                             <td colspan="2">
-                                <asp:TextBox ID="idEXPENSE_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="idEXPENSE_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server" AutoPostBack="True" OnTextChanged="masraf_degisim"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>

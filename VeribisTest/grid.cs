@@ -11,12 +11,12 @@ namespace VeribisTest
         [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void TestgetStokElemanByKod()
         {
-            GRID gd = new GRID();
-            Dictionary<string, string> list = gd.getStokElemanByKod("1");
-            foreach (string item in list.Keys)
-            {
-                Console.WriteLine(item);
-            }
+            //GRID gd = new GRID();
+            //Dictionary<string, string> list = gd.getStokElemanByKod("1");
+            //foreach (string item in list.Keys)
+            //{
+            //    Console.WriteLine(item);
+            //}
         }      
     }
 }

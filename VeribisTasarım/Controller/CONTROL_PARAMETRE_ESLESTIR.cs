@@ -52,8 +52,9 @@ namespace VeribisTasarım.Controller
                             if (elemanText.ID.Equals("idPRODUCT_NAME"))
                             {
                                 dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedItem.ToString()));
-                            }else
-                            dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedValue));
+                            }
+                            else
+                                dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedValue));
 
                         }
                         else
@@ -93,7 +94,12 @@ namespace VeribisTasarım.Controller
                     int sonuc = -1;
                     if (!String.IsNullOrEmpty(icerik))
                     {
-                        sonuc = Convert.ToInt16(icerik);
+                        string a = icerik.Substring(0, 1);
+                        if (a.Equals("#"))
+                        {
+                            return int.Parse(icerik.Substring(1), System.Globalization.NumberStyles.HexNumber);
+                        }
+                        sonuc = Convert.ToInt32(icerik);
                     }
                     return sonuc;
                     break;

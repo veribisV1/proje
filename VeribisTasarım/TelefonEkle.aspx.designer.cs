@@ -31,33 +31,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// idButtonTelefonYeni control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonTelefonYeni;
-        
-        /// <summary>
-        /// idButtonTelefonKaydet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonTelefonKaydet;
-        
-        /// <summary>
-        /// idButtonTelefonSil control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonTelefonSil;
-        
-        /// <summary>
         /// idPHONE_CODE control.
         /// </summary>
         /// <remarks>
@@ -110,6 +83,24 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idINTERNAL_CODE;
+        
+        /// <summary>
+        /// idButtonTelefonKaydet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonTelefonKaydet;
+        
+        /// <summary>
+        /// idButtonTelefonIptal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonTelefonIptal;
         
         /// <summary>
         /// idCOMPANY_CODE control.

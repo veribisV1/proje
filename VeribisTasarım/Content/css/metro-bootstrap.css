@@ -1529,7 +1529,7 @@ a {
 }
 .metro table {
   max-width: 100%;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   border-collapse: collapse;
   border-spacing: 0;
 }

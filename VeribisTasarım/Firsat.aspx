@@ -4,7 +4,7 @@
      <script src="Content/js/metro/metro-tab-control.js"></script>
        <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
-    <script src="Content/js/navigate.js"></script>
+  
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
         .fancybox-custom .fancybox-skin {

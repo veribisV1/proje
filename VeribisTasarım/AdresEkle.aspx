@@ -19,21 +19,7 @@
             <h3>Adres Ekle</h3>
                           
                     <div class="KisiTableHizalama">
-                       <%-- <tr>
-                            <td>
-                                <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="ButtonYeni" Text="Yeni" Height="30px" BackColor="#012353" ForeColor="White" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="ButtonKaydet" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonAdresKaydet_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Button ID="idButtonAdresSil" runat="server" CssClass="ButtonSil" Text="Sil" Height="30px" BackColor="#012353" ForeColor="White" />
-                            </td>
-                        </tr>--%>
+                     
                         <asp:TextBox ID="idADDRESS_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
                         <div class="ALAN6">
@@ -163,10 +149,10 @@
                             <table style="float: right; margin-right: 10px;">
                                 <tr>
                                     <td>
-                                        <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" BackColor="#012353" ForeColor="White" OnClick="idButtonAdresKaydet_Click" />
+                                        <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonAdresKaydet_Click" />
                                     </td>
                                     <td>
-                                        <asp:Button ID="idButtonAdresIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" BackColor="#012353" ForeColor="White" />
+                                        <asp:Button ID="idButtonAdresIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" />
                                     </td>
                                 </tr>
                     

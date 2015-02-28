@@ -123,8 +123,6 @@
                         </td>
                     </tr>
                 </table>
-
-
             </div>
             <div class="ALAN6">
                 <table>

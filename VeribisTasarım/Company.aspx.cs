@@ -106,14 +106,18 @@ namespace VeribisTasarım
 
 
         }
-
-
-
-
+    
     }
-
+            
 
 }
+
+
+    
+
+
+
+  
 
 
 

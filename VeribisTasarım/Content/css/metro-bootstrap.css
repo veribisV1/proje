@@ -4058,7 +4058,7 @@ a {
 .metro .navigation-bar .navbar-content .element,
 .metro .navbar .navbar-content .element {
   padding: 15px;
-  line-height: 15px;
+  /*line-height: 15px;*/
   color: inherit;
   font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;

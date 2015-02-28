@@ -2,6 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <script src="Content/js/metro/metro-tab-control.js"></script>
+       <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
+    <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="Content/js/navigate.js"></script>
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;          
+        }
+     
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -238,6 +248,7 @@
 
                 </div>
 
+<<<<<<< HEAD
              
                 <%-- ******* GRIDVIEW *******--%>
                <div class="ALAN12">
@@ -245,6 +256,13 @@
                                 <table class="KisiTable">
                                     <tr>
                                         <td>
+=======
+              <%--   <asp:GridView ID="GridView2" runat="server"
+                    AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" FooterStyle-CssClass="footer" AllowPaging="True" ShowFooter="True" OnPageIndexChanging="OnPaging" OnRowEditing="EditCustomer" OnRowUpdating="UpdateCustomer" OnRowCancelingEdit="CancelEdit" PageSize="5" EmptyDataText="ÜRÜN EKLEYİNİZ...">--%>
+                <%-- gridle ilgili işlemler başlıyor --%>
+
+                 <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx');return false;" Width="75px" />
+>>>>>>> 8937c07eb740daea0aa66f5646e80db9cab85b53
                 <asp:GridView ID="GridView1" runat="server"
                     AutoGenerateColumns="False" CssClass="mGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
                   
@@ -370,9 +388,30 @@
                             </ItemTemplate>
                         </asp:TemplateField>
 
+<<<<<<< HEAD
                     </Columns>
 
                    
+=======
+                        <asp:TemplateField ItemStyle-Width="100px">
+                            <ItemTemplate>
+                                <asp:Button ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="gridSatirSil"></asp:Button>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:Button ID="btnAdd" runat="server" Text="Ekle" OnClientClick="baslat(1);return false;" Width="75px" />
+                            </FooterTemplate>
+
+                            <ItemStyle Width="100px"></ItemStyle>
+                        </asp:TemplateField>
+                        <asp:CommandField ShowEditButton="True" ItemStyle-Width="200px" ButtonType="Button">
+                            <ItemStyle Width="200px"></ItemStyle>
+                        </asp:CommandField>
+                    </Columns>
+
+<FooterStyle CssClass="footer"></FooterStyle>
+
+                    <PagerStyle CssClass="pgr"></PagerStyle>
+>>>>>>> 8937c07eb740daea0aa66f5646e80db9cab85b53
 
                 </asp:GridView>
 

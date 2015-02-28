@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
-    <script type="text/javascript"src="fancyBox/lib/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="fancyBox/lib/jquery-1.10.1.min.js"></script>
     
 <%-- *** fancy_box bitis ***--%>
 
@@ -21,12 +21,16 @@
     <link rel="stylesheet" href="Content/css/metro-bootstrap.css" />
     <link rel="stylesheet" href="Content/css/metro-bootstrap-responsive.css" />
     <link href="Content/css/iconFont.css" rel="stylesheet" />
+<<<<<<< HEAD
     <link href="style/gridStil.css" rel="stylesheet" />
     <script src="Content/js/jquery/jquery.min.js"></script>
+=======
+    <script src="Content/js/jquery/jquery.min.js"></script>   
+>>>>>>> 8937c07eb740daea0aa66f5646e80db9cab85b53
     <script src="Content/js/jquery/jquery.widget.min.js"></script>
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
     <script src="Content/js/metro/metro.min.js"></script>
- 
+    <script src="Content/js/navigate.js"></script>
     <asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
 </head>
 <body class="metro">
@@ -34,9 +38,9 @@
 
     <nav class="navigation-bar">
         <nav class="navigation-bar-content">
-            <a class="element" style="font-size: x-large;" href="Default.aspx">
-                <img src="image/logo1.png" />
-                 
+            <a class="element" style="font-size: 36px;" href="Default.aspx">
+               <%-- <img src="image/logo1.png" />--%>
+                VeribisCRM 
             </a>
 
             <a class="element place-right" href="#"><span class="icon-switch" style="margin-top:20px;"></span></a>

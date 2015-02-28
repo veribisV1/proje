@@ -10,34 +10,25 @@
 namespace VeribisTasarım {
     
     
-    public partial class Fırsat {
+    public partial class FirsatEkle {
         
         /// <summary>
-        /// idButtonFirsatEkleYeni control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleYeni;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// idButtonFirsatEkleKaydet control.
+        /// idROW_ORDER_NO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleKaydet;
-        
-        /// <summary>
-        /// idButtonFirsatEkleSil control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatEkleSil;
+        protected global::System.Web.UI.WebControls.TextBox idROW_ORDER_NO;
         
         /// <summary>
         /// idOPPORTUNITY_CODE control.
@@ -49,166 +40,94 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idOPPORTUNITY_CODE;
         
         /// <summary>
-        /// idCOMPANY_CODE control.
+        /// txtStokKod control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
+        protected global::System.Web.UI.WebControls.TextBox txtStokKod;
         
         /// <summary>
-        /// idCONTACT_CODE control.
+        /// btnStokKodAra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
+        protected global::System.Web.UI.WebControls.Button btnStokKodAra;
         
         /// <summary>
-        /// idDOCUMENT_NO1 control.
+        /// idSTOK_CODE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO1;
+        protected global::System.Web.UI.WebControls.DropDownList idSTOK_CODE;
         
         /// <summary>
-        /// idDOCUMENT_NO2 control.
+        /// idQUANTITY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
+        protected global::System.Web.UI.WebControls.TextBox idQUANTITY;
         
         /// <summary>
-        /// idSELLING_BUYING control.
+        /// idUNIT_PRICE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idSELLING_BUYING;
+        protected global::System.Web.UI.WebControls.TextBox idUNIT_PRICE;
         
         /// <summary>
-        /// idDOCUMENT_DATE control.
+        /// idCUR_TYPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_DATE;
+        protected global::System.Web.UI.WebControls.DropDownList idCUR_TYPE;
         
         /// <summary>
-        /// idAPPOINTED_USER_CODE control.
+        /// idTOTAL_UNTAX control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idAPPOINTED_USER_CODE;
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UNTAX;
         
         /// <summary>
-        /// idFREE_STOK control.
+        /// idDISCOUNT_PERCENT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList idFREE_STOK;
+        protected global::System.Web.UI.WebControls.TextBox idDISCOUNT_PERCENT;
         
         /// <summary>
-        /// idREVISION control.
+        /// idEXPENSE_PERCENT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idREVISION;
+        protected global::System.Web.UI.WebControls.TextBox idEXPENSE_PERCENT;
         
         /// <summary>
-        /// idDELIVERY_TYPE control.
+        /// idTOTAL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDELIVERY_TYPE;
-        
-        /// <summary>
-        /// idPAYMENT_TYPE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idPAYMENT_TYPE;
-        
-        /// <summary>
-        /// idSEARCH_METHOD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_METHOD;
-        
-        /// <summary>
-        /// idSEARCH_STEP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
-        
-        /// <summary>
-        /// idCERTIFICATE_DATE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idCERTIFICATE_DATE;
-        
-        /// <summary>
-        /// idPROJECT_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idPROJECT_CODE;
-        
-        /// <summary>
-        /// idLAST_POSITION control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idLAST_POSITION;
-        
-        /// <summary>
-        /// idWHY_LOST control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idWHY_LOST;
-        
-        /// <summary>
-        /// idRIVAL_COMPANY_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idRIVAL_COMPANY_CODE;
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL;
         
         /// <summary>
         /// idEXPLANATION control.
@@ -220,102 +139,111 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
         
         /// <summary>
-        /// btnVeriEkle control.
+        /// txtStokAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVeriEkle;
+        protected global::System.Web.UI.WebControls.TextBox txtStokAdi;
         
         /// <summary>
-        /// GridView1 control.
+        /// btnStokAdiAra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button btnStokAdiAra;
         
         /// <summary>
-        /// idTextBoxFirsatArama control.
+        /// idPRODUCT_NAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTextBoxFirsatArama;
+        protected global::System.Web.UI.WebControls.DropDownList idPRODUCT_NAME;
         
         /// <summary>
-        /// idButtonFirsatArama control.
+        /// idUNIT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonFirsatArama;
+        protected global::System.Web.UI.WebControls.TextBox idUNIT;
         
         /// <summary>
-        /// idLabelFirsatDurum control.
+        /// idTAX_PERCENT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelFirsatDurum;
+        protected global::System.Web.UI.WebControls.TextBox idTAX_PERCENT;
         
         /// <summary>
-        /// idDropDownFirsatDurum control.
+        /// idCUR_VALUE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDropDownFirsatDurum;
+        protected global::System.Web.UI.WebControls.TextBox idCUR_VALUE;
         
         /// <summary>
-        /// idLabelFirsatBaslangic control.
+        /// idTOTAL_UPBK_UNTAX control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelFirsatBaslangic;
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UPBK_UNTAX;
         
         /// <summary>
-        /// idFirsatBaslangicTarih control.
+        /// idDISCOUNT_TOTAL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFirsatBaslangicTarih;
+        protected global::System.Web.UI.WebControls.TextBox idDISCOUNT_TOTAL;
         
         /// <summary>
-        /// idLabelFirsatBitis control.
+        /// idEXPENSE_TOTAL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelFirsatBitis;
+        protected global::System.Web.UI.WebControls.TextBox idEXPENSE_TOTAL;
         
         /// <summary>
-        /// idFirsatBitisTarih control.
+        /// idTOTAL_UPBK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idFirsatBitisTarih;
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UPBK;
         
         /// <summary>
-        /// idUrunHizmetDetayli control.
+        /// idButtonFirsatKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idUrunHizmetDetayli;
+        protected global::System.Web.UI.WebControls.Button idButtonFirsatKaydet;
+        
+        /// <summary>
+        /// idButtonFirsatIptal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonFirsatIptal;
     }
 }

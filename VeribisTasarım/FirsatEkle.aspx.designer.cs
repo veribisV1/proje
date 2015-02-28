@@ -67,6 +67,78 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idSTOK_CODE;
         
         /// <summary>
+        /// idQUANTITY control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idQUANTITY;
+        
+        /// <summary>
+        /// idUNIT_PRICE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idUNIT_PRICE;
+        
+        /// <summary>
+        /// idCUR_TYPE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idCUR_TYPE;
+        
+        /// <summary>
+        /// idTOTAL_UNTAX control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UNTAX;
+        
+        /// <summary>
+        /// idDISCOUNT_PERCENT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idDISCOUNT_PERCENT;
+        
+        /// <summary>
+        /// idEXPENSE_PERCENT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idEXPENSE_PERCENT;
+        
+        /// <summary>
+        /// idTOTAL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL;
+        
+        /// <summary>
+        /// idEXPLANATION control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
+        
+        /// <summary>
         /// txtStokAdi control.
         /// </summary>
         /// <remarks>
@@ -94,15 +166,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idPRODUCT_NAME;
         
         /// <summary>
-        /// idQUANTITY control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idQUANTITY;
-        
-        /// <summary>
         /// idUNIT control.
         /// </summary>
         /// <remarks>
@@ -110,15 +173,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idUNIT;
-        
-        /// <summary>
-        /// idUNIT_PRICE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idUNIT_PRICE;
         
         /// <summary>
         /// idTAX_PERCENT control.
@@ -130,15 +184,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idTAX_PERCENT;
         
         /// <summary>
-        /// idCUR_TYPE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idCUR_TYPE;
-        
-        /// <summary>
         /// idCUR_VALUE control.
         /// </summary>
         /// <remarks>
@@ -146,69 +191,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idCUR_VALUE;
-        
-        /// <summary>
-        /// idTOTAL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTOTAL;
-        
-        /// <summary>
-        /// idTOTAL_UPBK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UPBK;
-        
-        /// <summary>
-        /// idDISCOUNT_PERCENT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idDISCOUNT_PERCENT;
-        
-        /// <summary>
-        /// idDISCOUNT_TOTAL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idDISCOUNT_TOTAL;
-        
-        /// <summary>
-        /// idEXPENSE_PERCENT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idEXPENSE_PERCENT;
-        
-        /// <summary>
-        /// idEXPENSE_TOTAL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idEXPENSE_TOTAL;
-        
-        /// <summary>
-        /// idTOTAL_UNTAX control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UNTAX;
         
         /// <summary>
         /// idTOTAL_UPBK_UNTAX control.
@@ -220,13 +202,31 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idTOTAL_UPBK_UNTAX;
         
         /// <summary>
-        /// idEXPLANATION control.
+        /// idDISCOUNT_TOTAL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
+        protected global::System.Web.UI.WebControls.TextBox idDISCOUNT_TOTAL;
+        
+        /// <summary>
+        /// idEXPENSE_TOTAL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idEXPENSE_TOTAL;
+        
+        /// <summary>
+        /// idTOTAL_UPBK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTOTAL_UPBK;
         
         /// <summary>
         /// idButtonFirsatKaydet control.

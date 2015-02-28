@@ -6,6 +6,7 @@
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
     <script type="text/javascript">
 
+      
 
         function baslat(siraNo) {
             //var firmaKodu = $('#ContentPlaceHolder1_idCOMPANY_CODE').val();
@@ -23,10 +24,18 @@
 
 
                 }
+              
+             
+              
                 $.fancybox.open({
                     href: adres,
                     type: 'iframe',
                     padding: 5,
+                    height: 500,
+                    autoSize: false,
+                    overflow: 'hidden',
+                    scrolling: 'no',
+                   
                 });
             //}
             //else {
@@ -43,8 +52,9 @@
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
         .fancybox-custom .fancybox-skin {
-            box-shadow: 0 0 50px #222;
+            box-shadow: 0 0 50px #222;          
         }
+     
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

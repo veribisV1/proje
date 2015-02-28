@@ -74,15 +74,26 @@ namespace VeribisTasarım
         protected void masraf_degisim(object sender, EventArgs e)
         {
             TextBox masraf = (TextBox)sender;
-            if (masraf.ID == idEXPENSE_PERCENT.ID)
-            {
-                idEXPENSE_TOTAL.Text = idEXPENSE_PERCENT.Text;
-            }
-            else if (masraf.ID == idEXPENSE_TOTAL.ID)
-            {
-                idEXPENSE_PERCENT.Text = idEXPENSE_TOTAL.Text;
-            }
+            degistir(masraf,idEXPENSE_PERCENT,idEXPENSE_TOTAL);
             alanlariHesapla();
+        }
+
+        protected void iskonto_degisim(object sender, EventArgs e)
+        {
+            TextBox masraf = (TextBox)sender;
+            degistir(masraf, idDISCOUNT_PERCENT, idDISCOUNT_TOTAL);
+            alanlariHesapla();
+        }
+        private void degistir(TextBox eleman, TextBox eleman1, TextBox eleman2)
+        {
+            if (eleman.ID == eleman1.ID)
+            {
+                eleman2.Text = eleman1.Text;
+            }
+            else if (eleman.ID == eleman2.ID)
+            {
+                eleman1.Text = eleman2.Text;
+            }
         }
         private void alanlariHesapla()
         {
@@ -90,14 +101,12 @@ namespace VeribisTasarım
             idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
             double kurTutari = (String.IsNullOrEmpty(idCUR_VALUE.Text)) ? 1 : Convert.ToDouble(idCUR_VALUE.Text);
             double miktar = (String.IsNullOrEmpty(idQUANTITY.Text)) ? 1 : Convert.ToDouble(idQUANTITY.Text);
-            double PRICE = (String.IsNullOrEmpty(idUNIT_PRICE.Text)) ? 1 : Convert.ToDouble(idUNIT_PRICE.Text);
-            
+            double PRICE = (String.IsNullOrEmpty(idUNIT_PRICE.Text)) ? 1 : Convert.ToDouble(idUNIT_PRICE.Text);            
             double TOTAL_UNTAX = PRICE * miktar;
             double TOTAL_UPBK_UNTAX = kurTutari * TOTAL_UNTAX;
             double DISCOUNT_TOTAL = (String.IsNullOrEmpty(idDISCOUNT_TOTAL.Text)) ? 0 : Convert.ToDouble(idDISCOUNT_TOTAL.Text);
             double EXPENSE_TOTAL = (String.IsNullOrEmpty(idEXPENSE_TOTAL.Text)) ? 0 : Convert.ToDouble(idEXPENSE_TOTAL.Text);
             double TAX=(String.IsNullOrEmpty(idTAX_PERCENT.Text)) ? 0 : Convert.ToDouble(idTAX_PERCENT.Text);
-
             double TOTAL = (TOTAL_UNTAX * (1 + TAX / 100)) + (DISCOUNT_TOTAL + EXPENSE_TOTAL);
             double TOTAL_UPBK = TOTAL * kurTutari;
 
@@ -106,8 +115,6 @@ namespace VeribisTasarım
             idTOTAL.Text = TOTAL.ToString();
             idTOTAL_UPBK.Text = TOTAL_UPBK.ToString();           
         }
-
-
 
 
     }

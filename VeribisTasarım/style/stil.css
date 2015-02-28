@@ -172,7 +172,7 @@ textarea
 }
 .TextBoxArama {
     position:relative;
-    bottom:1730px;
+    bottom:745px;
     left:234%;
     height:20px;
     width:250px;
@@ -181,8 +181,8 @@ textarea
 }
 .ButtonArama {
     position:relative;
-    bottom:1760px;
-    left:500%;
+    bottom:775px;
+    left:480%;
     width:80%;
     height:30px;
     background: #012353;

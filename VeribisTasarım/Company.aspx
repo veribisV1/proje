@@ -4,8 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <script src="Content/js/metro/metro-tab-control.js"></script>
-   <%-- <script src="Content/js/metro/metro-calendar.js"></script>
-    <script src="Content/js/metro/metro-datepicker.js"></script>--%>
+  
 
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
@@ -57,21 +56,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="width: 100%; float: left; margin-left: 10px;">
+    <div class="ALAN12">
         <h3>FİRMA KARTI</h3>
 
         <div class="tab-control" data-role="tab-control">
-            <ul class="tabs">               
-                <li><a href="#ListeAdi">Liste Adı</a></li>
-                <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
-                <li><a href="#MakinaParki">Makina Parkı</a></li>
-                <li><a href="#RakipFirma">Rakip Firma</a></li>
-                <li><a href="#RakipUrun">Rakip Ürün</a></li>
-                <li><a href="#Kontak">Kontak</a></li>
-                <li><a href="#Numune">Numune</a></li>
-                <li><a href="#Proforma">Proforma</a></li>
-                <li><a href="#Fatura">Fatura</a></li>
-                <li><a href="#EkForm">Ek Form</a></li>
+             <ul class="tabs">
+                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
+                 <li><a href="#FirmaEkle">Firma Ekle</a></li>
+                 <li><a href="#MakinaParki">Makina Parkı</a></li>
+                 <li><a href="#RakipFirma">Rakip Firma</a></li>
+                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
+                 <li><a href="#Kontak">Kontak</a></li>
+                 <li><a href="#Numune">Numune</a></li>
+                 <li><a href="#Proforma">Proforma</a></li>
+                 <li><a href="#Fatura">Fatura</a></li>
+                 <li><a href="#EkForm">Ek Form</a></li>
+
             </ul>
 
             <div class="frames" style="float: left; width: 100%">
@@ -127,7 +127,7 @@
 
                         <hr />
 
-                        <div style="width: 32%; float: left; margin-left: 10px;">
+                        <div class="ALAN4">
                             <table class="KisiTable" id="Table1">
 
                                 <tr>
@@ -180,7 +180,7 @@
 
 
                         </div>
-                        <div style="width: 32%; float: left; margin-left: 10px;">
+                        <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
                                     <td width="35%">Tipi
@@ -285,7 +285,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 32%; float: left; margin-left: 10px;">
+                        <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
                                     <td width="35%">Referans
@@ -383,7 +383,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 48%; float: left; margin-left: 10px;">
+                        <div class="ALAN6">
                             <br />
 
 
@@ -416,7 +416,7 @@
                             </table>
 
                         </div>
-                        <div style="width: 48%; float: left; margin-left: 10px;">
+                        <div class="ALAN6">
                             <br />
                             <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="baslat(2);return false;" />
                             <table class="KisiTable">
@@ -465,7 +465,7 @@
                         </table>
 
                         <hr />
-                        <div style="width: 100%; margin-left: 10px;">
+                        <div class="ALAN12">
 
                             <table class="KisiTable">
                                 <tr>

@@ -19,9 +19,13 @@ namespace VeribisTasarım
         {
             if (!IsPostBack)
             {
-                //  adresDoldur();
-                // telefonDoldur();
+                adresDoldur();
+                telefonDoldur();
                 ekranDoldur();
+
+                //BindDummyRow();
+
+
             }
 
         }
@@ -100,9 +104,20 @@ namespace VeribisTasarım
             }
             //formTemizle(this);
 
+
         }
+
+
 
 
     }
 
+
 }
+
+
+
+
+
+
+

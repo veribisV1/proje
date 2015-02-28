@@ -67,6 +67,7 @@ namespace VeribisTasarım.Controller
         }
 
 
+
         //kullanacağımız veritabanının adı.
         public string getDatabase(string customerCode)
         {
@@ -78,7 +79,12 @@ namespace VeribisTasarım.Controller
             }
            
         }
-  
+
+
+      
+
+
+
     }
 }
 

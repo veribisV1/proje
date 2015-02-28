@@ -528,5 +528,11 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',CODE as 'col2' from STOKCARD where NAME_TR like '%{0}%'", stokKart));
             return liste;
         }
+
+        internal Dictionary<string, string> getParaBirimiGroup()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("7"));
+            return liste;
+        }
     }
 }

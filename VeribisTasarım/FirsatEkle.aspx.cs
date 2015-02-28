@@ -136,6 +136,8 @@ namespace VeribisTasarım
             idTOTAL_UPBK.Text = TOTAL_UPBK.ToString();           
         }
 
+       
+
 
     }
 }

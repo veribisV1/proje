@@ -41,7 +41,7 @@
                             <td></td>
                             <td></td>
                             <td colspan="2">
-                                <asp:DropDownList ID="idSTOK_CODE" Height="30px" runat="server" Width="100%" AutoPostBack="True"></asp:DropDownList>
+                                <asp:DropDownList ID="idSTOK_CODE" Height="30px" runat="server" Width="100%" AutoPostBack="True" OnTextChanged="elamnlariYuke"></asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
@@ -145,7 +145,7 @@
                             <td></td>
                             <td></td>
                             <td colspan="2">
-                                <asp:DropDownList ID="idPRODUCT_NAME" Height="30px" runat="server" Width="100%" AutoPostBack="True"></asp:DropDownList>
+                                <asp:DropDownList ID="idPRODUCT_NAME" Height="30px" runat="server" Width="100%" AutoPostBack="True" OnTextChanged="elamnlariYuke"></asp:DropDownList>
                             </td>
                         </tr>
                         <tr>

@@ -56,7 +56,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                          <asp:TextBox ID="idQUANTITY" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim"></asp:TextBox>
+                                          <asp:TextBox ID="idQUANTITY" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim" AutoPostBack="True"></asp:TextBox>
                                     </td>
                                 </tr>
                                 
@@ -96,7 +96,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                      <asp:TextBox ID="idDISCOUNT_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="iskonto_degisim"></asp:TextBox>
+                                      <asp:TextBox ID="idDISCOUNT_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="iskonto_degisim" AutoPostBack="True"></asp:TextBox>
                                     </td>
                                 </tr>
                                
@@ -106,7 +106,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                      <asp:TextBox ID="idEXPENSE_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim"></asp:TextBox>
+                                      <asp:TextBox ID="idEXPENSE_PERCENT" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim" AutoPostBack="True"></asp:TextBox>
                                     </td>
                                 </tr>
                                
@@ -195,7 +195,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                      <asp:TextBox ID="idDISCOUNT_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="iskonto_degisim"></asp:TextBox>
+                                      <asp:TextBox ID="idDISCOUNT_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="iskonto_degisim" AutoPostBack="True"></asp:TextBox>
                                     </td>
                                 </tr>
                                   <tr>
@@ -204,7 +204,7 @@
                                     <td class="auto-style1">:
                                     </td>
                                     <td colspan="2">
-                                      <asp:TextBox ID="idEXPENSE_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim"></asp:TextBox>
+                                      <asp:TextBox ID="idEXPENSE_TOTAL" MaxLength="200" Height="30px" Width="100%" runat="server" OnTextChanged="masraf_degisim" AutoPostBack="True"></asp:TextBox>
                                     </td>
                                 </tr>
                                  <tr>

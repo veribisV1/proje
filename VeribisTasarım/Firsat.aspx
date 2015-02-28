@@ -250,16 +250,16 @@
                   
                     <Columns>
 
-                        <asp:TemplateField ItemStyle-Width="3%">
+                        <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                             <ItemTemplate>
-                                <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" Text="Sil" OnClick="gridSatirSil"></asp:ImageButton>
+                                <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')"  OnClick="gridSatirSil"></asp:ImageButton>
                             </ItemTemplate>
                         </asp:TemplateField>
-                       
+                 
          
-                        <asp:TemplateField ItemStyle-Width="3%">
+                        <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                             <ItemTemplate>
-                                <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" Text="Düzenle" OnClick="gridSatirSil"></asp:ImageButton>
+                                <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idOPPORTUNITY_CODE').val());return false;"></asp:ImageButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="KOD" ItemStyle-Width="5%">

@@ -21,12 +21,10 @@
     <link rel="stylesheet" href="Content/css/metro-bootstrap.css" />
     <link rel="stylesheet" href="Content/css/metro-bootstrap-responsive.css" />
     <link href="Content/css/iconFont.css" rel="stylesheet" />
-<<<<<<< HEAD
+
     <link href="style/gridStil.css" rel="stylesheet" />
     <script src="Content/js/jquery/jquery.min.js"></script>
-=======
-    <script src="Content/js/jquery/jquery.min.js"></script>   
->>>>>>> 8937c07eb740daea0aa66f5646e80db9cab85b53
+ 
     <script src="Content/js/jquery/jquery.widget.min.js"></script>
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
     <script src="Content/js/metro/metro.min.js"></script>

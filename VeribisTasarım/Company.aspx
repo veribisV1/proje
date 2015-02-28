@@ -387,7 +387,7 @@
                             <br />
 
 
-                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="baslat(1);return false;" />
+                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx', $('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;" />
 
                             <table class="KisiTable">
                                 <tr>
@@ -418,7 +418,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="baslat(2);return false;" />
+                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="OpenPage('TelefonEkle.aspx', $('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;" />
                             <table class="KisiTable">
                                 <tr>
 

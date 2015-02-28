@@ -2,7 +2,7 @@
     width:100%;   
     background-color: #fff;   
     margin: 10px auto;   
-    border: solid 1px #525252;  
+    border: solid 1px #c1c1c1;  
     border:none; 
     border-collapse:collapse;   
 }  
@@ -11,13 +11,15 @@
     border: solid 1px #c1c1c1;   
     color: #717171;   
     font-size:12px;
-}  
+}
+
+
 .mGrid th {   
     padding: 4px 2px;   
     color: #fff;   
     background-color: #1ba1b2;  
     font-size: 14px;   
-     border: solid 1px #525252;
+    border: solid 1px #525252;
 }
 
     .mGrid th:nth-child(2)
@@ -25,22 +27,16 @@
     {
         border:0;
         background-color:transparent;
-        vertical-align:middle;
-        text-align:center;
+        
     }
 
     .mGrid th:first-child
 
     {
         border:0;
-       
         background-color:transparent;
-        vertical-align:middle;
-        text-align:center;
+        
     }
-
-
-
 
 
 .mGrid .alt { background: #eaeaea;

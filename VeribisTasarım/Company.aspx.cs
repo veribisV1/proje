@@ -106,8 +106,6 @@ namespace VeribisTasarım
 
 
         }
-
-
     
     }
             

@@ -19,20 +19,22 @@ namespace VeribisTasarım.Controller
         public void gridSatirEkle(object sender, EventArgs e)
         {
         }
-        public void gridSatirDuzenle(object sender, EventArgs e) 
+        public void gridSatirDuzenle(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
             string row = silButon.CommandArgument;
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "OpenPage('FirsatEkle.aspx','"+row+"')", true);
+            recursiveElemanBul(this);
+            oppCode = String.Format("{0}&param2={1}",row, oppCode);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction",String.Format("OpenPage('FirsatEkle.aspx','{0}')",oppCode), true);
         }
         public void gridSatirSil(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
             string rowOrderNo = silButon.CommandArgument;
-            DBARACISI dbadapter = new DBARACISI();         
+            DBARACISI dbadapter = new DBARACISI();
             recursiveElemanBul(this);
-            dbadapter.set(String.Format("DELETE FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}",oppCode,rowOrderNo));
-
+            dbadapter.set(String.Format("DELETE FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", oppCode, rowOrderNo));
+            
         }
         string oppCode;
         bool arananElemaqnBulundu = false;
@@ -57,8 +59,8 @@ namespace VeribisTasarım.Controller
                 recursiveElemanBul(c);
             }
         }
-        public void gridSayfala(object sender, EventArgs e) 
-        { 
+        public void gridSayfala(object sender, EventArgs e)
+        {
         }
 
 

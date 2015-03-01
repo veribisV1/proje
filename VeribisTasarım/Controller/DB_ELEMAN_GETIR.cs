@@ -209,7 +209,7 @@ namespace VeribisTasarım.Controller
             string sorgu = String.Format("SELECT BANKNOTE_SELING from CUR where CURDATE='{0}' and CURSYMBOL='{1}'", tarih.ToString("yyyy-MM-dd"), kurTipi);
             Dictionary<string, string> list = db.getEleman(sorgu);
 
-            return (String.IsNullOrEmpty(list["BANKNOTE_SELING"])) ? "0" : list["BANKNOTE_SELING"];
+            return (list.Count==0) ? "0" : list["BANKNOTE_SELING"];
 
         }
         /// <summary>

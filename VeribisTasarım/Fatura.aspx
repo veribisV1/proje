@@ -177,7 +177,8 @@
                         </div>
 
                     </div>
-                     <%-- ******* GRIDVIEW *******--%>
+                
+                      <%-- ******* GRIDVIEW *******--%>
                     <div class="ALAN12">
                         <div class="KisiTableHizalama">
                             <table class="KisiTable">

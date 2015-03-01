@@ -246,6 +246,7 @@ namespace VeribisTasarım.Controller
             return liste;
         }
         public Dictionary<string, string> getProje(string companyCode = "1")
+        
         {
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("select PROJECT_CODE as col1,NAME as col2 from PROJECTS where COMPANY_CODE=");

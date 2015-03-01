@@ -28,7 +28,7 @@
                                     <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" />
+                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" />
@@ -47,6 +47,16 @@
 
                         <div class="ALAN4">
                             <table class="KisiTable" id="Tablo1">
+                                 <tr>
+                                    <td width="35%">Çalıştığı Firma
+                                    </td>
+                                    <td width="2%">:
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="100%">
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td width="35%">Adı
                         
@@ -92,16 +102,7 @@
                                         <asp:TextBox ID="idNICNAME" MaxLength="50" Width="100%" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td width="35%">Çalıştığı Firma
-                                    </td>
-                                    <td width="2%">:
-                                    </td>
-                                    <td>
-                                        <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="100%">
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
+                              
                                 <tr>
                                     <td width="35%">Cinsiyet
                                     </td>
@@ -267,7 +268,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" />
+                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
 

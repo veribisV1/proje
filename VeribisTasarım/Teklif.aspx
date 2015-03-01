@@ -1,5 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Teklif.aspx.cs" Inherits="VeribisTasarım.Teklif" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+
+
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
@@ -7,7 +16,7 @@
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">              
                 <li><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#TeklifEkle">Teklif Ekle</a></li>
+                <li class="active"><a href="#TeklifEkle">Teklif Ekle</a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi" style="min-height: 100px">

@@ -51,7 +51,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%">
+                                        <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%" OnSelectedIndexChanged="idCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="true">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

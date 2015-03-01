@@ -246,6 +246,7 @@ namespace VeribisTasarım.Controller
             return liste;
         }
         public Dictionary<string, string> getProje(string companyCode = "1")
+        
         {
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("select PROJECT_CODE as col1,NAME as col2 from PROJECTS where COMPANY_CODE=");
@@ -352,7 +353,7 @@ namespace VeribisTasarım.Controller
 
         public Dictionary<string, string> getAlanKodu(int alanKodu)
         {
-            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, NAME AS col2 FROM PHONECODE WHERE COUNTRY_CODE=" + alanKodu);
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, CITY_CODE AS col2 FROM PHONECODE WHERE COUNTRY_CODE=" + alanKodu);
             return liste;
         }
 

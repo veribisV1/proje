@@ -6,7 +6,7 @@
         <h3>AKTİVİTE</h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li class="active"><a href="#AktiviteEkle">AktiAktivite Ekle</a></li>
+                <li class="active"><a href="#AktiviteEkle">Aktivite Ekle</a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="AktiviteEkle" style="min-height: 100px;">
@@ -30,22 +30,23 @@
                         <div class="ALAN4">
                             <table class="KisiTable" id="Table1">
 
-                                <tr>
-                                    <td width="35%">Adı
-                                    </td>
-                                    <td width="2%">:
-                                    </td>
-                                    <td>
-                                        <asp:DropDownList ID="idCONTACT_CODE" Height="30px" runat="server" Width="100%"></asp:DropDownList>
-                                    </td>
-                                </tr>
+                               
                                 <tr>
                                     <td width="35%">Firma Adı
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%"></asp:DropDownList>
+                                        <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%" OnSelectedIndexChanged="idCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td width="35%">Adı
+                                    </td>
+                                    <td width="2%">:
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="idCONTACT_CODE" Height="30px" runat="server" Width="100%"></asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>

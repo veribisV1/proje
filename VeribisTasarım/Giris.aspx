@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    
     <style>
         button, input {
             line-height: normal;
@@ -243,7 +244,7 @@
         }
 
         body.login-page .input-group-addon {
-            background-color: #3366cc;
+            background-color: #1ba1e2;
         }
 
         .form-control {
@@ -316,7 +317,7 @@
 
     
 </head>
-<body class="login-page ">
+<body class="login-page">
     <form id="form1" runat="server">
 
         <section class="content login-page">
@@ -335,17 +336,17 @@
 
                                     <div id="ticarikod" class="input-group">
                                         <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtTicariKod" runat="server" Text="Ticari Kod"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="_txtTicariKod" runat="server" placeholder="Ticari Kod"></asp:TextBox>
                                     </div>
 
                                     <div id="kullaniciadi" class="input-group">
                                         <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtKullaniciAdi" runat="server" Text="Kullanıcı Adı"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="_txtKullaniciAdi" runat="server" placeholder="Kullanıcı Adı"></asp:TextBox>
                                     </div>
 
                                     <div id="sifre" class="input-group">
                                         <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password" placeholder="Şifre"></asp:TextBox>
                                     </div>
 
                                     <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />

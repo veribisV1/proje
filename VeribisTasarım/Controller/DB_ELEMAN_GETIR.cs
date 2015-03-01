@@ -17,7 +17,7 @@ namespace VeribisTasarım.Controller
     public class DB_ELEMAN_GETIR
     {
         DBARACISI db = new DBARACISI();
-        DBTOOL tool = new DBTOOL();
+        //     DBTOOL tool = new DBTOOL();
 
         public DropDownList doldur(DropDownList eleman, Dictionary<string, string> liste)
         {
@@ -203,6 +203,14 @@ namespace VeribisTasarım.Controller
 
             Dictionary<string, string> liste = db.getListEleman("SELECT CUR_SYMBOL as col1,CUR_NAME as col2,ROW_ORDER_NO FROM CURTYPE order by ROW_ORDER_NO");
             return liste;
+        }
+        public string getParaBirimiDegeri(string kurTipi, DateTime tarih)
+        {
+            string sorgu = String.Format("SELECT BANKNOTE_SELING from CUR where CURDATE='{0}' and CURSYMBOL='{1}'", tarih.ToString("yyyy-MM-dd"), kurTipi);
+            Dictionary<string, string> list = db.getEleman(sorgu);
+
+            return (list.Count==0) ? "0" : list["BANKNOTE_SELING"];
+
         }
         /// <summary>
         /// KAYILI FİRMALARI GETİRİRİ
@@ -494,10 +502,34 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQLCitems("6"));
             return liste;
         }
-
         public DataTable getOppDetail(string oppCode)
         {
             return db.getGridIcerik("select ROW_ORDER_NO,PRODUCT_NAME,CUR_TYPE,TOTAL_UPBK from OPPORTUNITYDETAIL where OPPORTUNITY_CODE=" + oppCode);
+        }
+        public Dictionary<string, string> getStokKartByKod(string stokKart)
+        {
+            Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',CODE as 'col2' from STOKCARD where CODE like '%{0}%'", stokKart));
+            return liste;
+        }
+        public Dictionary<string, string> getStokKartByKodName(string stokKart)
+        {
+            Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',NAME_TR as 'col2' from STOKCARD where CODE like '%{0}%'", stokKart));
+            return liste;
+        }
+        public Dictionary<string, string> getStokKartByName(string stokKart)
+        {
+            Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',NAME_TR as 'col2' from STOKCARD where NAME_TR like '%{0}%'", stokKart));
+            return liste;
+        }
+        public Dictionary<string, string> getStokKartByNameKod(string stokKart)
+        {
+            Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',CODE as 'col2' from STOKCARD where NAME_TR like '%{0}%'", stokKart));
+            return liste;
+        }
+        internal Dictionary<string, string> getParaBirimiGroup()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQL("7"));
+            return liste;
         }
     }
 }

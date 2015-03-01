@@ -16,7 +16,7 @@ namespace VeribisTasarım
             {
                 ekranDoldur();               
             }
-            idOPPORTUNITY_CODE.Text = "35";
+            idOPPORTUNITY_CODE.Text = "0";
             gridDoldur(GridView1,idOPPORTUNITY_CODE.Text);
         }
         private void ekranDoldur()
@@ -38,10 +38,9 @@ namespace VeribisTasarım
             idWHY_LOST = dbGetir.doldur(idWHY_LOST, dbGetir.getNedenKaybettik());
             idRIVAL_COMPANY_CODE = dbGetir.doldur(idRIVAL_COMPANY_CODE, dbGetir.getRakipFirma());
             #endregion
-        }
-   
+        }   
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
-        {   
+        {
 
                 int oppurtunityCode = -1;
                 //Tipi kontrol edilecek

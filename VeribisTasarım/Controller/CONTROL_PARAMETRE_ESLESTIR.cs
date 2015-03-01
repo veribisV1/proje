@@ -49,7 +49,12 @@ namespace VeribisTasarım.Controller
                         if (eleman.GetType() == typeof(DropDownList))
                         {
                             DropDownList elemanText = (DropDownList)eleman;
-                            dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedValue));
+                            if (elemanText.ID.Equals("idPRODUCT_NAME"))
+                            {
+                                dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedItem.ToString()));
+                            }
+                            else
+                                dataListesi.Add(item, tipKontrol(dataTipleri[item], elemanText.SelectedValue));
 
                         }
                         else
@@ -89,7 +94,12 @@ namespace VeribisTasarım.Controller
                     int sonuc = -1;
                     if (!String.IsNullOrEmpty(icerik))
                     {
-                        sonuc = Convert.ToInt16(icerik);
+                        string a = icerik.Substring(0, 1);
+                        if (a.Equals("#"))
+                        {
+                            return int.Parse(icerik.Substring(1), System.Globalization.NumberStyles.HexNumber);
+                        }
+                        sonuc = Convert.ToInt32(icerik);
                     }
                     return sonuc;
                     break;
@@ -160,10 +170,29 @@ namespace VeribisTasarım.Controller
         /// <returns>sql parametre ye hazır liste</returns>
         public void eslestirDoldur(Page sayfa, Dictionary<string, string> paramtereListesi)
         {
+
+            Dictionary<string, object> dataListesi = new Dictionary<string, object>();
+            Control MainContent;
+
             MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
-            ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            if (ctl00 == null)
+            {
+                MainContent = sayfa;
+            }
+            else
+            {
+                MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
+            }
+
+            //MasterPage ctl00 = sayfa.FindControl("ctl00") as MasterPage;
+            //ContentPlaceHolder MainContent = ctl00.FindControl("ContentPlaceHolder1") as ContentPlaceHolder;
             foreach (string item in paramtereListesi.Keys)
             {
+                if (String.IsNullOrEmpty(paramtereListesi[item]))
+                {
+                    continue; // eğer veri yoksa boş geç
+                }
+
                 string okunacakElemanId = "id" + item;
                 Control eleman = MainContent.FindControl(okunacakElemanId);
                 if (eleman != null)

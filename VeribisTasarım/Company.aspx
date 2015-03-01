@@ -27,8 +27,8 @@
 
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#FirmaEkle">Firma Ekle</a></li>
+                <li><a href="#ListeAdi">Liste Adı</a></li>
+                <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
                 <li><a href="#MakinaParki">Makina Parkı</a></li>
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
@@ -44,15 +44,14 @@
 
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
-                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx','',700,500);return false;" Width="75px" />
-
-<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="mGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
+                        
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
 
                             <Columns>
 
                                 <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editCompany"></asp:ImageButton>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editCompany" CommandArgument='<%# Eval("COMPANY_CODE")%>'></asp:ImageButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
@@ -64,7 +63,7 @@
 
                                 <asp:TemplateField HeaderText="FİRMA ADI">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblCOMPANY_NAME" runat="server" Text='<%# Eval("COMPAN_NAME")%>'></asp:Label>
+                                        <asp:Label ID="lblCOMPANY_NAME" runat="server" Text='<%# Eval("COMPANY_NAME")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 

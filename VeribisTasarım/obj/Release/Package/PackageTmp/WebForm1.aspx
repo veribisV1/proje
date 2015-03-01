@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div style="width:500px">
     <asp:GridView ID="idADDRESS" runat="server" AutoGenerateColumns="False" Width="250px">
         <Columns>
             <asp:BoundField DataField="ADRES">
@@ -19,4 +20,6 @@
         </Columns>
     </asp:GridView>
     <p> şsljdf asf as as şasd şalsjd aşlsjd şlasjd lakjsd lakjsd la jsdlaj sdlka slkdj alskdj alksdj laksjd lkasjd laksj dlasj dlkaj sdlkjas dlkja sldj alsdj alsdj lasjd lakjsd lajsd lakjs dlkaj sdlkaj sdlkaj sldj lasd şalsjd aşlsjd şlasjd lakjsd lakjsd la jsdlaj sdlka slkdj alskdj alksdj laksjd lkasjd laksj dlasj dlkaj sdlkjas dlkja sldj alsdj alsdj lasjd lakjsd lajsd lakjs dlkaj sdlkaj sdlkaj sldj </p>
+
+        </div>
 </asp:Content>

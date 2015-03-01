@@ -23,13 +23,16 @@ namespace VeribisTasarım
                 adresDoldur();
                 telefonDoldur();
                 ekranDoldur();
+                gridDoldur();
+                
             }
-
+            
         }
-       void  griDoldur()
+       private void  gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-           
+            GridView1.DataSource = dbadapter.getGridIcerik("select * from COMPANY");
+            GridView1.DataBind();
         }
 
         private void ekranDoldur()
@@ -45,6 +48,7 @@ namespace VeribisTasarım
             idGROUP_CODE = dbGetir.doldur(idGROUP_CODE, dbGetir.getGrup());
             idCOMPANY_REFERANCE = dbGetir.doldur(idCOMPANY_REFERANCE, dbGetir.getReferans());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
+            idCURRENCY_TYPE = dbGetir.doldur(idCURRENCY_TYPE, dbGetir.getParaBirimiGroup());
             #endregion
             #region Makina Parkı DropDownları doldur
             idNAME = dbGetir.doldur(idNAME, dbGetir.getMarka());

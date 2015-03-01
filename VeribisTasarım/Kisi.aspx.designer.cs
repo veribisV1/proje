@@ -67,6 +67,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idCONTACT_CODE;
         
         /// <summary>
+        /// idCOMPANY_CODE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
+        
+        /// <summary>
         /// idNAME control.
         /// </summary>
         /// <remarks>
@@ -110,15 +119,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idNICNAME;
-        
-        /// <summary>
-        /// idCOMPANY_CODE control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idCOMPANY_CODE;
         
         /// <summary>
         /// idSEXUALITY control.

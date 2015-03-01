@@ -17,10 +17,15 @@ namespace VeribisTasarım
                 DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
                 idCUR_TYPE = dbelemanGetir.doldur(idCUR_TYPE, dbelemanGetir.getParaBirimi());
 
-                if (Request.QueryString["param"] != null)
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
-                    idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
+
+                    if (!String.IsNullOrEmpty(Request.QueryString["param2"]))
+                    {
+                        idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
+                    }
+                   
                     btnStokKodAra_Click(sender, e);
                     editIcerikYerlestir();
                 }

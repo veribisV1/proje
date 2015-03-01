@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <script src="Content/js/metro/metro-tab-control.js"></script>
-  
+
 
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
@@ -26,17 +26,17 @@
         <h3>FİRMA KARTI</h3>
 
         <div class="tab-control" data-role="tab-control">
-             <ul class="tabs">
-                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                 <li><a href="#FirmaEkle">Firma Ekle</a></li>
-                 <li><a href="#MakinaParki">Makina Parkı</a></li>
-                 <li><a href="#RakipFirma">Rakip Firma</a></li>
-                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
-                 <li><a href="#Kontak">Kontak</a></li>
-                 <li><a href="#Numune">Numune</a></li>
-                 <li><a href="#Proforma">Proforma</a></li>
-                 <li><a href="#Fatura">Fatura</a></li>
-                 <li><a href="#EkForm">Ek Form</a></li>
+            <ul class="tabs">
+                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
+                <li><a href="#FirmaEkle">Firma Ekle</a></li>
+                <li><a href="#MakinaParki">Makina Parkı</a></li>
+                <li><a href="#RakipFirma">Rakip Firma</a></li>
+                <li><a href="#RakipUrun">Rakip Ürün</a></li>
+                <li><a href="#Kontak">Kontak</a></li>
+                <li><a href="#Numune">Numune</a></li>
+                <li><a href="#Proforma">Proforma</a></li>
+                <li><a href="#Fatura">Fatura</a></li>
+                <li><a href="#EkForm">Ek Form</a></li>
 
             </ul>
 
@@ -44,26 +44,64 @@
 
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
-                        <div>
-                            <div class="menu">
-                                <asp:TextBox ID="txtSearch" runat="server" CssClass="searchText" />
-                            </div>
+                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx','',700,500);return false;" Width="75px" />
 
-                            <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false">
-                                <Columns>
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_CODE" HeaderText="COMPANY CODE"
-                                        ItemStyle-CssClass="ContactName" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_NAME" HeaderText="COMPANY NAME" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="ADDRESS" HeaderText="ADDRESS" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="SECTOR" HeaderText="SECTOR" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="PHONE" HeaderText="ADDRESS" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="MAIL" HeaderText="MAIL" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="WEBADDRESS" HeaderText="WEB ADDRESS" />
-                                </Columns>
-                            </asp:GridView>
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="mGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
 
-                            <div class="Pager"></div>
-                        </div>
+                            <Columns>
+
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editCompany"></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FİRMA KODU" Visible="true">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCOMPANY_CODE" runat="server" Text='<%# Eval("COMPANY_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FİRMA ADI">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCOMPANY_NAME" runat="server" Text='<%# Eval("COMPAN_NAME")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="ADRESS">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblADDRESS" runat="server"
+                                            Text='<%# Eval("ADDRESS")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="SEKTÖR">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblSECTOR" runat="server" Text='<%# Eval("SECTOR")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TELEFON">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblPHONE" runat="server" Text='<%# Eval("PHONE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="E-POSTA">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="WEB ADRESİ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblWEBADDRESS" runat="server" Text='<%# Eval("WEBADDRESS")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
 
                     </div>
                 </div>
@@ -74,7 +112,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white"  PostBackUrl="#FirmaEkle" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" />
@@ -142,7 +180,7 @@
                                         <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
                                     </td>
                                 </tr>
-                                        <%--   <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>--%>
+                                <%--   <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>--%>
                             </table>
 
 
@@ -241,10 +279,10 @@
                                     </td>
                                     <td width="2%">:
                                     </td>
-                                    <td>                                   
-                                         
-                                         <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
-                                    
+                                    <td>
+
+                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
+
                                     </td>
                                 </tr>
 
@@ -353,12 +391,8 @@
                         <div class="ALAN6">
                             <br />
 
-
-<<<<<<< HEAD
-                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx', $('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;" />
-=======
                             <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
->>>>>>> 1958af3baee6042ad0cf65b615fc9aa961a0a871
+
 
                             <table class="KisiTable">
                                 <tr>
@@ -389,11 +423,11 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-<<<<<<< HEAD
-                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="OpenPage('TelefonEkle.aspx', $('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;" />
-=======
+
+
                             <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
->>>>>>> 1958af3baee6042ad0cf65b615fc9aa961a0a871
+
+
                             <table class="KisiTable">
                                 <tr>
 

@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
 using VeribisTasarım.Controller;
+using System.Configuration;
 
 
 
@@ -22,12 +23,13 @@ namespace VeribisTasarım
                 adresDoldur();
                 telefonDoldur();
                 ekranDoldur();
-
-                //BindDummyRow();
-
-
             }
 
+        }
+       void  griDoldur()
+        {
+            DBARACISI dbadapter = new DBARACISI();
+           
         }
 
         private void ekranDoldur()
@@ -106,6 +108,16 @@ namespace VeribisTasarım
 
 
         }
+
+
+        protected void editCompany(object sender, EventArgs e)
+        {
+            ImageButton btn = (ImageButton)sender;
+            string code = btn.CommandArgument;
+            secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", String.Format("{0}", code));
+        }
+
+        
     
     }
             

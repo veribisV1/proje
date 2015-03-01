@@ -22,7 +22,7 @@
                 <li><a href="#ListeAdi">Liste Adı</a></li>
                 <li class="active"><a href="#FirsatEkle">Fırsat Ekle</a></li>
             </ul>
-            <div class="frames" style="float: left; width: 100%;">
+             <div class="frames" style="float: left; width: 100%;">
                 <div class="frame" id="FirsatEkle">
                     <div class="KisiTableHizalama">
                         <table>

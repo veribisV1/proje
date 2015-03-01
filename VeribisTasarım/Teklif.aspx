@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Teklif.aspx.cs" Inherits="VeribisTasarım.Teklif" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<<<<<<< HEAD
+
+=======
      <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
 
 
@@ -9,6 +12,7 @@
             box-shadow: 0 0 50px #222;
         }
     </style>
+>>>>>>> 3a6a80196c5636b70405b2dc13d9a56e2d043f9a
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">

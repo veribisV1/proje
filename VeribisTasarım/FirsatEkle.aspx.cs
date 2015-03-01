@@ -16,9 +16,25 @@ namespace VeribisTasarım
             {
                 DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
                 idCUR_TYPE = dbelemanGetir.doldur(idCUR_TYPE, dbelemanGetir.getParaBirimi());
+
+                if (Request.QueryString["param"] != null)
+                {
+                    idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
+                    idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
+                    btnStokKodAra_Click(sender, e);
+                    editIcerikYerlestir();
+                }
             }
         }
 
+
+        private void editIcerikYerlestir()
+        {
+            secilenElemanDetayiGetir(this, String.Format("SELECT * FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", idOPPORTUNITY_CODE.Text, idROW_ORDER_NO.Text));            
+            DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
+            idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
+            idPRODUCT_NAME.SelectedValue = idSTOK_CODE.SelectedValue;
+        }
         protected void idButtonFirsatKaydet_Click(object sender, EventArgs e)
         {
             int rowOrderCode = -1;

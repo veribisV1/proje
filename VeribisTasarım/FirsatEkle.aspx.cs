@@ -19,10 +19,13 @@ namespace VeribisTasarım
 
                 if (Request.QueryString["param"] != null)
                 {
-                    idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
-                    idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
-                    btnStokKodAra_Click(sender, e);
-                    editIcerikYerlestir();
+                    idOPPORTUNITY_CODE.Text = Request.QueryString["param"].ToString();
+                    if (Request.QueryString["param2"] != null)
+                    {
+                        idROW_ORDER_NO.Text = Request.QueryString["param2"].ToString();
+                        btnStokKodAra_Click(sender, e);
+                        editIcerikYerlestir();
+                    }
                 }
             }
         }
@@ -30,7 +33,7 @@ namespace VeribisTasarım
 
         private void editIcerikYerlestir()
         {
-            secilenElemanDetayiGetir(this, String.Format("SELECT * FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", idOPPORTUNITY_CODE.Text, idROW_ORDER_NO.Text));            
+            secilenElemanDetayiGetir(this, String.Format("SELECT * FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", idOPPORTUNITY_CODE.Text, idROW_ORDER_NO.Text));
             DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
             idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
             idPRODUCT_NAME.SelectedValue = idSTOK_CODE.SelectedValue;
@@ -49,8 +52,8 @@ namespace VeribisTasarım
                 rowOrderCode = kaydet("pUpdateOppDetail");
             }
             if (rowOrderCode != -1)
-            {                
-               formTemizle(this);
+            {
+                formTemizle(this);
             }
             // }
             //else
@@ -98,7 +101,7 @@ namespace VeribisTasarım
         protected void masraf_degisim(object sender, EventArgs e)
         {
             TextBox masraf = (TextBox)sender;
-            degistir(masraf,idEXPENSE_PERCENT,idEXPENSE_TOTAL);
+            degistir(masraf, idEXPENSE_PERCENT, idEXPENSE_TOTAL);
             alanlariHesapla();
         }
 
@@ -134,25 +137,25 @@ namespace VeribisTasarım
         }
         private void alanlariHesapla()
         {
-            
+
             double kurTutari = (String.IsNullOrEmpty(idCUR_VALUE.Text)) ? 1 : Convert.ToDouble(idCUR_VALUE.Text);
             double miktar = (String.IsNullOrEmpty(idQUANTITY.Text)) ? 1 : Convert.ToDouble(idQUANTITY.Text);
-            double PRICE = (String.IsNullOrEmpty(idUNIT_PRICE.Text)) ? 1 : Convert.ToDouble(idUNIT_PRICE.Text);            
+            double PRICE = (String.IsNullOrEmpty(idUNIT_PRICE.Text)) ? 1 : Convert.ToDouble(idUNIT_PRICE.Text);
             double TOTAL_UNTAX = PRICE * miktar;
             double TOTAL_UPBK_UNTAX = kurTutari * TOTAL_UNTAX;
             double DISCOUNT_TOTAL = (String.IsNullOrEmpty(idDISCOUNT_TOTAL.Text)) ? 0 : Convert.ToDouble(idDISCOUNT_TOTAL.Text);
             double EXPENSE_TOTAL = (String.IsNullOrEmpty(idEXPENSE_TOTAL.Text)) ? 0 : Convert.ToDouble(idEXPENSE_TOTAL.Text);
-            double TAX=(String.IsNullOrEmpty(idTAX_PERCENT.Text)) ? 0 : Convert.ToDouble(idTAX_PERCENT.Text);
+            double TAX = (String.IsNullOrEmpty(idTAX_PERCENT.Text)) ? 0 : Convert.ToDouble(idTAX_PERCENT.Text);
             double TOTAL = (TOTAL_UNTAX * (1 + TAX / 100)) + (DISCOUNT_TOTAL + EXPENSE_TOTAL);
             double TOTAL_UPBK = TOTAL * kurTutari;
 
             idTOTAL_UNTAX.Text = TOTAL_UNTAX.ToString();
             idTOTAL_UPBK_UNTAX.Text = TOTAL_UPBK_UNTAX.ToString();
             idTOTAL.Text = TOTAL.ToString();
-            idTOTAL_UPBK.Text = TOTAL_UPBK.ToString();           
+            idTOTAL_UPBK.Text = TOTAL_UPBK.ToString();
         }
 
-       
+
 
 
     }

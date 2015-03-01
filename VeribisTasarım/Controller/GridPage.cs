@@ -18,13 +18,18 @@ namespace VeribisTasarım.Controller
         }
         public void gridSatirEkle(object sender, EventArgs e)
         {
+            Button silButon = (Button)sender;
+            string row = silButon.CommandArgument;
+            recursiveElemanBul(this);
+        //    oppCode = String.Format("{0}&param2={1}", oppCode, row);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", String.Format("OpenPage('FirsatEkle.aspx','{0}')", oppCode), true);
         }
         public void gridSatirDuzenle(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
             string row = silButon.CommandArgument;
             recursiveElemanBul(this);
-            oppCode = String.Format("{0}&param2={1}",row, oppCode);
+            oppCode = String.Format("{0}&param2={1}", oppCode, row);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction",String.Format("OpenPage('FirsatEkle.aspx','{0}')",oppCode), true);
         }
         public void gridSatirSil(object sender, EventArgs e)

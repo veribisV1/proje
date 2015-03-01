@@ -8,7 +8,7 @@ using VeribisTasarım.Controller;
 
 namespace VeribisTasarım
 {
-    public partial class Proforma : BASECONTROLLER
+    public partial class Proforma : GRIDPAGE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,6 +16,9 @@ namespace VeribisTasarım
             {
                 ekranDoldur();
             }
+
+            idOPPORTUNITY_CODE.Text = "0";
+            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
 
         }
         private void ekranDoldur()

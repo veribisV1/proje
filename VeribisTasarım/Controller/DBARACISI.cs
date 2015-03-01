@@ -35,9 +35,7 @@ namespace VeribisTasarım.Controller
             {
                 return db.getDictionary(sorgu);
             }
-        }
-
-
+        }        
         /// <summary>
         /// gird içerisine gelecek bilgileri 
         /// store procedur gondererek 
@@ -51,7 +49,6 @@ namespace VeribisTasarım.Controller
                 return db.getDataTable(prosedurAdi, parametreIcerik);
             }
         }
-
         /// <summary>
         /// gird içerisine gelecek bilgileri 
         /// sorgu gondererek datatable donus elde edebilir
@@ -64,9 +61,7 @@ namespace VeribisTasarım.Controller
             {
                 return db.get(sorgu);
             }
-        }
-
-
+        }        
         /// <summary>
         /// gird içerisine gelecek bilgileri 
         /// sorgu gondererek datatable donus elde edebilir

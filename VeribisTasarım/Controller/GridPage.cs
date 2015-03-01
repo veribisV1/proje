@@ -29,14 +29,18 @@ namespace VeribisTasarım.Controller
         {
             ImageButton silButon = (ImageButton)sender;
             string rowOrderNo = silButon.CommandArgument;
-            DBARACISI dbadapter = new DBARACISI();
-           // string oppCode = ((TextBox)Page.FindControl("idOPPORTUNITY_CODE")).Text;
+            DBARACISI dbadapter = new DBARACISI();         
             recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}",oppCode,rowOrderNo));
 
         }
         string oppCode;
         bool arananElemaqnBulundu = false;
+
+        /// <summary>
+        /// sayfa içerisinde eleman arar
+        /// </summary>
+        /// <param name="childc"></param>
         private void recursiveElemanBul(Control childc)
         {
             if (childc.ID == "idOPPORTUNITY_CODE")

@@ -45,19 +45,13 @@
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
                         
-<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
 
                             <Columns>
 
                                 <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
                                         <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editCompany" CommandArgument='<%# Eval("COMPANY_CODE")%>'></asp:ImageButton>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-
-                                <asp:TemplateField HeaderText="FİRMA KODU" Visible="true">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblCOMPANY_CODE" runat="server" Text='<%# Eval("COMPANY_CODE")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
@@ -398,19 +392,8 @@
 
                                     <td>
                                         <div class="gridDivAdres">
-                                            <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn" EmptyDataText="Adres bilgisi mevcut değil.">
-                                                <AlternatingRowStyle BackColor="White" />
-                                                <EditRowStyle BackColor="#2461BF" />
-                                                <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px" />
-                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                                <RowStyle BackColor="#EFF3FB" />
-                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                            <asp:GridView ID="idADDRESS" runat="server" CssClass="nGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
+                                                
                                             </asp:GridView>
                                         </div>
                                     </td>
@@ -432,19 +415,8 @@
 
                                     <td>
                                         <div class="gridDivTelefon">
-                                            <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn" EmptyDataText="İletişim bilgisi mevcut değil.">
-                                                <AlternatingRowStyle BackColor="White" />
-                                                <EditRowStyle BackColor="#2461BF" />
-                                                <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px" />
-                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                                <RowStyle BackColor="#EFF3FB" />
-                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                            <asp:GridView ID="idPHONE" runat="server" CssClass="nGrid"  AlternatingRowStyle-CssClass="alt" EmptyDataText="İletişim bilgisi mevcut değil.">
+                                                
                                             </asp:GridView>
                                         </div>
 

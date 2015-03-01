@@ -9,27 +9,16 @@
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
+
     .mGrid td
-=======
-
-.mGrid th {   
-    padding: 4px 2px;   
-    color: #fff;   
-    background-color: #1ba1e2;  
-    font-size: 14px;   
-    border: solid 1px #525252;
-}
-
-    .mGrid th:nth-child(2)
-
->>>>>>> 3aaf4c58a9b28c8481464ac83fd3a013259ef7a0
     {
         padding: 2px;
         border: solid 1px #c1c1c1;
         color: #717171;
         font-size: 12px;
     }
+
+    
 
     .mGrid th
     {
@@ -89,3 +78,42 @@
                 color: #000;
                 text-decoration: none;
             }
+
+
+
+/* ************ ikinci tip grid için ****************** */
+.nGrid
+{
+    width: 100%;
+    background-color: #fff;
+    margin: 10px auto;
+    border: solid 1px #c1c1c1;
+    border: none;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+
+    .nGrid td
+    {
+        padding: 2px;
+        border: solid 1px #c1c1c1;
+        color: #717171;
+        font-size: 12px;
+    }
+
+    
+
+    .nGrid th
+    {
+        padding: 4px 2px;
+        color: #fff;
+        background-color: #1ba1b2;
+        font-size: 14px;
+        border: solid 1px #525252;
+    }
+
+     .nGrid .alt
+    {
+        background-color: #eaeaea;
+    }

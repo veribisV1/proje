@@ -240,14 +240,14 @@
 
                                                   <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                       <ItemTemplate>
-                                                          <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="gridSatirSil"></asp:ImageButton>
+                                                          <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="gridSatirSil" CommandArgument='<%# Eval("ROW_ORDER_NO")%>'></asp:ImageButton>
                                                       </ItemTemplate>
                                                   </asp:TemplateField>
 
 
                                                   <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                       <ItemTemplate>
-                                                          <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idROW_ORDER_NO').val());return false;"></asp:ImageButton>
+                                                          <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="gridSatirDuzenle" CommandArgument='<%# Eval("ROW_ORDER_NO")%>'></asp:ImageButton>
                                                       </ItemTemplate>
                                                   </asp:TemplateField>
 

@@ -502,12 +502,10 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQLCitems("6"));
             return liste;
         }
-
         public DataTable getOppDetail(string oppCode)
         {
             return db.getGridIcerik("select ROW_ORDER_NO,PRODUCT_NAME,CUR_TYPE,TOTAL_UPBK from OPPORTUNITYDETAIL where OPPORTUNITY_CODE=" + oppCode);
         }
-
         public Dictionary<string, string> getStokKartByKod(string stokKart)
         {
             Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',CODE as 'col2' from STOKCARD where CODE like '%{0}%'", stokKart));
@@ -528,7 +526,6 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(String.Format("select CODE as 'col1',CODE as 'col2' from STOKCARD where NAME_TR like '%{0}%'", stokKart));
             return liste;
         }
-
         internal Dictionary<string, string> getParaBirimiGroup()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQL("7"));

@@ -17,15 +17,15 @@ namespace VeribisTasarım
                 ekranDoldur();               
             }
             idOPPORTUNITY_CODE.Text = "0";
-            gridDoldur(GridView1,idOPPORTUNITY_CODE.Text);
+            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
         }
         private void ekranDoldur()
         {
-            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
 
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             #region Aktivite Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getFirma());
+          
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFirsatCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idREVISION = dbGetir.doldur(idREVISION, dbGetir.getRevizyon());
@@ -57,6 +57,12 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             
+        }
+
+        protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
 
          

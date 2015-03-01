@@ -13,6 +13,78 @@ namespace VeribisTasarım {
     public partial class Teklif {
         
         /// <summary>
+        /// idTextBoxTeklifArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTextBoxTeklifArama;
+        
+        /// <summary>
+        /// idButtonTeklifArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonTeklifArama;
+        
+        /// <summary>
+        /// idLabelTeklifDurum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idLabelTeklifDurum;
+        
+        /// <summary>
+        /// idDropDownTeklifDurum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idDropDownTeklifDurum;
+        
+        /// <summary>
+        /// idLabelTeklifBaslangic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idLabelTeklifBaslangic;
+        
+        /// <summary>
+        /// idTeklifBaslangicTarih control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTeklifBaslangicTarih;
+        
+        /// <summary>
+        /// idLabelTeklifBitis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idLabelTeklifBitis;
+        
+        /// <summary>
+        /// idTeklifBitisTarih control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTeklifBitisTarih;
+        
+        /// <summary>
         /// idButtonTeklifEkleYeni control.
         /// </summary>
         /// <remarks>
@@ -229,75 +301,21 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idEXPLANATION;
         
         /// <summary>
-        /// idTextBoxTeklifArama control.
+        /// btnVeriEkle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTextBoxTeklifArama;
+        protected global::System.Web.UI.WebControls.Button btnVeriEkle;
         
         /// <summary>
-        /// idButtonTeklifArama control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonTeklifArama;
-        
-        /// <summary>
-        /// idLabelTeklifDurum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelTeklifDurum;
-        
-        /// <summary>
-        /// idDropDownTeklifDurum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDropDownTeklifDurum;
-        
-        /// <summary>
-        /// idLabelTeklifBaslangic control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelTeklifBaslangic;
-        
-        /// <summary>
-        /// idTeklifBaslangicTarih control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTeklifBaslangicTarih;
-        
-        /// <summary>
-        /// idLabelTeklifBitis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idLabelTeklifBitis;
-        
-        /// <summary>
-        /// idTeklifBitisTarih control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idTeklifBitisTarih;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

@@ -57,6 +57,21 @@ namespace VeribisTasarım.Controller
         }
 
         /// <summary>
+        /// id ye gore elaman getirir
+        /// </summary>
+        /// <param name="sayfa">this</param>
+        /// <param name="tablo">TABLO NAME</param>
+        /// <param name="filitre"> COLUM NAME</param>
+        /// <param name="filitreEleman">PK</param>
+        public void secilenElemanDetayiGetir(Page sayfa, string sorgu)
+        {
+            DBARACISI adapter = new DBARACISI();
+            Dictionary<string, string> icerikListesi = adapter.getEleman(sorgu.ToString());
+            CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
+            controlEslestir.eslestirDoldur(sayfa, icerikListesi);
+        }
+
+        /// <summary>
         /// Rol yetkisi olmadığını belirten Javascript mesajı veridiren
         /// metot
         /// </summary>

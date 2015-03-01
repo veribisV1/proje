@@ -2,73 +2,69 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <title>VERIBIS</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1254" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="stylesheet" type="text/css" href="style/stil.css"/>
- <link href="script/jqueryui/jquery-ui.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="style/responsive.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="script/jqueryui/jquery-ui.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".menubutton").click(function () {
-                $(".menuhidden").toggle(1000);
-            });
-            $(".tabmenu").tabs();
-        });
-    </script>
+
+
+    <%-- *** fancy_box baslangic ***--%>
+
+    <link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <script type="text/javascript" src="fancyBox/lib/jquery-1.10.1.min.js"></script>
+    
+<%-- *** fancy_box bitis ***--%>
+
+
+
+
+    <link rel="stylesheet" href="Content/css/metro-bootstrap.css" />
+    <link rel="stylesheet" href="Content/css/metro-bootstrap-responsive.css" />
+    <link href="Content/css/iconFont.css" rel="stylesheet" />
+
+    <link href="style/gridStil.css" rel="stylesheet" />
+    <script src="Content/js/jquery/jquery.min.js"></script>
  
+    <script src="Content/js/jquery/jquery.widget.min.js"></script>
+    <script src="Content/js/jquery/jquery.mousewheel.js"></script>
+    <script src="Content/js/metro/metro.min.js"></script>
+    <script src="Content/js/navigate.js"></script>
     <asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
 </head>
-<body>
+<body class="metro">
 <form id="form1" runat="server">
-<div class="header">
- <img src="image/logo.png" />
-<div class="menubutton"><hr><hr><hr></div>
-<div class="menuhiddencontainer">
-    <div class="menuhidden">
-        <asp:Repeater ID="Repeater2" runat="server">
-                            <ItemTemplate>
-                                <li>
-                          <asp:LinkButton ID="LinkButtonMiniMenu" runat="server" PostBackUrl='<%#Eval("LINK") %>'><%# Eval("MENU_NAME") %></asp:LinkButton>
-                               </li>
-                            </ItemTemplate>
 
-        </asp:Repeater>
+    <nav class="navigation-bar">
+        <nav class="navigation-bar-content">
+            <a class="element" style="font-size: 36px;" href="Default.aspx">
+               <%-- <img src="image/logo1.png" />--%>
+                VeribisCRM 
+            </a>
+            
+            <a class="element place-right" href="Giris.aspx"><span class="icon-switch" style="margin-top:20px;"></span></a>
+            <span class="element-divider place-right"></span>
+            <button class="element image-button image-left place-right" style="padding-right: 15px;">
+                Hoşgeldin Kullanıcı
+                    <i class="icon-user" style="margin-top: 27px;"></i>
+            </button>
+        </nav>
+    </nav>
 
+    <nav class="sidebar light" style="width: 15%; height: 100%; float: left;">
+        <ul>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+                    <li><a style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><i class="icon-arrow-right"></i><%# Eval("MENU_NAME") %></a></li>
+                </ItemTemplate>
+            </asp:Repeater>
+        </ul>
+    </nav>
+
+    <div style="float:left;margin-left:auto;width:85%;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     </div>
-</div>
-</div>
 
-
-<div class="content">
-<div class="mainmenu">
-       <ul class="MenuDizayn">
-                        <asp:Repeater ID="Menu2" runat="server">
-                            <ItemTemplate>
-                                <li>
-                          <asp:LinkButton ID="LinkButtonmenu" runat="server" PostBackUrl='<%#Eval("LINK") %>'><%# Eval("MENU_NAME") %></asp:LinkButton>
-                               </li>
-
-                            </ItemTemplate>
-                            
-                        </asp:Repeater>
-           
-                        
-                    </ul> 
-  
-</div>
-
-<div class="mainbody"> 
-    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
-
-    </asp:ContentPlaceHolder>
-    
-</div>
-</div>
-  <div class="footer">Veribis</div>
 </form>
 </body>
 </html>

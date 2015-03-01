@@ -16,7 +16,7 @@ namespace VeribisTasarım.Controller
             grid.DataBind();
         }
         public void gridSatirEkle(object sender, EventArgs e)
-        { 
+        {
         }
         public void gridSatirDuzenle(object sender, EventArgs e) 
         { 

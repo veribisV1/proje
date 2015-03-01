@@ -9,7 +9,7 @@
                 <li class="active"><a href="#ProformaEkle">Proforma Ekle</a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
-                <div class="frame" id="ProformaEkle" style="min-height: 100px">
+                <div class="frame" id="ProformaEkle">
                     <div class="KisiTableHizalama">
                         <table>
                             <tr>

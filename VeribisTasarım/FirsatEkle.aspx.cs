@@ -55,6 +55,8 @@ namespace VeribisTasarım
             // }
             //else
             //    BosMesaji();
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
+           
         }
 
         protected void btnStokKodAra_Click(object sender, EventArgs e)

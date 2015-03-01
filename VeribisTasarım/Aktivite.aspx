@@ -28,9 +28,7 @@
                         <asp:TextBox ID="idACTIVITY_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
                         <div class="ALAN4">
-                            <table class="KisiTable" id="Table1">
-
-                               
+                            <table class="KisiTable" id="Table1">                              
                                 <tr>
                                     <td width="35%">Firma Adı
                                     </td>
@@ -100,8 +98,6 @@
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
-
-
                             </table>
                         </div>
                         <div class="ALAN4">

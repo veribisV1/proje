@@ -352,7 +352,7 @@ namespace VeribisTasarım.Controller
 
         public Dictionary<string, string> getAlanKodu(int alanKodu)
         {
-            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, NAME AS col2 FROM PHONECODE WHERE COUNTRY_CODE=" + alanKodu);
+            Dictionary<string, string> liste = db.getListEleman("SELECT  CITY_CODE AS col1, CITY_CODE AS col2 FROM PHONECODE WHERE COUNTRY_CODE=" + alanKodu);
             return liste;
         }
 

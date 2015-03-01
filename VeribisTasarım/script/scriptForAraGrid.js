@@ -14,7 +14,7 @@ function SearchTerm() {
 function GetCustomers(pageIndex) {
     $.ajax({
         type: "POST",
-        url: "company.aspx/GetCustomers",
+        url: "Company.aspx/GetCustomers",
         data: '{searchTerm: "' + SearchTerm() + '", pageIndex: ' + pageIndex + '}',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -58,7 +58,7 @@ function OnSuccess(response) {
             RecordCount: parseInt(pager.find("RecordCount").text())
         });
 
-        $(".ContactName").each(function () {
+        $(".COMPANY_NAME").each(function () {
             var searchPattern = new RegExp('(' + SearchTerm() + ')', 'ig');
             $(this).html($(this).text().replace(searchPattern, "<span class = 'highlight'>" + SearchTerm() + "</span>"));
         });

@@ -19,10 +19,16 @@ namespace VeribisTasarım.Controller
         {
         }
         public void gridSatirDuzenle(object sender, EventArgs e) 
-        { 
+        {
+            ImageButton silButon = (ImageButton)sender;
+            string row = silButon.CommandArgument;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "OpenPage('FirsatEkle.aspx','"+row+"')", true);
         }
         public void gridSatirSil(object sender, EventArgs e)
-        { 
+        {
+            ImageButton silButon = (ImageButton)sender;
+            string row = silButon.CommandArgument;
+          //  Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "OpenPage('FirsatEkle.aspx','2')", true);
         }
         public void gridSayfala(object sender, EventArgs e) 
         { 

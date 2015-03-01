@@ -67,6 +67,19 @@ namespace VeribisTasarım.Controller
         }
 
 
+        /// <summary>
+        /// gird içerisine gelecek bilgileri 
+        /// sorgu gondererek datatable donus elde edebilir
+        /// </summary>
+        /// <param name="prosedurAdi"></param>
+        /// <returns></returns>
+        public void set(string sorgu)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                db.set(sorgu);
+            }
+        }
 
         //kullanacağımız veritabanının adı.
         public string getDatabase(string customerCode)

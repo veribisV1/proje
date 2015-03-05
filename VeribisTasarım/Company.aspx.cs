@@ -32,7 +32,7 @@ namespace VeribisTasarım
        private void  gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 * FROM COMPANY");
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 * FROM COMPANY order by COMPANY_CODE desc");
             GridView1.DataBind();
         }
 

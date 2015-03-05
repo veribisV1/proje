@@ -19,6 +19,7 @@ namespace VeribisTasarım
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
+                    secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", contactCode));
                 }
             }
         }
@@ -48,28 +49,24 @@ namespace VeribisTasarım
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
 
-            //DBARACISI firma = new DBARACISI();
-            //Dictionary<string, string> paramtereListesi = firma.getStoreParametre("pInsertContact");
-            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            //int companyCode = firma.setStore("pInsertContact", dataListesi);
-
-
             int contactCode = -1;
             if (!String.IsNullOrEmpty(idNAME.Text))
             {
-                if (!String.IsNullOrEmpty(idNAME.Text))
+
+                if (String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
                     contactCode = kaydet("pInsertContact");
+                    if (contactCode != -1)
+                    {
+                        idCONTACT_CODE.Text = contactCode.ToString();
+
+                    }
                 }
                 else
                 {
                     contactCode = kaydet("pUpdateContact");
                 }
-                if (contactCode != -1)
-                {
-                    formTemizle(this);
-                }
+                
             }
             else
                 BosMesaji();  

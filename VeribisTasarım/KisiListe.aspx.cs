@@ -33,13 +33,17 @@ namespace VeribisTasarım
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
-          
-            
-            
+                      
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
 
             Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", "parent.location.replace('Kisi.aspx?param=" + code + "');", true);
                  
+        }
+
+        protected void btnVeriEkle_Click(object sender, EventArgs e)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", "parent.location.replace('Kisi.aspx');", true);
         }
     }
 }

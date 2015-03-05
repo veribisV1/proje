@@ -47,7 +47,9 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             }
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
+           
            
         }
 

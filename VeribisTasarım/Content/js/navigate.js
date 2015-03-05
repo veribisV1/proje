@@ -15,9 +15,7 @@
         autoSize: false,
         overflow: 'hidden',
         scrolling: 'no',
-        'afterClose': function () {
-            window.location.reload();
-        }
+       
     });
    
 }

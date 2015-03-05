@@ -15,9 +15,9 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
-                if (Request.QueryString["firma"]!=null)
+                if (Request.QueryString["param"]!=null)
                 {
-                    idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
+                    idCOMPANY_CODE.Text = Request.QueryString["param"].ToString();
                 }
                 
             }
@@ -43,6 +43,7 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             }
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
         }
 

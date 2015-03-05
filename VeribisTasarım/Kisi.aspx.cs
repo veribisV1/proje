@@ -76,6 +76,11 @@ namespace VeribisTasarım
    
         }
 
+        protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+        }
+
     
 
 

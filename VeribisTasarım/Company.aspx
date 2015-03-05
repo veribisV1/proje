@@ -119,6 +119,10 @@
                                 <td>
                                     <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
                                 </td>
+
+                                <td>
+                                    <asp:Button ID="idButtonKisileriListele" runat="server" CssClass="bg-blue fg-white" Text="Kişileri Listele" Height="30px" />
+                                </td>
                             </tr>
                         </table>
 

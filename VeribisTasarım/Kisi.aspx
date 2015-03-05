@@ -25,7 +25,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" OnClick="idButtonKisiEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />

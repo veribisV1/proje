@@ -121,7 +121,7 @@
                                 </td>
 
                                 <td>
-                                    <asp:Button ID="idButtonKisileriListele" runat="server" CssClass="bg-blue fg-white" Text="Kişileri Listele" Height="30px" />
+                                    <asp:Button ID="idButtonKisileriListele" runat="server" CssClass="bg-blue fg-white" Text="Kişileri Listele" Height="30px" OnClientClick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                             </tr>
                         </table>

@@ -16,6 +16,10 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {               
                 ekranDoldur();
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                {
+                    var contactCode = Convert.ToInt32((Request.QueryString["param"]));
+                }
             }
         }
 

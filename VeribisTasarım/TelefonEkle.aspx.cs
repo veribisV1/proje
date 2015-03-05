@@ -43,6 +43,7 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             }
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
         }
 
         private void ekranDoldur()

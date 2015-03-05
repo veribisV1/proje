@@ -18,10 +18,11 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             if (!IsPostBack)
             {
-                adresDoldur();
-                telefonDoldur();
+                //adresDoldur();
+                //telefonDoldur();
                 ekranDoldur();
                 gridDoldur();
                 
@@ -31,7 +32,7 @@ namespace VeribisTasarım
        private void  gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik("SELECT * FROM COMPANY");
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 * FROM COMPANY");
             GridView1.DataBind();
         }
 
@@ -62,7 +63,7 @@ namespace VeribisTasarım
         }
 
 
-        private void adresDoldur(int companyCode = 2)
+        private void adresDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
@@ -75,7 +76,7 @@ namespace VeribisTasarım
 
         }
 
-        private void telefonDoldur(int companyCode = 2)
+        private void telefonDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
@@ -119,6 +120,8 @@ namespace VeribisTasarım
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
             secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", String.Format("{0}", code));
+            adresDoldur(Convert.ToInt32(code));
+            telefonDoldur(Convert.ToInt32(code));
         }
 
         

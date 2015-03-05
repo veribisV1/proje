@@ -173,11 +173,13 @@
                                     <td width="35%">&nbsp;</td>
                                     <td width="2%"></td>
                                     <td>
-
-                                        <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
+                                        <div style="visibility: hidden;">
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
+                                        </div>
+                                       
                                     </td>
                                 </tr>
-                                <%--   <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>--%>
+                               
                             </table>
 
 

@@ -20,7 +20,7 @@
             <h3>Kişiler</h3>
             <div class="KisiTableHizalama">
                   <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kişi" Width="75px" OnClick="btnVeriEkle_Click" />
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="CONTACT_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="CONTACT_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="KİŞİ EKLEYİNİZ...">
 
                     <Columns>
                         <asp:TemplateField ItemStyle-HorizontalAlign="Center">

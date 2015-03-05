@@ -19,6 +19,7 @@ namespace VeribisTasarım
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
+                    idCONTACT_CODE.Text = contactCode.ToString();
                     secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", contactCode));
                 }
             }
@@ -59,8 +60,10 @@ namespace VeribisTasarım
                     if (contactCode != -1)
                     {
                         idCONTACT_CODE.Text = contactCode.ToString();
-
+                      
+                        
                     }
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
                 else
                 {

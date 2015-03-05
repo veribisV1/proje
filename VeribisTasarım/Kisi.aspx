@@ -1,6 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Kisi.aspx.cs" Inherits="VeribisTasarım.Kisi" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <script src="Content/js/metro/metro-tab-control.js"></script>
+    <script src="Content/js/metro/metro-tab-control.js"></script>
+
+    <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
+    <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+
+
+    <%--fancy_box stil tanımı--%>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
@@ -28,10 +40,10 @@
                                     <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" OnClick="idButtonKisiEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" />
+                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonKisiEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonKisiEkleKaydet_Click" />
@@ -41,13 +53,15 @@
                                 </td>
                             </tr>
                         </table>
+                        <div style="visibility: hidden;">
+                            <asp:TextBox ID="idCONTACT_CODE" runat="server"></asp:TextBox>
+                        </div>
 
-                        <asp:TextBox ID="idCONTACT_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
 
                         <div class="ALAN4">
                             <table class="KisiTable" id="Tablo1">
-                                 <tr>
+                                <tr>
                                     <td width="35%">Çalıştığı Firma
                                     </td>
                                     <td width="2%">:
@@ -102,7 +116,7 @@
                                         <asp:TextBox ID="idNICNAME" MaxLength="50" Width="100%" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
-                              
+
                                 <tr>
                                     <td width="35%">Cinsiyet
                                     </td>
@@ -338,7 +352,7 @@
                                 </td>
                             </tr>
                         </table>
-                       
+
                         <asp:TextBox ID="idNOTE_CODE" runat="server" Visible="False"></asp:TextBox>
                         <hr />
 
@@ -402,7 +416,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                       <%-- <asp:DropDownList ID="idISMARRIED" runat="server" Height="30px" Width="100%" OnSelectedIndexChanged="idISMARRIED_SelectedIndexChanged">
+                                        <%-- <asp:DropDownList ID="idISMARRIED" runat="server" Height="30px" Width="100%" OnSelectedIndexChanged="idISMARRIED_SelectedIndexChanged">
                                         </asp:DropDownList>--%>
                                     </td>
                                 </tr>

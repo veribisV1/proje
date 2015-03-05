@@ -20,9 +20,19 @@ namespace VeribisTasarım
                 //    idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
                 //}
 
-                if (Request.QueryString["param"] != null)
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
-                    idCOMPANY_CODE.Text = Request.QueryString["param"].ToString();
+                    var qString = Request.QueryString["param"].ToString();
+                    if (qString.Contains('-'))
+                    {
+                        idCOMPANY_CODE.Text = qString.Split('-')[0].ToString();
+                        idCONTACT_CODE.Text = qString.Split('-')[1].ToString();
+                    }
+                    else
+                    {
+                        idCOMPANY_CODE.Text = qString;
+                    }
+                   
                 }
                 
             }

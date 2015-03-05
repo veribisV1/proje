@@ -124,6 +124,13 @@ namespace VeribisTasarım
             telefonDoldur(Convert.ToInt32(code));
         }
 
+        protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+            adresDoldur(-1);
+            telefonDoldur(-1);
+        }
+
         
     
     }

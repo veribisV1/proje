@@ -24,7 +24,7 @@ namespace VeribisTasarım
                     //editIcerikYerlestir();
 
                     secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));                 
-                    idOPPORTUNITY_CODE.Text = "0";
+                    idOPPORTUNITY_CODE.Text = "1";
                     gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
                 }
             }

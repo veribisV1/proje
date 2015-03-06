@@ -29,6 +29,11 @@ namespace VeribisTasarım
                     }
 
                 }
+                if (!String.IsNullOrEmpty(Request.QueryString["edit"]))
+                {
+                    var phoneCode = Convert.ToInt32(Request.QueryString["edit"]);
+                    secilenElemanDetayiGetir(this, "PHONE", "PHONE_CODE", String.Format("{0}", phoneCode));
+                }
                 
             }
         }

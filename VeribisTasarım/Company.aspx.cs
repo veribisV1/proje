@@ -128,12 +128,14 @@ namespace VeribisTasarım
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Phone", "OpenPage('TelefonEkle.aspx?edit=" + code + "')", true);
            
         }
         protected void editAddress(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Adres", "OpenPage('AdresEkle.aspx?edit=" + code + "')", true);
             
         }
 

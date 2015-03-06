@@ -285,9 +285,13 @@
                             <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
-
                                     <td>
-                                        <div class="gridDivAdresKisi">
+                                         <div class="gridDivAdres">
+                                            <asp:GridView ID="idADDRESS" runat="server" CssClass="nGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
+                                                
+                                            </asp:GridView>
+                                        </div>
+                                        <%--<div class="gridDivAdresKisi">
                                             <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <EditRowStyle BackColor="#2461BF" />
@@ -301,7 +305,7 @@
                                                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                             </asp:GridView>
-                                        </div>
+                                        </div>--%>
                                     </td>
                                 </tr>
                             </table>
@@ -314,7 +318,12 @@
                                 <tr>
 
                                     <td>
-                                        <div class="gridDivTelefonKisi">
+                                        <div class="gridDivTelefon">
+                                            <asp:GridView ID="idPHONE" runat="server" CssClass="nGrid"  AlternatingRowStyle-CssClass="alt" EmptyDataText="İletişim bilgisi mevcut değil.">
+                                                
+                                            </asp:GridView>
+                                        </div>
+                                        <<%--div class="gridDivTelefonKisi">
                                             <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <EditRowStyle BackColor="#2461BF" />
@@ -328,7 +337,7 @@
                                                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                             </asp:GridView>
-                                        </div>
+                                        </div>--%>
 
                                     </td>
                                 </tr>

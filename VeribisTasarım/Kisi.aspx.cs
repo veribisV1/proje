@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -18,10 +20,14 @@ namespace VeribisTasarım
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
-                    var contactCode = Convert.ToInt32((Request.QueryString["param"]));
+                    var contactCode = Convert.ToInt32((Request.QueryString["param"]));                    
                     idCONTACT_CODE.Text = contactCode.ToString();
+                    adresDoldur(Convert.ToInt32(contactCode));
+                    telefonDoldur(Convert.ToInt32(contactCode));
                     secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", contactCode));
+
                 }
+                
             }
         }
 
@@ -45,6 +51,31 @@ namespace VeribisTasarım
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
             #endregion
 
+        }
+
+        private void adresDoldur(int contactCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+           
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ÜLKE,  ADDRESS.CITY AS İL ,ADDRESS.COUNTY1 AS İLÇE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
+            sorgu.Append(contactCode);
+            DataTable tablo = db.get(sorgu.ToString());
+            idADDRESS.DataSource = tablo;
+            idADDRESS.DataBind();
+
+        }
+
+        private void telefonDoldur(int contactCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND CONTACT_CODE=");
+            sorgu.Append(contactCode);
+            DataTable tablo = db.get(sorgu.ToString());
+            idPHONE.DataSource = tablo;
+            idPHONE.DataBind();
         }
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)

@@ -398,9 +398,7 @@
 
                                     <td>
                                         <div class="gridDivAdres">
-                                           <%-- <asp:GridView ID="idADDRESS" runat="server" CssClass="nGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
-                                                
-                                            </asp:GridView>--%>
+                                          
 
                                              <asp:GridView ID="idADDRESS" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">

@@ -58,7 +58,7 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
            
-            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ÜLKE,  ADDRESS.CITY AS İL ,ADDRESS.COUNTY1 AS İLÇE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
+            sorgu.Append("SELECT ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ULKE,  ADDRESS.CITY AS IL ,ADDRESS.COUNTY1 AS ILCE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
             sorgu.Append(contactCode);
             DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
@@ -71,7 +71,7 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             
-            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND CONTACT_CODE=");
+            sorgu.Append("SELECT PHONE_CODE, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND CONTACT_CODE=");
             sorgu.Append(contactCode);
             DataTable tablo = db.get(sorgu.ToString());
             idPHONE.DataSource = tablo;
@@ -116,7 +116,20 @@ namespace VeribisTasarım
             formTemizle(this);
         }
 
-    
+        protected void editPhone(object sender, EventArgs e)
+        {
+            ImageButton btn = (ImageButton)sender;
+            string code = btn.CommandArgument;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Phone", "OpenPage('TelefonEkle.aspx?edit=" + code + "')", true);
+
+        }
+        protected void editAddress(object sender, EventArgs e)
+        {
+            ImageButton btn = (ImageButton)sender;
+            string code = btn.CommandArgument;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Adres", "OpenPage('AdresEkle.aspx?edit=" + code + "')", true);
+
+        }
 
 
        

@@ -82,7 +82,7 @@
                                      </td>
 
                                      <td>
-                                         <asp:Button ID="idButtonTelefonIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" />
+                                         <asp:Button ID="idButtonTelefonIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" OnClientClick="parent.$.fancybox.close();" />
                                      </td>
                                  </tr>
                              </table>

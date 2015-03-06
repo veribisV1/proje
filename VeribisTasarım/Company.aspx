@@ -10,6 +10,18 @@
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
 
+    <script>
+        function ShowTelefon(parametre)
+        {
+            OpenPage('TelefonEkle.aspx?edit=', parametre, 600, 400);
+            return false;
+        }
+
+        function ShowAdres(parametre) {
+            OpenPage('AdresEkle.aspx?edit=', parametre, 600, 400);
+            return false;
+        }
+    </script>
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
@@ -414,7 +426,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editAddress" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("ADDRESS_CODE", "ShowAdres({0});return false;") %>' CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
 
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
@@ -497,7 +509,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editPhone" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("PHONE_CODE", "ShowTelefon({0});return false;") %>' CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
 
                                                     </ItemTemplate>
                                                 </asp:TemplateField>

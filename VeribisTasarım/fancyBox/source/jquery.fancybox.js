@@ -1860,7 +1860,7 @@
 			//if (this.overlay && !F.isActive) {
 			if (this.overlay && !F.coming) {
 			    this.overlay.fadeOut(opts.speedOut, $.proxy(this.close, this));
-			   
+			
 			}
 			
 		}

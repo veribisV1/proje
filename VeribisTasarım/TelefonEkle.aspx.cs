@@ -48,18 +48,17 @@ namespace VeribisTasarım
                 if (String.IsNullOrEmpty(idPHONE_CODE.Text))
                 {
                     Company_Code = kaydet("pInsertPhone");
+                   
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdatePhone");
+                   
                 }
-                if (Company_Code != -1)
-                {
-                    formTemizle(this);
-                }
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
             }
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
+          
         }
 
         private void ekranDoldur()

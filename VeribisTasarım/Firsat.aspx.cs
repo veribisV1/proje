@@ -24,13 +24,13 @@ namespace VeribisTasarım
                     //editIcerikYerlestir();
 
                     secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));
-                    idOPPORTUNITY_CODE.Text = "0";
+                 
 
                     gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
                 }
             }
-            idOPPORTUNITY_CODE.Text = "0";
-            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+         
+            gridDoldur(GridView1, "0");
 
             //secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "1"));
             //idOPPORTUNITY_CODE.Text = "1";

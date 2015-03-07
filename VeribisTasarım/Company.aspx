@@ -5,8 +5,6 @@
 
     <script src="Content/js/metro/metro-tab-control.js"></script>
 
-
-
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
 
@@ -419,7 +417,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 
@@ -502,7 +500,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 

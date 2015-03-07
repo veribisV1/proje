@@ -480,7 +480,7 @@ namespace VeribisTasarım.Controller
         }
         public Dictionary<string, string> getTeklifCinsi()
         {
-            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("70"));
+            Dictionary<string, string> liste = db.getListEleman(getSQL("70"));
             return liste;
         }
         public Dictionary<string, string> getFirsatCinsi()

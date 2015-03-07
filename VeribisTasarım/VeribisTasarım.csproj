@@ -103,6 +103,7 @@
     <Content Include="image\grd_pgr.png" />
     <Content Include="image\logo1.png" />
     <Content Include="Kisi.aspx" />
+    <Content Include="KisiListe.aspx" />
     <Content Include="Numune.aspx" />
     <Content Include="Proforma.aspx" />
     <Content Include="script\ASPSnippets_Pager.min.js" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="Kisi.aspx.designer.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KisiListe.aspx.cs">
+      <DependentUpon>KisiListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KisiListe.aspx.designer.cs">
+      <DependentUpon>KisiListe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Numune.aspx.cs">
       <DependentUpon>Numune.aspx</DependentUpon>

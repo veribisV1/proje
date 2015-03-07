@@ -152,7 +152,7 @@
                                         <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonAdresKaydet_Click" />
                                     </td>
                                     <td>
-                                        <asp:Button ID="idButtonAdresIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" />
+                                        <asp:Button ID="idButtonAdresIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" OnClientClick="parent.$.fancybox.close();" />
                                     </td>
                                 </tr>
                     

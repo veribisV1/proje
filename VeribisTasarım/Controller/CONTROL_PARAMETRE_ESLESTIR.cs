@@ -202,7 +202,15 @@ namespace VeribisTasarım.Controller
                         if (paramtereListesi[item].Equals("-1"))
                             continue;
                         TextBox elemanText = (TextBox)eleman;
-                        elemanText.Text = paramtereListesi[item];
+                        if (elemanText.TextMode == TextBoxMode.Date)
+                        {
+                            elemanText.Text = Convert.ToDateTime(paramtereListesi[item]).ToString("yyyy-MM-dd");
+                        }
+                        else
+                        {
+                            elemanText.Text = paramtereListesi[item];
+                        }
+                        
                     }
                     else
                         if (eleman.GetType() == typeof(DropDownList))

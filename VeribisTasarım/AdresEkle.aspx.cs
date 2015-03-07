@@ -15,14 +15,28 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
-                //if (Request.QueryString["firma"]!=null)
-                //{
-                //    idCOMPANY_CODE.Text = Request.QueryString["firma"].ToString();
-                //}
-
-                if (Request.QueryString["param"] != null)
+                if (!String.IsNullOrEmpty(Request.QueryString["edit"]))
                 {
-                    idCOMPANY_CODE.Text = Request.QueryString["param"].ToString();
+                    var addressCode = Convert.ToInt32(Request.QueryString["edit"]);
+                    secilenElemanDetayiGetir(this, "ADDRESS", "ADDRESS_CODE", String.Format("{0}", addressCode));
+                }
+                else
+                {
+
+                    if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                    {
+                        var qString = Request.QueryString["param"].ToString();
+                        if (qString.Contains('-'))
+                        {
+                            idCOMPANY_CODE.Text = qString.Split('-')[0].ToString();
+                            idCONTACT_CODE.Text = qString.Split('-')[1].ToString();
+                        }
+                        else
+                        {
+                            idCOMPANY_CODE.Text = qString;
+                        }
+
+                    }
                 }
                 
             }
@@ -42,14 +56,11 @@ namespace VeribisTasarım
                 {
                     Company_Code = kaydet("pUpdateAddress");
                 }
-                if (Company_Code != -1)
-                {
-                    formTemizle(this);
-                }
-            }
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
+           
+            }           
         }
-
 
         private void ekranDoldur()
         {

@@ -25,12 +25,17 @@ namespace VeribisTasarım
 
                     secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));
                     idOPPORTUNITY_CODE.Text = "0";
+
                     gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
                 }
             }
+            idOPPORTUNITY_CODE.Text = "0";
+            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+
             //secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "1"));
             //idOPPORTUNITY_CODE.Text = "1";
             //gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+
 
         }
         private void ekranDoldur()
@@ -70,7 +75,7 @@ namespace VeribisTasarım
             {
                 oppurtunityCode = kaydet("pUpdateOppMaster");
             }
-           
+
 
         }
 

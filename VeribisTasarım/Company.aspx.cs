@@ -21,8 +21,12 @@ namespace VeribisTasarım
            
             if (!IsPostBack)
             {
-                //adresDoldur();
-                //telefonDoldur();
+                if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+                {
+                    adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+                    telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+                }
+              
                 ekranDoldur();
                 gridDoldur();
                 
@@ -122,21 +126,6 @@ namespace VeribisTasarım
             secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", String.Format("{0}", code));
             adresDoldur(Convert.ToInt32(code));
             telefonDoldur(Convert.ToInt32(code));
-        }
-
-        protected void editPhone(object sender, EventArgs e)
-        {
-            ImageButton btn = (ImageButton)sender;
-            string code = btn.CommandArgument;
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Phone", "OpenPage('TelefonEkle.aspx?edit=" + code + "')", true);
-           
-        }
-        protected void editAddress(object sender, EventArgs e)
-        {
-            ImageButton btn = (ImageButton)sender;
-            string code = btn.CommandArgument;
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Adres", "OpenPage('AdresEkle.aspx?edit=" + code + "')", true);
-            
         }
 
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)

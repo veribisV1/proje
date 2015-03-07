@@ -15,25 +15,28 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
-               
-                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
-                {
-                    var qString = Request.QueryString["param"].ToString();
-                    if (qString.Contains('-'))
-                    {
-                        idCOMPANY_CODE.Text = qString.Split('-')[0].ToString();
-                        idCONTACT_CODE.Text = qString.Split('-')[1].ToString();
-                    }
-                    else
-                    {
-                        idCOMPANY_CODE.Text = qString;
-                    }
-                   
-                }
                 if (!String.IsNullOrEmpty(Request.QueryString["edit"]))
                 {
                     var addressCode = Convert.ToInt32(Request.QueryString["edit"]);
                     secilenElemanDetayiGetir(this, "ADDRESS", "ADDRESS_CODE", String.Format("{0}", addressCode));
+                }
+                else
+                {
+
+                    if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                    {
+                        var qString = Request.QueryString["param"].ToString();
+                        if (qString.Contains('-'))
+                        {
+                            idCOMPANY_CODE.Text = qString.Split('-')[0].ToString();
+                            idCONTACT_CODE.Text = qString.Split('-')[1].ToString();
+                        }
+                        else
+                        {
+                            idCOMPANY_CODE.Text = qString;
+                        }
+
+                    }
                 }
                 
             }

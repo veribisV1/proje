@@ -51,10 +51,10 @@
                                     <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" OnClick="idButtonKisiEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonKisiEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonKisiEkleKaydet_Click" />
@@ -293,7 +293,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
                                     <td>
@@ -344,7 +344,7 @@
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="İL" ItemStyle-Width="5%">
+                                                <asp:TemplateField  HeaderText="İL" ItemStyle-Width="5%">
                                                     <ItemTemplate>
                                                         <asp:Label ID="lblIL" runat="server" Text='<%# Eval("IL")%>'></asp:Label>
                                                     </ItemTemplate>
@@ -368,7 +368,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
 

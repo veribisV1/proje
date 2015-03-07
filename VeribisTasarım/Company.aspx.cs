@@ -128,6 +128,16 @@ namespace VeribisTasarım
             telefonDoldur(Convert.ToInt32(code));
         }
 
+        protected void telefonSil(object sender, EventArgs e)
+        {
+            ImageButton silButon = (ImageButton)sender;
+            string phoneCode = silButon.CommandArgument;
+            DBARACISI dbadapter = new DBARACISI();
+            //recursiveElemanBul(this);
+            dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
+            telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+        }
+
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);

@@ -478,6 +478,11 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("61"));
             return liste;
         }
+        public Dictionary<string, string> getTeklifCinsi()
+        {
+            Dictionary<string, string> liste = db.getListEleman(getSQLCitems("70"));
+            return liste;
+        }
         public Dictionary<string, string> getFirsatCinsi()
         {
             Dictionary<string, string> liste = db.getListEleman(getSQLCitems("44"));

@@ -38,7 +38,7 @@ namespace VeribisTasarım
 
             #region Aktivite Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());         
-            idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFirsatCinsi());
+            idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getTeklifCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idREVISION = dbGetir.doldur(idREVISION, dbGetir.getRevizyon());
             idDELIVERY_TYPE = dbGetir.doldur(idDELIVERY_TYPE, dbGetir.getTeslimSekliFirsat());

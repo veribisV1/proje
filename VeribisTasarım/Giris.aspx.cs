@@ -25,17 +25,16 @@ namespace VeribisTasarım
            
             if (!String.IsNullOrEmpty(_txtTicariKod.Text))
             {
-                //Hangi veritabaninin kullanilacagi bilgisi 
-
-                //DBARACISI dbAraci = new DBARACISI();
-                //Session["DB_NAME"] = dbAraci.getDatabase(_txtTicariKod.Text);
+               
 
                
                 //Kullanıcı girişi kontrol
                 DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();
                 if (db.validateUser(_txtKullaniciAdi.Text, _txtSifre.Text))
                 {
+                    Session["USER_CODE"] = db.getUserID(_txtKullaniciAdi.Text, _txtSifre.Text);
                     FormsAuthentication.RedirectFromLoginPage(_txtKullaniciAdi.Text, false);
+                   
                 }
                 else
                 {

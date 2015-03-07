@@ -70,10 +70,24 @@ namespace VeribisTasarım.Controller
             sorgu.Append("'");
 
             Dictionary<string, string> liste = db.getEleman(sorgu.ToString());
+           
             if (liste.Count != 0)
                 return true;
             else
                 return false;
+        }
+
+        public int getUserID(string username, string password)
+        {
+            StringBuilder sorgu = new StringBuilder();
+            sorgu.Append("SELECT USER_CODE FROM USERS WHERE USER_NAME='");
+            sorgu.Append(username);
+            sorgu.Append("'");
+            sorgu.Append(" AND USER_PASSWORD='");
+            sorgu.Append(password);
+            sorgu.Append("'");
+            Dictionary<string, string> liste = db.getEleman(sorgu.ToString());
+            return Convert.ToInt32(liste.Values.ToList()[0]);
         }
 
         public Dictionary<string, string> getMarka()
@@ -537,5 +551,7 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> liste = db.getListEleman(getSQL("7"));
             return liste;
         }
+
+       
     }
 }

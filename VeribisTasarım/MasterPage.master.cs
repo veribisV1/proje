@@ -16,6 +16,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if (!IsPostBack)
         {
             MenuGoster();
+
+            var gelenUSERID = Session["USER_CODE"];
         }
     }
     //private void MenuGoster()

@@ -138,6 +138,16 @@ namespace VeribisTasarım
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
 
+        protected void adresSil(object sender, EventArgs e)
+        {
+            ImageButton silButon = (ImageButton)sender;
+            string addressCode = silButon.CommandArgument;
+            DBARACISI dbadapter = new DBARACISI();
+            //recursiveElemanBul(this);
+            dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
+            adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+        }
+
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);

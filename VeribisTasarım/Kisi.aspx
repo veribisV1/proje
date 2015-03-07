@@ -31,7 +31,7 @@
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#KisiEkle">Kişi Ekle</a></li>
+                <li id="kisi"><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#AktivitePlanla">Aktivite Planla</a></li>
                 <li><a href="#NotEkle">Not Ekle</a></li>
                 <li><a href="#Fırsat">Fırsat</a></li>

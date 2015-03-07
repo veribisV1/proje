@@ -131,7 +131,7 @@ namespace VeribisTasarım
 
       
             
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('.tab-control').tabcontrol();", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             
 
         }

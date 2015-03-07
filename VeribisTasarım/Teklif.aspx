@@ -83,7 +83,8 @@
 
                         <hr />
                         <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
-                        <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="False" Text="2"></asp:TextBox>
+                        <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="false" Text="2"></asp:TextBox>
+                     
                         <div class="ALAN4">
                             <table class="KisiTable" id="Table1">
                                 <tr>

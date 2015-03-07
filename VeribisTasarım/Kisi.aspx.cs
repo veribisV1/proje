@@ -78,6 +78,26 @@ namespace VeribisTasarım
             idPHONE.DataBind();
         }
 
+        protected void telefonSil(object sender, EventArgs e)
+        {
+            ImageButton silButon = (ImageButton)sender;
+            string phoneCode = silButon.CommandArgument;
+            DBARACISI dbadapter = new DBARACISI();
+            //recursiveElemanBul(this);
+            dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
+            telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+        }
+
+        protected void adresSil(object sender, EventArgs e)
+        {
+            ImageButton silButon = (ImageButton)sender;
+            string addressCode = silButon.CommandArgument;
+            DBARACISI dbadapter = new DBARACISI();
+            //recursiveElemanBul(this);
+            dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
+            adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+        }
+
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
 

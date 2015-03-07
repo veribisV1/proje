@@ -5,7 +5,26 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script>
+        function GoToPage(url, companyCode, contactCode) {
+            window.location.href = url;
 
+            if (companyCode != '' && companyCode != -1) {
+                if (contactCode != '' && contactCode != -1) {
+                    window.location.href = url + '?param=' + companyCode + '-' + contactCode;
+                }
+                else {
+                    window.location.href = url + '?param=' + companyCode;
+                }
+            }
+            else {
+                if (contactCode != '' && contactCode != -1) {
+                    window.location.href = url + '?param=-' + contactCode;
+                }
+            }
+
+        }
+    </script>
      <script>
          function ShowTelefon(parametre) {
              OpenPage('TelefonEkle.aspx?edit=', parametre, 600, 400);
@@ -28,17 +47,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
         <h3>KİŞİ KARTI</h3>
-        <div class="tab-control" data-role="tab-control">
+        <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
+<<<<<<< HEAD
                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
                 <li id="kisi"><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#AktivitePlanla">Aktivite Planla</a></li>
+=======
+                <li class="active"><a href="#KisiEkle">Kişi Ekle</a></li>
+                <li><a href="#AktivitePlanla" onclick="GoToPage('Aktivite.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Aktivite Planla</a></li>
+>>>>>>> bf1a1cf0ac38f9b99892f9708d3c126bd720c932
                 <li><a href="#NotEkle">Not Ekle</a></li>
-                <li><a href="#Fırsat">Fırsat</a></li>
-                <li><a href="#Teklif">Teklif</a></li>
-                <li><a href="#Numune">Numune</a></li>
-                <li><a href="#Proforma">Proforma</a></li>
-                <li><a href="#Fatura">Fatura</a></li>
+                <li><a href="#Firsat" onclick="GoToPage('Firsat.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Fırsat</a></li>
+                <li><a href="#Teklif" onclick="GoToPage('Teklif.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Teklif</a></li>
+                <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Numune</a></li>
+                <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Proforma</a></li>
+                <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Fatura</a></li>
                 <li><a href="#EkForm">Ek Form</a></li>
                 <li><a href="#AileBilgileri">Aile Bilgileri</a></li>
             </ul>
@@ -110,10 +134,10 @@
                                     <asp:Button ID="idButtonKisiEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" OnClick="idButtonKisiEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonKisiEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonKisiEkleKaydet_Click" />
@@ -352,7 +376,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                            <asp:Button ID="idAdresEkle" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
                                     <td>
@@ -364,7 +388,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="adresSil"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 
@@ -403,7 +427,7 @@
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="İL" ItemStyle-Width="5%">
+                                                <asp:TemplateField  HeaderText="İL" ItemStyle-Width="5%">
                                                     <ItemTemplate>
                                                         <asp:Label ID="lblIL" runat="server" Text='<%# Eval("IL")%>'></asp:Label>
                                                     </ItemTemplate>
@@ -427,7 +451,7 @@
                         </div>
                         <div class="ALAN6">
                             <br />
-                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
+                            <asp:Button ID="idTelefonEkle" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" OnClientClick="if($('#ContentPlaceHolder1_idCONTACT_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val()+'-'+$('#ContentPlaceHolder1_idCONTACT_CODE').val(),600,400);return false;" />
                             <table class="KisiTable">
                                 <tr>
 
@@ -440,7 +464,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 
@@ -531,7 +555,7 @@
                     </div>
 
                 </div>
-                <div class="frame" id="Fırsat"></div>
+                <div class="frame" id="Firsat"></div>
                 <div class="frame" id="Teklif"></div>
                 <div class="frame" id="Numune"></div>
                 <div class="frame" id="Proforma"></div>

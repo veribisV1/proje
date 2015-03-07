@@ -56,7 +56,7 @@ namespace VeribisTasarım
             }
             if (rowOrderCode != -1)
             {
-                formTemizle(this);
+              //  formTemizle(this);
             }
             // }
             //else

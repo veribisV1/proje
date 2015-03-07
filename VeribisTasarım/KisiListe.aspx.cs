@@ -15,11 +15,12 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
 
-                if (Request.QueryString["param"] != null)
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     idCOMPANY_CODE.Text = Request.QueryString["param"].ToString();
+                    gridDoldur();
                 }
-                gridDoldur();
+               
             }
         }
 

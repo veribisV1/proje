@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    
     <style>
         button, input {
             line-height: normal;
@@ -243,7 +244,7 @@
         }
 
         body.login-page .input-group-addon {
-            background-color: #3366cc;
+            background-color: #1ba1e2;
         }
 
         .form-control {
@@ -316,7 +317,7 @@
 
     
 </head>
-<body class="login-page ">
+<body class="login-page">
     <form id="form1" runat="server">
 
         <section class="content login-page">

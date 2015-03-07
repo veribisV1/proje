@@ -23,14 +23,19 @@ namespace VeribisTasarım
                     //btnStokKodAra_Click(sender, e);
                     //editIcerikYerlestir();
 
-                    secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));                 
-                    idOPPORTUNITY_CODE.Text = "1";
+                    secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));
+                    idOPPORTUNITY_CODE.Text = "0";
+
                     gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
                 }
             }
+            idOPPORTUNITY_CODE.Text = "0";
+            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+
             //secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "1"));
             //idOPPORTUNITY_CODE.Text = "1";
             //gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+
 
         }
         private void ekranDoldur()
@@ -39,7 +44,7 @@ namespace VeribisTasarım
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             #region Aktivite Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-          
+
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFirsatCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idREVISION = dbGetir.doldur(idREVISION, dbGetir.getRevizyon());
@@ -52,25 +57,26 @@ namespace VeribisTasarım
             idWHY_LOST = dbGetir.doldur(idWHY_LOST, dbGetir.getNedenKaybettik());
             idRIVAL_COMPANY_CODE = dbGetir.doldur(idRIVAL_COMPANY_CODE, dbGetir.getRakipFirma());
             #endregion
-        }   
+        }
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
         {
 
-                int oppurtunityCode = -1;
-                //Tipi kontrol edilecek
-                if (String.IsNullOrEmpty(idOPPORTUNITY_CODE.Text))
-                {
-                    oppurtunityCode = kaydet("pInsertOppMaster");
-                }
-                else
-                {
-                    oppurtunityCode = kaydet("pUpdateOppMaster");
-                }
+            int oppurtunityCode = -1;
+            //Tipi kontrol edilecek
+            if (String.IsNullOrEmpty(idOPPORTUNITY_CODE.Text))
+            {
+                oppurtunityCode = kaydet("pInsertOppMaster");
                 if (oppurtunityCode != -1)
                 {
-                    formTemizle(this);
+                    idOPPORTUNITY_CODE.Text = oppurtunityCode.ToString();
                 }
-            
+            }
+            else
+            {
+                oppurtunityCode = kaydet("pUpdateOppMaster");
+            }
+
+
         }
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,6 +85,6 @@ namespace VeribisTasarım
             idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
 
-         
+
     }
 }

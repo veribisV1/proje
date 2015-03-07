@@ -31,7 +31,7 @@
                                     <asp:Button ID="idButtonFirsatEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonFirsatEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonFirsatEkleKaydet_Click" />
+                                    <asp:Button ID="idButtonFirsatEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonFirsatEkleKaydet_Click" OnClientClick="return confirm('Firsat bilgisi kaydedilmiştir.')" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonFirsatEkleSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
@@ -40,6 +40,7 @@
                         </table>
 
                         <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
+                        <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="False" Text="1"></asp:TextBox>
                         <hr />
                         <div class="ALAN4">
 

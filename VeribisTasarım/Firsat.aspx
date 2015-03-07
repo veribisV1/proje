@@ -23,7 +23,76 @@
                 <li class="active"><a href="#FirsatEkle">Fırsat Ekle</a></li>
             </ul>
              <div class="frames" style="float: left; width: 100%;">
-                <div class="frame" id="FirsatEkle">
+               
+                   <div class="frame" id="ListeAdi">
+                    <div class="KisiTableHizalama">
+                        <table>
+                            <tr>
+
+                                <td>
+                                    <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="EvrakListesiArama" Height="20px" Width="13%"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="EvrakListesiDropdownDurum"></asp:DropDownList>
+                        <asp:Label ID="idLabelFirsatBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBaslangicTarih"></asp:TextBox><br />
+                        <asp:Label ID="idLabelFirsatBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBitisTarih"></asp:TextBox>
+                        <asp:Button ID="idUrunHizmetDetayli" runat="server" Text="Ürün Hizmet Detaylı" CssClass="UrunHizmetDetayli" />
+
+
+                        <hr />
+                       <asp:GridView ID="grFirsatListe" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="OPPORTUNITY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="FIRSAT EKLEYİNİZ...">
+
+                            <Columns>
+
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editFirsat" CommandArgument='<%# Eval("OPPORTUNITY_CODE")%>'></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TOTAL_UPB">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTOTAL_UPB" runat="server" Text='<%# Eval("TOTAL_UPB")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FREE_STOK">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblFREE_STOK" runat="server"
+                                            Text='<%# Eval("FREE_STOK")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TAX">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTAX" runat="server" Text='<%# Eval("TAX")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TOTAL">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTOTAL" runat="server" Text='<%# Eval("TOTAL")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="AVAILABLE_DATE">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblAVAILABLE_DATE" runat="server" Text='<%# Eval("AVAILABLE_DATE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
+                    </div>
+                </div>
+                 
+                  <div class="frame" id="FirsatEkle">
                     <div class="KisiTableHizalama">
                         <table>
                             <tr>
@@ -409,43 +478,7 @@
 
                     <%-- gridle ilgili işlemler bitiyor --%>
                 </div>
-                <div class="frame" id="ListeAdi">
-                    <div class="KisiTableHizalama">
-                        <table>
-                            <tr>
-
-                                <td>
-                                    <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="EvrakListesiArama" Height="20px" Width="13%"></asp:TextBox>
-                                </td>
-                                <td>
-                                    <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" />
-                                </td>
-                            </tr>
-                        </table>
-
-                        <asp:Label ID="idLabelFirsatDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label><asp:DropDownList ID="idDropDownFirsatDurum" runat="server" CssClass="EvrakListesiDropdownDurum"></asp:DropDownList>
-                        <asp:Label ID="idLabelFirsatBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label><asp:TextBox ID="idFirsatBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBaslangicTarih"></asp:TextBox><br />
-                        <asp:Label ID="idLabelFirsatBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label><asp:TextBox ID="idFirsatBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBitisTarih"></asp:TextBox>
-                        <asp:Button ID="idUrunHizmetDetayli" runat="server" Text="Ürün Hizmet Detaylı" CssClass="UrunHizmetDetayli" />
-
-
-                        <hr />
-                        <div class="ALAN12">
-                            <div class="KisiTableHizalama">
-                                <table class="KisiTable">
-                                    <tr>
-                                        <td>
-
-                                            <%-- gridle ilgili işlemler başlıyor --%>
-
-                                            <%-- gridle ilgili işlemler bitiyor --%>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
         </div>
 

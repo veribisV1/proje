@@ -5,7 +5,26 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script>
+        function GoToPage(url, companyCode, contactCode) {
+            window.location.href = url;
 
+            if (companyCode != '' && companyCode != -1) {
+                if (contactCode != '' && contactCode != -1) {
+                    window.location.href = url + '?param=' + companyCode + '-' + contactCode;
+                }
+                else {
+                    window.location.href = url + '?param=' + companyCode;
+                }
+            }
+            else {
+                if (contactCode != '' && contactCode != -1) {
+                    window.location.href = url + '?param=-' + contactCode;
+                }
+            }
+
+        }
+    </script>
      <script>
          function ShowTelefon(parametre) {
              OpenPage('TelefonEkle.aspx?edit=', parametre, 600, 400);
@@ -33,11 +52,11 @@
                 <li class="active"><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#AktivitePlanla">Aktivite Planla</a></li>
                 <li><a href="#NotEkle">Not Ekle</a></li>
-                <li><a href="#Fırsat">Fırsat</a></li>
-                <li><a href="#Teklif">Teklif</a></li>
-                <li><a href="#Numune">Numune</a></li>
-                <li><a href="#Proforma">Proforma</a></li>
-                <li><a href="#Fatura">Fatura</a></li>
+                <li><a href="#Firsat" onclick="GoToPage('Firsat.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Fırsat</a></li>
+                <li><a href="#Teklif" onclick="GoToPage('Teklif.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Teklif</a></li>
+                <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Numune</a></li>
+                <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Proforma</a></li>
+                <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Fatura</a></li>
                 <li><a href="#EkForm">Ek Form</a></li>
                 <li><a href="#AileBilgileri">Aile Bilgileri</a></li>
             </ul>
@@ -472,7 +491,7 @@
                     </div>
 
                 </div>
-                <div class="frame" id="Fırsat"></div>
+                <div class="frame" id="Firsat"></div>
                 <div class="frame" id="Teklif"></div>
                 <div class="frame" id="Numune"></div>
                 <div class="frame" id="Proforma"></div>

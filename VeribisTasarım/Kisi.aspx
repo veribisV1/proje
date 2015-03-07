@@ -5,27 +5,7 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
-    <script>
-        function GoToPage(url, companyCode,contactCode) {
-            window.location.href = url;
-
-            if (companyCode != '' && companyCode != -1) {
-                if (contactCode != '' && contactCode != -1) {
-                    window.location.href = url + '?param=' + companyCode + '-' + contactCode;
-                }
-                else {
-                    window.location.href = url + '?param=' + companyCode;
-                }
-            }
-            else {
-                if (contactCode != '' && contactCode != -1)
-                {
-                    window.location.href = url + '?param=-' + contactCode;
-                }
-            }
-           
-        }
-    </script>
+    
      <script>
          function ShowTelefon(parametre) {
              OpenPage('TelefonEkle.aspx?edit=', parametre, 600, 400);

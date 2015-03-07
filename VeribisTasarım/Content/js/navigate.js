@@ -28,3 +28,29 @@
 }
 
 
+function GoToPage(url, companyCode) {
+    window.location.href = url;
+
+    if (companyCode != '') {
+        window.location.href = url + '?param=' + companyCode;
+    }
+}
+
+function GoToPage(url, companyCode, contactCode) {
+    window.location.href = url;
+
+    if (companyCode != '' && companyCode != -1) {
+        if (contactCode != '' && contactCode != -1) {
+            window.location.href = url + '?param=' + companyCode + '-' + contactCode;
+        }
+        else {
+            window.location.href = url + '?param=' + companyCode;
+        }
+    }
+    else {
+        if (contactCode != '' && contactCode != -1) {
+            window.location.href = url + '?param=-' + contactCode;
+        }
+    }
+
+}

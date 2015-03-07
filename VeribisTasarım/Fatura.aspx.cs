@@ -20,11 +20,12 @@ namespace VeribisTasarım
                     var qString = Request.QueryString["param"].ToString();
                     if (qString.Contains('-'))
                     {
-
+                        idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                       
                     }
                     else
                     {
-
+                        idCOMPANY_CODE.SelectedValue = qString;
                     }
                 }
             }
@@ -50,11 +51,6 @@ namespace VeribisTasarım
 
         protected void idButtonFaturaEkleKaydet_Click(object sender, EventArgs e)
         {
-            //DBARACISI firma = new DBARACISI();
-            //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertOppMaster");
-            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);                                 
-            //int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
 
             int oppurtunityCode = -1;
             //Tipi kontrol edilecek

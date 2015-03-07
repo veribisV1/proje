@@ -16,26 +16,28 @@ namespace VeribisTasarım
             {
                 ekranDoldur();
 
-                if (Request.QueryString["param"] != null)
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
-                    //idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
-                    //idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
-                    //btnStokKodAra_Click(sender, e);
-                    //editIcerikYerlestir();
+                    var qString = Request.QueryString["param"].ToString();
+                    if (qString.Contains('-'))
+                    {
+                        idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                        idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
+                    }
+                    else
+                    {
+                        idCOMPANY_CODE.SelectedValue = qString;
+                    }
 
                     secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));
                     idOPPORTUNITY_CODE.Text = "0";
 
                     gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
                 }
+
             }
             idOPPORTUNITY_CODE.Text = "0";
             gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
-
-            //secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "1"));
-            //idOPPORTUNITY_CODE.Text = "1";
-            //gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
-
 
         }
         private void ekranDoldur()

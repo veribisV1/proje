@@ -39,6 +39,7 @@ namespace VeribisTasarım.Controller
             DBARACISI dbadapter = new DBARACISI();
             recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", oppCode, rowOrderNo));
+            Response.Redirect(Request.RawUrl); 
             
         }
         string oppCode;

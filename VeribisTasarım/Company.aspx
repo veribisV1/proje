@@ -7,7 +7,15 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
-   
+   <script>
+       function GoToPage(url, companyCode) {
+           window.location.href = url;
+
+           if (companyCode != '') {
+               window.location.href = url + '?param=' + companyCode;
+           }
+       }
+   </script>
     <script>
         function ShowTelefon(parametre)
         {

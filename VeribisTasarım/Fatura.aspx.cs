@@ -15,6 +15,18 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                {
+                    var qString = Request.QueryString["param"].ToString();
+                    if (qString.Contains('-'))
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
             }
             idOPPORTUNITY_CODE.Text = "35";
             gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);

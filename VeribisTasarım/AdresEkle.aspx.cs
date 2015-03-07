@@ -45,16 +45,22 @@ namespace VeribisTasarım
 
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
         {
-            int Company_Code = -1;
+            int addressCode = -1;
             if (!String.IsNullOrEmpty(idADDRESS1.Text))
             {
                 if (String.IsNullOrEmpty(idADDRESS_CODE.Text))
                 {
-                    Company_Code = kaydet("pInsertAddress");
+                    addressCode = kaydet("pInsertAddress");
                 }
                 else
                 {
-                    Company_Code = kaydet("pUpdateAddress");
+                    addressCode = kaydet("pUpdateAddress");
+                }
+
+                if (idADDRESS_TYPE_ID.SelectedValue.Equals("1") && addressCode != -1 && String.IsNullOrEmpty(idCONTACT_CODE.Text))
+                {
+                    DBARACISI db = new DBARACISI();
+                    db.set(String.Format("UPDATE COMPANY SET ADDRESS={0} WHERE COMPANY_CODE={1}", addressCode, idCOMPANY_CODE.Text));
                 }
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);

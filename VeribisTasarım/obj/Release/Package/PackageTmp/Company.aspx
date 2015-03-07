@@ -27,8 +27,8 @@
 
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#FirmaEkle">Firma Ekle</a></li>
+                <li><a href="#ListeAdi">Liste Adı</a></li>
+                <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
                 <li><a href="#MakinaParki">Makina Parkı</a></li>
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
@@ -44,26 +44,57 @@
 
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
-                        <div>
-                            <div class="menu">
-                                <asp:TextBox ID="txtSearch" runat="server" CssClass="searchText" />
-                            </div>
+                        
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">
 
-                            <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false">
-                                <Columns>
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_CODE" HeaderText="COMPANY CODE"
-                                        ItemStyle-CssClass="ContactName" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="COMPANY_NAME" HeaderText="COMPANY NAME" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="ADDRESS" HeaderText="ADDRESS" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="SECTOR" HeaderText="SECTOR" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="PHONE" HeaderText="ADDRESS" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="MAIL" HeaderText="MAIL" />
-                                    <asp:BoundField HeaderStyle-Width="150px" DataField="WEBADDRESS" HeaderText="WEB ADDRESS" />
-                                </Columns>
-                            </asp:GridView>
+                            <Columns>
 
-                            <div class="Pager"></div>
-                        </div>
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editCompany"  CommandArgument='<%# Eval("COMPANY_CODE")%>'></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FİRMA ADI">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCOMPANY_NAME" runat="server" Text='<%# Eval("COMPANY_NAME")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="ADRESS">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblADDRESS" runat="server"
+                                            Text='<%# Eval("ADDRESS")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="SEKTÖR">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblSECTOR" runat="server" Text='<%# Eval("SECTOR")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TELEFON">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblPHONE" runat="server" Text='<%# Eval("PHONE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="E-POSTA">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="WEB ADRESİ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblWEBADDRESS" runat="server" Text='<%# Eval("WEBADDRESS")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
 
                     </div>
                 </div>
@@ -77,13 +108,13 @@
                                     <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" />
+                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" OnClientClick="OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" />
+                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" />
+                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" OnClientClick="return confirm('Firma bilgisi kaydedilmiştir.')" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
@@ -361,19 +392,8 @@
 
                                     <td>
                                         <div class="gridDivAdres">
-                                            <asp:GridView ID="idADDRESS" runat="server" CssClass="gridEn" EmptyDataText="Adres bilgisi mevcut değil.">
-                                                <AlternatingRowStyle BackColor="White" />
-                                                <EditRowStyle BackColor="#2461BF" />
-                                                <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px" />
-                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                                <RowStyle BackColor="#EFF3FB" />
-                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                            <asp:GridView ID="idADDRESS" runat="server" CssClass="nGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
+                                                
                                             </asp:GridView>
                                         </div>
                                     </td>
@@ -395,19 +415,8 @@
 
                                     <td>
                                         <div class="gridDivTelefon">
-                                            <asp:GridView ID="idPHONE" runat="server" CssClass="gridEn" EmptyDataText="İletişim bilgisi mevcut değil.">
-                                                <AlternatingRowStyle BackColor="White" />
-                                                <EditRowStyle BackColor="#2461BF" />
-                                                <EmptyDataRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" Height="50px" />
-                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                                <RowStyle BackColor="#EFF3FB" />
-                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                            <asp:GridView ID="idPHONE" runat="server" CssClass="nGrid"  AlternatingRowStyle-CssClass="alt" EmptyDataText="İletişim bilgisi mevcut değil.">
+                                                
                                             </asp:GridView>
                                         </div>
 

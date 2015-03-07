@@ -1859,8 +1859,10 @@
 			// (e.g., it is not being open using afterClose callback)
 			//if (this.overlay && !F.isActive) {
 			if (this.overlay && !F.coming) {
-				this.overlay.fadeOut(opts.speedOut, $.proxy( this.close, this ));
+			    this.overlay.fadeOut(opts.speedOut, $.proxy(this.close, this));
+			
 			}
+			
 		}
 	};
 

@@ -51,7 +51,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%">
+                                        <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%" OnSelectedIndexChanged="idCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="true">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -259,7 +259,7 @@
 
                                         <%-- gridle ilgili işlemler başlıyor --%>
 
-                                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClientClick="OpenPage('FirsatEkle.aspx','',700,500);return false;" Width="75px" />
+                                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt" OnClick="gridSatirEkle" Width="75px" />
 
                                         <asp:GridView ID="GridView1" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ROW_ORDER_NO" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">

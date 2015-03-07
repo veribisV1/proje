@@ -22,7 +22,7 @@ namespace VeribisTasarım
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
 
             #region Aktivite Ekle DropDownları doldur
-            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getFirma());
+           
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idACTIVITY_TYPE = dbGetir.doldur(idACTIVITY_TYPE, dbGetir.getAktiviteTipi());
             idJOINER_CODE = dbGetir.doldur(idJOINER_CODE, dbGetir.getAktiviteSonucGrubu());
@@ -56,6 +56,12 @@ namespace VeribisTasarım
             }
             else
                 BosMesaji();
+        }
+
+        protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
     }
 }

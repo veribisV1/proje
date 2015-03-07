@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,6 +18,16 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {               
                 ekranDoldur();
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                {
+                    var contactCode = Convert.ToInt32((Request.QueryString["param"]));                    
+                    idCONTACT_CODE.Text = contactCode.ToString();
+                    adresDoldur(Convert.ToInt32(contactCode));
+                    telefonDoldur(Convert.ToInt32(contactCode));
+                    secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", contactCode));
+
+                }
+                
             }
         }
 
@@ -41,31 +53,54 @@ namespace VeribisTasarım
 
         }
 
+        private void adresDoldur(int contactCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+           
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ÜLKE,  ADDRESS.CITY AS İL ,ADDRESS.COUNTY1 AS İLÇE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
+            sorgu.Append(contactCode);
+            DataTable tablo = db.get(sorgu.ToString());
+            idADDRESS.DataSource = tablo;
+            idADDRESS.DataBind();
+
+        }
+
+        private void telefonDoldur(int contactCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            
+            sorgu.Append("SELECT GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND CONTACT_CODE=");
+            sorgu.Append(contactCode);
+            DataTable tablo = db.get(sorgu.ToString());
+            idPHONE.DataSource = tablo;
+            idPHONE.DataBind();
+        }
+
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
-
-            //DBARACISI firma = new DBARACISI();
-            //Dictionary<string, string> paramtereListesi = firma.getStoreParametre("pInsertContact");
-            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
-            //int companyCode = firma.setStore("pInsertContact", dataListesi);
-
 
             int contactCode = -1;
             if (!String.IsNullOrEmpty(idNAME.Text))
             {
-                if (!String.IsNullOrEmpty(idNAME.Text))
+
+                if (String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
                     contactCode = kaydet("pInsertContact");
+                    if (contactCode != -1)
+                    {
+                        idCONTACT_CODE.Text = contactCode.ToString();
+                      
+                        
+                    }
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
                 else
                 {
                     contactCode = kaydet("pUpdateContact");
                 }
-                if (contactCode != -1)
-                {
-                    formTemizle(this);
-                }
+                
             }
             else
                 BosMesaji();  
@@ -74,6 +109,11 @@ namespace VeribisTasarım
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
         {
    
+        }
+
+        protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
         }
 
     

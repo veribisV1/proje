@@ -14,18 +14,36 @@ namespace VeribisTasarım
         {
             if (!IsPostBack)
             {
-                ekranDoldur();               
+                ekranDoldur();
+
+                if (Request.QueryString["param"] != null)
+                {
+                    //idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
+                    //idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
+                    //btnStokKodAra_Click(sender, e);
+                    //editIcerikYerlestir();
+
+                    secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));                 
+                    idOPPORTUNITY_CODE.Text = "1";
+                    gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+                }
             }
            idOPPORTUNITY_CODE.Text = "0";
            gridDoldur(GridView1,idOPPORTUNITY_CODE.Text);
+
+            //secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "1"));
+            //idOPPORTUNITY_CODE.Text = "1";
+            //gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+
+
         }
         private void ekranDoldur()
         {
-            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
 
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             #region Aktivite Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getFirma());
+          
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFirsatCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idREVISION = dbGetir.doldur(idREVISION, dbGetir.getRevizyon());
@@ -57,6 +75,12 @@ namespace VeribisTasarım
                     formTemizle(this);
                 }
             
+        }
+
+        protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
 
          

@@ -56,7 +56,7 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="FİRMA KODU">
+                                <asp:TemplateField HeaderText="FİRMA KODU" >
                                     <ItemTemplate>
                                         <asp:Label ID="lblCOMPANY_CODE" runat="server" Text='<%# Eval("COMPANY_CODE")%>'></asp:Label>
                                     </ItemTemplate>
@@ -147,8 +147,7 @@
                                         <td width="2%">:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="idNAME" MaxLength="200" Width="75%" runat="server"></asp:TextBox>
-                                        <asp:Button ID="btnFirmaAra" runat="server" CssClass="bg-blue fg-white" Text="ARA" Height="25px" OnClientClick="OpenPage('KayitSec.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"/>
+                                            <asp:TextBox ID="idNAME" MaxLength="200" Width="100%" runat="server"></asp:TextBox>
                                         </td>
                                 </tr>
                                 <tr>

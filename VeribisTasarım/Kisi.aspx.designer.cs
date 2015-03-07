@@ -103,15 +103,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idNAME;
         
         /// <summary>
-        /// btnFirmaAra control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFirmaAra;
-        
-        /// <summary>
         /// idMIDDLE_NAME control.
         /// </summary>
         /// <remarks>

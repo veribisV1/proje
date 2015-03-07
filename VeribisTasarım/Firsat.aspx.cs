@@ -35,13 +35,13 @@ namespace VeribisTasarım
 
                     secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));
 
-                    //idOPPORTUNITY_CODE.Text = "0";
-                    //gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+                   
                 }
-
+                idOPPORTUNITY_CODE.Text = "0";
+                gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
             }
-         
-            //gridDoldur(GridView1, "0");
+
+          
 
         }
         private void gridDoldur()
@@ -51,29 +51,7 @@ namespace VeribisTasarım
             grFirsatListe.DataBind();
         }
 
-        //private void gridDoldur(int companyCode)
-        //{
-        //    DBARACISI dbadapter = new DBARACISI();
-        //    StringBuilder sorgu = new StringBuilder();
-        //    sorgu.Append("SELECT * FROM OPPORTUNITYMASTER WHERE COMPANY_CODE=");
-        //    sorgu.Append(companyCode);
-        //    sorgu.Append(" ORDER BY OPPORTUNITY_CODE DESC");
-        //    grFirsatListe.DataSource = dbadapter.getGridIcerik(sorgu.ToString());
-        //    grFirsatListe.DataBind();
-        //}
-
-        //private void gridDoldur(int companyCode, int contactCode)
-        //{
-        //    DBARACISI dbadapter = new DBARACISI();
-        //    StringBuilder sorgu = new StringBuilder();
-        //    sorgu.Append("SELECT * FROM OPPORTUNITYMASTER WHERE COMPANY_CODE=");
-        //    sorgu.Append(companyCode);
-        //    sorgu.Append(" AND CONTACT_CODE=");
-        //    sorgu.Append(contactCode);
-        //    sorgu.Append(" ORDER BY OPPORTUNITY_CODE DESC");
-        //    grFirsatListe.DataSource = dbadapter.getGridIcerik(sorgu.ToString());
-        //    grFirsatListe.DataBind();
-        //}
+     
 
     
         private void ekranDoldur()

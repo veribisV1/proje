@@ -7,7 +7,15 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+   <script>
+       function GoToPage(url, companyCode) {
+           window.location.href = url;
 
+           if (companyCode != '') {
+               window.location.href = url + '?param=' + companyCode;
+           }
+       }
+   </script>
     <script>
         function ShowTelefon(parametre)
         {
@@ -43,9 +51,9 @@
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
                 <li><a href="#Kontak">Kontak</a></li>
-                <li><a href="#Numune">Numune</a></li>
-                <li><a href="#Proforma">Proforma</a></li>
-                <li><a href="#Fatura">Fatura</a></li>
+                <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Numune</a></li>
+                <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Proforma</a></li>
+                <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Fatura</a></li>
                 <li><a href="#EkForm">Ek Form</a></li>
 
             </ul>
@@ -417,7 +425,7 @@
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="adresSil"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 
@@ -819,8 +827,12 @@
                     </div>
                 </div>
 
-                <div class="frame" id="Kontak"></div>
-                <div class="frame" id="Numune"></div>
+                <div class="frame" id="Kontak">
+                   
+                </div>
+                <div class="frame" id="Numune">
+                     
+                </div>
                 <div class="frame" id="Proforma"></div>
                 <div class="frame" id="Fatura"></div>
                 <div class="frame" id="Ek Form"></div>

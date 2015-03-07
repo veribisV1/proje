@@ -16,6 +16,20 @@ namespace VeribisTasarım
             {
                 ekranDoldur();
                 idOPENORCLOSE.Text = "1";// aktivite açık;
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                {
+                    var qString = Request.QueryString["param"].ToString();
+                    if (qString.Contains('-'))
+                    {
+                        idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                        idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
+                    }
+                    else
+                    {
+                        idCOMPANY_CODE.SelectedValue = qString;
+                    }
+                }               
+
             }
         }
         private void ekranDoldur()
@@ -49,14 +63,14 @@ namespace VeribisTasarım
                     activiteCode = kaydet("pInsertActivity");
                     if (activiteCode != -1)
                     {
-                        idACTIVITY_CODE.Text = activiteCode.ToString();                       
+                        idACTIVITY_CODE.Text = activiteCode.ToString();
                     }
                 }
                 else
                 {
                     activiteCode = kaydet("pUpdateActivity");
                 }
-                
+
             }
             else
                 BosMesaji();

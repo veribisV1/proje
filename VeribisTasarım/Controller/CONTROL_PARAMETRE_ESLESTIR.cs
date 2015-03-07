@@ -215,6 +215,7 @@ namespace VeribisTasarım.Controller
                     else
                         if (eleman.GetType() == typeof(DropDownList))
                         {
+                          
                             DropDownList elemanText = (DropDownList)eleman;
                             elemanText.SelectedValue = paramtereListesi[item];
 

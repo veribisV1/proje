@@ -14,9 +14,30 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+                gridDoldur();
+                if (!String.IsNullOrEmpty(Request.QueryString["param"]))
+                {
+                    var qString = Request.QueryString["param"].ToString();
+                    if (qString.Contains('-'))
+                    {
+                        idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                        idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
+                    }
+                    else
+                    {
+                        idCOMPANY_CODE.SelectedValue = qString;
+                    }
+                }
             }
           
             gridDoldur(GridView1, "0");
+        }
+
+        private void gridDoldur()
+        {
+            DBARACISI dbadapter = new DBARACISI();
+            grTeklifListe.DataSource = dbadapter.getGridIcerik("SELECT * FROM OPPORTUNITYMASTER WHERE DOCUMENT_TYPE=2 AND OPEN_CLOSE=1 order by LAST_UPDATE desc");
+            grTeklifListe.DataBind();
         }
 
         private void ekranDoldur()
@@ -39,6 +60,13 @@ namespace VeribisTasarım
             #endregion
         }
 
+        protected void editTeklif(object sender, EventArgs e)
+        {
+            ImageButton btn = (ImageButton)sender;
+            string code = btn.CommandArgument;
+            secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
+
+        }
 
         protected void idButtonTeklifEkleKaydet_Click(object sender, EventArgs e)
         {

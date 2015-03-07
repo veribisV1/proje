@@ -85,6 +85,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idTeklifBitisTarih;
         
         /// <summary>
+        /// grTeklifListe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grTeklifListe;
+        
+        /// <summary>
         /// idButtonTeklifEkleYeni control.
         /// </summary>
         /// <remarks>

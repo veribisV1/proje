@@ -138,7 +138,16 @@ namespace VeribisTasarım
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
 
-        protected void adresSil(object sender, EventArgs e)
+       
+
+        protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+            adresDoldur(-1);
+            telefonDoldur(-1);
+        }
+
+        protected void lnkRemove_Click(object sender, ImageClickEventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
             string addressCode = silButon.CommandArgument;
@@ -146,13 +155,6 @@ namespace VeribisTasarım
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
-        }
-
-        protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
-        {
-            formTemizle(this);
-            adresDoldur(-1);
-            telefonDoldur(-1);
         }
 
         

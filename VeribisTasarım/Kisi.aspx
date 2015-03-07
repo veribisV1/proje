@@ -28,7 +28,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
         <h3>KİŞİ KARTI</h3>
-        <div class="tab-control" data-role="tab-control">
+        <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li class="active"><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#AktivitePlanla">Aktivite Planla</a></li>

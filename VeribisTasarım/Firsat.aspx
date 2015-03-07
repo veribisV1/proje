@@ -40,6 +40,7 @@
                         </table>
 
                         <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
+                        <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="False" Text="1"></asp:TextBox>
                         <hr />
                         <div class="ALAN4">
 

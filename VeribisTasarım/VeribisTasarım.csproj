@@ -102,6 +102,7 @@
     <Content Include="image\grd_head.png" />
     <Content Include="image\grd_pgr.png" />
     <Content Include="image\logo1.png" />
+    <Content Include="KayitSec.aspx" />
     <Content Include="Kisi.aspx" />
     <Content Include="KisiListe.aspx" />
     <Content Include="Numune.aspx" />
@@ -141,7 +142,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdresEkle.aspx.cs">
@@ -219,6 +219,13 @@
     <Compile Include="Giris.aspx.designer.cs">
       <DependentUpon>Giris.aspx</DependentUpon>
     </Compile>
+    <Compile Include="KayitSec.aspx.cs">
+      <DependentUpon>KayitSec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KayitSec.aspx.designer.cs">
+      <DependentUpon>KayitSec.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Kisi.aspx.cs">
       <DependentUpon>Kisi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,13 +273,6 @@
     </Compile>
     <Compile Include="TelefonEkle.aspx.designer.cs">
       <DependentUpon>TelefonEkle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

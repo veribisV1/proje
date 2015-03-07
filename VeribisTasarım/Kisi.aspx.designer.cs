@@ -13,6 +13,24 @@ namespace VeribisTasarım {
     public partial class Kisi {
         
         /// <summary>
+        /// drpCOMPANY_CODE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpCOMPANY_CODE;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
         /// idButtonKisiEkleYeni control.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,15 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idNAME;
+        
+        /// <summary>
+        /// btnFirmaAra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFirmaAra;
         
         /// <summary>
         /// idMIDDLE_NAME control.

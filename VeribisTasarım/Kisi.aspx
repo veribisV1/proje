@@ -30,7 +30,8 @@
         <h3>KİŞİ KARTI</h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li class="active"><a href="#KisiEkle">Kişi Ekle</a></li>
+                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
+                <li><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#AktivitePlanla">Aktivite Planla</a></li>
                 <li><a href="#NotEkle">Not Ekle</a></li>
                 <li><a href="#Fırsat">Fırsat</a></li>
@@ -41,6 +42,64 @@
                 <li><a href="#EkForm">Ek Form</a></li>
                 <li><a href="#AileBilgileri">Aile Bilgileri</a></li>
             </ul>
+             <div class="frames" style="float: left; width: 100%">
+            <div class="frame" id="ListeAdi">
+                    <div class="KisiTableHizalama">
+                        Firma: <asp:DropDownList ID="drpCOMPANY_CODE"  runat="server" OnSelectedIndexChanged="drpCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="True" Height="30px" Width="20%"></asp:DropDownList>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="CONTACT_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Kişi bilgisine rastlanmadı.">
+
+                            <Columns>
+
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editContact" CommandArgument='<%# Eval("CONTACT_CODE")%>'></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FİRMA KODU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCOMPANY_CODE" runat="server" Text='<%# Eval("COMPANY_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="KİŞİ KODU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCONTACT_CODE" runat="server"
+                                            Text='<%# Eval("CONTACT_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="AD">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblNAME" runat="server" Text='<%# Eval("NAME")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="SURMANE">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblSURNAME" runat="server" Text='<%# Eval("SURNAME")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="ÜNVAN">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTITLE" runat="server" Text='<%# Eval("TITLE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="E-POSTE">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
+
+                    </div>
+                </div>
+                 </div>
 
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="KisiEkle">
@@ -88,7 +147,8 @@
                                         <td width="2%">:
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="idNAME" MaxLength="200" Width="100%" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="idNAME" MaxLength="200" Width="75%" runat="server"></asp:TextBox>
+                                        <asp:Button ID="btnFirmaAra" runat="server" CssClass="bg-blue fg-white" Text="ARA" Height="25px" OnClientClick="OpenPage('KayitSec.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"/>
                                         </td>
                                 </tr>
                                 <tr>

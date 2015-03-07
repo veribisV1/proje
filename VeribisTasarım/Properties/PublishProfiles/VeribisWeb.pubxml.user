@@ -14,13 +14,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/28/2015 18:53:24</publishTime>
     </File>
     <File Include="Aktivite.aspx">
-      <publishTime>02/28/2015 08:59:44</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="bin/VeribisTasarım.dll">
-      <publishTime>02/28/2015 19:34:34</publishTime>
+      <publishTime>03/01/2015 18:19:18</publishTime>
     </File>
     <File Include="Company.aspx">
-      <publishTime>02/28/2015 19:06:22</publishTime>
+      <publishTime>03/01/2015 18:12:48</publishTime>
     </File>
     <File Include="Content/css/iconFont.css">
       <publishTime>02/27/2015 12:59:42</publishTime>
@@ -152,19 +152,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/28/2015 15:43:38</publishTime>
     </File>
     <File Include="Fatura.aspx">
-      <publishTime>02/28/2015 08:59:45</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="FirmaListeAdi.aspx">
       <publishTime>02/28/2015 08:59:45</publishTime>
     </File>
     <File Include="Firsat.aspx">
-      <publishTime>02/28/2015 19:33:21</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="FirsatEkle.aspx">
       <publishTime>02/28/2015 19:05:07</publishTime>
     </File>
     <File Include="Giris.aspx">
-      <publishTime>02/28/2015 18:53:24</publishTime>
+      <publishTime>03/01/2015 12:35:52</publishTime>
     </File>
     <File Include="image/Add-icon.png">
       <publishTime>02/28/2015 17:14:42</publishTime>
@@ -260,16 +260,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/04/2015 16:49:03</publishTime>
     </File>
     <File Include="Kisi.aspx">
-      <publishTime>02/28/2015 08:59:45</publishTime>
+      <publishTime>03/01/2015 18:12:48</publishTime>
     </File>
     <File Include="MasterPage.master">
-      <publishTime>02/28/2015 18:53:24</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="Numune.aspx">
-      <publishTime>02/28/2015 08:59:45</publishTime>
+      <publishTime>03/01/2015 13:59:13</publishTime>
     </File>
     <File Include="Proforma.aspx">
-      <publishTime>02/28/2015 08:59:45</publishTime>
+      <publishTime>03/01/2015 13:59:13</publishTime>
     </File>
     <File Include="script/ASPSnippets_Pager.min.js">
       <publishTime>02/21/2015 19:32:39</publishTime>
@@ -341,10 +341,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/15/2015 10:50:48</publishTime>
     </File>
     <File Include="script/scriptForAraGrid.js">
-      <publishTime>02/21/2015 19:32:39</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="style/gridStil.css">
-      <publishTime>02/28/2015 18:53:24</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="style/responsive.css">
       <publishTime>02/15/2015 10:50:48</publishTime>
@@ -359,13 +359,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/15/2015 10:50:48</publishTime>
     </File>
     <File Include="Teklif.aspx">
-      <publishTime>02/28/2015 08:59:45</publishTime>
+      <publishTime>03/01/2015 16:25:43</publishTime>
     </File>
     <File Include="TelefonEkle.aspx">
       <publishTime>02/28/2015 18:53:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/28/2015 19:34:34</publishTime>
+      <publishTime>03/01/2015 18:19:19</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>02/21/2015 19:32:39</publishTime>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System;using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,8 +15,8 @@ namespace VeribisTasarım
             {
                 ekranDoldur();
             }
-            idOPPORTUNITY_CODE.Text = "0";
-            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+          
+            gridDoldur(GridView1, "0");
         }
 
         private void ekranDoldur()
@@ -25,8 +24,7 @@ namespace VeribisTasarım
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
 
             #region Aktivite Ekle DropDownları doldur
-            idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getFirma());
+            idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());         
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFirsatCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idREVISION = dbGetir.doldur(idREVISION, dbGetir.getRevizyon());
@@ -44,25 +42,28 @@ namespace VeribisTasarım
 
         protected void idButtonTeklifEkleKaydet_Click(object sender, EventArgs e)
         {
-            //DBARACISI firma = new DBARACISI();
-            //Dictionary<string, string> paramtereListesi = firma.storeParametreGetir("pInsertOppMaster");
-            //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
-            //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this,  paramtereListesi);
-            //int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
+
             int oppurtunityCode = -1;
             //Tipi kontrol edilecek
             if (String.IsNullOrEmpty(idOPPORTUNITY_CODE.Text))
             {
                 oppurtunityCode = kaydet("pInsertOppMaster");
+                if (oppurtunityCode != -1)
+                {
+                    idOPPORTUNITY_CODE.Text = oppurtunityCode.ToString();
+                }
             }
             else
             {
                 oppurtunityCode = kaydet("pUpdateOppMaster");
-            }
-            if (oppurtunityCode != -1)
-            {
-                formTemizle(this);
-            }
+            }          
+          
+        }
+
+        protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
     }
 }

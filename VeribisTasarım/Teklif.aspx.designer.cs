@@ -121,6 +121,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idOPPORTUNITY_CODE;
         
         /// <summary>
+        /// idDOCUMENT_TYPE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_TYPE;
+        
+        /// <summary>
         /// idCOMPANY_CODE control.
         /// </summary>
         /// <remarks>
@@ -139,13 +148,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idCONTACT_CODE;
         
         /// <summary>
-        /// idDOCUMENT_TYPE control.
+        /// idText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idDOCUMENT_TYPE;
+        protected global::System.Web.UI.WebControls.TextBox idText;
         
         /// <summary>
         /// idDOCUMENT_NO1 control.

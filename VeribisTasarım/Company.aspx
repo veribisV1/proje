@@ -50,7 +50,7 @@
                 <li><a href="#MakinaParki">Makina Parkı</a></li>
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>
-                <li><a href="#Kontak">Kontak</a></li>
+                <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;">Kontak</a></li>
                 <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Numune</a></li>
                 <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Proforma</a></li>
                 <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Fatura</a></li>

@@ -265,6 +265,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.DropDownList idSEARCH_STEP;
         
         /// <summary>
+        /// idOPEN_CLOSE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList idOPEN_CLOSE;
+        
+        /// <summary>
         /// idCERTIFICATE_DATE control.
         /// </summary>
         /// <remarks>

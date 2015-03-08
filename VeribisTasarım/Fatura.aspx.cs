@@ -12,8 +12,10 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
+                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -29,8 +31,8 @@ namespace VeribisTasarım
                     }
                 }
             }
-            idOPPORTUNITY_CODE.Text = "35";
-            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+           // idOPPORTUNITY_CODE.Text = "35";
+            gridDoldur(GridView1, "3");
         }
         private void ekranDoldur()
         {
@@ -40,13 +42,14 @@ namespace VeribisTasarım
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFaturaCinsi());
             idNORMAL_BACK = dbGetir.doldur(idNORMAL_BACK, dbGetir.getFaturaNormal());
-            idAPPOINTED_USER_CODE = dbGetir.doldur(idSELLING_BUYING, dbGetir.userAdSoyadGetir());
+            idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idWAREHOUSE = dbGetir.doldur(idWAREHOUSE, dbGetir.getDepo());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
             idPROJECT_CODE = dbGetir.doldur(idPROJECT_CODE, dbGetir.getProje());
             idOPEN_CLOSE = dbGetir.doldur(idOPEN_CLOSE, dbGetir.getFaturaAcikKapali());
             idGROUPS = dbGetir.doldur(idGROUPS, dbGetir.getFaturaGrubu());
             #endregion
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
         protected void idButtonFaturaEkleKaydet_Click(object sender, EventArgs e)

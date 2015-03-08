@@ -12,10 +12,16 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
                 gridDoldur();
                 ekranDoldur();
+                idSDATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                idSDATE_TIME.Text = DateTime.Now.ToLocalTime().ToString("HH:mm");
+                idEDATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                idEDATE_TIME.Text = DateTime.Now.ToLocalTime().ToString("HH:mm");
+
                 idOPENORCLOSE.Text = "1";// aktivite açık;
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -50,6 +56,7 @@ namespace VeribisTasarım
             idACTIVITY_GROUP = dbGetir.doldur(idACTIVITY_GROUP, dbGetir.getAktiviteGrubu());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idPROJECT = dbGetir.doldur(idPROJECT, dbGetir.getProje());
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
             #endregion
         }
 

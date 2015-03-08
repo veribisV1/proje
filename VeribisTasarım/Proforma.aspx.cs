@@ -12,8 +12,10 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
+                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -55,6 +57,7 @@ namespace VeribisTasarım
             idWHY_LOST = dbGetir.doldur(idWHY_LOST, dbGetir.getNedenKaybettik());
             idRIVAL_COMPANY_CODE = dbGetir.doldur(idRIVAL_COMPANY_CODE, dbGetir.getRakipFirma());
             #endregion
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
         protected void idButtonProformaEkleKaydet_Click(object sender, EventArgs e)

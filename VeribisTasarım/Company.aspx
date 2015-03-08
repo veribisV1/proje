@@ -193,7 +193,8 @@
                                     <td>
                                         <div style="visibility: hidden;">
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
-                                            <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="True"></asp:TextBox>
+                                          
+                                            <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="true"></asp:TextBox>
                                         </div>
 
                                     </td>

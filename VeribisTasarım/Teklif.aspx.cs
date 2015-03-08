@@ -12,8 +12,10 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
+                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 ekranDoldur();
                 gridDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -61,6 +63,7 @@ namespace VeribisTasarım
             idOPEN_CLOSE = dbGetir.doldur(idOPEN_CLOSE, dbGetir.getAktiviteAcikKapali());
             idOPEN_CLOSE.SelectedValue = "1";
             #endregion
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
         protected void editTeklif(object sender, EventArgs e)

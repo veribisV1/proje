@@ -22,7 +22,7 @@ namespace VeribisTasarım
                 HttpContext.Current.Session.Clear();
                 HttpContext.Current.Session.Abandon();
                 HttpContext.Current.User = null;
-                System.Web.Security.FormsAuthentication.SignOut();
+                FormsAuthentication.SignOut();
             }
         }
 

@@ -148,8 +148,6 @@ namespace VeribisTasarım
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
             secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", code));
-
-      
             
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             

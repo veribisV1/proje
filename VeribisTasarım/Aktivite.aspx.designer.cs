@@ -40,6 +40,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idButtonAktiviteSil;
         
         /// <summary>
+        /// idButtonAktiviteKapat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonAktiviteKapat;
+        
+        /// <summary>
         /// idACTIVITY_CODE control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idACTIVITY_CODE;
+        
+        /// <summary>
+        /// idOPENORCLOSE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idOPENORCLOSE;
         
         /// <summary>
         /// idCOMPANY_CODE control.

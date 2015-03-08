@@ -108,7 +108,7 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="E-POSTE">
+                                <asp:TemplateField HeaderText="E-POSTA">
                                     <ItemTemplate>
                                         <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
                                     </ItemTemplate>

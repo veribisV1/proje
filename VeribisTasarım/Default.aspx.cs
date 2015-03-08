@@ -15,6 +15,7 @@ namespace VeribisTasarım
         {
             if (!this.Page.User.Identity.IsAuthenticated)
             {
+               
                 FormsAuthentication.RedirectToLoginPage();
             }
         }

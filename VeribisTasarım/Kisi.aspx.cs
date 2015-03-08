@@ -159,10 +159,9 @@ namespace VeribisTasarım
         protected void drpCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='"+drpCOMPANY_CODE.SelectedValue+"' ORDER BY CONTACT_CODE DESC");
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='" + drpCOMPANY_CODE.SelectedValue + "' ORDER BY CONTACT_CODE DESC");
             GridView1.DataBind();
         }
 
-       
     }
 }

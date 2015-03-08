@@ -12,6 +12,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
                 ekranDoldur();
@@ -47,6 +48,7 @@ namespace VeribisTasarım
             idOPEN_CLOSE = dbGetir.doldur(idOPEN_CLOSE, dbGetir.getFaturaAcikKapali());
             idGROUPS = dbGetir.doldur(idGROUPS, dbGetir.getFaturaGrubu());
             #endregion
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
         protected void idButtonFaturaEkleKaydet_Click(object sender, EventArgs e)

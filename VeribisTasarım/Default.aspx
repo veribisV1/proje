@@ -6,5 +6,5 @@
     <div class="ALAN6"></div>
 <div class="ALAN6"></div>
     <div class="ALAN12"> </div>--%>
-
+    <asp:Label ID="Label1" runat="server"></asp:Label>
 </asp:Content>

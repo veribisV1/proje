@@ -25,7 +25,7 @@ namespace VeribisTasarım
                     adresDoldur(Convert.ToInt32(contactCode));
                     telefonDoldur(Convert.ToInt32(contactCode));
                     secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", contactCode));
-
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
                 
             }

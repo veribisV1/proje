@@ -29,8 +29,8 @@ namespace VeribisTasarım
                     }
                 }
             }
-            idOPPORTUNITY_CODE.Text = "35";
-            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+           // idOPPORTUNITY_CODE.Text = "35";
+            gridDoldur(GridView1, "3");
         }
         private void ekranDoldur()
         {
@@ -40,7 +40,7 @@ namespace VeribisTasarım
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getFaturaCinsi());
             idNORMAL_BACK = dbGetir.doldur(idNORMAL_BACK, dbGetir.getFaturaNormal());
-            idAPPOINTED_USER_CODE = dbGetir.doldur(idSELLING_BUYING, dbGetir.userAdSoyadGetir());
+            idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idWAREHOUSE = dbGetir.doldur(idWAREHOUSE, dbGetir.getDepo());
             idPAYMENT_TYPE = dbGetir.doldur(idPAYMENT_TYPE, dbGetir.getOdemeSekli());
             idPROJECT_CODE = dbGetir.doldur(idPROJECT_CODE, dbGetir.getProje());

@@ -26,14 +26,14 @@ namespace VeribisTasarım
                     adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                     telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                 }
-              
+
                 ekranDoldur();
-                
-                
+
+
             }
-            
+
         }
-       private void  gridDoldur()
+        private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
             GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,PHONE.PHONE_NUMBER AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE ORDER BY COMPANY_CODE DESC");
@@ -75,8 +75,8 @@ namespace VeribisTasarım
             sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3) AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
-            idADDRESS.DataSource = tablo;
-            idADDRESS.DataBind();
+            grdADDRESS.DataSource = tablo;
+            grdADDRESS.DataBind();
 
         }
 
@@ -125,7 +125,7 @@ namespace VeribisTasarım
             secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", String.Format("{0}", code));
             adresDoldur(Convert.ToInt32(code));
             telefonDoldur(Convert.ToInt32(code));
-          
+
         }
 
         protected void telefonSil(object sender, EventArgs e)
@@ -138,14 +138,14 @@ namespace VeribisTasarım
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
 
-       
+
 
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
             adresDoldur(-1);
             telefonDoldur(-1);
-            
+
         }
 
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)
@@ -158,19 +158,19 @@ namespace VeribisTasarım
             adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
 
-        
-    
+
+
     }
-            
+
 
 }
 
 
-    
 
 
 
-  
+
+
 
 
 

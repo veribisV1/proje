@@ -17,7 +17,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             if (!Page.IsPostBack)
             {
                 HttpContext.Current.Session.Clear();
@@ -25,9 +25,7 @@ namespace VeribisTasarım
                 HttpContext.Current.User = null;
                 FormsAuthentication.SignOut();
             }
-=======
 
->>>>>>> 7c2a7cd5f545bf3bbf8fc71a66301b365d53decf
         }
 
         protected void btnGiris_Click(object sender, EventArgs e)

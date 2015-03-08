@@ -13,7 +13,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session.Count < 2)
+        if (Session.Count < 1)
         {
             Response.Redirect("Giris.aspx");
         }

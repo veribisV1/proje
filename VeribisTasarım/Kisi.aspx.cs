@@ -35,7 +35,7 @@ namespace VeribisTasarım
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             #region Kişi Ekle DropDownları doldur
-          
+            drpCOMPANY_CODE = dbGetir.doldur(drpCOMPANY_CODE, dbGetir.getFirma());
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSEXUALITY = dbGetir.doldur(idSEXUALITY, dbGetir.getCinsiyet());
             idASSOCIATION_CODE = dbGetir.doldur(idASSOCIATION_CODE, dbGetir.getDernekler());
@@ -148,14 +148,18 @@ namespace VeribisTasarım
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
             secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", code));
-
-      
             
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             
 
         }
 
-    
+        protected void drpCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DBARACISI dbadapter = new DBARACISI();
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='" + drpCOMPANY_CODE.SelectedValue + "' ORDER BY CONTACT_CODE DESC");
+            GridView1.DataBind();
+        }
+
     }
 }

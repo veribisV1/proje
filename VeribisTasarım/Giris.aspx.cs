@@ -17,7 +17,13 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!Page.IsPostBack)
+            {
+                HttpContext.Current.Session.Clear();
+                HttpContext.Current.Session.Abandon();
+                HttpContext.Current.User = null;
+                System.Web.Security.FormsAuthentication.SignOut();
+            }
         }
 
         protected void btnGiris_Click(object sender, EventArgs e)
@@ -39,7 +45,7 @@ namespace VeribisTasarım
                 }
                 else
                 {
-                    //this.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", " toastr.error('Girilen kullanıcı adı veya şifre hatalı.', 'Kullanıcı Girişi');  ", true);
+                   
                 }
             }
 

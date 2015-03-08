@@ -13,10 +13,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        if (Session.Count < 1)
         {
-            MenuGoster();
+            Response.Redirect("Giris.aspx");
         }
+        MenuGoster();
+
     }
 
     private void MenuGoster()
@@ -41,6 +43,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
         conn.Close();
     }
 
-    
+
 }
 

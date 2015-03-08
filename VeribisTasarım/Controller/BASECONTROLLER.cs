@@ -36,6 +36,14 @@ namespace VeribisTasarım.Controller
             Dictionary<string, string> paramtereListesi = firma.getStoreParametre(storeProsedurAdi);
             CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
+            if (dataListesi.ContainsKey("@CREATE_USER"))
+            {
+                dataListesi["@CREATE_USER"]=Session["USER_CODE"];
+            }
+            if (dataListesi.ContainsKey("@LAST_UPDATE_USER"))
+            {
+                dataListesi["@LAST_UPDATE_USER"] = Session["USER_CODE"];
+            }
             return firma.setStore(storeProsedurAdi, dataListesi);
 
         }

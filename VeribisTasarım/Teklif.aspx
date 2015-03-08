@@ -122,7 +122,6 @@
                                 </td>
                             </tr>
                         </table>
-
                         <hr />
                         <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
                         <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="false" Text="2"></asp:TextBox>

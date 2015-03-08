@@ -146,8 +146,8 @@ namespace VeribisTasarım
 
         private void gelenKisiyiYukle()
         {
-            adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
-            telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+            adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+            telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", idCONTACT_CODE.Text));
         }
 

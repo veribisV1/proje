@@ -123,8 +123,10 @@
                             </tr>
                         </table>
                         <hr />
-                        <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
-                        <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="false" Text="2"></asp:TextBox>
+                        <div hidden="hidden"><asp:TextBox ID="idOPPORTUNITY_CODE" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="idDOCUMENT_TYPE" runat="server"  Text="2"></asp:TextBox>
+                        </div>
+                        
 
                         <div class="ALAN4">
                             <table class="KisiTable" id="Table1">

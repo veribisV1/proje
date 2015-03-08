@@ -29,6 +29,10 @@ namespace VeribisTasarım
                 }
                 
             }
+            if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
+            }
         }
 
         private void ekranDoldur()

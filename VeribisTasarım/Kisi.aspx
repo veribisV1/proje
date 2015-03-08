@@ -104,13 +104,23 @@
 
                                 <asp:TemplateField HeaderText="ÜNVAN">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTITLE" runat="server" Text='<%# Eval("TITLE")%>'></asp:Label>
+                                        <asp:Label ID="lblTITLE" runat="server" Text='<%# Eval("EXP_TR")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="E-POSTA">
                                     <ItemTemplate>
                                         <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                 <asp:TemplateField HeaderText="IS TELEFONU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblcep" runat="server" Text='<%# Eval("IS")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                 <asp:TemplateField HeaderText="CEP TELEFONU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblis" runat="server" Text='<%# Eval("CEP")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 

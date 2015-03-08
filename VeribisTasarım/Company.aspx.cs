@@ -18,6 +18,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             gridDoldur();
             if (!IsPostBack)
             {
@@ -64,6 +65,7 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
+            idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
 
 

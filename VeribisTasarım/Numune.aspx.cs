@@ -12,6 +12,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
                 idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -39,10 +40,11 @@ namespace VeribisTasarım
 
             #region Numune Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-            //idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi());
+            idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idSEARCH_METHOD = dbGetir.doldur(idSEARCH_METHOD, dbGetir.getTakipYontemi());
             idSEARCH_STEP = dbGetir.doldur(idSEARCH_STEP, dbGetir.getTakipAsamalari());
             #endregion
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
         protected void idButtonNumuneEkleKaydet_Click(object sender, EventArgs e)

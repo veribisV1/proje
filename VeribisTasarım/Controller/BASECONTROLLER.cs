@@ -9,6 +9,7 @@ namespace VeribisTasarım.Controller
 {
     public abstract class BASECONTROLLER : System.Web.UI.Page
     {
+       
         CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
         /// <summary>
         /// ekrandaki tüm form elemanlarının
@@ -98,6 +99,14 @@ namespace VeribisTasarım.Controller
             donusMesaji.Append("window.alert('Boş alanlar Mevcut');");
             donusMesaji.Append("</script>");
             Response.Write(donusMesaji.ToString());
+        }
+
+        internal void Page_Load()
+        {
+            if (Session.Count < 1)
+            {
+                Response.Redirect("Giris.aspx");
+            }
         }
     }
 }

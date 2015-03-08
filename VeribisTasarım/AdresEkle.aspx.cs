@@ -19,6 +19,10 @@ namespace VeribisTasarım
                 {
                     var addressCode = Convert.ToInt32(Request.QueryString["edit"]);
                     secilenElemanDetayiGetir(this, "ADDRESS", "ADDRESS_CODE", String.Format("{0}", addressCode));
+                    idCITY_SelectedIndexChanged(sender, e);
+                    DBARACISI adapter = new DBARACISI();
+                    System.Data.DataTable ilce = adapter.getGridIcerik(String.Format("select County1 from ADDRESS where  ADDRESS.ADDRESS_CODE={0}", addressCode));
+                    idCOUNTY1.SelectedValue = ilce.Rows[0][0].ToString();
                 }
                 else
                 {
@@ -38,9 +42,9 @@ namespace VeribisTasarım
 
                     }
                 }
-                
+
             }
-            
+
         }
 
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
@@ -62,15 +66,15 @@ namespace VeribisTasarım
                     DBARACISI db = new DBARACISI();
                     db.set(String.Format("UPDATE COMPANY SET ADDRESS={0} WHERE COMPANY_CODE={1}", addressCode, idCOMPANY_CODE.Text));
                 }
-                else if (idADDRESS_TYPE_ID.SelectedValue.Equals("2") && addressCode != -1 && !String.IsNullOrEmpty(idCONTACT_CODE.Text))           
+                else if (idADDRESS_TYPE_ID.SelectedValue.Equals("2") && addressCode != -1 && !String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
                     DBARACISI db = new DBARACISI();
                     db.set(String.Format("UPDATE CONTACT SET ADDRESS={0} WHERE CONTACT_CODE={1}", addressCode, idCONTACT_CODE.Text));
                 }
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
-           
-            }           
+
+            }
         }
 
         private void ekranDoldur()
@@ -84,7 +88,7 @@ namespace VeribisTasarım
             idCOUNTY_SelectedIndexChanged(new object(), new EventArgs());
             #endregion
 
-           
+
 
         }
 

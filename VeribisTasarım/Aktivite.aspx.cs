@@ -12,6 +12,7 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load();
             if (!IsPostBack)
             {
                 ekranDoldur();
@@ -49,6 +50,7 @@ namespace VeribisTasarım
             idACTIVITY_GROUP = dbGetir.doldur(idACTIVITY_GROUP, dbGetir.getAktiviteGrubu());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idPROJECT = dbGetir.doldur(idPROJECT, dbGetir.getProje());
+            idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
             #endregion
         }
 

@@ -51,7 +51,7 @@
 
                                 <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editFirsat" CommandArgument='<%# Eval("OPPORTUNITY_CODE")%>'></asp:ImageButton>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editFirsat_Click" CommandArgument='<%# Eval("OPPORTUNITY_CODE")%>'></asp:ImageButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 

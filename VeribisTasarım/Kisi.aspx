@@ -49,14 +49,10 @@
         <h3>KİŞİ KARTI</h3>
         <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
-<<<<<<< HEAD
+
                 <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
                 <li id="kisi"><a href="#KisiEkle">Kişi Ekle</a></li>
-                <li><a href="#AktivitePlanla">Aktivite Planla</a></li>
-=======
-                <li class="active"><a href="#KisiEkle">Kişi Ekle</a></li>
-                <li><a href="#AktivitePlanla" onclick="GoToPage('Aktivite.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Aktivite Planla</a></li>
->>>>>>> bf1a1cf0ac38f9b99892f9708d3c126bd720c932
+                <li><a href="#AktivitePlanla">Aktivite Planla</a></li>               
                 <li><a href="#NotEkle">Not Ekle</a></li>
                 <li><a href="#Firsat" onclick="GoToPage('Firsat.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Fırsat</a></li>
                 <li><a href="#Teklif" onclick="GoToPage('Teklif.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Teklif</a></li>

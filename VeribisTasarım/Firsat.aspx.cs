@@ -25,55 +25,33 @@ namespace VeribisTasarım
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
 
-                        gridDoldur(Convert.ToInt32(qString.Split('-')[0]), Convert.ToInt32(qString.Split('-')[1]));
+                     
                     }
                     else
                     {
                         idCOMPANY_CODE.SelectedValue = qString;
-                        gridDoldur(Convert.ToInt32(qString.Split('-')[0]));
+                     
                     }
 
                     secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", "0"));
 
-                    //idOPPORTUNITY_CODE.Text = "0";
-                    //gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+                   
                 }
-
+                idOPPORTUNITY_CODE.Text = "0";
+                gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
             }
-         
-            //gridDoldur(GridView1, "0");
+
+          
 
         }
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            grFirsatListe.DataSource = dbadapter.getGridIcerik("SELECT TOP 50 * FROM OPPORTUNITYMASTER order by OPPORTUNITY_CODE desc");
+            grFirsatListe.DataSource = dbadapter.getGridIcerik("SELECT * FROM OPPORTUNITYMASTER WHERE DOCUMENT_TYPE=1 AND OPEN_CLOSE=1 order by LAST_UPDATE desc");
             grFirsatListe.DataBind();
         }
 
-        private void gridDoldur(int companyCode)
-        {
-            DBARACISI dbadapter = new DBARACISI();
-            StringBuilder sorgu = new StringBuilder();
-            sorgu.Append("SELECT * FROM OPPORTUNITYMASTER WHERE COMPANY_CODE=");
-            sorgu.Append(companyCode);
-            sorgu.Append(" ORDER BY OPPORTUNITY_CODE DESC");
-            grFirsatListe.DataSource = dbadapter.getGridIcerik(sorgu.ToString());
-            grFirsatListe.DataBind();
-        }
-
-        private void gridDoldur(int companyCode, int contactCode)
-        {
-            DBARACISI dbadapter = new DBARACISI();
-            StringBuilder sorgu = new StringBuilder();
-            sorgu.Append("SELECT * FROM OPPORTUNITYMASTER WHERE COMPANY_CODE=");
-            sorgu.Append(companyCode);
-            sorgu.Append(" AND CONTACT_CODE=");
-            sorgu.Append(contactCode);
-            sorgu.Append(" ORDER BY OPPORTUNITY_CODE DESC");
-            grFirsatListe.DataSource = dbadapter.getGridIcerik(sorgu.ToString());
-            grFirsatListe.DataBind();
-        }
+     
 
     
         private void ekranDoldur()

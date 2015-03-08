@@ -42,26 +42,52 @@
 
 
                         <hr />
-                        <div class="ALAN12">
-                            <div class="KisiTableHizalama">
-                                <table class="KisiTable">
-                                    <tr>
-                                        <td>
-                                            <%--  <asp:GridView ID="idTeklifGridView" runat="server" CssClass="ListeAdiGridView" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-                                  <Columns>
-                                      <asp:BoundField DataField="FİRMA" HeaderText="FİRMA" ReadOnly="True" SortExpression="FİRMA" />
-                                      <asp:BoundField DataField="KİŞİ" HeaderText="KİŞİ" ReadOnly="True" SortExpression="KİŞİ" />
-                                      <asp:BoundField DataField="TEMSİLCİ" HeaderText="TEMSİLCİ" ReadOnly="True" SortExpression="TEMSİLCİ" />
-                                      <asp:BoundField DataField="DOCUMENT_DATE" HeaderText="DOCUMENT_DATE" SortExpression="DOCUMENT_DATE" />
-                                      <asp:BoundField DataField="OPEN_CLOSE" HeaderText="OPEN_CLOSE" SortExpression="OPEN_CLOSE" />
-                                  </Columns>
-                                       </asp:GridView>
-                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [FİRMA], [KİŞİ], [TEMSİLCİ], [DOCUMENT_DATE], [OPEN_CLOSE] FROM [VOTASK]"></asp:SqlDataSource>--%>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+                      
+                       <asp:GridView ID="grTeklifListe" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="OPPORTUNITY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="TEKLİF EKLEYİNİZ...">
+
+                            <Columns>
+
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editTeklif" CommandArgument='<%# Eval("OPPORTUNITY_CODE")%>'></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TOTAL_UPB">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTOTAL_UPB" runat="server" Text='<%# Eval("TOTAL_UPB")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FREE_STOK">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblFREE_STOK" runat="server"
+                                            Text='<%# Eval("FREE_STOK")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TAX">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTAX" runat="server" Text='<%# Eval("TAX")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TOTAL">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTOTAL" runat="server" Text='<%# Eval("TOTAL")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="AVAILABLE_DATE">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblAVAILABLE_DATE" runat="server" Text='<%# Eval("AVAILABLE_DATE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
+
                     </div>
 
                 </div>

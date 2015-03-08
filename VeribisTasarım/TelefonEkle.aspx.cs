@@ -50,19 +50,26 @@ namespace VeribisTasarım
         {
 
 
-            int Company_Code = -1;
+            int PhoneCode = -1;
             if (!String.IsNullOrEmpty(idPHONE_NUMBER.Text))
             {
                 if (String.IsNullOrEmpty(idPHONE_CODE.Text))
                 {
-                    Company_Code = kaydet("pInsertPhone");
+                    PhoneCode = kaydet("pInsertPhone");
                    
                 }
                 else
                 {
-                    Company_Code = kaydet("pUpdatePhone");
+                    PhoneCode = kaydet("pUpdatePhone");
                    
                 }
+
+                if (idPHONE_TYPE_ID.SelectedValue.Equals("1") && PhoneCode != -1 && String.IsNullOrEmpty(idCONTACT_CODE.Text))
+                {
+                    DBARACISI db = new DBARACISI();
+                    db.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}", PhoneCode, idCOMPANY_CODE.Text));
+                }
+
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
             }

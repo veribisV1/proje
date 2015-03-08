@@ -11,7 +11,8 @@
     <script src="Content/js/jquery/jquery.min.js"></script>
     <script src="Content/js/jquery/jquery.widget.min.js"></script>
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
-    <script src="Content/js/metro/metro.min.js"></script>   
+    <script src="Content/js/metro/metro.min.js"></script> 
+  
 </head>
 <body class="metro">
     <form id="form1" runat="server">
@@ -82,13 +83,17 @@
                                      </td>
 
                                      <td>
-                                         <asp:Button ID="idButtonTelefonIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" />
+                                         <asp:Button ID="idButtonTelefonIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" OnClientClick="parent.$.fancybox.close();" />
                                      </td>
                                  </tr>
                              </table>
                         </div>
                     </div>
-            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Visible="False"></asp:TextBox>
+            <div style="visibility:hidden;">
+                   <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
+            <asp:TextBox ID="idCONTACT_CODE" runat="server"></asp:TextBox>
+            </div>
+          
         </div>
     </form>
 </body>

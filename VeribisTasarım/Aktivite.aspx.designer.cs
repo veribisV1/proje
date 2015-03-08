@@ -121,24 +121,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idDOCUMENT_NO2;
         
         /// <summary>
-        /// basTarihi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox basTarihi;
-        
-        /// <summary>
-        /// saati control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox saati;
-        
-        /// <summary>
         /// idSDATE control.
         /// </summary>
         /// <remarks>
@@ -155,15 +137,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idEDATE;
-        
-        /// <summary>
-        /// idEDATE_TIME control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idEDATE_TIME;
         
         /// <summary>
         /// idJOINER_CODE control.

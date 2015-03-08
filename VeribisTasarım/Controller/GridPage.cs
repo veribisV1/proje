@@ -21,6 +21,10 @@ namespace VeribisTasarım.Controller
             Button silButon = (Button)sender;
             string row = silButon.CommandArgument;
             recursiveElemanBul(this);
+            if (String.IsNullOrEmpty(oppCode))
+            {
+                return;
+            }
         //    oppCode = String.Format("{0}&param2={1}", oppCode, row);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", String.Format("OpenPage('FirsatEkle.aspx','{0}')", oppCode), true);
         }

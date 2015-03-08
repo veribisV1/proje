@@ -62,6 +62,11 @@ namespace VeribisTasarım
                     DBARACISI db = new DBARACISI();
                     db.set(String.Format("UPDATE COMPANY SET ADDRESS={0} WHERE COMPANY_CODE={1}", addressCode, idCOMPANY_CODE.Text));
                 }
+                else if (idADDRESS_TYPE_ID.SelectedValue.Equals("2") && addressCode != -1 && !String.IsNullOrEmpty(idCONTACT_CODE.Text))           
+                {
+                    DBARACISI db = new DBARACISI();
+                    db.set(String.Format("UPDATE CONTACT SET ADDRESS={0} WHERE CONTACT_CODE={1}", addressCode, idCONTACT_CODE.Text));
+                }
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
            

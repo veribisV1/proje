@@ -50,26 +50,31 @@ namespace VeribisTasarım
         {
 
 
-            int PhoneCode = -1;
+            int PhoneFaxCode = -1;
             if (!String.IsNullOrEmpty(idPHONE_NUMBER.Text))
             {
                 if (String.IsNullOrEmpty(idPHONE_CODE.Text))
                 {
-                    PhoneCode = kaydet("pInsertPhone");
+                    PhoneFaxCode = kaydet("pInsertPhone");
                    
                 }
                 else
                 {
-                    PhoneCode = kaydet("pUpdatePhone");
+                    PhoneFaxCode = kaydet("pUpdatePhone");
                    
                 }
 
-                if (idPHONE_TYPE_ID.SelectedValue.Equals("1") && PhoneCode != -1 && String.IsNullOrEmpty(idCONTACT_CODE.Text))
+                if (idPHONE_TYPE_ID.SelectedValue.Equals("1") && PhoneFaxCode != -1 && String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
                     DBARACISI db = new DBARACISI();
-                    db.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}", PhoneCode, idCOMPANY_CODE.Text));
+                    db.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}", PhoneFaxCode, idCOMPANY_CODE.Text));
                 }
 
+                else if (idPHONE_TYPE_ID.SelectedValue.Equals("3") && PhoneFaxCode != -1 && String.IsNullOrEmpty(idCONTACT_CODE.Text))
+                {
+                    DBARACISI db = new DBARACISI();
+                    db.set(String.Format("UPDATE COMPANY SET FAX={0} WHERE COMPANY_CODE={1}", PhoneFaxCode, idCOMPANY_CODE.Text));
+                }
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
             }

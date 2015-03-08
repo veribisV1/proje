@@ -1,4 +1,5 @@
-﻿using System;using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -29,14 +30,14 @@ namespace VeribisTasarım
                     }
                 }
             }
-          
+
             gridDoldur(GridView1, "0");
         }
 
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            grTeklifListe.DataSource = dbadapter.getGridIcerik("SELECT * FROM OPPORTUNITYMASTER WHERE DOCUMENT_TYPE=2 AND OPEN_CLOSE=1 order by LAST_UPDATE desc");
+            grTeklifListe.DataSource = dbadapter.getGridIcerik("SELECT OPPORTUNITY_CODE,COMPANY.COMPANY_NAME,CONTACT.NAME AS 'CONTACT_NAME', OPPORTUNITYMASTER.EXPLANATION, STEP.EXP_TR AS 'SEARCH_STEP',USERS.AUSER_NAME +' '+USERS.SURNAME AS 'APPOINTED_USER_CODE', OPPORTUNITYMASTER.EXPLANATION, OPPORTUNITYMASTER.DOCUMENT_DATE,TOTAL,TOTAL_UPB FROM OPPORTUNITYMASTER LEFT JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE LEFT JOIN CONTACT ON CONTACT.CONTACT_CODE=OPPORTUNITYMASTER.CONTACT_CODE LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=42 ) AS STEP ON STEP.ROW_ORDER_NO=OPPORTUNITYMASTER.SEARCH_STEP LEFT JOIN USERS ON USERS.USER_CODE=OPPORTUNITYMASTER.APPOINTED_USER_CODE WHERE DOCUMENT_TYPE=2 AND OPEN_CLOSE=1 order by OPPORTUNITYMASTER.LAST_UPDATE desc");
             grTeklifListe.DataBind();
         }
 
@@ -45,7 +46,7 @@ namespace VeribisTasarım
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
 
             #region Aktivite Ekle DropDownları doldur
-            idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());         
+            idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getTeklifCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idREVISION = dbGetir.doldur(idREVISION, dbGetir.getRevizyon());
@@ -84,8 +85,8 @@ namespace VeribisTasarım
             else
             {
                 oppurtunityCode = kaydet("pUpdateOppMaster");
-            }          
-          
+            }
+
         }
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)

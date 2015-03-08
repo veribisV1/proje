@@ -22,6 +22,7 @@ namespace VeribisTasarım
                     if (qString.Contains('-'))
                     {
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                        idCOMPANY_CODE_SelectedIndexChanged(sender, e);
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
                     }
                     else

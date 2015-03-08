@@ -75,13 +75,6 @@ namespace VeribisTasarım
             #endregion
         }
 
-        protected void editFirsat(object sender, EventArgs e)
-        {
-            ImageButton btn = (ImageButton)sender;
-            string code = btn.CommandArgument;
-            secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
-            
-        }
 
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
         {
@@ -108,6 +101,13 @@ namespace VeribisTasarım
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
+        }
+
+        protected void editFirsat_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton btn = (ImageButton)sender;
+            string code = btn.CommandArgument;
+            secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
         }
 
 

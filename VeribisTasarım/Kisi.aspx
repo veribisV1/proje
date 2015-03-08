@@ -50,7 +50,7 @@
         <h3>KİŞİ KARTI</h3>
         <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
+                <li id="liste" class="active"><a href="#ListeAdi">Liste Adı</a></li>
                 <li id="kisi"><a href="#KisiEkle">Kişi Ekle</a></li>
                 <li><a href="#AktivitePlanla" onclick="GoToPage('Aktivite.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;">Aktivite Planla</a></li>
                 <li><a href="#NotEkle">Not Ekle</a></li>

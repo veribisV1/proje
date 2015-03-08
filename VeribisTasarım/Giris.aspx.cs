@@ -18,6 +18,14 @@ namespace VeribisTasarım
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!Page.IsPostBack)
+            {
+                HttpContext.Current.Session.Clear();
+                HttpContext.Current.Session.Abandon();
+                HttpContext.Current.User = null;
+                FormsAuthentication.SignOut();
+            }
+
         }
 
         protected void btnGiris_Click(object sender, EventArgs e)

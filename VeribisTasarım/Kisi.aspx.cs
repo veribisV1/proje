@@ -23,8 +23,14 @@ namespace VeribisTasarım
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
                     idCONTACT_CODE.Text = contactCode.ToString();
                     gelenKisiyiYukle();                  
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);                  
                 }
 
+            }
+
+            if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
             }
 
         }
@@ -153,10 +159,8 @@ namespace VeribisTasarım
             string code = btn.CommandArgument;
             idCOMPANY_CODE.Text = code;
             gelenKisiyiYukle();
-            // secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", code));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
-
-
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void drpCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)

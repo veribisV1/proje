@@ -157,7 +157,7 @@ namespace VeribisTasarım
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
-            idCOMPANY_CODE.Text = code;
+            idCONTACT_CODE.Text = code;
             gelenKisiyiYukle();
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);

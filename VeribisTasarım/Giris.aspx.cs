@@ -22,6 +22,7 @@ namespace VeribisTasarım
 
         protected void btnGiris_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
              if (!String.IsNullOrEmpty(_txtTicariKod.Text))
              {
                  //Kullanıcı girişi kontrol
@@ -31,6 +32,28 @@ namespace VeribisTasarım
                      Session["USER_CODE"] = db.getUserID(_txtKullaniciAdi.Text, _txtSifre.Text);
                      Session["USER_NAME"] = _txtKullaniciAdi.Text;
                      FormsAuthentication.RedirectFromLoginPage(_txtKullaniciAdi.Text, false);
+=======
+           
+            if (!String.IsNullOrEmpty(_txtTicariKod.Text))
+            {
+               
+
+               
+                //Kullanıcı girişi kontrol
+                DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();
+                if (db.validateUser(_txtKullaniciAdi.Text, _txtSifre.Text))
+                {
+                    Session["USER_CODE"] = db.getUserID(_txtKullaniciAdi.Text, _txtSifre.Text);
+                  
+                    FormsAuthentication.RedirectFromLoginPage(_txtKullaniciAdi.Text, false);
+                   
+                }
+                else
+                {
+                   
+                }
+            }
+>>>>>>> ab5e0aff4a2306b89e84c4da60575ee4929d61a2
 
                  }
                  else

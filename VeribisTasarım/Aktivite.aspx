@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Aktivite.aspx.cs" Inherits="VeribisTasarım.Aktivite" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -22,13 +23,19 @@
                                 <td>
                                     <asp:Button ID="idButtonAktiviteSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
                                 </td>
+                                <td>
+                                    <asp:Button ID="idButtonAktiviteKapat" runat="server" CssClass="bg-blue fg-white" Text="Aktivite Kapat" OnClientClick="if($('#ContentPlaceHolder1_idACTIVITY_CODE').val()==null){alert('Aktiviteyi Kaydedin..'); return false;}" Height="30px" OnClick="idButtonAktiviteKapat_Click" />
+                                </td>
                             </tr>
                         </table>
-                      
-                        <asp:TextBox ID="idACTIVITY_CODE" runat="server" Visible="False"></asp:TextBox>
+                        <div hidden="hidden">
+                            <asp:TextBox ID="idACTIVITY_CODE" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="idOPENORCLOSE" runat="server"></asp:TextBox>
+                        </div>
+
                         <hr />
                         <div class="ALAN4">
-                            <table class="KisiTable" id="Table1">                              
+                            <table class="KisiTable" id="Table1">
                                 <tr>
                                     <td width="35%">Firma Adı
                                     </td>
@@ -38,7 +45,7 @@
                                         <asp:DropDownList ID="idCOMPANY_CODE" Height="30px" runat="server" Width="100%" OnSelectedIndexChanged="idCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                     </td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td width="35%">Adı
                                     </td>
                                     <td width="2%">:

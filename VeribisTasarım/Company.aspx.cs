@@ -36,7 +36,7 @@ namespace VeribisTasarım
        private void  gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,(ADDRESS.ADDRESS1+' '+ADDRESS.ADDRESS2+' '+ADDRESS.ADDRESS3) AS ADDRESS, GROUPS.EXP_TR AS SECTOR,PHONE.PHONE_NUMBER AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.COMPANY_CODE LEFT JOIN GROUPS ON GROUPS.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE WHERE GROUPS.GROUP_CODE=4 ORDER BY COMPANY_CODE DESC");
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,(ADDRESS.ADDRESS1+' '+ADDRESS.ADDRESS2+' '+ADDRESS.ADDRESS3) AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,PHONE.PHONE_NUMBER AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.COMPANY_CODE LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE ORDER BY COMPANY_CODE DESC");
             GridView1.DataBind();
         }
 
@@ -114,8 +114,7 @@ namespace VeribisTasarım
 
             }
             //formTemizle(this);
-
-
+            gridDoldur();
         }
 
 
@@ -126,6 +125,7 @@ namespace VeribisTasarım
             secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", String.Format("{0}", code));
             adresDoldur(Convert.ToInt32(code));
             telefonDoldur(Convert.ToInt32(code));
+          
         }
 
         protected void telefonSil(object sender, EventArgs e)
@@ -145,6 +145,7 @@ namespace VeribisTasarım
             formTemizle(this);
             adresDoldur(-1);
             telefonDoldur(-1);
+            
         }
 
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)

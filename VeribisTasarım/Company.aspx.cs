@@ -88,8 +88,8 @@ namespace VeribisTasarım
             sorgu.Append("SELECT PHONE_CODE, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
-            idPHONE.DataSource = tablo;
-            idPHONE.DataBind();
+            gridPHONE.DataSource = tablo;
+            gridPHONE.DataBind();
         }
 
 

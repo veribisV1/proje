@@ -502,7 +502,7 @@
 
                                     <td>
                                         <div class="gridDivTelefon">
-                                            <asp:GridView ID="idPHONE" runat="server"
+                                            <asp:GridView ID="gridPHONE" runat="server"
                                                 AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="PHONE_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Telefon bilgisi mevcut değil.">
 
                                                 <Columns>

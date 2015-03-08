@@ -7,18 +7,17 @@
 
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
-   <script>
-       function GoToPage(url, companyCode) {
-           window.location.href = url;
-
-           if (companyCode != '') {
-               window.location.href = url + '?param=' + companyCode;
-           }
-       }
-   </script>
     <script>
-        function ShowTelefon(parametre)
-        {
+        function GoToPage(url, companyCode) {
+            window.location.href = url;
+
+            if (companyCode != '') {
+                window.location.href = url + '?param=' + companyCode;
+            }
+        }
+    </script>
+    <script>
+        function ShowTelefon(parametre) {
             OpenPage('TelefonEkle.aspx?edit=', parametre, 600, 400);
             return false;
         }
@@ -31,7 +30,8 @@
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin {
+        .fancybox-custom .fancybox-skin
+        {
             box-shadow: 0 0 50px #222;
         }
     </style>
@@ -62,7 +62,7 @@
 
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
-                        
+
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Firma bilgisine rastlanmadı.">
 
                             <Columns>
@@ -193,11 +193,13 @@
                                     <td>
                                         <div style="visibility: hidden;">
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
+                                          
+                                            <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="true"></asp:TextBox>
                                         </div>
-                                       
+
                                     </td>
                                 </tr>
-                               
+
                             </table>
 
 
@@ -298,7 +300,7 @@
                                     </td>
                                     <td>
 
-                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server" ></asp:TextBox>
+                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
 
                                     </td>
                                 </tr>
@@ -416,69 +418,69 @@
 
                                     <td>
                                         <div class="gridDivAdres">
-                                          
-
-                                             <asp:GridView ID="idADDRESS" runat="server"
-                                            AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
-
-                                            <Columns>
-
-                                                <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click"  CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
 
 
-                                                <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("ADDRESS_CODE", "ShowAdres({0});return false;") %>' CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                            <asp:GridView ID="grdADDRESS" runat="server"
+                                                AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
 
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                <Columns>
 
-                                                <asp:TemplateField HeaderText="ADDRESS_CODE" ItemStyle-Width="5%" Visible="false">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblADDRESS_CODE" runat="server" Text='<%# Eval("ADDRESS_CODE")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-
-                                                <asp:TemplateField HeaderText="TÜR" ItemStyle-Width="5%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblTUR" runat="server" Text='<%# Eval("TUR")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
 
-                                                <asp:TemplateField HeaderText="ADRES" ItemStyle-Width="15%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblADRES" runat="server"
-                                                            Text='<%# Eval("ADRES")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("ADDRESS_CODE", "ShowAdres({0});return false;") %>' CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="ADDRESS_CODE" ItemStyle-Width="5%" Visible="false">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblADDRESS_CODE" runat="server" Text='<%# Eval("ADDRESS_CODE")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="TÜR" ItemStyle-Width="5%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblTUR" runat="server" Text='<%# Eval("TUR")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
 
-                                                <asp:TemplateField HeaderText="ÜLKE" ItemStyle-Width="5%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblULKE" runat="server" Text='<%# Eval("ULKE")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="ADRES" ItemStyle-Width="15%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblADRES" runat="server"
+                                                                Text='<%# Eval("ADRES")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="İL" ItemStyle-Width="5%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblIL" runat="server" Text='<%# Eval("IL")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="İLÇE" ItemStyle-Width="5%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblILCE" runat="server" Text='<%# Eval("ILCE")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="ÜLKE" ItemStyle-Width="5%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblULKE" runat="server" Text='<%# Eval("ULKE")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
-                                               
-                                            </Columns>
-                                        </asp:GridView>
+                                                    <asp:TemplateField HeaderText="İL" ItemStyle-Width="5%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblIL" runat="server" Text='<%# Eval("IL")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="İLÇE" ItemStyle-Width="5%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblILCE" runat="server" Text='<%# Eval("ILCE")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+
+                                                </Columns>
+                                            </asp:GridView>
                                         </div>
 
 
@@ -502,46 +504,46 @@
                                     <td>
                                         <div class="gridDivTelefon">
                                             <asp:GridView ID="idPHONE" runat="server"
-                                            AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="PHONE_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Telefon bilgisi mevcut değil.">
+                                                AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="PHONE_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Telefon bilgisi mevcut değil.">
 
-                                            <Columns>
+                                                <Columns>
 
-                                                <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-
-
-                                                <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("PHONE_CODE", "ShowTelefon({0});return false;") %>' CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
-
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-
-                                                <asp:TemplateField HeaderText="PHONE_CODE" ItemStyle-Width="5%" Visible="false">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblPHONE_CODE" runat="server" Text='<%# Eval("PHONE_CODE")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-
-                                                <asp:TemplateField HeaderText="TÜR" ItemStyle-Width="5%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblTUR" runat="server" Text='<%# Eval("TUR")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
 
-                                                <asp:TemplateField HeaderText="TELEFON" ItemStyle-Width="15%">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblTELEFON" runat="server"
-                                                            Text='<%# Eval("TELEFON")%>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("PHONE_CODE", "ShowTelefon({0});return false;") %>' CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
 
-                                            </Columns>
-                                        </asp:GridView>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="PHONE_CODE" ItemStyle-Width="5%" Visible="false">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblPHONE_CODE" runat="server" Text='<%# Eval("PHONE_CODE")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="TÜR" ItemStyle-Width="5%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblTUR" runat="server" Text='<%# Eval("TUR")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+
+                                                    <asp:TemplateField HeaderText="TELEFON" ItemStyle-Width="15%">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblTELEFON" runat="server"
+                                                                Text='<%# Eval("TELEFON")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                </Columns>
+                                            </asp:GridView>
                                         </div>
 
                                     </td>
@@ -828,10 +830,8 @@
                 </div>
 
                 <div class="frame" id="Kontak">
-                   
                 </div>
                 <div class="frame" id="Numune">
-                     
                 </div>
                 <div class="frame" id="Proforma"></div>
                 <div class="frame" id="Fatura"></div>

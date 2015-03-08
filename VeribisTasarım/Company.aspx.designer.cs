@@ -121,6 +121,15 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idCOMPANY_CODE;
         
         /// <summary>
+        /// idADDRESS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idADDRESS;
+        
+        /// <summary>
         /// idCOMPANY_SPECIAL_TYPE control.
         /// </summary>
         /// <remarks>
@@ -310,13 +319,13 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.Button idAdresEkle;
         
         /// <summary>
-        /// idADDRESS control.
+        /// grdADDRESS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView idADDRESS;
+        protected global::System.Web.UI.WebControls.GridView grdADDRESS;
         
         /// <summary>
         /// idTelefonEkle control.

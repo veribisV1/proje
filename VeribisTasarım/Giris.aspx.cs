@@ -33,7 +33,7 @@ namespace VeribisTasarım
                 if (db.validateUser(_txtKullaniciAdi.Text, _txtSifre.Text))
                 {
                     Session["USER_CODE"] = db.getUserID(_txtKullaniciAdi.Text, _txtSifre.Text);
-                    Session["USER_NAME"] = _txtKullaniciAdi.Text;
+                  
                     FormsAuthentication.RedirectFromLoginPage(_txtKullaniciAdi.Text, false);
                    
                 }

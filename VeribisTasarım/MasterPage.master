@@ -62,4 +62,11 @@
 
 </form>
 </body>
+    <link rel="stylesheet" type="text/css" href="Content/css/jquery.datetimepicker.css" />
+
+<script src="Content/js/jquery/jquery.datetimepicker.js"></script>
+   <script>
+       jQuery('#ContentPlaceHolder1_idSDATE').datetimepicker();
+       jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker();
+    </script>
 </html>

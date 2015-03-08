@@ -20,6 +20,10 @@ namespace VeribisTasarım
 
                 idEDATE.Text = DateTime.Now.ToString();
 
+                gridDoldur();
+                ekranDoldur();
+
+
                 idOPENORCLOSE.Text = "1";// aktivite açık;
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -95,5 +99,19 @@ namespace VeribisTasarım
             idButtonAktiviteKaydet_Click(sender, e);
             formTemizle(this);
         }
+
+        private void gridDoldur()
+        {
+            DBARACISI dbadapter = new DBARACISI();
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT  * FROM ACTIVITY WHERE OPENORCLOSE='1'");
+            GridView1.DataBind();
+        }
+        protected void editActivity(object sender, EventArgs e)
+        {
+
+
+        }
+
+
     }
 }

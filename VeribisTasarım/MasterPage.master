@@ -47,7 +47,7 @@
             <a class="element place-right" href="Giris.aspx"><span class="icon-switch" style="margin-top:20px;"></span></a>
             <span class="element-divider place-right"></span>
             <button class="element image-button image-left place-right" style="padding-right: 15px;">
-                Hoþgeldin <%# Session["USER_CODE"].ToString() %>
+                Hoþgeldin <%= HttpContext.Current.Session["USER_NAME"].ToString() %>
                     <i class="icon-user" style="margin-top: 27px;"></i>
             </button>
         </nav>

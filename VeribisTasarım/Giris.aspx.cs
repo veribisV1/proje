@@ -17,32 +17,42 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
+            if (!Page.IsPostBack)
+            {
+                HttpContext.Current.Session.Clear();
+                HttpContext.Current.Session.Abandon();
+                HttpContext.Current.User = null;
+                FormsAuthentication.SignOut();
+            }
+
         }
 
         protected void btnGiris_Click(object sender, EventArgs e)
         {
-           
+
+
             if (!String.IsNullOrEmpty(_txtTicariKod.Text))
             {
-               
 
-               
+
                 //Kullanıcı girişi kontrol
                 DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();
                 if (db.validateUser(_txtKullaniciAdi.Text, _txtSifre.Text))
                 {
                     Session["USER_CODE"] = db.getUserID(_txtKullaniciAdi.Text, _txtSifre.Text);
-                    Session["USER_NAME"] = _txtKullaniciAdi.Text;
+
                     FormsAuthentication.RedirectFromLoginPage(_txtKullaniciAdi.Text, false);
-                   
+
                 }
-                else
-                {
-                    //this.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", " toastr.error('Girilen kullanıcı adı veya şifre hatalı.', 'Kullanıcı Girişi');  ", true);
-                }
+
+            }
+            else
+            {
+                //this.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", " toastr.error('Girilen kullanıcı adı veya şifre hatalı.', 'Kullanıcı Girişi');  ", true);
             }
 
         }
+
     }
 }

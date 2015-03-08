@@ -267,7 +267,16 @@
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
-
+                                 <tr>
+                                    <td width="35%">Açık/Kapalı
+                                    </td>
+                                    <td width="2%">:
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="idOPEN_CLOSE" runat="server" Height="30px" Width="100%">
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
 
 
 

@@ -72,6 +72,9 @@ namespace VeribisTasarım
             idLAST_POSITION = dbGetir.doldur(idLAST_POSITION, dbGetir.getSonuc());
             idWHY_LOST = dbGetir.doldur(idWHY_LOST, dbGetir.getNedenKaybettik());
             idRIVAL_COMPANY_CODE = dbGetir.doldur(idRIVAL_COMPANY_CODE, dbGetir.getRakipFirma());
+
+            idOPEN_CLOSE = dbGetir.doldur(idOPEN_CLOSE, dbGetir.getAktiviteAcikKapali());
+            idOPEN_CLOSE.SelectedValue = "1";
             #endregion
         }
 

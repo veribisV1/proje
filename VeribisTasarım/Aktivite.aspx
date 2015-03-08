@@ -11,6 +11,62 @@
                 <li ><a href="#AktiviteEkle">Aktivite Ekle</a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
+                <div class="frame" id="ListeAdi">
+                    <div class="KisiTableHizalama">
+
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Firma bilgisine rastlanmadı.">
+
+                            <Columns>
+
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClick="editActivity" CommandArgument='<%# Eval("ACTIVITY_CODE")%>'></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="AKTİVİTE KODU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblACTIVITY_CODE" runat="server" Text='<%# Eval("ACTIVITY_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="KİŞİ KODU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCONTACT_CODE" runat="server"
+                                            Text='<%# Eval("CONTACT_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="FİRMA KODU">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCOMPANY_CODE" runat="server" Text='<%# Eval("COMPANY_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="BAŞLANDIÇ TARİHİ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblSDATE" runat="server" Text='<%# Eval("SDATE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="BİTİŞ TARİHİ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblEDATE" runat="server" Text='<%# Eval("EDATE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="SÜRE">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblDURATION" runat="server" Text='<%# Eval("DURATION")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
+
+                    </div>
+                </div>
                 <div class="frame" id="AktiviteEkle" style="min-height: 100px;">
                     <div class="KisiTableHizalama">
                         <table>

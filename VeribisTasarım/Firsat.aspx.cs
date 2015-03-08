@@ -75,13 +75,6 @@ namespace VeribisTasarım
             #endregion
         }
 
-        //protected void editFirsat(object sender, EventArgs e)
-        //{
-        //    ImageButton btn = (ImageButton)sender;
-        //    string code = btn.CommandArgument;
-        //    secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
-            
-        //}
 
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
         {

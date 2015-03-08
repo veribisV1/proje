@@ -42,8 +42,8 @@
 
 
                         <hr />
-                      
-                       <asp:GridView ID="grTeklifListe" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="OPPORTUNITY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="TEKLİF EKLEYİNİZ...">
+
+                        <asp:GridView ID="grTeklifListe" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="OPPORTUNITY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="TEKLİF EKLEYİNİZ...">
 
                             <Columns>
 
@@ -53,37 +53,53 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="TOTAL_UPB">
+                                <asp:TemplateField HeaderText="FİRMA ADI">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTOTAL_UPB" runat="server" Text='<%# Eval("TOTAL_UPB")%>'></asp:Label>
+                                        <asp:Label ID="COMPANY_NAME" runat="server" Text='<%# Eval("COMPANY_NAME")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="FREE_STOK">
+                                <asp:TemplateField HeaderText="KONTAK KİŞİ">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblFREE_STOK" runat="server"
-                                            Text='<%# Eval("FREE_STOK")%>'></asp:Label>
+                                        <asp:Label ID="CONTACT_NAME" runat="server" Text='<%# Eval("CONTACT_NAME")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="TAX">
+                                <asp:TemplateField HeaderText="AÇIKLAMA">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTAX" runat="server" Text='<%# Eval("TAX")%>'></asp:Label>
+                                        <asp:Label ID="EXPLANATION" runat="server" Text='<%# Eval("EXPLANATION")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="TOTAL">
+                                <asp:TemplateField HeaderText="TAKİP AŞAMASI">
+                                    <ItemTemplate>
+                                        <asp:Label ID="SEARCH_STEP" runat="server" Text='<%# Eval("SEARCH_STEP")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TEMSİLCİ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="APPOINTED_USER_CODE" runat="server" Text='<%# Eval("APPOINTED_USER_CODE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="DÖKÜMAN TARİHİ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="DOCUMENT_DATE" runat="server" Text='<%# Eval("DOCUMENT_DATE")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="TOPLAM DÖVİZ">
                                     <ItemTemplate>
                                         <asp:Label ID="lblTOTAL" runat="server" Text='<%# Eval("TOTAL")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="AVAILABLE_DATE">
+                                <asp:TemplateField HeaderText="TOPLAM TL">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblAVAILABLE_DATE" runat="server" Text='<%# Eval("AVAILABLE_DATE")%>'></asp:Label>
+                                        <asp:Label ID="lblTOTALUPB" runat="server" Text='<%# Eval("TOTAL_UPB")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-
                             </Columns>
 
                         </asp:GridView>
@@ -110,7 +126,7 @@
                         <hr />
                         <asp:TextBox ID="idOPPORTUNITY_CODE" runat="server" Visible="False"></asp:TextBox>
                         <asp:TextBox ID="idDOCUMENT_TYPE" runat="server" Visible="false" Text="2"></asp:TextBox>
-                     
+
                         <div class="ALAN4">
                             <table class="KisiTable" id="Table1">
                                 <tr>

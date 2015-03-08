@@ -16,19 +16,17 @@ namespace VeribisTasarım
         {
 
             if (!IsPostBack)
-            {               
+            {
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
-                    var contactCode = Convert.ToInt32((Request.QueryString["param"]));                    
+                    var contactCode = Convert.ToInt32((Request.QueryString["param"]));
                     idCONTACT_CODE.Text = contactCode.ToString();
-                    adresDoldur(Convert.ToInt32(contactCode));
-                    telefonDoldur(Convert.ToInt32(contactCode));
-                    secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", contactCode));
-
+                    gelenKisiyiYukle();                  
                 }
-                
+
             }
+
         }
 
         private void ekranDoldur()
@@ -58,7 +56,7 @@ namespace VeribisTasarım
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
-           
+
             sorgu.Append("SELECT ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ULKE,  ADDRESS.CITY AS IL ,ADDRESS.COUNTY1 AS ILCE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
             sorgu.Append(contactCode);
             DataTable tablo = db.get(sorgu.ToString());
@@ -71,7 +69,7 @@ namespace VeribisTasarım
         {
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
-            
+
             sorgu.Append("SELECT PHONE_CODE, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND CONTACT_CODE=");
             sorgu.Append(contactCode);
             DataTable tablo = db.get(sorgu.ToString());
@@ -112,8 +110,8 @@ namespace VeribisTasarım
                     if (contactCode != -1)
                     {
                         idCONTACT_CODE.Text = contactCode.ToString();
-                      
-                        
+
+
                     }
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
@@ -121,15 +119,15 @@ namespace VeribisTasarım
                 {
                     contactCode = kaydet("pUpdateContact");
                 }
-                
+
             }
             else
-                BosMesaji();  
+                BosMesaji();
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
         {
-   
+
         }
 
         protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
@@ -139,18 +137,25 @@ namespace VeribisTasarım
 
 
 
-       
 
-        
+        private void gelenKisiyiYukle()
+        {
+            adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+            telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+            secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", idCOMPANY_CODE.Text));
+        }
+
+
 
         protected void editContact(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
-            secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", code));
-            
+            idCOMPANY_CODE.Text = code;
+            gelenKisiyiYukle();
+            // secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", code));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
-            
+
 
         }
 

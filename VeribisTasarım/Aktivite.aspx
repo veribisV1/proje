@@ -7,7 +7,8 @@
         <h3>AKTİVİTE</h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li class="active"><a href="#AktiviteEkle">Aktivite Ekle</a></li>
+                <li class="active"><a href="#ListeAdi">Liste Adı</a></li>
+                <li ><a href="#AktiviteEkle">Aktivite Ekle</a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="AktiviteEkle" style="min-height: 100px;">

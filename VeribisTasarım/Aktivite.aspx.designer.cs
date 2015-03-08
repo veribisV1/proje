@@ -121,15 +121,6 @@ namespace VeribisTasarım {
         protected global::System.Web.UI.WebControls.TextBox idSDATE;
         
         /// <summary>
-        /// idSDATE_TIME control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idSDATE_TIME;
-        
-        /// <summary>
         /// idEDATE control.
         /// </summary>
         /// <remarks>
@@ -137,15 +128,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idEDATE;
-        
-        /// <summary>
-        /// idEDATE_TIME control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idEDATE_TIME;
         
         /// <summary>
         /// idJOINER_CODE control.

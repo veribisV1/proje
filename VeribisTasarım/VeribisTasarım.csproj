@@ -61,11 +61,14 @@
     <Content Include="Aktivite.aspx" />
     <Content Include="Company.aspx" />
     <Content Include="Content\css\iconFont.css" />
+    <Content Include="Content\css\jquery.datetimepicker.css" />
     <Content Include="Content\css\metro-bootstrap-responsive.css" />
     <Content Include="Content\css\metro-bootstrap.css" />
     <Content Include="Content\fonts\iconFont.dev.svg" />
     <Content Include="Content\fonts\iconFont.svg" />
     <Content Include="Content\fonts\metroSysIcons.svg" />
+    <Content Include="Content\js\jquery\jquery.datetimepicker.js" />
+    <Content Include="Content\js\jquery\jquery.js" />
     <Content Include="Content\js\jquery\jquery.min.js" />
     <Content Include="Content\js\jquery\jquery.mousewheel.js" />
     <Content Include="Content\js\jquery\jquery.widget.min.js" />

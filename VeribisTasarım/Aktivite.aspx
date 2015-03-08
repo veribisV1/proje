@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Aktivite.aspx.cs" Inherits="VeribisTasarım.Aktivite" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
     <div class="ALAN12">
         <h3>AKTİVİTE</h3>
         <div class="tab-control" data-role="tab-control">
@@ -80,8 +82,10 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idSDATE" runat="server" TextMode="Date" Height="30px" Width="70%"></asp:TextBox>
-                                        <asp:TextBox ID="idSDATE_TIME" runat="server" TextMode="Time" Height="30px" Width="28%"></asp:TextBox>
+                                     <%--   <input id="datetimepicker" type="text" />--%>
+                                       
+                                        <asp:TextBox ID="idSDATE" runat="server" Height="30px" Width="100%"></asp:TextBox>
+                                      
                                     </td>
                                 </tr>
                                 <tr>
@@ -90,9 +94,15 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idEDATE" runat="server" TextMode="Date" Height="30px" Width="70%"></asp:TextBox>
-                                        <asp:TextBox ID="idEDATE_TIME" runat="server" TextMode="Time" Height="30px" Width="28%"></asp:TextBox>
-
+                                        <asp:TextBox ID="idEDATE" runat="server" Height="30px" Width="100%"></asp:TextBox>
+                                       
+                                          <link rel="stylesheet" type="text/css" href="Content/css/jquery.datetimepicker.css" />
+<script src="Content/js/jquery/jquery.js"></script>
+<script src="Content/js/jquery/jquery.datetimepicker.js"></script>
+    <script>
+        jQuery('#ContentPlaceHolder1_idSDATE').datetimepicker();
+        jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker();
+    </script>
                                     </td>
                                 </tr>
                                 <tr>

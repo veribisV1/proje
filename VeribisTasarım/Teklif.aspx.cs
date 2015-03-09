@@ -24,6 +24,7 @@ namespace VeribisTasarım
                     if (qString.Contains('-'))
                     {
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                        idCOMPANY_CODE_SelectedIndexChanged(sender, e);
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
                     }
                     else
@@ -32,8 +33,7 @@ namespace VeribisTasarım
                     }
                 }
             }
-
-            gridDoldur(GridView1, "0");
+            
         }
 
         private void gridDoldur()
@@ -71,6 +71,11 @@ namespace VeribisTasarım
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
             secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
+            idCOMPANY_CODE_SelectedIndexChanged(sender, e);
+            DBARACISI adapter = new DBARACISI();
+            System.Data.DataTable ilce = adapter.getGridIcerik(String.Format("select CONTACT_CODE from OPPORTUNITYMASTER where  OPPORTUNITY_CODE={0}", code));
+            idCONTACT_CODE.SelectedValue = ilce.Rows[0][0].ToString();
+            gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
 
         }
 

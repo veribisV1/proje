@@ -15,12 +15,13 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
+
+                idSDATE.Text = DateTime.Now.ToString();
+
+                idEDATE.Text = DateTime.Now.ToString();
+
                 gridDoldur();
                 ekranDoldur();
-                idSDATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                idSDATE_TIME.Text = DateTime.Now.ToLocalTime().ToString("HH:mm");
-                idEDATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                idEDATE_TIME.Text = DateTime.Now.ToLocalTime().ToString("HH:mm");
 
                 idOPENORCLOSE.Text = "1";// aktivite açık;
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -79,7 +80,7 @@ namespace VeribisTasarım
                 {
                     activiteCode = kaydet("pUpdateActivity");
                 }
-
+                Response.Redirect("Aktivite.aspx");
             }
             else
                 BosMesaji();

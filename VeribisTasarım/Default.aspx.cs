@@ -17,7 +17,16 @@ namespace VeribisTasarım
             {
                
                 FormsAuthentication.RedirectToLoginPage();
+                
             }
+
+            DBARACISI adapter = new DBARACISI();
+            System.Data.DataTable ilce = adapter.getGridIcerik("select * from CUR where CONVERT(VARCHAR, CURDATE, 112) = CONVERT(VARCHAR, GETDATE(), 112)");
+            if (ilce.Rows.Count < 2)
+            {
+                Label1.Text = "Lütfen Kur bilgilerini güncelleyiniz..";
+            } 
+
         }
     }
 }

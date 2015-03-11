@@ -117,6 +117,7 @@ namespace VeribisTasarım
             }
             //formTemizle(this);
             gridDoldur();
+         
         }
 
 
@@ -145,6 +146,7 @@ namespace VeribisTasarım
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
+            ekranDoldur();
             grdADDRESS.DataSource = null;
             grdADDRESS.DataBind();
             gridPHONE.DataSource = null;

@@ -30,6 +30,10 @@ namespace VeribisTasarım
 
             if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
             {
+                if (Request.QueryString["btnKisiListele"].Contains('-'))
+                {
+                    idCOMPANY_CODE.SelectedValue = Request.QueryString["btnKisiListele"].Split('-')[0];
+                }
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
             }
 

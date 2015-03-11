@@ -75,12 +75,14 @@ namespace VeribisTasarım
                     {
                         idACTIVITY_CODE.Text = activiteCode.ToString();
                     }
+
+                    KayitBasariliMesaji("Aktivite");
                 }
                 else
                 {
                     activiteCode = kaydet("pUpdateActivity");
                 }
-                Response.Redirect("Aktivite.aspx");
+                //Response.Redirect("Aktivite.aspx");
             }
             else
                 BosMesaji();

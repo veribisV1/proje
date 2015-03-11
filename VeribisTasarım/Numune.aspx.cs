@@ -23,6 +23,7 @@ namespace VeribisTasarım
                     if (qString.Contains('-'))
                     {
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
+                        idCOMPANY_CODE_SelectedIndexChanged(sender, e);
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
                     }
                     else
@@ -64,6 +65,12 @@ namespace VeribisTasarım
             {
                 formTemizle(this);
             }
+        }
+
+        protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
     }
 }

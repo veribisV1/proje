@@ -145,8 +145,10 @@ namespace VeribisTasarım
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
-            adresDoldur(-1);
-            telefonDoldur(-1);
+            grdADDRESS.DataSource = null;
+            grdADDRESS.DataBind();
+            gridPHONE.DataSource = null;
+            gridPHONE.DataBind();
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
 
         }

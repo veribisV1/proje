@@ -59,7 +59,7 @@ namespace VeribisTasarım
             idHAVE_HOME = dbGetir.doldur(idHAVE_HOME, dbGetir.getEvVarMi());
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
             #endregion
-
+            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
 
         private void adresDoldur(int contactCode)
@@ -145,6 +145,7 @@ namespace VeribisTasarım
         protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
+            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
 
 

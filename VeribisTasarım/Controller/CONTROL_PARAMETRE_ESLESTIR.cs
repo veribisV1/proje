@@ -155,6 +155,7 @@ namespace VeribisTasarım.Controller
                 DropDownList elemanText = (DropDownList)childc;
                 elemanText.SelectedValue = "-1";
             }
+          
             foreach (Control c in childc.Controls)
             {
                 recursiveEkranTEmizle(c);

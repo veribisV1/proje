@@ -41,7 +41,7 @@ namespace VeribisTasarım
 
             #region Kişi Ekle DropDownları doldur
             idCOMPANY_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
-            idCONTACT_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
+            //idCONTACT_CODE = dbGetir.doldur(idCOMPANY_CODE, dbGetir.getFirma());
             idSELLING_BUYING = dbGetir.doldur(idSELLING_BUYING, dbGetir.getProformaCinsi());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idSIPARIS_YOLU = dbGetir.doldur(idSIPARIS_YOLU, dbGetir.getSiparisYolu());
@@ -85,8 +85,8 @@ namespace VeribisTasarım
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
-            //idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
+            DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
+            idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
         }
     }
 }

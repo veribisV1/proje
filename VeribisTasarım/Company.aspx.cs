@@ -147,6 +147,7 @@ namespace VeribisTasarım
             formTemizle(this);
             adresDoldur(-1);
             telefonDoldur(-1);
+            idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
 
         }
 

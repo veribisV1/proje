@@ -8,6 +8,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI.HtmlControls;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
@@ -41,7 +42,43 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
 
         conn.Close();
+
+        //var menulink = Repeater1.FindControl("menulink") as HtmlGenericControl;
+        //menulink.Attributes["class"] = "active";
+
+        //string curlink = Request.RawUrl;
+
+        //if (curlink.Contains("/administration/school"))
+        //{
+        //    menulink.Attributes["class"] = "selected";
+        //}
+        //else if (curlink.Contains("/administration/result"))
+        //{
+        //    resultlink.Attributes["class"] = "selected";
+        //}
+        //else if (curlink.Contains("/administration/staff"))
+        //{
+        //    staffslink.Attributes["class"] = "selected";
+        //}
     }
+
+    protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+    {
+
+        string curlink = Request.RawUrl;
+
+        if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+        {
+            var anc = (HtmlAnchor)e.Item.FindControl("menulink");
+            if (curlink.Contains(anc.HRef))
+            {
+                ((HtmlGenericControl)(e.Item.FindControl("menulist"))).
+                   Attributes["class"] = "active";
+            }
+        }
+    }
+
+   
 
 
 }

@@ -18,6 +18,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+                idSDATE.Text = DateTime.Now.ToString();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
@@ -25,17 +26,17 @@ namespace VeribisTasarım
                     gelenKisiyiYukle();                  
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);                  
                 }
-
-            }
-
-            if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
-            {
-                if (Request.QueryString["btnKisiListele"].Contains('-'))
+                if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
                 {
-                    idCOMPANY_CODE.SelectedValue = Request.QueryString["btnKisiListele"].Split('-')[0];
+                    if (Request.QueryString["btnKisiListele"].Contains('-'))
+                    {
+                        idCOMPANY_CODE.SelectedValue = Request.QueryString["btnKisiListele"].Split('-')[0];
+                    }
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
             }
+
+          
 
         }
 
@@ -123,14 +124,16 @@ namespace VeribisTasarım
 
 
                     }
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
+                    KayitBasariliMesaji("Kişi");
+                   
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
                 else
                 {
                     contactCode = kaydet("pUpdateContact");
                 }
 
-                gridDoldur();
+                //gridDoldur();
             }
             else
                 BosMesaji();

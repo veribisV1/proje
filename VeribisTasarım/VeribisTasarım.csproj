@@ -249,7 +249,9 @@
     <Compile Include="Proforma.aspx.designer.cs">
       <DependentUpon>Proforma.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ResGetir.cs" />
+    <Compile Include="Controller\ResGetir.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Teklif.aspx.cs">
       <DependentUpon>Teklif.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

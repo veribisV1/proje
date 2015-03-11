@@ -61,13 +61,14 @@ namespace VeribisTasarım.Controller
         //kullanıcı giriş kontrol
         public bool validateUser(string username, string password)
         {
-            login.Class1 passwordCodec = new login.Class1();
+            //login.Class1 passwordCodec = new login.Class1();
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS WHERE USER_NAME='");
             sorgu.Append(username);
             sorgu.Append("'");
             sorgu.Append(" AND USER_PASSWORD='");
-            sorgu.Append(passwordCodec.Encrypt(password));
+            //sorgu.Append(passwordCodec.Encrypt(password));
+            sorgu.Append(password);
             sorgu.Append("'");
 
             Dictionary<string, string> liste = db.getEleman(sorgu.ToString());
@@ -82,13 +83,14 @@ namespace VeribisTasarım.Controller
         {
 
 
-            login.Class1 passwordCodec = new login.Class1();
+            //login.Class1 passwordCodec = new login.Class1();
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS WHERE USER_NAME='");
             sorgu.Append(username);
             sorgu.Append("'");
             sorgu.Append(" AND USER_PASSWORD='");
-            sorgu.Append(passwordCodec.Encrypt(password));
+            //sorgu.Append(passwordCodec.Encrypt(password));
+            sorgu.Append(password);
             sorgu.Append("'");
             Dictionary<string, string> liste = db.getEleman(sorgu.ToString());
             return Convert.ToInt32(liste.Values.ToList()[0]);

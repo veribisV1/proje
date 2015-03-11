@@ -1,9 +1,16 @@
 ﻿function OpenPage(url,parametre,genislik,yukseklik) {
-  
+   
     var adres = url;
-    if (parametre != null) {
-        var adres = url + '?param=' + parametre;
+    var ara = /edit/gi;
+    if (url.search(ara) != -1) {
+        var adres = url + parametre;
     }
+    else {
+        if (parametre != null) {
+            var adres = url + '?param=' + parametre;
+        }
+    }
+   
    
 
     $.fancybox.open({
@@ -15,7 +22,12 @@
         autoSize: false,
         overflow: 'hidden',
         scrolling: 'no',
-
+       
     });
    
 }
+
+
+
+
+

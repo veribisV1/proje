@@ -23,7 +23,6 @@ namespace VeribisTasarım
                 gridDoldur();
                 ekranDoldur();
 
-
                 idOPENORCLOSE.Text = "1";// aktivite açık;
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -81,7 +80,7 @@ namespace VeribisTasarım
                 {
                     activiteCode = kaydet("pUpdateActivity");
                 }
-
+                Response.Redirect("Aktivite.aspx");
             }
             else
                 BosMesaji();

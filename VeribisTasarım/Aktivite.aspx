@@ -11,7 +11,7 @@
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li><a href="#ListeAdi">Liste Adı</a></li>
-                <li><a href="#AktiviteEkle">Aktivite Ekle</a></li>
+                <li class="active"><a href="#AktiviteEkle">Aktivite Ekle</a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi">
@@ -46,7 +46,7 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="BAŞLANDIÇ TARİHİ">
+                                <asp:TemplateField HeaderText="BAŞLANGIÇ TARİHİ">
                                     <ItemTemplate>
                                         <asp:Label ID="lblSDATE" runat="server" Text='<%# Eval("SDATE")%>'></asp:Label>
                                     </ItemTemplate>

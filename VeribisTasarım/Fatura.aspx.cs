@@ -23,7 +23,7 @@ namespace VeribisTasarım
                     if (qString.Contains('-'))
                     {
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
-                       
+
                     }
                     else
                     {
@@ -31,8 +31,7 @@ namespace VeribisTasarım
                     }
                 }
             }
-           // idOPPORTUNITY_CODE.Text = "35";
-            gridDoldur(GridView1, "3");
+
         }
         private void ekranDoldur()
         {

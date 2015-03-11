@@ -97,7 +97,7 @@ namespace VeribisTasarım
             {
                 oppurtunityCode = kaydet("pUpdateOppMaster");
             }
-
+            gridDoldur();
         }
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)

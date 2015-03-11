@@ -36,13 +36,8 @@ namespace VeribisTasarım
                      
                     }
                    
-                }
-                
-                
+                }                
             }
-
-          
-
         }
         private void gridDoldur()
         {

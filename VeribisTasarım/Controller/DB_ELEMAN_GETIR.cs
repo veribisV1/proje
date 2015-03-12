@@ -61,6 +61,7 @@ namespace VeribisTasarım.Controller
         //kullanıcı giriş kontrol
         public bool validateUser(string username, string password)
         {
+           
             login.Class1 passwordCodec = new login.Class1();
             StringBuilder sorgu = new StringBuilder();
             sorgu.Append("SELECT USER_CODE as col1, (AUSER_NAME+' '+SURNAME) AS col2 FROM USERS WHERE USER_NAME='");

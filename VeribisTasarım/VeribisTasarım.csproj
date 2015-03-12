@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="login, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Content\login.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -77,7 +81,7 @@
     <Content Include="Content\js\metro\metro-tab-control.js" />
     <Content Include="Content\js\metro\metro.min.js" />
     <Content Include="Content\js\navigate.js" />
-    <Content Include="Controller\login.dll" />
+    <Content Include="Content\login.dll" />
     <Content Include="Default.aspx" />
     <Content Include="fancyBox\lib\jquery-1.10.1.min.js" />
     <Content Include="fancyBox\source\blank.gif" />

@@ -14,6 +14,7 @@ namespace VeribisTasarım
         {
             if (!IsPostBack)
             {
+              
                 DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
                 idCUR_TYPE = dbelemanGetir.doldur(idCUR_TYPE, dbelemanGetir.getParaBirimi());
 

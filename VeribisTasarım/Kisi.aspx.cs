@@ -18,6 +18,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 ekranDoldur();
+                idSDATE.Text = DateTime.Now.ToString();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
@@ -25,13 +26,17 @@ namespace VeribisTasarım
                     gelenKisiyiYukle();                  
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);                  
                 }
-
+                if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
+                {
+                    if (Request.QueryString["btnKisiListele"].Contains('-'))
+                    {
+                        idCOMPANY_CODE.SelectedValue = Request.QueryString["btnKisiListele"].Split('-')[0];
+                    }
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
+                }
             }
 
-            if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
-            }
+          
 
         }
 
@@ -55,7 +60,7 @@ namespace VeribisTasarım
             idHAVE_HOME = dbGetir.doldur(idHAVE_HOME, dbGetir.getEvVarMi());
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
             #endregion
-
+            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
 
         private void adresDoldur(int contactCode)
@@ -119,14 +124,16 @@ namespace VeribisTasarım
 
 
                     }
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
+                    KayitBasariliMesaji("Kişi");
+                   
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
                 else
                 {
                     contactCode = kaydet("pUpdateContact");
                 }
 
-                gridDoldur();
+                //gridDoldur();
             }
             else
                 BosMesaji();
@@ -141,6 +148,7 @@ namespace VeribisTasarım
         protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
+            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
 
 

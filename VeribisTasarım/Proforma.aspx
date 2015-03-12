@@ -187,7 +187,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="100%" TextMode="DateTime" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="100%" TextMode="Date" Height="30px"></asp:TextBox>
 
                                     </td>
                                 </tr>

@@ -47,7 +47,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="100%" OnSelectedIndexChanged="idCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="true">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -187,7 +187,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="100%" TextMode="DateTime" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="100%" TextMode="Date" Height="30px"></asp:TextBox>
 
                                     </td>
                                 </tr>

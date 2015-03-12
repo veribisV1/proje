@@ -154,10 +154,7 @@
                                     <td>
                                         <asp:TextBox ID="idEDATE" runat="server" Height="30px" Width="100%"></asp:TextBox>
                                        
-     <script>
-         jQuery('#ContentPlaceHolder1_idSDATE').datetimepicker();
-         jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker();
-    </script>
+     
                                     </td>
                                 </tr>
                                 <tr>

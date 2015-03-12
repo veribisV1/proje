@@ -13,3 +13,4 @@ C:\veribis\proje\VeribisTasarım\bin\VeribisTasarım.pdb
 C:\veribis\proje\VeribisTasarım\obj\Release\VeribisTasarım.csprojResolveAssemblyReference.cache
 C:\veribis\proje\VeribisTasarım\obj\Release\VeribisTasarım.dll
 C:\veribis\proje\VeribisTasarım\obj\Release\VeribisTasarım.pdb
+C:\veribis\proje\VeribisTasarım\bin\login.dll

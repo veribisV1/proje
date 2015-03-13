@@ -10,8 +10,18 @@ namespace VeribisTasarım
 {
     public partial class FirsatEkle : BASECONTROLLER
     {
+        private string sayfaAdi;
+        public string SayfaAdi { get { return sayfaAdi; } }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.UrlReferrer.AbsolutePath.Contains("Teklif.aspx"))
+            {
+                sayfaAdi = "Teklif Ekle";
+            }
+            else if (Request.UrlReferrer.AbsolutePath.Contains("Firsat.aspx"))
+            {
+                sayfaAdi = "Fırsat Ekle";
+            }
             if (!IsPostBack)
             {
               
@@ -21,15 +31,14 @@ namespace VeribisTasarım
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
 
-                    idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
+                    idOPPORTUNITY_CODE.Text = Request.QueryString["param"].ToString();
 
                     if (!String.IsNullOrEmpty(Request.QueryString["param2"]))
                     {
-                        idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
+                        idROW_ORDER_NO.Text = Request.QueryString["param2"].ToString();
+                        editIcerikYerlestir();
                     }
 
-                    btnStokKodAra_Click(sender, e);
-                    editIcerikYerlestir();
                 }
             }
         }
@@ -37,6 +46,8 @@ namespace VeribisTasarım
 
         private void editIcerikYerlestir()
         {
+            btnStokKodAra_Click(new object(), new EventArgs());
+           
             secilenElemanDetayiGetir(this, String.Format("SELECT * FROM OPPORTUNITYDETAIL WHERE OPPORTUNITY_CODE={0} AND ROW_ORDER_NO={1}", idOPPORTUNITY_CODE.Text, idROW_ORDER_NO.Text));
             DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
             idCUR_VALUE.Text = dbelemanGetir.getParaBirimiDegeri(idCUR_TYPE.SelectedValue.ToString(), DateTime.Now);
@@ -62,12 +73,14 @@ namespace VeribisTasarım
             // }
             //else
             //    BosMesaji();
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
 
         }
 
         protected void btnStokKodAra_Click(object sender, EventArgs e)
         {
+            
             DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
             idSTOK_CODE = dbelemanGetir.doldur(idSTOK_CODE, dbelemanGetir.getStokKartByKod(txtStokKod.Text));
             idPRODUCT_NAME = dbelemanGetir.doldur(idPRODUCT_NAME, dbelemanGetir.getStokKartByKodName(txtStokKod.Text));

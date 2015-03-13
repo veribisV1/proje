@@ -15,8 +15,7 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
-                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                
                 ekranDoldur();
                 gridDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -67,12 +66,15 @@ namespace VeribisTasarım
             idOPEN_CLOSE.SelectedValue = "1";
             #endregion
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         protected void editTeklif(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
+            idCONTACT_CODE.Items.Clear();
             secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
             idCOMPANY_CODE_SelectedIndexChanged(sender, e);
             DBARACISI adapter = new DBARACISI();
@@ -106,6 +108,14 @@ namespace VeribisTasarım
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
+        }
+
+        protected void idButtonTeklifEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+            ekranDoldur();
+            GridView1.DataSource = null;
+            GridView1.DataBind();
         }
     }
 }

@@ -542,7 +542,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="idSDATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="idSDATE" Width="100%" Height="30px" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>

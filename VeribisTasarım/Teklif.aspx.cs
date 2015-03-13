@@ -73,6 +73,7 @@ namespace VeribisTasarım
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
+            idCONTACT_CODE.Items.Clear();
             secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
             idCOMPANY_CODE_SelectedIndexChanged(sender, e);
             DBARACISI adapter = new DBARACISI();

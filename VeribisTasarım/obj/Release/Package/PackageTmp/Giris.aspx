@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    
+
     <style>
         button, input {
             line-height: normal;
@@ -315,7 +315,7 @@
         }
     </style>
 
-    
+
 </head>
 <body class="login-page">
     <form id="form1" runat="server">
@@ -331,7 +331,7 @@
 
                                     <div class="login-title text-center">
                                         <h4>Kullanıcı Girişi</h4>
-                                        
+
                                     </div>
 
                                     <div id="ticarikod" class="input-group">
@@ -352,9 +352,13 @@
                                     <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />
 
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </section>

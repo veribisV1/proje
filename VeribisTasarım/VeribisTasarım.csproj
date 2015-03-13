@@ -38,8 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="login">
-      <HintPath>..\..\..\Users\ev\Desktop\VeribisPrpjeler\login\login\bin\Debug\login.dll</HintPath>
+    <Reference Include="login, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Content\login.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -80,6 +81,7 @@
     <Content Include="Content\js\metro\metro-tab-control.js" />
     <Content Include="Content\js\metro\metro.min.js" />
     <Content Include="Content\js\navigate.js" />
+    <Content Include="Content\login.dll" />
     <Content Include="Default.aspx" />
     <Content Include="fancyBox\lib\jquery-1.10.1.min.js" />
     <Content Include="fancyBox\source\blank.gif" />

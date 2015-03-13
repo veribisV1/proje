@@ -47,9 +47,10 @@
 
     <nav class="sidebar light" style="width: 15%; height: 100%; float: left;">
         <ul>
-            <asp:Repeater ID="Repeater1" runat="server">
+            <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound" >
                 <ItemTemplate>
-                    <li><a style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><i class="icon-arrow-right"></i><%# Eval("MENU_NAME") %></a></li>
+                    <li id="menulist" runat="server">
+                        <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><i class="icon-arrow-right"></i><%# Eval("MENU_NAME") %></a></li>
                 </ItemTemplate>
             </asp:Repeater>
         </ul>
@@ -61,12 +62,15 @@
     </div>
 
 </form>
-</body>
     <link rel="stylesheet" type="text/css" href="Content/css/jquery.datetimepicker.css" />
 
-<script src="Content/js/jquery/jquery.datetimepicker.js"></script>
-   <script>
-       jQuery('#ContentPlaceHolder1_idSDATE').datetimepicker();
-       jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker();
+    <script src="Content/js/jquery/jquery.datetimepicker.js"></script>
+    <script>
+        jQuery('#ContentPlaceHolder1_idSDATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker({ format: 'd.m.Y H:i' });
+       
     </script>
+   
+</body>
+    
 </html>

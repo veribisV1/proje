@@ -165,6 +165,23 @@ namespace VeribisTasarım
             adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
 
+        protected void idButtonMakinaParkiKaydet_Click(object sender, EventArgs e)
+        {
+            int Company_Code = -1;
+            if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
+            {              
+                    Company_Code = kaydet("pInsertMakinePark");
+                    if (Company_Code != -1)
+                    {
+                        KayitBasariliMesaji(Company_Code.ToString());
+
+                    }               
+
+            }
+           
+
+        }
+
 
 
     }

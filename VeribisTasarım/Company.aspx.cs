@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Text;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.Services;
 using VeribisTasarım.Controller;
-using System.Configuration;
-
-
-
 namespace VeribisTasarım
 {
     public partial class Company : BASECONTROLLER
@@ -19,6 +11,7 @@ namespace VeribisTasarım
         protected void Page_Load(object sender, EventArgs e)
         {
             base.Page_Load();
+            idGROUP_CODE.SelectionMode = ListSelectionMode.Multiple;
             gridDoldur();
             if (!IsPostBack)
             {
@@ -40,7 +33,6 @@ namespace VeribisTasarım
             GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,(COUNTRY_CODE+ ' ' + AREA_CODE + ' ' + PHONE_NUMBER) AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE ORDER BY COMPANY_CODE DESC");
             GridView1.DataBind();
         }
-
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
@@ -67,8 +59,6 @@ namespace VeribisTasarım
             #endregion
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
-
-
         private void adresDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -81,7 +71,6 @@ namespace VeribisTasarım
             grdADDRESS.DataBind();
 
         }
-
         private void telefonDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -93,8 +82,6 @@ namespace VeribisTasarım
             gridPHONE.DataSource = tablo;
             gridPHONE.DataBind();
         }
-
-
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             int Company_Code = -1;
@@ -140,8 +127,6 @@ namespace VeribisTasarım
             gridDoldur();
 
         }
-
-
         protected void editCompany(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
@@ -152,20 +137,23 @@ namespace VeribisTasarım
             companyGroupDoldur(code);
 
         }
-
         private void companyGroupDoldur(string code)
         {
             idGROUP_CODE.ClearSelection();
             DBARACISI adapter = new DBARACISI();
             System.Collections.Generic.List<string> group = adapter.getElemanList(String.Format("SELECT GROUP_CODE FROM COMPANYGROUP WHERE COMPANY_CODE={0}", code));
-            idGROUP_CODE.SelectionMode=ListSelectionMode.Multiple;
-            foreach (string item in group)
+            foreach (ListItem listItem in idGROUP_CODE.Items)
             {
-                idGROUP_CODE.SelectedValue = item;
+                foreach (string item in group)
+                {
+                    if (listItem.Value.ToString() == item)
+                    {
+                        listItem.Selected = true;
+                    }
+                }
             }
 
         }
-
         protected void telefonSil(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
@@ -175,9 +163,6 @@ namespace VeribisTasarım
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
-
-
-
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
@@ -189,7 +174,6 @@ namespace VeribisTasarım
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
 
         }
-
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
@@ -199,7 +183,6 @@ namespace VeribisTasarım
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
         }
-
         protected void idButtonMakinaParkiKaydet_Click(object sender, EventArgs e)
         {
             int Company_Code = -1;
@@ -211,17 +194,9 @@ namespace VeribisTasarım
                     KayitBasariliMesaji(Company_Code.ToString());
 
                 }
-
             }
-
-
         }
-
-
-
     }
-
-
 }
 
 

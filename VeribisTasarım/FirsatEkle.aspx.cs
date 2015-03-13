@@ -39,8 +39,6 @@ namespace VeribisTasarım
                         editIcerikYerlestir();
                     }
 
-                    //btnStokKodAra_Click(sender, e);
-                  
                 }
             }
         }

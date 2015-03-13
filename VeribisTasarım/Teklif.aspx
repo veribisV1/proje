@@ -112,7 +112,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonTeklifEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonTeklifEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" OnClick="idButtonTeklifEkleYeni_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonTeklifEkleKaydet_Click" OnClientClick="return confirm('Teklif bilgisi kaydedilmiştir.')" />

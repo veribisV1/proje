@@ -27,20 +27,45 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="EvrakListesiArama" Height="20px" Width="13%"></asp:TextBox>
-
+                                   
+                                     <asp:Label ID="idLabelTeklifArama" runat="server" Text="Teklif" CssClass="EvrakListesiDurum"></asp:Label>
                                 </td>
+                                <td>:</td>
                                 <td>
-                                    <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" />
+                                     <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="EvrakListesiArama" Width="180px"></asp:TextBox>
+                                 
+                                </td>
+                                 <td>
+                                     <asp:Label ID="idLabelTeklifDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label>
+                                </td>
+                                   <td>:</td>
+                                <td>
+                                   <asp:DropDownList ID="idDropDownTeklifDurum" runat="server" CssClass="EvrakListesiDropdownDurum" Width="180px"></asp:DropDownList>
                                 </td>
                             </tr>
+                            <tr>
+                                 <td> 
+                                    <asp:Label ID="idLabelTeklifBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label>
+                                 </td>
+                                   <td>:</td>
+                                 <td> 
+                                     <asp:TextBox ID="idTeklifBaslangicTarih" runat="server" Width="180px"  ></asp:TextBox>
+                                 </td>
+                                <td>
+                                    <asp:Label ID="idLabelTeklifBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label>
+                                </td>
+                                   <td>:</td>
+                                 <td>
+                                     <asp:TextBox ID="idTeklifBitisTarih" runat="server" Width="180px" ></asp:TextBox>
+                                 </td>
+                                <td>
+                                      <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" />
+                                </td>
+                            </tr>
+                           
                         </table>
 
-                        <asp:Label ID="idLabelTeklifDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label><asp:DropDownList ID="idDropDownTeklifDurum" runat="server" CssClass="EvrakListesiDropdownDurum"></asp:DropDownList>
-                        <asp:Label ID="idLabelTeklifBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label><asp:TextBox ID="idTeklifBaslangicTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBaslangicTarih"></asp:TextBox><br />
-                        <asp:Label ID="idLabelTeklifBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label><asp:TextBox ID="idTeklifBitisTarih" runat="server" TextMode="DateTimeLocal" CssClass="EvrakListesiBitisTarih"></asp:TextBox>
-
-
+                      
                         <hr />
 
                         <asp:GridView ID="grTeklifListe" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="OPPORTUNITY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="TEKLİF EKLEYİNİZ...">

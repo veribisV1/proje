@@ -27,6 +27,7 @@ namespace VeribisTasarım
             }
 
         }
+       
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();

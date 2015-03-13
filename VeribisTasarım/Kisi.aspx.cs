@@ -17,6 +17,7 @@ namespace VeribisTasarım
            
             if (!IsPostBack)
             {
+                base.Page_Load();
                 ekranDoldur();
                 idSDATE.Text = DateTime.Now.ToString();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -34,9 +35,7 @@ namespace VeribisTasarım
                     }
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
-            }
-
-          
+            }         
 
         }
 

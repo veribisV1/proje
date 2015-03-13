@@ -34,6 +34,31 @@
             box-shadow: 0 0 50px #222;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            $(document).on("keydown", keydown);
+            $(document).on("keyup", keyup);
+        });
+
+        function keydown(e) {
+
+            if ((e.which || e.keyCode) == 116 || ((e.which || e.keyCode) == 82 && ctrlKeyDown)) {
+                // Pressing F5 or Ctrl+R
+                e.preventDefault();
+            } else if ((e.which || e.keyCode) == 17) {
+                // Pressing  only Ctrl
+                ctrlKeyDown = true;
+            }
+        };
+
+        function keyup(e) {
+            // Key up Ctrl
+            if ((e.which || e.keyCode) == 17)
+                ctrlKeyDown = false;
+        };
+    </script>
+
+
     <link href="Content/css/multiple-select.css" rel="stylesheet" />
     <script src="Content/js/jquery.multiple.select.js"></script>
 </asp:Content>
@@ -122,7 +147,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClick="idButtonFirmaEkleYeni_Click" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle"   OnClick="idButtonFirmaEkleYeni_Click" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />

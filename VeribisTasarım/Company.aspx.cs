@@ -65,7 +65,7 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
-            idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
+            idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
 
@@ -106,18 +106,39 @@ namespace VeribisTasarım
                     if (Company_Code != -1)
                     {
                         idCOMPANY_CODE.Text = Company_Code.ToString();
+                        DBARACISI adapter = new DBARACISI();
+                        foreach (ListItem item in idGROUP_CODE.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                if (item.Value != "-1")
+                                    adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", Company_Code, item.Value));
+                            }
+
+                        }
 
                     }
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdateCompany");
+                    DBARACISI adapter = new DBARACISI();
+                    adapter.set(String.Format("Delete from COMPANYGROUP where COMPANY_CODE={0}", idCOMPANY_CODE.Text));
+                    foreach (ListItem item in idGROUP_CODE.Items)
+                    {
+                        if (item.Selected)
+                        {
+                            if (item.Value != "-1")
+                                adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", idCOMPANY_CODE.Text, item.Value));
+                        }
+
+                    }
                 }
 
             }
             //formTemizle(this);
             gridDoldur();
-         
+
         }
 
 
@@ -128,6 +149,20 @@ namespace VeribisTasarım
             secilenElemanDetayiGetir(this, "COMPANY", "COMPANY_CODE", String.Format("{0}", code));
             adresDoldur(Convert.ToInt32(code));
             telefonDoldur(Convert.ToInt32(code));
+            companyGroupDoldur(code);
+
+        }
+
+        private void companyGroupDoldur(string code)
+        {
+            idGROUP_CODE.ClearSelection();
+            DBARACISI adapter = new DBARACISI();
+            System.Collections.Generic.List<string> group = adapter.getElemanList(String.Format("SELECT GROUP_CODE FROM COMPANYGROUP WHERE COMPANY_CODE={0}", code));
+            idGROUP_CODE.SelectionMode=ListSelectionMode.Multiple;
+            foreach (string item in group)
+            {
+                idGROUP_CODE.SelectedValue = item;
+            }
 
         }
 
@@ -151,7 +186,7 @@ namespace VeribisTasarım
             grdADDRESS.DataBind();
             gridPHONE.DataSource = null;
             gridPHONE.DataBind();
-            idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
+            idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
 
         }
 
@@ -169,16 +204,16 @@ namespace VeribisTasarım
         {
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
-            {              
-                    Company_Code = kaydet("pInsertMakinePark");
-                    if (Company_Code != -1)
-                    {
-                        KayitBasariliMesaji(Company_Code.ToString());
+            {
+                Company_Code = kaydet("pInsertMakinePark");
+                if (Company_Code != -1)
+                {
+                    KayitBasariliMesaji(Company_Code.ToString());
 
-                    }               
+                }
 
             }
-           
+
 
         }
 

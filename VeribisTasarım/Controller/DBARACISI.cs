@@ -29,6 +29,13 @@ namespace VeribisTasarım.Controller
                 return db.getDictionaryTable(sorgu);
             }
         }
+        public List<string> getElemanList(string sorgu)
+        {
+            using (DBTOOL db = new DBTOOL())
+            {
+                return db.getDictionaryList(sorgu);
+            }
+        }
         public Dictionary<string, string> getListEleman(string sorgu)
         {
             using (DBTOOL db = new DBTOOL())

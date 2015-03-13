@@ -28,6 +28,15 @@ namespace VeribisTasarım.Controller
             eleman.SelectedValue = "-1";
             return eleman;
         }
+        public ListBox doldur(ListBox eleman, Dictionary<string, string> liste)
+        {
+            eleman.DataSource = liste;
+            eleman.DataTextField = "Value";
+            eleman.DataValueField = "Key";
+            eleman.DataBind();
+            eleman.SelectedValue = "-1";
+            return eleman;
+        }
         private string getSQL(string grupKodu)
         {
             StringBuilder sorgu = new StringBuilder();

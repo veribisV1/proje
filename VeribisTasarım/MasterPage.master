@@ -59,7 +59,8 @@
                 VeribisCRM 
             </a>
             
-            <a class="element place-right" href="Giris.aspx"><span class="icon-switch" style="margin-top:20px;"></span></a>
+            <a class="element place-right" href="Giris.aspx?param=logout"><span class="icon-switch" style="margin-top:20px;"></span></a>
+      
             <span class="element-divider place-right"></span>
             <button class="element image-button image-left place-right" style="padding-right: 15px;">
                 Hoþgeldin <%= this.Page.User.Identity.Name %>

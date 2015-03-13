@@ -23,24 +23,89 @@
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
     <script src="Content/js/metro/metro.min.js"></script>
     <script src="Content/js/navigate.js"></script>
+    <style>
+        .dropdown-dark {
+  background: #444;
+  
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  
+}
+.dropdown-dark:before {
+  border-bottom-color: #aaa;
+}
+.dropdown-dark:after {
+  border-top-color: #aaa;
+}
+.dropdown-dark .dropdown-select {
+  color: #aaa;
+  text-shadow: 0 1px black;
+  /* Fallback for IE 8 */
+  background: #444;
+}
+.dropdown-dark .dropdown-select:focus {
+  color: #ccc;
+}
+.dropdown-dark .dropdown-select > option {
+  background: #444;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+
+    </style>
     
     <asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
 </head>
 <body class="metro">
 <form id="form1" runat="server">
 
-    <nav class="navigation-bar">
+    <nav class="navigation-bar" style="height:140px;">
         <nav class="navigation-bar-content">
-            <a class="element" style="font-size: 36px;" href="Default.aspx">
-               <%-- <img src="image/logo1.png" />--%>
+            <a class="element" style="font-size: 36px; margin-top:20px;" href="Default.aspx">
+              
                 VeribisCRM 
             </a>
-            
-            <a class="element place-right" href="Giris.aspx"><span class="icon-switch" style="margin-top:20px;"></span></a>
-            <span class="element-divider place-right"></span>
-            <button class="element image-button image-left place-right" style="padding-right: 15px;">
+             <span class="element-divider" style="margin-top:30px;"></span>
+          <div class="element">
+              <asp:Repeater ID="Repeater2" runat="server">
+                  <ItemTemplate>
+                      <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("MENU_NAME") %></a>
+                  </ItemTemplate>
+              </asp:Repeater>
+
+          </div>
+            <span class="element-divider" style="margin-top:30px;"></span>
+            <div class="element">
+                <table style="margin-top:85px;">
+                  <tr>
+                      <td>
+                            <asp:DropDownList ID="DropDownList1" runat="server" ForeColor="White" Width="120px" Height="30px" CssClass="dropdown-dark">
+                                <asp:ListItem Text="Kiþiler"></asp:ListItem>
+                                <asp:ListItem Text="Firmalar"></asp:ListItem>
+                                <asp:ListItem Text="Aktivite"></asp:ListItem>
+                            </asp:DropDownList>
+                      </td>
+                      <td>
+                           <div class="input-control text" style="margin-top:11px;" >
+                    <input type="text" placeholder="Arama Yapýn..." style="width:150px;height:30px;" />
+                    <button class="btn-search"></button>
+                </div>
+                      </td>
+                  </tr>
+              </table>
+            </div>
+                   
+          
+         <span class="element-divider" style="margin-top:30px;"></span>
+           
+            <a class="element place-right" href="Giris.aspx" style="margin-top:45px;"><span class="icon-switch" ></span></a>
+            <span class="element-divider place-right" style="margin-top:30px;"></span>
+            <button class="element image-button image-left place-right" style="padding-right: 15px;margin-top:25px;">
                 Hoþgeldin <%= this.Page.User.Identity.Name %>
-                    <i class="icon-user" style="margin-top: 27px;"></i>
+                    <i class="icon-user" style="margin-top: 30px;"></i>
             </button>
         </nav>
     </nav>

@@ -19,14 +19,38 @@ public partial class MasterPage : System.Web.UI.MasterPage
             Response.Redirect("Giris.aspx");
         }
         MenuGoster();
+        VeriGetir();
+    }
+
+    private void VeriGetir()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);
+        conn.Open();
+        string MenuSql = "select MENU_NAME,SQL from MENULOAD inner join PSQL on MENULOAD.LINK=PSQL.SQL_ID WHERE USER_CODE = @KullaniciTipiId AND MENULOAD.TYPE=2 ";
+        SqlCommand KullaniciMenu = new SqlCommand(MenuSql, conn);
+        KullaniciMenu.Parameters.Add("@KullaniciTipiId", SqlDbType.Int).Value = Convert.ToInt32(Session["KullaniciTipiId"]);
+        SqlDataAdapter dv = new SqlDataAdapter(KullaniciMenu);
+
+        DataTable dtv = new DataTable();
+        dtv.Columns.Add("MENU_NAME");
+        dtv.Columns.Add("SQL");
+        dv.Fill(dtv);
+        Repeater Repeater2 = (Repeater)this.FindControl("Repeater2");
+
+        Repeater2.DataSource = dtv;
+        Repeater2.DataBind();
+
+
+        conn.Close();
 
     }
+
 
     private void MenuGoster()
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["veribis"].ConnectionString);
         conn.Open();
-        string MenuSql = "SELECT MENU_NAME,LINK FROM MENULOAD WITH (NOLOCK) WHERE USER_CODE = @KullaniciTipiId ORDER BY ORDER_BY";
+        string MenuSql = "SELECT MENU_NAME,LINK FROM MENULOAD WITH (NOLOCK) WHERE USER_CODE = @KullaniciTipiId AND TYPE=1 ORDER BY ORDER_BY";
         SqlCommand KullaniciMenu = new SqlCommand(MenuSql, conn);
         KullaniciMenu.Parameters.Add("@KullaniciTipiId", SqlDbType.Int).Value = Convert.ToInt32(Session["KullaniciTipiId"]);
         SqlDataAdapter dv = new SqlDataAdapter(KullaniciMenu);
@@ -43,23 +67,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         conn.Close();
 
-        //var menulink = Repeater1.FindControl("menulink") as HtmlGenericControl;
-        //menulink.Attributes["class"] = "active";
-
-        //string curlink = Request.RawUrl;
-
-        //if (curlink.Contains("/administration/school"))
-        //{
-        //    menulink.Attributes["class"] = "selected";
-        //}
-        //else if (curlink.Contains("/administration/result"))
-        //{
-        //    resultlink.Attributes["class"] = "selected";
-        //}
-        //else if (curlink.Contains("/administration/staff"))
-        //{
-        //    staffslink.Attributes["class"] = "selected";
-        //}
     }
 
     protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)

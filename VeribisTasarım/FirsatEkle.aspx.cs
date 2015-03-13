@@ -21,11 +21,11 @@ namespace VeribisTasarım
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
 
-                    idROW_ORDER_NO.Text = Request.QueryString["param"].ToString();
+                    idOPPORTUNITY_CODE.Text = Request.QueryString["param"].ToString();
 
                     if (!String.IsNullOrEmpty(Request.QueryString["param2"]))
                     {
-                        idOPPORTUNITY_CODE.Text = Request.QueryString["param2"].ToString();
+                        idROW_ORDER_NO.Text = Request.QueryString["param2"].ToString();
                     }
 
                     btnStokKodAra_Click(sender, e);

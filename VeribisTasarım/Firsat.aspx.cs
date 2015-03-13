@@ -16,8 +16,7 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
-                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+               
                 ekranDoldur();
                 gridDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -73,6 +72,8 @@ namespace VeribisTasarım
             
             #endregion
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
 
@@ -94,7 +95,7 @@ namespace VeribisTasarım
                 oppurtunityCode = kaydet("pUpdateOppMaster");
             }
 
-
+            gridDoldur();
         }
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,12 +108,21 @@ namespace VeribisTasarım
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
+            idCONTACT_CODE.Items.Clear();
             secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
             idCOMPANY_CODE_SelectedIndexChanged(sender, e);
             DBARACISI adapter = new DBARACISI();
             System.Data.DataTable ilce = adapter.getGridIcerik(String.Format("select CONTACT_CODE from OPPORTUNITYMASTER where  OPPORTUNITY_CODE={0}", code));
             idCONTACT_CODE.SelectedValue = ilce.Rows[0][0].ToString();
             gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+        }
+
+        protected void idButtonFirsatEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+            ekranDoldur();
+            GridView1.DataSource = null;
+            GridView1.DataBind();
         }
 
 

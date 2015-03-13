@@ -10,11 +10,20 @@ namespace VeribisTasarım
 {
     public partial class FirsatEkle : BASECONTROLLER
     {
+        private string sayfaAdi;
+        public string SayfaAdi { get { return sayfaAdi; } }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-              
+                if (Request.UrlReferrer.AbsolutePath.Contains("Teklif.aspx"))
+                {
+                    sayfaAdi = "Teklif Ekle";
+                }
+                else if (Request.UrlReferrer.AbsolutePath.Contains("Firsat.aspx"))
+                {
+                    sayfaAdi = "Fırsat Ekle";
+                }
                 DB_ELEMAN_GETIR dbelemanGetir = new DB_ELEMAN_GETIR();
                 idCUR_TYPE = dbelemanGetir.doldur(idCUR_TYPE, dbelemanGetir.getParaBirimi());
 

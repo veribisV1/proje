@@ -137,13 +137,13 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonTeklifEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" OnClick="idButtonTeklifEkleYeni_Click" />
+                                    <asp:Button ID="idButtonTeklifEkleYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonTeklifEkleYeni_Click" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonTeklifEkleKaydet_Click" OnClientClick="return confirm('Teklif bilgisi kaydedilmiştir.')" />
+                                    <asp:Button ID="idButtonTeklifEkleKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonTeklifEkleKaydet_Click" OnClientClick="return confirm('Teklif bilgisi kaydedilmiştir.')" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTeklifEkleSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                    <asp:Button ID="idButtonTeklifEkleSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                             </tr>
                         </table>
@@ -166,7 +166,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Kontak
+                                    <td width="35%"><%=ResGetir.resGetir(1)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -384,7 +384,7 @@
 
                                         <%-- gridle ilgili işlemler başlıyor --%>
 
-                                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" Text="Yeni Kayıt"  OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idOPPORTUNITY_CODE').val(),700,500);return false;" Width="75px" />
+                                        <asp:Button ID="btnVeriEkle" runat="server" CssClass="bg-blue fg-white" OnClientClick="OpenPage('FirsatEkle.aspx',$('#ContentPlaceHolder1_idOPPORTUNITY_CODE').val(),700,500);return false;" Width="75px" />
 
                                         <asp:GridView ID="GridView1" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" AlternatingRowStyle-CssClass="alt" EmptyDataText="ÜRÜN EKLEYİNİZ...">

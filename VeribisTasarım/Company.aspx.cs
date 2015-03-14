@@ -15,19 +15,36 @@ namespace VeribisTasarım
             gridDoldur();
             if (!IsPostBack)
             {
+                butonText();
                 if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
                 {
                     adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                     telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                 }
-
+                //
                 ekranDoldur();
 
 
             }
 
         }
-       
+        private void butonText()
+        {
+            idButtonFirmaEkleYeni.Text = ResGetir.resGetir(123);
+            idButtonAdresYeni.Text = ResGetir.resGetir(124);
+            idButtonTelefonYeni.Text = ResGetir.resGetir(125);
+            idButtonFirmaEkleKaydet.Text = ResGetir.resGetir(94);
+            idButtonFirmaEkleSil.Text = ResGetir.resGetir(93);
+            idButtonMakinaParkiKaydet.Text = ResGetir.resGetir(94);
+            idButtonMakinaParkiYeni.Text = ResGetir.resGetir(126);
+            idButtonMakinaParkiSil.Text = ResGetir.resGetir(93);
+            idButtonRakipFirmaYeni.Text = ResGetir.resGetir(174);
+            idButtonRakipUrunYeni.Text = ResGetir.resGetir(92);
+            idButtonRakipFirmaKaydet.Text = ResGetir.resGetir(94);
+            idButtonRakipFirmaSil.Text = ResGetir.resGetir(93);
+            idButtonRakipUrunKaydet.Text = ResGetir.resGetir(94);
+            idButtonRakipUrunSil.Text = ResGetir.resGetir(93);
+        }
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();

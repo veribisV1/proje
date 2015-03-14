@@ -59,7 +59,7 @@
                                      <asp:TextBox ID="idTeklifBitisTarih" runat="server" Width="180px" ></asp:TextBox>
                                  </td>
                                 <td>
-                                      <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" />
+                                      <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" OnClick="idButtonTeklifArama_Click"/>
                                 </td>
                             </tr>
                            

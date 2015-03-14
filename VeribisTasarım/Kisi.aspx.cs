@@ -58,6 +58,7 @@ namespace VeribisTasarım
             idEDUCATION = dbGetir.doldur(idEDUCATION, dbGetir.getEgitimDuzeyi());
             idHAVE_HOME = dbGetir.doldur(idHAVE_HOME, dbGetir.getEvVarMi());
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
+            idISMARRIED = dbGetir.doldur(idISMARRIED, dbGetir.getMedeniHal());
             #endregion
             idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
@@ -124,7 +125,7 @@ namespace VeribisTasarım
 
                     }
                     KayitBasariliMesaji("Kişi");
-                    gelenKisiyiYukle();
+                    
                    
                     //Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }

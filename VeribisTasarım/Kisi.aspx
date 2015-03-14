@@ -595,8 +595,9 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <%-- <asp:DropDownList ID="idISMARRIED" runat="server" Height="30px" Width="100%" OnSelectedIndexChanged="idISMARRIED_SelectedIndexChanged">
-                                        </asp:DropDownList>--%>
+                                   
+                                     <asp:DropDownList ID="idISMARRIED" runat="server" Height="30px" Width="100%">
+                                        </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>

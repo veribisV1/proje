@@ -453,7 +453,7 @@
 
                                     <div class="login-title">
                                         <div class="text-left">
-                                            <h4>Kullanıcı Girişi <%--<%#Eval(Res.resGetir(483))%>--%></h4>
+                                            <h4>Kullanıcı Girişi</h4>
                                         </div>
                                         <div class="lang-btn-div">
                                             <asp:RadioButtonList ID="idDilSecim" runat="server" RepeatDirection="Horizontal">

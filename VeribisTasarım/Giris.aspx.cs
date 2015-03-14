@@ -43,7 +43,19 @@ namespace VeribisTasarım
 
             if (!String.IsNullOrEmpty(_txtTicariKod.Text))
             {
-                Session["DIL"] = "TR";
+                switch (idDilSecim.SelectedValue)
+                {
+                    case "TR":
+                        Session["DIL"] = "TR";
+                        break;
+                    case "EN":
+                        Session["DIL"] = "EN";
+                        break;
+                    default:
+                        Session["DIL"] = "TR";
+                        break;
+                }
+              
 
                 //Kullanıcı girişi kontrol
                 DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();

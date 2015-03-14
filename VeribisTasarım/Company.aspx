@@ -45,8 +45,9 @@
 
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li><a href="#ListeAdi"> <%=ResGetir.resGetir(217)%></a></li>
-                <li class="active"><a href="#FirmaEkle"> <%=ResGetir.resGetir(131)%></a></li>
+
+                <li id="liste"><a href="#ListeAdi" class="active"> <%=ResGetir.resGetir(217)%></a></li>
+                <li id="firma"><a href="#FirmaEkle"> <%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"> <%=ResGetir.resGetir(126)%></a></li>
                 <li><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
@@ -55,6 +56,7 @@
                 <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(636)%></a></li>
                 <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(211)%></a></li>
                 <li><a href="#EkForm"><%=ResGetir.resGetir(573)%></a></li>
+
 
             </ul>
 

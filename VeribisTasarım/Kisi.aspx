@@ -2,7 +2,6 @@
 <%@ Import Namespace="VeribisTasarım.Controller"  %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="Content/js/metro/metro-tab-control.js"></script>
-
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
     <script>
@@ -36,7 +35,8 @@
             return false;
         }
     </script>
-
+    <link href="Content/css/multiple-select.css" rel="stylesheet" />
+    <script src="Content/js/jquery.multiple.select.js"></script>
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
         .fancybox-custom .fancybox-skin
@@ -65,6 +65,7 @@
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
+
                         Firma:
                         <asp:DropDownList ID="drpCOMPANY_CODE" runat="server" OnSelectedIndexChanged="drpCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="True" Height="30px" Width="20%"></asp:DropDownList>
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="CONTACT_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Kişi bilgisine rastlanmadı.">
@@ -226,6 +227,7 @@
                                 <td>
                                     <asp:DropDownList ID="idSEXUALITY" runat="server" Height="30px" Width="100%">
                                     </asp:DropDownList>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -234,8 +236,11 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
+                                    <asp:Listbox ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="100px" SelectionMode="Multiple">
+                                    </asp:Listbox>
+                                    <script type="text/javascript">
+                                        $('#ContentPlaceHolder1_idASSOCIATION_CODE').multipleSelect();
+                                        </script>
                                 </td>
                             </tr>
 
@@ -270,8 +275,11 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idGROUP_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
+                                    <asp:ListBox ID="idGROUP_CODE" runat="server" Height="30px" Width="100px">
+                                    </asp:ListBox>
+                                     <script type="text/javascript">
+                                         $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
+                                        </script>
                                 </td>
                             </tr>
                             <tr>
@@ -309,8 +317,11 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idLANGUAGE_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
+                                    <asp:ListBox ID="idLANGUAGE_CODE" runat="server" Height="30px" Width="100px">
+                                    </asp:ListBox>
+                                    <script type="text/javascript">
+                                        $('#ContentPlaceHolder1_idLANGUAGE_CODE').multipleSelect();
+                                        </script>
                                 </td>
                             </tr>
 
@@ -389,6 +400,67 @@
                                 <td>
                                     <div class="gridDivAdres">
                                         <asp:GridView ID="idADDRESS" runat="server"
+                                            AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
+
+                                            <Columns>
+
+                                                <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                                                    <ItemTemplate>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="adresSil" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+
+                                                <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                                                    <ItemTemplate>
+                                                        <asp:ImageButton ImageUrl="~/image/editicon.png" ID="lnkEdit" runat="server" OnClientClick='<%# Eval("ADDRESS_CODE", "ShowAdres({0});return false;") %>' CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+                                                <asp:TemplateField HeaderText="ADDRESS_CODE" ItemStyle-Width="5%" Visible="false">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblADDRESS_CODE" runat="server" Text='<%# Eval("ADDRESS_CODE")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+                                                <asp:TemplateField HeaderText="TÜR" ItemStyle-Width="5%">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblTUR" runat="server" Text='<%# Eval("TUR")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+
+                                                <asp:TemplateField HeaderText="ADRES" ItemStyle-Width="15%">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblADRES" runat="server"
+                                                            Text='<%# Eval("ADRES")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+
+                                                <asp:TemplateField HeaderText="ÜLKE" ItemStyle-Width="5%">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblULKE" runat="server" Text='<%# Eval("ULKE")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+                                                <asp:TemplateField HeaderText="İL" ItemStyle-Width="5%">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblIL" runat="server" Text='<%# Eval("IL")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+                                                <asp:TemplateField HeaderText="İLÇE" ItemStyle-Width="5%">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblILCE" runat="server" Text='<%# Eval("ILCE")%>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+
+
+                                            </Columns>
+                                        </asp:GridView>
+                                          <asp:GridView ID="GridView2" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
 
                                             <Columns>

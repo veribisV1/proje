@@ -154,7 +154,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idASSOCIATION_CODE;
+        protected global::System.Web.UI.WebControls.ListBox idASSOCIATION_CODE;
         
         /// <summary>
         /// idDEPARTMENT control.
@@ -181,7 +181,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idGROUP_CODE;
+        protected global::System.Web.UI.WebControls.ListBox idGROUP_CODE;
         
         /// <summary>
         /// idCONTACT_REPRESENT_CODE control.
@@ -217,7 +217,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idLANGUAGE_CODE;
+        protected global::System.Web.UI.WebControls.ListBox idLANGUAGE_CODE;
         
         /// <summary>
         /// idPRETITLE control.
@@ -290,6 +290,15 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView idADDRESS;
+        
+        /// <summary>
+        /// GridView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView2;
         
         /// <summary>
         /// idTelefonEkle control.

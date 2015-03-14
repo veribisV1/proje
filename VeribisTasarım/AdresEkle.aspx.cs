@@ -14,6 +14,7 @@ namespace VeribisTasarım
         {
             if (!IsPostBack)
             {
+                butonText();
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["edit"]))
                 {
@@ -46,7 +47,12 @@ namespace VeribisTasarım
             }
 
         }
+        private void butonText()
+        {
+            idButtonAdresKaydet.Text = ResGetir.resGetir(94);
+            idButtonAdresIptal.Text = ResGetir.resGetir(615);
 
+        }
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
         {
             int addressCode = -1;

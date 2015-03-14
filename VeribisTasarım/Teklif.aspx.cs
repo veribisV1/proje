@@ -15,7 +15,7 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
-                
+                butonText();
                 ekranDoldur();
                 gridDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -34,6 +34,14 @@ namespace VeribisTasarım
                 }
             }
             
+        }
+        private void butonText()
+        {
+            btnVeriEkle.Text = ResGetir.resGetir(784);
+            idButtonTeklifArama.Text = ResGetir.resGetir(149);
+            idButtonTeklifEkleYeni.Text = ResGetir.resGetir(136);
+            idButtonTeklifEkleKaydet.Text = ResGetir.resGetir(94);
+            idButtonTeklifEkleSil.Text = ResGetir.resGetir(93);
         }
 
         private void gridDoldur()

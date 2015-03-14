@@ -272,6 +272,7 @@
                                 <td>
                                     <asp:DropDownList ID="idGROUP_CODE" runat="server" Height="30px" Width="100%">
                                     </asp:DropDownList>
+
                                 </td>
                             </tr>
                             <tr>

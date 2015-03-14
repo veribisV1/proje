@@ -47,7 +47,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
-        <h3>KİŞİ KARTI</h3>
+        <h3>KİŞİ <%=ResGetir.resGetir(130)%></h3>
         <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li id="liste" class="active"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
@@ -59,8 +59,8 @@
                 <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;"><%=ResGetir.resGetir(637)%></a></li>
                 <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;"><%=ResGetir.resGetir(636)%></a></li>
                 <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;"><%=ResGetir.resGetir(217)%></a></li>
-                <li><a href="#EkForm">Ek Form</a></li>
-                <li><a href="#AileBilgileri">Aile Bilgileri</a></li>
+                <li><a href="#EkForm"><%=ResGetir.resGetir(573)%></a></li>
+                <li><a href="#AileBilgileri"><%=ResGetir.resGetir(133)%></a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi">
@@ -164,7 +164,7 @@
                     <div class="ALAN4">
                         <table class="KisiTable" id="Tablo1">
                             <tr>
-                                <td width="35%">Çalıştığı Firma
+                                <td width="35%"><%=ResGetir.resGetir(34)%>
                                 </td>
                                 <td width="2%">:
                                 </td>

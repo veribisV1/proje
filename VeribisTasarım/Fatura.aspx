@@ -16,7 +16,7 @@
         <h3>FATURA</h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li><a href="#FaturaEkle">Fatura Ekle</a></li>
+                <li><a href="#FaturaEkle"></a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="FaturaEkle" style="min-height: 100px;">

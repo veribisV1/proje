@@ -330,7 +330,7 @@
                                 <div class="inner">
 
                                     <div class="login-title text-center">
-                                        <h4>Kullanıcı Girişi</h4>
+                                        <h4>Kullanıcı Girişi <%--<%#Eval(Res.resGetir(483))%>--%></h4>
 
                                     </div>
 

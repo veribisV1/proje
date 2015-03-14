@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Giris.aspx.cs" Inherits="VeribisTasarım.Giris" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,82 +7,99 @@
     <title></title>
 
     <style>
-        button, input {
+        button, input
+        {
             line-height: normal;
         }
 
-        *, *::before, *::after {
+        *, *::before, *::after
+        {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
 
-        button, input, select, textarea {
+        button, input, select, textarea
+        {
             margin: 0;
             font-family: inherit;
             font-size: 100%;
         }
 
-        .boxed {
+        .boxed
+        {
             margin-bottom: 20px;
         }
 
-            .boxed .inner::after {
+            .boxed .inner::after
+            {
                 content: "";
                 clear: both;
                 display: block;
             }
 
-        .login-title {
+        .login-title
+        {
             padding-bottom: 20px;
         }
 
-        .input-group {
+        .input-group
+        {
             position: relative;
             display: table;
             border-collapse: separate;
         }
 
-            .input-group .form-control {
+            .input-group .form-control
+            {
                 width: 100%;
                 margin-bottom: 0px;
             }
 
-            .input-group-addon, .input-group-btn, .input-group .form-control {
+            .input-group-addon, .input-group-btn, .input-group .form-control
+            {
                 display: table-cell;
             }
 
-        .boxed .inner input {
+        .boxed .inner input
+        {
             width: 100%;
         }
 
-        p {
+        p
+        {
             margin: 0 0 10px;
         }
 
-        .input-group :first-child.form-control, :first-child.input-group-addon, :first-child.input-group-btn > .btn, :first-child.input-group-btn > .dropdown-toggle, :last-child.input-group-btn > :not(:last-child):not(.dropdown-toggle).btn {
+        .input-group :first-child.form-control, :first-child.input-group-addon, :first-child.input-group-btn > .btn, :first-child.input-group-btn > .dropdown-toggle, :last-child.input-group-btn > :not(:last-child):not(.dropdown-toggle).btn
+        {
             border-top-right-radius: 0px;
             border-bottom-right-radius: 0px;
         }
 
-        :first-child.input-group-addon {
+        :first-child.input-group-addon
+        {
             border-right: 0;
         }
 
-        h5 {
+        h5
+        {
             font-size: 18px;
         }
 
-        .boxed .inner h1, .boxed .inner h2, .boxed .inner h3, .boxed .inner h4, .boxed .inner h5, .boxed .inner h6 {
+        .boxed .inner h1, .boxed .inner h2, .boxed .inner h3, .boxed .inner h4, .boxed .inner h5, .boxed .inner h6
+        {
             margin: 0px;
             padding: 0px;
         }
 
-        body.login-page .login-page-container * {
+        body.login-page .login-page-container *
+        {
             line-height: normal;
         }
 
-        body.login-page .boxed {
+        body.login-page .boxed
+        {
             display: inline-block;
             width: 100%;
             position: absolute;
@@ -89,92 +107,112 @@
             margin-top: -150px;
         }
 
-        body.login-page .login-page-container {
+        body.login-page .login-page-container
+        {
             width: 320px;
             position: relative;
             margin: 0 auto;
         }
 
-        .row {
+        .row
+        {
             margin-right: -15px;
             margin-left: -15px;
         }
 
-            .row::before, .row::after {
+            .row::before, .row::after
+            {
                 display: table;
                 content: " ";
             }
 
-            .row::after {
+            .row::after
+            {
                 clear: both;
             }
 
-            .row::before, .row::after {
+            .row::before, .row::after
+            {
                 display: table;
                 content: " ";
             }
 
-            .row::after {
+            .row::after
+            {
                 clear: both;
             }
 
-        .container {
+        .container
+        {
             padding-right: 15px;
             padding-left: 15px;
             margin-right: auto;
             margin-left: auto;
         }
         /* @media all and (min-width:768px) */
-        .container {
+        .container
+        {
             width: 750px;
         }
         /* @media all and (min-width:992px) */
-        .container {
+        .container
+        {
             width: 970px;
         }
         /* @media all and (min-width:1200px) */
-        .container {
+        .container
+        {
             width: 1170px;
         }
 
-            .container::before, .container::after {
+            .container::before, .container::after
+            {
                 display: table;
                 content: " ";
             }
 
-            .container::after {
+            .container::after
+            {
                 clear: both;
             }
 
-            .container::before, .container::after {
+            .container::before, .container::after
+            {
                 display: table;
                 content: " ";
             }
 
-            .container::after {
+            .container::after
+            {
                 clear: both;
             }
 
-        .content-liquid {
+        .content-liquid
+        {
             height: 100%;
         }
 
-        .content {
+
+        .content
+        {
             height: 100%;
             width: 100%;
             position: relative;
         }
 
-        html {
+        html
+        {
             overflow: hidden;
         }
 
-        body.login-page {
+        body.login-page
+        {
             /*background: url('/Content/Images/login.jpg') top left no-repeat transparent;*/
             background-size: cover;
         }
 
-        .boxed .inner {
+        .boxed .inner
+        {
             padding: 12px 20px;
             background-color: #ffffff;
             border-radius: 3px;
@@ -186,47 +224,62 @@
             border: 1px solid #D1D1D1;
         }
 
-        .text-center {
+        .text-center
+        {
             text-align: center;
         }
 
-        body.login-page .input-group {
+        .text-left
+        {
+            text-align: left;
+            float: left;
+        }
+
+        body.login-page .input-group
+        {
             margin-bottom: 10px;
             height: 39px;
         }
 
-        input, button, select, textarea {
+        input, button, select, textarea
+        {
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
         }
 
-            button, html input[type='button'], input[type='reset'], input[type='submit'] {
+            button, html input[type='button'], input[type='reset'], input[type='submit']
+            {
                 cursor: pointer;
                 -webkit-appearance: button;
             }
 
-        body.login-page .submit {
+        body.login-page .submit
+        {
             width: 100%;
             height: 100px;
         }
 
-        body.login-page p.footer {
+        body.login-page p.footer
+        {
             text-align: center;
             margin-top: 10px;
         }
 
-        :-ms-input-placeholder.form-control {
+        :-ms-input-placeholder.form-control
+        {
             color: #999;
         }
 
-        .input-group-addon, .input-group-btn {
+        .input-group-addon, .input-group-btn
+        {
             width: 1%;
             white-space: nowrap;
             vertical-align: middle;
         }
 
-        .input-group-addon {
+        .input-group-addon
+        {
             padding: 6px 12px;
             font-size: 14px;
             font-weight: normal;
@@ -238,15 +291,18 @@
             border-radius: 4px;
         }
 
-        .input-group-addon {
+        .input-group-addon
+        {
             min-width: 40px;
         }
 
-        body.login-page .input-group-addon {
+        body.login-page .input-group-addon
+        {
             background-color: #1ba1e2;
         }
 
-        .form-control {
+        .form-control
+        {
             display: block;
             width: 100%;
             height: 34px;
@@ -265,53 +321,119 @@
             transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         }
 
-        :-ms-input-placeholder {
+        :-ms-input-placeholder
+        {
             color: #bfc3c4;
         }
 
-        body.login-page .input-group input {
+        body.login-page .input-group input
+        {
             height: 39px;
         }
 
-        .input-group :last-child.form-control, :last-child.input-group-addon, :last-child.input-group-btn > .btn, :last-child.input-group-btn > .dropdown-toggle, :first-child.input-group-btn > :not(:first-child).btn {
+        .input-group :last-child.form-control, :last-child.input-group-addon, :last-child.input-group-btn > .btn, :last-child.input-group-btn > .dropdown-toggle, :first-child.input-group-btn > :not(:first-child).btn
+        {
             border-bottom-left-radius: 0px;
             border-top-left-radius: 0px;
         }
 
-        body.login-page .input-group i {
+        body.login-page .input-group i
+        {
             color: #ffffff;
         }
 
-        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+        {
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
             font-weight: 500;
             line-height: 1.1;
             color: inherit;
         }
 
-        h4, h5, h6 {
+        h4, h5, h6
+        {
             margin-top: 10px;
             margin-bottom: 10px;
         }
 
-        h4, .h4 {
+        h4, .h4
+        {
             font-size: 18px;
         }
 
-        h5, .h5 {
+        h5, .h5
+        {
             font-size: 14px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6
+        {
             font-family: "Lato", sans-serif;
             font-weight: 300;
             color: #7b8b9d;
             margin-top: 0px;
         }
 
-        h4 {
+        h4
+        {
             font-size: 20px;
         }
+
+        .lang-btn-div
+        {
+            float: right;
+        }
+
+        .lang-cl
+        {
+            clear: both;
+        }
+
+        input[type=radio]
+        {
+            display: none;
+        }
+
+            input[type=radio] + label
+            {
+                display: inline-block;
+                margin: -2px;
+                padding: 4px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 20px;
+                color: #333;
+                text-align: center;
+                text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+                vertical-align: middle;
+                cursor: pointer;
+                background-color: #f5f5f5;
+                background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+                background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+                background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+                background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+                background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+                background-repeat: repeat-x;
+                border: 1px solid #ccc;
+                border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+                border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+                border-bottom-color: #b3b3b3;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+                filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+            }
+
+            input[type=radio]:checked + label
+            {
+                background-image: none;
+                outline: 0;
+                -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                background-color: #e0e0e0;
+            }
     </style>
 
 
@@ -328,8 +450,19 @@
 
                                 <div class="inner">
 
-                                    <div class="login-title text-center">
-                                        <h4>Kullanıcı Girişi</h4>
+
+                                    <div class="login-title">
+                                        <div class="text-left">
+                                            <h4>Kullanıcı Girişi</h4>
+                                        </div>
+                                        <div class="lang-btn-div">
+                                            <asp:RadioButtonList ID="idDilSecim" runat="server" RepeatDirection="Horizontal">
+                                                <asp:ListItem Value="TR" Selected="True">TR</asp:ListItem>
+                                                <asp:ListItem Value="EN">EN</asp:ListItem>
+                                            </asp:RadioButtonList>
+
+                                        </div>
+                                        <div class="lang-cl"></div>
 
                                     </div>
 
@@ -348,7 +481,7 @@
                                         <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password" placeholder="Şifre"></asp:TextBox>
                                     </div>
 
-                                    <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />                                   
+                                    <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />
                                 </div>
 
                             </div>

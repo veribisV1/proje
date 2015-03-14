@@ -7,11 +7,11 @@ using System.Data;
 using VeribisTasarım.Controller;
 using System.Web.Security;
 
-namespace VeribisTasarım
+namespace VeribisTasarım.Controller
 {
     public class ResGetir : BASECONTROLLER
     {
-        static DBTOOL db = new DBTOOL();
+       static DBARACISI adapter = new DBARACISI();
         /// <summary>
         /// etiketleri DB deki id ye göre çeken metot
         /// </summary>
@@ -19,18 +19,18 @@ namespace VeribisTasarım
         /// <returns></returns>
         public static string resGetir(int id = 0)
         {
-            DBARACISI adapter = new DBARACISI();
+            
             string sorgu = null;
             switch (HttpContext.Current.Session["DIL"].ToString())
             {
                 case "TR":
-                    sorgu = String.Format("SELECT TR RES WHERE R_ID={0}", id);
+                    sorgu = String.Format("SELECT TR FROM RES  WHERE R_ID={0}", id);
                     break;
                 case "EN":
-                    sorgu = String.Format("SELECT EN RES WHERE R_ID={0}", id);
+                    sorgu = String.Format("SELECT EN FROM RES WHERE R_ID={0}", id);
                     break;
                 default:
-                    sorgu = String.Format("SELECT TR RES WHERE R_ID={0}", id);
+                    sorgu = String.Format("SELECT TR FROM RES WHERE R_ID={0}", id);
                     break;
             }
             DataTable dt = adapter.getGridIcerik(sorgu);

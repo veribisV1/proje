@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Giris.aspx.cs" Inherits="VeribisTasarım.Giris" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -330,7 +329,7 @@
                                 <div class="inner">
 
                                     <div class="login-title text-center">
-                                        <h4>Kullanıcı Girişi <%--<%#Eval(Res.resGetir(483))%>--%></h4>
+                                        <h4>Kullanıcı Girişi</h4>
 
                                     </div>
 

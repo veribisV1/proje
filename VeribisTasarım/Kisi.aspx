@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="Content/js/metro/metro-tab-control.js"></script>
-
     <%--fancy_box uygulamasını başlatan fonksiyon ve ilgili script--%>
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
     <script>
@@ -36,7 +35,8 @@
             return false;
         }
     </script>
-
+    <link href="Content/css/multiple-select.css" rel="stylesheet" />
+    <script src="Content/js/jquery.multiple.select.js"></script>
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
         .fancybox-custom .fancybox-skin
@@ -227,6 +227,7 @@
                                 <td>
                                     <asp:DropDownList ID="idSEXUALITY" runat="server" Height="30px" Width="100%">
                                     </asp:DropDownList>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -235,8 +236,11 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
+                                    <asp:Listbox ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="100%">
+                                    </asp:Listbox>
+                                    <script type="text/javascript">
+                                        $('#ContentPlaceHolder1_idASSOCIATION_CODE').multipleSelect();
+                                        </script>
                                 </td>
                             </tr>
 
@@ -271,8 +275,11 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idGROUP_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
+                                    <asp:ListBox ID="idGROUP_CODE" runat="server" Height="30px" Width="100%">
+                                    </asp:ListBox>
+                                     <script type="text/javascript">
+                                         $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
+                                        </script>
                                 </td>
                             </tr>
                             <tr>
@@ -310,8 +317,11 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="idLANGUAGE_CODE" runat="server" Height="30px" Width="100%">
-                                    </asp:DropDownList>
+                                    <asp:ListBox ID="idLANGUAGE_CODE" runat="server" Height="30px" Width="100%">
+                                    </asp:ListBox>
+                                    <script type="text/javascript">
+                                        $('#ContentPlaceHolder1_idLANGUAGE_CODE').multipleSelect();
+                                        </script>
                                 </td>
                             </tr>
 

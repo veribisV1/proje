@@ -34,6 +34,7 @@ namespace VeribisTasarım
         public void logOut()
         {
             Session.Remove("USER_CODE");
+            Session.Remove("DIL");
         }
 
         protected void btnGiris_Click(object sender, EventArgs e)
@@ -42,7 +43,19 @@ namespace VeribisTasarım
 
             if (!String.IsNullOrEmpty(_txtTicariKod.Text))
             {
-
+                switch (idDilSecim.SelectedValue)
+                {
+                    case "TR":
+                        Session["DIL"] = "TR";
+                        break;
+                    case "EN":
+                        Session["DIL"] = "EN";
+                        break;
+                    default:
+                        Session["DIL"] = "TR";
+                        break;
+                }
+              
 
                 //Kullanıcı girişi kontrol
                 DB_ELEMAN_GETIR db = new DB_ELEMAN_GETIR();

@@ -154,7 +154,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idASSOCIATION_CODE;
+        protected global::System.Web.UI.WebControls.ListBox idASSOCIATION_CODE;
         
         /// <summary>
         /// idDEPARTMENT control.
@@ -217,7 +217,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idLANGUAGE_CODE;
+        protected global::System.Web.UI.WebControls.ListBox idLANGUAGE_CODE;
         
         /// <summary>
         /// idPRETITLE control.

@@ -703,7 +703,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" />

@@ -116,6 +116,7 @@
     <Content Include="KisiListe.aspx" />
     <Content Include="Numune.aspx" />
     <Content Include="Proforma.aspx" />
+    <Content Include="RakipFirmaEkle.aspx" />
     <Content Include="script\ASPSnippets_Pager.min.js" />
     <Content Include="script\scriptForAraGrid.js" />
     <Content Include="style\gridStil.css" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="Controller\ResGetir.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RakipFirmaEkle.aspx.cs">
+      <DependentUpon>RakipFirmaEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RakipFirmaEkle.aspx.designer.cs">
+      <DependentUpon>RakipFirmaEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teklif.aspx.cs">
       <DependentUpon>Teklif.aspx</DependentUpon>

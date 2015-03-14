@@ -15,6 +15,7 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
+                butonText();
                 idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 ekranDoldur();
@@ -35,6 +36,15 @@ namespace VeribisTasarım
             }
 
          
+        }
+
+        private void butonText()
+        {
+            btnVeriEkle.Text = ResGetir.resGetir(784);
+            //idButtonGeriDon.Text = ResGetir.resGetir();//YOK
+            idButtonProformaEkleSil.Text = ResGetir.resGetir(93);
+            idButtonProformaEkleKaydet.Text = ResGetir.resGetir(94);
+            idButtonProformaEkleYeni.Text = ResGetir.resGetir(92);
         }
         private void ekranDoldur()
         {

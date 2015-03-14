@@ -27,6 +27,7 @@ namespace VeribisTasarım
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
                         idCOMPANY_CODE_SelectedIndexChanged(sender, e);
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#teklif').addClass('active');$('#liste').removeClass('active')", true); 
                     }
                     else
                     {
@@ -146,17 +147,18 @@ namespace VeribisTasarım
             }
             if (!String.IsNullOrEmpty(idTeklifBaslangicTarih.Text))
             {
-                aramaKosulu.Append(" AND OPPORTUNITYMASTER.DOCUMENT_DATE>='");
+                aramaKosulu.Append(" AND OPPORTUNITYMASTER.DOCUMENT_DATE>=Convert(datetime,'");
                 aramaKosulu.Append(idTeklifBaslangicTarih.Text);
-                aramaKosulu.Append("' ");
+                aramaKosulu.Append("', 104) ");
             }
             if (!String.IsNullOrEmpty(idTeklifBitisTarih.Text))
             {
-                aramaKosulu.Append(" AND OPPORTUNITYMASTER.DOCUMENT_DATE<='");
+                aramaKosulu.Append(" AND OPPORTUNITYMASTER.DOCUMENT_DATE<=Convert(datetime,'");
                 aramaKosulu.Append(idTeklifBitisTarih.Text);
-                aramaKosulu.Append("' ");
+                aramaKosulu.Append("', 104) ");
             }
             gridDoldurFitre(aramaKosulu.ToString());
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#liste').addClass('active');$('#liste').removeClass('active')", true); 
 
         }
 

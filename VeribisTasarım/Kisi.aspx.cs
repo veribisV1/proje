@@ -18,6 +18,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 base.Page_Load();
+                butonText();
                 ekranDoldur();
                 idSDATE.Text = DateTime.Now.ToString();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -38,7 +39,21 @@ namespace VeribisTasarım
             }         
 
         }
-
+        private void butonText()
+        {
+            idButtonAileBilgileriYeni.Text = ResGetir.resGetir(92);
+            idButtonAileBilgileriKaydet.Text = ResGetir.resGetir(94);
+            idButtonAileBilgileriSil.Text = ResGetir.resGetir(93);
+            idButtonNotEkleYeni.Text = ResGetir.resGetir(92);
+            idButtonNotEkleSil.Text = ResGetir.resGetir(93);
+            idButtonNotEkleKaydet.Text = ResGetir.resGetir(94);
+            idButtonKisiEkleYeni.Text = ResGetir.resGetir(92);
+            idButtonAdresYeni.Text = ResGetir.resGetir(124);
+            idButtonTelefonYeni.Text = ResGetir.resGetir(125);
+            idButtonNotEkleKaydet.Text = ResGetir.resGetir(94);
+            idButtonKisiEkleSil.Text = ResGetir.resGetir(93);
+            
+        }
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();

@@ -19,7 +19,7 @@ namespace VeribisTasarım
                 idSDATE.Text = DateTime.Now.ToString();
 
                 idEDATE.Text = DateTime.Now.ToString();
-
+                butonText();
                 gridDoldur();
                 ekranDoldur();
 
@@ -41,6 +41,15 @@ namespace VeribisTasarım
 
             }
         }
+
+        private void butonText()
+        {
+            idButtonAktiviteYeni.Text = ResGetir.resGetir(92);
+            idButtonAktiviteKaydet.Text = ResGetir.resGetir(94);
+            idButtonAktiviteSil.Text = ResGetir.resGetir(93);
+            idButtonAktiviteKapat.Text = ResGetir.resGetir(166);
+        }
+
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();

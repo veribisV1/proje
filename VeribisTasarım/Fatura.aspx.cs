@@ -16,6 +16,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                butonText();
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -32,6 +33,14 @@ namespace VeribisTasarım
                 }
             }
 
+        }
+
+        private void butonText()
+        {
+            idButtonFaturaEkleYeni.Text = ResGetir.resGetir(92);
+            idButtonFaturaEkleKaydet.Text = ResGetir.resGetir(94);
+            idButtonFaturaEkleSil.Text = ResGetir.resGetir(93);
+            idButtonGeriDon.Text = ResGetir.resGetir();//GERİ DON YOK
         }
         private void ekranDoldur()
         {

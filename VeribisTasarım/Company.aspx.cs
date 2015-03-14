@@ -136,6 +136,8 @@ namespace VeribisTasarım
             adresDoldur(Convert.ToInt32(code));
             telefonDoldur(Convert.ToInt32(code));
             companyGroupDoldur(code);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
         }
         private void companyGroupDoldur(string code)

@@ -10687,3 +10687,10 @@ a {
 .ALAN10 {width:80%;float:left;margin-left:10px;min-height:10px;}
 .ALAN11 {width:88%;float:left;margin-left:10px;min-height:10px;}
 .ALAN12 {width:96%;float:left;margin-left:10px;min-height:10px;}
+
+
+.liste
+{
+    min-height:250px;
+    min-width:200px;
+}

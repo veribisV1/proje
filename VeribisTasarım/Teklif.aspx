@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Teklif.aspx.cs" Inherits="VeribisTasarım.Teklif" %>
-
+<%@ Import Namespace="VeribisTasarım.Controller"  %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
@@ -19,7 +19,7 @@
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li><a href="#ListeAdi">Liste Adı</a></li>
-                <li class="active"><a href="#TeklifEkle">Teklif Ekle</a></li>
+                <li class="active"><a href="#TeklifEkle"><%=ResGetir.resGetir(136)%></a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi" style="min-height: 100px">
@@ -156,7 +156,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable" id="Table1">
                                 <tr>
-                                    <td width="35%">Firma Adı
+                                    <td width="35%"><%=ResGetir.resGetir(3)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -176,7 +176,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Evrak Tipi
+                                    <td width="35%"><%=ResGetir.resGetir(186)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -186,7 +186,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Evrak No
+                                    <td width="35%"><%=ResGetir.resGetir(188)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -196,7 +196,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Cinsi
+                                    <td width="35%"><%=ResGetir.resGetir(180)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -206,7 +206,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Evrak Tarihi
+                                    <td width="35%"><%=ResGetir.resGetir(193)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -222,7 +222,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%">Temsilcisi
+                                    <td width="35%"><%=ResGetir.resGetir(6)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -243,7 +243,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Revizyon
+                                    <td width="35%"><%=ResGetir.resGetir(196)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -253,7 +253,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Teslim Şekli
+                                    <td width="35%"><%=ResGetir.resGetir(454)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -263,7 +263,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Ödeme Şekli
+                                    <td width="35%"><%=ResGetir.resGetir(28)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -273,7 +273,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Takip Yön.
+                                    <td width="35%"><%=ResGetir.resGetir(184)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -283,7 +283,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Takip Aşaması
+                                    <td width="35%"><%=ResGetir.resGetir(185)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -293,7 +293,7 @@
                                     </td>
                                 </tr>
                                  <tr>
-                                    <td width="35%">Açık/Kapalı
+                                    <td width="35%"><%=ResGetir.resGetir(114)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -311,7 +311,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%">Geçerlilik Tarihi
+                                    <td width="35%"><%=ResGetir.resGetir(455)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -320,7 +320,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Proje
+                                    <td width="35%"><%=ResGetir.resGetir(81)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -330,7 +330,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Son Durum
+                                    <td width="35%"><%=ResGetir.resGetir(42)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -341,7 +341,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Neden Kaybettik
+                                    <td width="35%"><%=ResGetir.resGetir(195)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -351,7 +351,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Kazanan Rakip Firma
+                                    <td width="35%"><%=ResGetir.resGetir(172)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -362,7 +362,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td width="35%">Açıklama
+                                    <td width="35%"><%=ResGetir.resGetir(206)%>
                                     </td>
                                     <td width="2%">:
                                     </td>

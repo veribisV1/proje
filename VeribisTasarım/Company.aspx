@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
-
+<%@ Import Namespace="VeribisTasarım.Controller"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -41,12 +41,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="ALAN12">
-        <h3>FİRMA KARTI</h3>
+        <h3> <%=ResGetir.resGetir(2)%></h3>
 
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li><a href="#ListeAdi">Liste Adı</a></li>
-                <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
+                <li><a href="#ListeAdi"> <%=ResGetir.resGetir(217)%></a></li>
+                <li class="active"><a href="#FirmaEkle"> <%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki">Makina Parkı</a></li>
                 <li><a href="#RakipFirma">Rakip Firma</a></li>
                 <li><a href="#RakipUrun">Rakip Ürün</a></li>

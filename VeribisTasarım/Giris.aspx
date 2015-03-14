@@ -389,48 +389,51 @@
             clear: both;
         }
 
-      input[type=radio] {
-    display:none;
-}
- 
-input[type=radio] + label {
-    display:inline-block;
-    margin:-2px;
-    padding: 4px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 20px;
-    color: #333;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #f5f5f5;
-    background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
-    background-image: -o-linear-gradient(top,#fff,#e6e6e6);
-    background-image: linear-gradient(to bottom,#fff,#e6e6e6);
-    background-repeat: repeat-x;
-    border: 1px solid #ccc;
-    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-    border-bottom-color: #b3b3b3;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-}
- 
-input[type=radio]:checked + label {
-       background-image: none;
-    outline: 0;
-    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
-    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
-        background-color:#e0e0e0;
-}
+        input[type=radio]
+        {
+            display: none;
+        }
+
+            input[type=radio] + label
+            {
+                display: inline-block;
+                margin: -2px;
+                padding: 4px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 20px;
+                color: #333;
+                text-align: center;
+                text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+                vertical-align: middle;
+                cursor: pointer;
+                background-color: #f5f5f5;
+                background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+                background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+                background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+                background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+                background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+                background-repeat: repeat-x;
+                border: 1px solid #ccc;
+                border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+                border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+                border-bottom-color: #b3b3b3;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+                filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+            }
+
+            input[type=radio]:checked + label
+            {
+                background-image: none;
+                outline: 0;
+                -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                background-color: #e0e0e0;
+            }
     </style>
 
 
@@ -447,6 +450,7 @@ input[type=radio]:checked + label {
 
                                 <div class="inner">
 
+
                                     <div class="login-title">
                                         <div class="text-left">
                                             <h4>Kullanıcı Girişi <%--<%#Eval(Res.resGetir(483))%>--%></h4>
@@ -456,13 +460,10 @@ input[type=radio]:checked + label {
                                                 <asp:ListItem Value="TR" Selected="True">TR</asp:ListItem>
                                                 <asp:ListItem Value="EN">EN</asp:ListItem>
                                             </asp:RadioButtonList>
-                                            <%-- <div class="lang-btn">
-                                                <asp:Button ID="btnTR" runat="server" Text="TR" CssClass="lang-btn-bg" /></div>
-                                            <div class="lang-btn">
-                                                <asp:Button ID="btnEN" runat="server" Text="EN" CssClass="lang-btn-bg"/></div>
-                                            <div class="lang-cl"></div>--%>
+
                                         </div>
                                         <div class="lang-cl"></div>
+
                                     </div>
 
                                     <div id="ticarikod" class="input-group">

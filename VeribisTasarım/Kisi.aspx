@@ -47,7 +47,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
-        <h3>KİŞİ <%=ResGetir.resGetir(130)%></h3>
+        <h3><%=ResGetir.resGetir(130)%></h3>
         <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li id="liste" class="active"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
@@ -66,7 +66,7 @@
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
 
-                        Firma:
+                        <%=ResGetir.resGetir(2)%>:
                         <asp:DropDownList ID="drpCOMPANY_CODE" runat="server" OnSelectedIndexChanged="drpCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="True" Height="30px" Width="20%"></asp:DropDownList>
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="CONTACT_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Kişi bilgisine rastlanmadı.">
 

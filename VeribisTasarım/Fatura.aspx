@@ -14,7 +14,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
-        <h3>FATURA</h3>
+        <h3><%=ResGetir.resGetir(211)%></h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li><a href="#FaturaEkle"></a></li>

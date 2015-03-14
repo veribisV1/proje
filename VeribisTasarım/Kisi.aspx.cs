@@ -56,7 +56,7 @@ namespace VeribisTasarım
             idButtonTelefonYeni.Text = ResGetir.resGetir(125);
             idButtonNotEkleKaydet.Text = ResGetir.resGetir(94);
             idButtonKisiEkleSil.Text = ResGetir.resGetir(93);
-            
+            idButtonKisiEkleKaydet.Text = ResGetir.resGetir(94);
         }
         private void ekranDoldur()
         {

@@ -44,6 +44,10 @@ namespace VeribisTasarım
             idButtonTeklifEkleYeni.Text = ResGetir.resGetir(136);
             idButtonTeklifEkleKaydet.Text = ResGetir.resGetir(94);
             idButtonTeklifEkleSil.Text = ResGetir.resGetir(93);
+            idLabelTeklifDurum.Text = ResGetir.resGetir(114);
+            idLabelTeklifBitis.Text = ResGetir.resGetir(73);
+            idLabelTeklifBaslangic.Text = ResGetir.resGetir(72);
+            idLabelTeklifArama.Text = ResGetir.resGetir(333);
         }
 
         private void gridDoldur()

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Aktivite.aspx.cs" Inherits="VeribisTasarım.Aktivite" %>
+<%@ Import Namespace="VeribisTasarım.Controller"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
@@ -75,16 +76,16 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonAktiviteYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonAktiviteYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAktiviteKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonAktiviteKaydet_Click" />
+                                    <asp:Button ID="idButtonAktiviteKaydet" runat="server" CssClass="bg-blue fg-white"  Height="30px" OnClick="idButtonAktiviteKaydet_Click" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAktiviteSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                    <asp:Button ID="idButtonAktiviteSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAktiviteKapat" runat="server" CssClass="bg-blue fg-white" Text="Aktivite Kapat" OnClientClick="if($('#ContentPlaceHolder1_idACTIVITY_CODE').val()==null){alert('Aktiviteyi Kaydedin..'); return false;}" Height="30px" OnClick="idButtonAktiviteKapat_Click" />
+                                    <asp:Button ID="idButtonAktiviteKapat" runat="server" CssClass="bg-blue fg-white" OnClientClick="if($('#ContentPlaceHolder1_idACTIVITY_CODE').val()==null){alert('Aktiviteyi Kaydedin..'); return false;}" Height="30px" OnClick="idButtonAktiviteKapat_Click" />
                                 </td>
                             </tr>
                         </table>
@@ -97,7 +98,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable" id="Table1">
                                 <tr>
-                                    <td width="35%">Firma Adı
+                                    <td width="35%"><%=ResGetir.resGetir(3)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -106,7 +107,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Adı
+                                    <td width="35%"><%=ResGetir.resGetir(101)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -115,7 +116,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Aktivite Tipi
+                                    <td width="35%"><%=ResGetir.resGetir(71)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -125,7 +126,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td width="35%">Evrak No
+                                    <td width="35%"><%=ResGetir.resGetir(188)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -135,7 +136,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Başlangıç
+                                    <td width="35%"><%=ResGetir.resGetir(72)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -147,7 +148,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Bitiş
+                                    <td width="35%"><%=ResGetir.resGetir(73)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -158,7 +159,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Sonuç Grubu
+                                    <td width="35%"><%=ResGetir.resGetir(75)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -172,7 +173,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%">Konu Grubu
+                                    <td width="35%"><%=ResGetir.resGetir(169)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -182,7 +183,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Konu
+                                    <td width="35%"><%=ResGetir.resGetir(76)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -192,7 +193,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Nerede
+                                    <td width="35%"><%=ResGetir.resGetir(77)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -202,7 +203,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Öncelik
+                                    <td width="35%"><%=ResGetir.resGetir(78)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -212,7 +213,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Hatırlatma
+                                    <td width="35%"><%=ResGetir.resGetir(79)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -222,7 +223,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Renk
+                                    <td width="35%"><%=ResGetir.resGetir(55)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -232,7 +233,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Grubu
+                                    <td width="35%"><%=ResGetir.resGetir(17)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -247,7 +248,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%">Temsilcisi
+                                    <td width="35%"><%=ResGetir.resGetir(6)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -257,7 +258,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Proje
+                                    <td width="35%"><%=ResGetir.resGetir(81)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -267,7 +268,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Sonuç
+                                    <td width="35%"><%=ResGetir.resGetir(84)%>
                                     </td>
                                     <td width="2%">:
                                     </td>

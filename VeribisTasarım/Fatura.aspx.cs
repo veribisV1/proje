@@ -37,10 +37,11 @@ namespace VeribisTasarım
 
         private void butonText()
         {
+            btnVeriEkle.Text = ResGetir.resGetir(784);
             idButtonFaturaEkleYeni.Text = ResGetir.resGetir(92);
             idButtonFaturaEkleKaydet.Text = ResGetir.resGetir(94);
             idButtonFaturaEkleSil.Text = ResGetir.resGetir(93);
-            idButtonGeriDon.Text = ResGetir.resGetir();//GERİ DON YOK
+           // idButtonGeriDon.Text = ResGetir.resGetir();//GERİ DON YOK
         }
         private void ekranDoldur()
         {

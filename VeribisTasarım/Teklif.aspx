@@ -15,7 +15,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ALAN12">
-        <h3>TEKLİF</h3>
+        <h3><%=ResGetir.resGetir(333)%></h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li id="liste" class="active"><a href="#ListeAdi">Liste Adı</a></li>
@@ -28,7 +28,7 @@
                             <tr>
                                 <td>
                                    
-                                     <asp:Label ID="idLabelTeklifArama" runat="server" Text="Teklif" CssClass="EvrakListesiDurum"></asp:Label>
+                                     <asp:Label ID="idLabelTeklifArama" runat="server" CssClass="EvrakListesiDurum"></asp:Label>
                                 </td>
                                 <td>:</td>
                                 <td>
@@ -36,7 +36,7 @@
                                  
                                 </td>
                                  <td>
-                                     <asp:Label ID="idLabelTeklifDurum" runat="server" Text="Açık/Kapalı" CssClass="EvrakListesiDurum"></asp:Label>
+                                     <asp:Label ID="idLabelTeklifDurum" runat="server" CssClass="EvrakListesiDurum"></asp:Label>
                                 </td>
                                    <td>:</td>
                                 <td>
@@ -45,14 +45,14 @@
                             </tr>
                             <tr>
                                  <td> 
-                                    <asp:Label ID="idLabelTeklifBaslangic" runat="server" Text="Başlangıç" CssClass="LabelEvrakListesiBaslangic"></asp:Label>
+                                    <asp:Label ID="idLabelTeklifBaslangic" runat="server" CssClass="LabelEvrakListesiBaslangic"></asp:Label>
                                  </td>
                                    <td>:</td>
                                  <td> 
                                      <asp:TextBox ID="idTeklifBaslangicTarih" runat="server" Width="180px"  ></asp:TextBox>
                                  </td>
                                 <td>
-                                    <asp:Label ID="idLabelTeklifBitis" runat="server" Text="Bitiş" CssClass="LabelEvrakListesiBitis"></asp:Label>
+                                    <asp:Label ID="idLabelTeklifBitis" runat="server" CssClass="LabelEvrakListesiBitis"></asp:Label>
                                 </td>
                                    <td>:</td>
                                  <td>

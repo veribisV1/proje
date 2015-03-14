@@ -146,7 +146,7 @@
                 <a class="element place-right" href="Giris.aspx?param=logout" style="margin-top: 20px;"><span class="icon-switch"></span></a>
                 <span class="element-divider place-right" style="margin-top: 10px;"></span>
                 <button class="element image-button image-left place-right" style="padding-right: 10px; margin-top: 15px;">
-                    Hoþgeldin <%= this.Page.User.Identity.Name %>
+                    <%= this.Page.User.Identity.Name %>
                     <i class="icon-user" style="margin-top: 15px;"></i>
                 </button>
             </nav>

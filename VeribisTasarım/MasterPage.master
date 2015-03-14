@@ -96,7 +96,7 @@
                 <div class="element">
                     <asp:Repeater ID="Repeater2" runat="server">
                         <ItemTemplate>
-                            <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("MENU_NAME") %></a>
+                            <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></a>
                         </ItemTemplate>
                     </asp:Repeater>
 

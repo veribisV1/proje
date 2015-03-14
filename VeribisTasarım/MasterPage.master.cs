@@ -27,7 +27,16 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         DBARACISI adapter = new DBARACISI();
         Repeater Repeater2 = (Repeater)this.FindControl("Repeater2");
-        Repeater2.DataSource = adapter.getGridIcerik(String.Format("select MENU_NAME,SQL from MENULOAD inner join PSQL on MENULOAD.LINK=PSQL.SQL_ID WHERE USER_CODE = {0} AND MENULOAD.TYPE=2", Session["USER_CODE"]));
+        Dictionary<string, string> dt = adapter.getListEleman(String.Format("select MENU_NAME as col1,SQL as col2 from MENULOAD inner join PSQL on MENULOAD.LINK=PSQL.SQL_ID WHERE USER_CODE = {0} AND MENULOAD.TYPE=2", Session["USER_CODE"]));
+       
+        dt.Remove("-1");
+        Dictionary<string, string> dtClone = new Dictionary<string, string>();
+        foreach (string item in dt.Keys)
+        {
+            dtClone.Add(item,adapter.getGridIcerik(dt[item]).Rows[0][0].ToString());
+               // [item] = adapter.getGridIcerik(dtClone[item]).Rows[0][0].ToString();
+        }
+        Repeater2.DataSource = dtClone;
         Repeater2.DataBind();      
     }
 

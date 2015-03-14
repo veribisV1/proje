@@ -236,7 +236,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:Listbox ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="100%">
+                                    <asp:Listbox ID="idASSOCIATION_CODE" runat="server" Height="30px" Width="100px" SelectionMode="Multiple">
                                     </asp:Listbox>
                                     <script type="text/javascript">
                                         $('#ContentPlaceHolder1_idASSOCIATION_CODE').multipleSelect();
@@ -275,7 +275,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:ListBox ID="idGROUP_CODE" runat="server" Height="30px" Width="100%">
+                                    <asp:ListBox ID="idGROUP_CODE" runat="server" Height="30px" Width="100px">
                                     </asp:ListBox>
                                      <script type="text/javascript">
                                          $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
@@ -317,7 +317,7 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <asp:ListBox ID="idLANGUAGE_CODE" runat="server" Height="30px" Width="100%">
+                                    <asp:ListBox ID="idLANGUAGE_CODE" runat="server" Height="30px" Width="100px">
                                     </asp:ListBox>
                                     <script type="text/javascript">
                                         $('#ContentPlaceHolder1_idLANGUAGE_CODE').multipleSelect();

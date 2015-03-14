@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>VERIBIS</title>
+    <title>VERIBIS</title>
 
 
     <%-- *** fancy_box baslangic ***--%>
@@ -12,12 +12,12 @@
     <link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
     <script type="text/javascript" src="fancyBox/lib/jquery-1.10.1.min.js"></script>
-    
-<%-- *** fancy_box bitis ***--%>
+
+    <%-- *** fancy_box bitis ***--%>
     <link rel="stylesheet" href="Content/css/metro-bootstrap.css" />
     <link rel="stylesheet" href="Content/css/metro-bootstrap-responsive.css" />
     <link href="Content/css/iconFont.css" rel="stylesheet" />
-    <link href="style/gridStil.css" rel="stylesheet" />    
+    <link href="style/gridStil.css" rel="stylesheet" />
     <script src="Content/js/jquery/jquery.min.js"></script>
     <script src="Content/js/jquery/jquery.widget.min.js"></script>
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
@@ -25,108 +25,133 @@
     <script src="Content/js/navigate.js"></script>
     <style>
         .dropdown-dark {
-  background: #444;
-  
-  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-  
-}
-.dropdown-dark:before {
-  border-bottom-color: #aaa;
-}
-.dropdown-dark:after {
-  border-top-color: #aaa;
-}
-.dropdown-dark .dropdown-select {
-  color: #aaa;
-  text-shadow: 0 1px black;
-  /* Fallback for IE 8 */
-  background: #444;
-}
-.dropdown-dark .dropdown-select:focus {
-  color: #ccc;
-}
-.dropdown-dark .dropdown-select > option {
-  background: #444;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-}
+            background: #444;
+            background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+            background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+            background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+            background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+            -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
 
+            .dropdown-dark:before {
+                border-bottom-color: #aaa;
+            }
+
+            .dropdown-dark:after {
+                border-top-color: #aaa;
+            }
+
+            .dropdown-dark .dropdown-select {
+                color: #aaa;
+                text-shadow: 0 1px black;
+                /* Fallback for IE 8 */
+                background: #444;
+            }
+
+                .dropdown-dark .dropdown-select:focus {
+                    color: #ccc;
+                }
+
+                .dropdown-dark .dropdown-select > option {
+                    background: #444;
+                    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+                }
     </style>
-    
-    <asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <script>
+        $(document).ready(function () {
+            $(document).on("keydown", keydown);
+            $(document).on("keyup", keyup);
+        });
+
+        function keydown(e) {
+            if ((e.which || e.keyCode) == 116 || ((e.which || e.keyCode) == 82 && ctrlKeyDown)) {
+                // Pressing F5 or Ctrl+R
+                e.preventDefault();
+            } else if ((e.which || e.keyCode) == 17) {
+                // Pressing  only Ctrl
+                ctrlKeyDown = true;
+            }
+        };
+
+        function keyup(e) {
+            // Key up Ctrl
+            if ((e.which || e.keyCode) == 17)
+                ctrlKeyDown = false;
+        };
+    </script>
 </head>
 <body class="metro">
-<form id="form1" runat="server">
+    <form id="form1" runat="server">
 
-    <nav class="navigation-bar" style="height:140px;">
-        <nav class="navigation-bar-content">
-            <a class="element" style="font-size: 36px; margin-top:20px;" href="Default.aspx">
-              
-                VeribisCRM 
-            </a>
-             <span class="element-divider" style="margin-top:30px;"></span>
-          <div class="element">
-              <asp:Repeater ID="Repeater2" runat="server">
-                  <ItemTemplate>
-                      <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("MENU_NAME") %></a>
-                  </ItemTemplate>
-              </asp:Repeater>
+        <nav class="navigation-bar" style="height: 80px;">
+            <nav class="navigation-bar-content">
+                <a class="element" style="font-size: 36px; margin-top: 10px;" href="Default.aspx">VeribisCRM 
+                </a>
 
-          </div>
-            <span class="element-divider" style="margin-top:30px;"></span>
-            <div class="element">
-                <table style="margin-top:85px;">
-                  <tr>
-                      <td>
-                            <asp:DropDownList ID="DropDownList1" runat="server" ForeColor="White" Width="120px" Height="30px" CssClass="dropdown-dark">
-                                <asp:ListItem Text="Kiþiler"></asp:ListItem>
-                                <asp:ListItem Text="Firmalar"></asp:ListItem>
-                                <asp:ListItem Text="Aktivite"></asp:ListItem>
-                            </asp:DropDownList>
-                      </td>
-                      <td>
-                           <div class="input-control text" style="margin-top:11px;" >
-                    <input type="text" placeholder="Arama Yapýn..." style="width:150px;height:30px;" />
-                    <button class="btn-search"></button>
+              <%--  <span class="element-divider" style="margin-top: 15px;"></span>--%>
+                <div class="element">
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <ItemTemplate>
+                            <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("MENU_NAME") %></a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
                 </div>
-                      </td>
-                  </tr>
-              </table>
-            </div>
-                   
-          
-         <span class="element-divider" style="margin-top:30px;"></span>
-           
-            <a class="element place-right" href="Giris.aspx" style="margin-top:45px;"><span class="icon-switch" ></span></a>
-            <span class="element-divider place-right" style="margin-top:30px;"></span>
-            <button class="element image-button image-left place-right" style="padding-right: 15px;margin-top:25px;">
-                Hoþgeldin <%= this.Page.User.Identity.Name %>
-                    <i class="icon-user" style="margin-top: 30px;"></i>
-            </button>
+               <%-- <span class="element-divider" style="margin-top: 30px;"></span>--%>
+                <div class="element">
+                    <table <%--style="margin-top: 85px;"--%>>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList1" runat="server" ForeColor="White" Width="120px" Height="30px" CssClass="dropdown-dark">
+                                    <asp:ListItem Text="Kiþiler"></asp:ListItem>
+                                    <asp:ListItem Text="Firmalar"></asp:ListItem>
+                                    <asp:ListItem Text="Aktivite"></asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                            <td>
+                                <div class="input-control text" style="margin-top: 11px;">
+                                    <input type="text" placeholder="Arama Yapýn..." style="width: 150px; height: 30px;" />
+                                    <button class="btn-search"></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+              <%--  <span class="element-divider" style="margin-top: 30px;"></span>--%>
+                <a class="element place-right" href="Giris.aspx?param=logout" style="margin-top: 20px;"><span class="icon-switch"></span></a>
+                <span class="element-divider place-right" style="margin-top: 10px;"></span>
+                <button class="element image-button image-left place-right" style="padding-right: 10px; margin-top: 15px;">
+                    Hoþgeldin <%= this.Page.User.Identity.Name %>
+                    <i class="icon-user" style="margin-top: 15px;"></i>
+                </button>
+            </nav>
         </nav>
-    </nav>
+       
+         <div class="clearfix"></div>
+        <nav class="sidebar light" style="width: 15%; height: 100%; float: left;">
+            <ul>
+                <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
+                    <ItemTemplate>
+                        <li id="menulist" runat="server">
+                            <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><i class="icon-arrow-right"></i><%# Eval("MENU_NAME") %></a></li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </nav>
 
-    <nav class="sidebar light" style="width: 15%; height: 100%; float: left;">
-        <ul>
-            <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound" >
-                <ItemTemplate>
-                    <li id="menulist" runat="server">
-                        <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><i class="icon-arrow-right"></i><%# Eval("MENU_NAME") %></a></li>
-                </ItemTemplate>
-            </asp:Repeater>
-        </ul>
-    </nav>
+        <div style="float: left; margin-left: auto; width: 85%;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
 
-    <div style="float:left;margin-left:auto;width:85%;">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-
-</form>
+    </form>
     <link rel="stylesheet" type="text/css" href="Content/css/jquery.datetimepicker.css" />
 
     <script src="Content/js/jquery/jquery.datetimepicker.js"></script>
@@ -136,7 +161,7 @@
         jQuery('#ContentPlaceHolder1_idTeklifBaslangicTarih').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idTeklifBitisTarih').datetimepicker({ format: 'd.m.Y H:i' });
     </script>
-   
+
 </body>
-    
+
 </html>

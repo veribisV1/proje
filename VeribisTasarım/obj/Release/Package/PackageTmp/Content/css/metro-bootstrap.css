@@ -4018,7 +4018,7 @@ a {
 .metro .navbar {
   width: 100%;
   display: block;
-  background-color: #1ba1e2;
+  background-color: #336699;
   color: #ffffff;
 }
 .metro .navigation-bar .navigation-bar-content,
@@ -4041,7 +4041,7 @@ a {
   float: left;
   background-color: inherit;
   position: relative;
-  height: 80px;
+  height: 60px;
 }
 .metro .navigation-bar .navigation-bar-content .element.place-right,
 .metro .navbar .navigation-bar-content .element.place-right,

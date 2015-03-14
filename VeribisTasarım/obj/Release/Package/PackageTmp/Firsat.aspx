@@ -114,7 +114,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirsatEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonFirsatEkleYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" OnClick="idButtonFirsatEkleYeni_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonFirsatEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonFirsatEkleKaydet_Click" OnClientClick="return confirm('Firsat bilgisi kaydedilmiştir.')" />

@@ -30,13 +30,13 @@
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin
-        {
+        .fancybox-custom .fancybox-skin {
             box-shadow: 0 0 50px #222;
         }
     </style>
 
-
+    <link href="Content/css/multiple-select.css" rel="stylesheet" />
+    <script src="Content/js/jquery.multiple.select.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -123,7 +123,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClick="idButtonFirmaEkleYeni_Click" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle"   OnClick="idButtonFirmaEkleYeni_Click" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
@@ -193,7 +193,7 @@
                                     <td>
                                         <div style="visibility: hidden;">
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
-                                          
+
                                             <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="true"></asp:TextBox>
                                         </div>
 
@@ -270,9 +270,10 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idGROUP_CODE" runat="server" Width="100%" Height="30px">
-                                        </asp:DropDownList>
-
+                                        <asp:ListBox ID="idGROUP_CODE" runat="server" Width="100%" Height="30px" SelectionMode="Multiple"></asp:ListBox>
+                                        <script type="text/javascript">
+                                            $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
+                                        </script>
                                     </td>
                                 </tr>
                                 <tr>
@@ -562,7 +563,7 @@
                                     <asp:Button ID="idButtonMakinaParkiYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonMakinaParkiKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" />
+                                    <asp:Button ID="idButtonMakinaParkiKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonMakinaParkiKaydet_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonMakinaParkiSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
@@ -840,6 +841,7 @@
             </div>
         </div>
     </div>
+
 
 
 </asp:Content>

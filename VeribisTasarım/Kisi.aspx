@@ -65,6 +65,7 @@
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
+
                         Firma:
                         <asp:DropDownList ID="drpCOMPANY_CODE" runat="server" OnSelectedIndexChanged="drpCOMPANY_CODE_SelectedIndexChanged" AutoPostBack="True" Height="30px" Width="20%"></asp:DropDownList>
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="CONTACT_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Kişi bilgisine rastlanmadı.">

@@ -119,6 +119,26 @@ namespace VeribisTasarım.Controller
             return list;
         }
 
+        public List<string> getDictionaryList(string sorgu)
+        {
+            List<string> list = new List<string>();
+            adapter = new SqlDataAdapter();
+            komut = new SqlCommand(sorgu, connection);
+            connection.Open();
+            using (SqlDataReader rdr = komut.ExecuteReader())
+            {
+
+                while (rdr.Read())
+                {
+                    list.Add(rdr[0].ToString());
+                }
+               
+            }
+
+
+            connection.Close();
+            return list;
+        }
 
         public Dictionary<string, string> getDictionary(string sorgu)
         {

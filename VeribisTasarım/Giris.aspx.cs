@@ -17,15 +17,23 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!Page.IsPostBack)
+            if (!String.IsNullOrEmpty(Request.QueryString["param"]))
             {
-                HttpContext.Current.Session.Clear();
-                HttpContext.Current.Session.Abandon();
-                HttpContext.Current.User = null;
-                FormsAuthentication.SignOut();
+                logOut();
             }
 
+            //if (!Page.IsPostBack)
+            //{
+            //    HttpContext.Current.Session.Clear();
+            //    HttpContext.Current.Session.Abandon();
+            //    HttpContext.Current.User = null;
+            //    FormsAuthentication.SignOut();
+            //}
+
+        }
+        public void logOut()
+        {
+            Session.Remove("USER_CODE");
         }
 
         protected void btnGiris_Click(object sender, EventArgs e)
@@ -53,6 +61,8 @@ namespace VeribisTasarım
             }
 
         }
+
+      
 
     }
 }

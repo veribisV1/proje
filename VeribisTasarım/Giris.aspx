@@ -330,7 +330,7 @@
                                 <div class="inner">
 
                                     <div class="login-title text-center">
-                                        <h4>Kullanıcı Girişi</h4>
+                                        <h4>Kullanıcı Girişi <%--<%#Eval(Res.resGetir(483))%>--%></h4>
 
                                     </div>
 
@@ -349,8 +349,7 @@
                                         <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password" placeholder="Şifre"></asp:TextBox>
                                     </div>
 
-                                    <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />
-
+                                    <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />                                   
                                 </div>
 
                             </div>

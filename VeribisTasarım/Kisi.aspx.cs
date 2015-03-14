@@ -124,6 +124,7 @@ namespace VeribisTasarım
 
                     }
                     KayitBasariliMesaji("Kişi");
+                    gelenKisiyiYukle();
                    
                     //Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
@@ -136,7 +137,10 @@ namespace VeribisTasarım
             }
             else
                 BosMesaji();
+           
 
+            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
@@ -168,7 +172,7 @@ namespace VeribisTasarım
             string code = btn.CommandArgument;
             idCONTACT_CODE.Text = code;
             gelenKisiyiYukle();
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
+            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 

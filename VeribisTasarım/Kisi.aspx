@@ -275,11 +275,14 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
+
+
                                     <asp:ListBox ID="idGROUP_CODE" runat="server" Height="30px" Width="100px">
                                     </asp:ListBox>
                                      <script type="text/javascript">
                                          $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
                                         </script>
+
                                 </td>
                             </tr>
                             <tr>
@@ -666,8 +669,9 @@
                                 <td width="2%">:
                                 </td>
                                 <td>
-                                    <%-- <asp:DropDownList ID="idISMARRIED" runat="server" Height="30px" Width="100%" OnSelectedIndexChanged="idISMARRIED_SelectedIndexChanged">
-                                        </asp:DropDownList>--%>
+                                   
+                                     <asp:DropDownList ID="idISMARRIED" runat="server" Height="30px" Width="100%">
+                                        </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>

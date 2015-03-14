@@ -181,7 +181,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idGROUP_CODE;
+        protected global::System.Web.UI.WebControls.ListBox idGROUP_CODE;
         
         /// <summary>
         /// idCONTACT_REPRESENT_CODE control.

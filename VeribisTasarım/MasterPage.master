@@ -103,12 +103,12 @@
                                <table>
                                    <tr>
                                     <td>
- <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></a>
+ <span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></span>
                                     </td>                                    
                                 </tr>
                                  <tr>
-                                     <td>
-<a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></a>
+                                     <td style="text-align:center;">
+<span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></span>
                                      </td>
                                      
                                 </tr>

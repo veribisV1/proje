@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
-<%@ Import Namespace="VeribisTasarım.Controller"  %>
+
+<%@ Import Namespace="VeribisTasarım.Controller" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -30,7 +31,8 @@
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin {
+        .fancybox-custom .fancybox-skin
+        {
             box-shadow: 0 0 50px #222;
         }
     </style>
@@ -41,14 +43,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="ALAN12">
-        <h3> <%=ResGetir.resGetir(2)%></h3>
+        <h3><%=ResGetir.resGetir(2)%></h3>
 
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
 
-                <li id="liste"><a href="#ListeAdi" class="active"> <%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma"><a href="#FirmaEkle"> <%=ResGetir.resGetir(131)%></a></li>
-                <li><a href="#MakinaParki"> <%=ResGetir.resGetir(126)%></a></li>
+                <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
+                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
                 <li><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
                 <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"><%=ResGetir.resGetir(1)%></a></li>
@@ -125,7 +127,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle"   OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
@@ -565,7 +567,7 @@
                                     <asp:Button ID="idButtonMakinaParkiYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonMakinaParkiKaydet" runat="server" CssClass="bg-blue fg-white"  Height="30px" OnClick="idButtonMakinaParkiKaydet_Click" />
+                                    <asp:Button ID="idButtonMakinaParkiKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonMakinaParkiKaydet_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonMakinaParkiSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
@@ -701,7 +703,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" />
@@ -718,8 +720,19 @@
                             <table class="KisiTable">
                                 <tr>
                                     <td>
-                                        <asp:GridView ID="idRAKIP_FIRMALAR" runat="server"></asp:GridView>
-                                        <asp:GridView ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>
+                                        <%--<asp:GridView ID="idRAKIP_FIRMALAR" runat="server"></asp:GridView>
+                                        <asp:GridView ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>--%>
+                                        <span style="font-size:small">Rakip Firmalar Listesi</span>
+                                        <asp:ListBox ID="idRAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" /><br /><br />
+                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" />
+
+                                    </td>
+                                    <td>
+                                        <span style="font-size:small">Bu Firmadaki Rakip Firmalar</span>
+                                        <asp:ListBox ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                 </tr>
 

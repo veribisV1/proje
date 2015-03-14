@@ -77,6 +77,7 @@ namespace VeribisTasarım
             idEDUCATION = dbGetir.doldur(idEDUCATION, dbGetir.getEgitimDuzeyi());
             idHAVE_HOME = dbGetir.doldur(idHAVE_HOME, dbGetir.getEvVarMi());
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
+            idISMARRIED = dbGetir.doldur(idISMARRIED, dbGetir.getMedeniHal());
             #endregion
             idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
         }
@@ -154,6 +155,7 @@ namespace VeribisTasarım
 
                     }
                     KayitBasariliMesaji("Kişi");
+                    
                    
                     //Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
@@ -166,7 +168,10 @@ namespace VeribisTasarım
             }
             else
                 BosMesaji();
+           
 
+            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
@@ -198,7 +203,7 @@ namespace VeribisTasarım
             string code = btn.CommandArgument;
             idCONTACT_CODE.Text = code;
             gelenKisiyiYukle();
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
+            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 

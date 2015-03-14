@@ -514,7 +514,25 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView idRAKIP_FIRMALAR;
+        protected global::System.Web.UI.WebControls.ListBox idRAKIP_FIRMALAR;
+        
+        /// <summary>
+        /// idRakipFirmaEkle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idRakipFirmaEkle;
+        
+        /// <summary>
+        /// idRakipFirmaCikar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idRakipFirmaCikar;
         
         /// <summary>
         /// idBU_FIRMADAKI_RAKIP_FIRMALAR control.
@@ -523,7 +541,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView idBU_FIRMADAKI_RAKIP_FIRMALAR;
+        protected global::System.Web.UI.WebControls.ListBox idBU_FIRMADAKI_RAKIP_FIRMALAR;
         
         /// <summary>
         /// idButtonRakipUrunYeni control.

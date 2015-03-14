@@ -94,12 +94,30 @@
 
               <%--  <span class="element-divider" style="margin-top: 15px;"></span>--%>
                 <div class="element">
+                    <table>
+                        <tbody>
+                            <tr>
                     <asp:Repeater ID="Repeater2" runat="server">
                         <ItemTemplate>
-                            <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></a>
-                        </ItemTemplate>
-                    </asp:Repeater>
-
+                           <td>
+                               <table>
+                                   <tr>
+                                    <td>
+ <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></a>
+                                    </td>                                    
+                                </tr>
+                                 <tr>
+                                     <td>
+<a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></a>
+                                     </td>
+                                     
+                                </tr>
+                               </table> 
+                            
+                           </td> 
+                        </ItemTemplate></asp:Repeater>
+</tr> </tbody>                   
+</table>
                 </div>
                <%-- <span class="element-divider" style="margin-top: 30px;"></span>--%>
                 <div class="element">

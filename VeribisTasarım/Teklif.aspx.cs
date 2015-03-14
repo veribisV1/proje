@@ -15,7 +15,7 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
-                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                
                 ekranDoldur();
                 gridDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -39,7 +39,9 @@ namespace VeribisTasarım
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            grTeklifListe.DataSource = dbadapter.getGridIcerik("SELECT OPPORTUNITY_CODE,COMPANY.COMPANY_NAME,CONTACT.NAME AS 'CONTACT_NAME', OPPORTUNITYMASTER.EXPLANATION, STEP.EXP_TR AS 'SEARCH_STEP',USERS.AUSER_NAME +' '+USERS.SURNAME AS 'APPOINTED_USER_CODE', OPPORTUNITYMASTER.EXPLANATION, OPPORTUNITYMASTER.DOCUMENT_DATE,TOTAL,TOTAL_UPB FROM OPPORTUNITYMASTER LEFT JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE LEFT JOIN CONTACT ON CONTACT.CONTACT_CODE=OPPORTUNITYMASTER.CONTACT_CODE LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=42 ) AS STEP ON STEP.ROW_ORDER_NO=OPPORTUNITYMASTER.SEARCH_STEP LEFT JOIN USERS ON USERS.USER_CODE=OPPORTUNITYMASTER.APPOINTED_USER_CODE WHERE DOCUMENT_TYPE=2 AND OPEN_CLOSE=1 order by OPPORTUNITYMASTER.LAST_UPDATE desc");
+           
+            grTeklifListe.DataSource = dbadapter.getGridIcerik("SELECT OPPORTUNITY_CODE,COMPANY.COMPANY_NAME,(CONTACT.NAME +' ' + CONTACT.SURNAME) AS 'CONTACT_NAME', OPPORTUNITYMASTER.EXPLANATION, STEP.EXP_TR AS 'SEARCH_STEP',USERS.AUSER_NAME +' '+USERS.SURNAME AS 'APPOINTED_USER_CODE', OPPORTUNITYMASTER.EXPLANATION, OPPORTUNITYMASTER.DOCUMENT_DATE,TOTAL,TOTAL_UPB FROM OPPORTUNITYMASTER LEFT JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE LEFT JOIN CONTACT ON CONTACT.CONTACT_CODE=OPPORTUNITYMASTER.CONTACT_CODE LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=42 ) AS STEP ON STEP.ROW_ORDER_NO=OPPORTUNITYMASTER.SEARCH_STEP LEFT JOIN USERS ON USERS.USER_CODE=OPPORTUNITYMASTER.APPOINTED_USER_CODE WHERE DOCUMENT_TYPE=2 AND OPEN_CLOSE=1 order by OPPORTUNITYMASTER.LAST_UPDATE desc");
+           
             grTeklifListe.DataBind();
         }
 
@@ -64,12 +66,15 @@ namespace VeribisTasarım
             idOPEN_CLOSE.SelectedValue = "1";
             #endregion
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         protected void editTeklif(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
             string code = btn.CommandArgument;
+            idCONTACT_CODE.Items.Clear();
             secilenElemanDetayiGetir(this, "OPPORTUNITYMASTER", "OPPORTUNITY_CODE", String.Format("{0}", code));
             idCOMPANY_CODE_SelectedIndexChanged(sender, e);
             DBARACISI adapter = new DBARACISI();
@@ -96,13 +101,21 @@ namespace VeribisTasarım
             {
                 oppurtunityCode = kaydet("pUpdateOppMaster");
             }
-
+            gridDoldur();
         }
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             idCONTACT_CODE = dbGetir.doldur(idCONTACT_CODE, dbGetir.getKisi(idCOMPANY_CODE.SelectedValue));
+        }
+
+        protected void idButtonTeklifEkleYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+            ekranDoldur();
+            GridView1.DataSource = null;
+            GridView1.DataBind();
         }
     }
 }

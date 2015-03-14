@@ -13,6 +13,15 @@ namespace VeribisTasarım {
     public partial class Teklif {
         
         /// <summary>
+        /// idLabelTeklifArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idLabelTeklifArama;
+        
+        /// <summary>
         /// idTextBoxTeklifArama control.
         /// </summary>
         /// <remarks>
@@ -20,15 +29,6 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idTextBoxTeklifArama;
-        
-        /// <summary>
-        /// idButtonTeklifArama control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idButtonTeklifArama;
         
         /// <summary>
         /// idLabelTeklifDurum control.
@@ -83,6 +83,15 @@ namespace VeribisTasarım {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox idTeklifBitisTarih;
+        
+        /// <summary>
+        /// idButtonTeklifArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonTeklifArama;
         
         /// <summary>
         /// grTeklifListe control.

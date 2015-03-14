@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -45,7 +46,13 @@ namespace VeribisTasarım
         protected void btnVeriEkle_Click(object sender, EventArgs e)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", "parent.location.replace('Kisi.aspx?btnKisiListele='+'yeni');", true);
+            StringBuilder script = new StringBuilder();
+            script.Append("parent.location.replace('Kisi.aspx?btnKisiListele=");
+            script.Append(idCOMPANY_CODE.Text);
+            script.Append("-");
+            script.Append("yeni");
+            script.Append("');");
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script.ToString(), true);
         }
     }
 }

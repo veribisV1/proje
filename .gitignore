@@ -13,3 +13,7 @@
 *.pdb
 *.suo
 *.cache
+<<<<<<< HEAD
+=======
+*.config
+>>>>>>> 23fabdd561e7b890f3357d71f1a6f979e2df1eda

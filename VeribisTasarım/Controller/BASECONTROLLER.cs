@@ -101,6 +101,18 @@ namespace VeribisTasarım.Controller
             Response.Write(donusMesaji.ToString());
         }
 
+        public void KayitBasariliMesaji(string kayitBilgisi)
+        {
+            StringBuilder donusMesaji = new StringBuilder();
+            donusMesaji.Append("<script type=\"text/javascript\">");
+            donusMesaji.Append("window.alert('");
+            donusMesaji.Append(kayitBilgisi);
+            donusMesaji.Append(" Kayıt İşlemi Başarılı.");
+            donusMesaji.Append("');");
+            donusMesaji.Append("</script>");
+            Response.Write(donusMesaji.ToString());
+        }
+
         internal void Page_Load()
         {
             if (Session.Count < 1)

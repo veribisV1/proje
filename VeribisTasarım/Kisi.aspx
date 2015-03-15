@@ -114,7 +114,7 @@
                                         <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="IS TELEFONU">
+                                 <asp:TemplateField HeaderText="İŞ TELEFONU">
                                     <ItemTemplate>
                                         <asp:Label ID="lblcep" runat="server" Text='<%# Eval("IS")%>'></asp:Label>
                                     </ItemTemplate>

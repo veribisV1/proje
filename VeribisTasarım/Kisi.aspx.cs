@@ -95,15 +95,15 @@ namespace VeribisTasarım
             idADDRESS.DataSource = tablo;
             idADDRESS.DataBind();
 
-            if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
-            {
-                sorgu.Length = 0;
-                sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3) AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
-                sorgu.Append(idCOMPANY_CODE.Text);
-                tablo = db.get(sorgu.ToString());
-                GridView2.DataSource = tablo;
-                GridView2.DataBind();
-            }
+            //if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+            //{
+            //    sorgu.Length = 0;
+            //    sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3) AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
+            //    sorgu.Append(idCOMPANY_CODE.Text);
+            //    tablo = db.get(sorgu.ToString());
+            //    GridView2.DataSource = tablo;
+            //    GridView2.DataBind();
+            //}
 
 
         }

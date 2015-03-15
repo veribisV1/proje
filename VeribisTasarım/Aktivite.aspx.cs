@@ -16,9 +16,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
 
-                idSDATE.Text = DateTime.Now.ToString();
-
-                idEDATE.Text = DateTime.Now.ToString();
+               
                 butonText();
                 gridDoldur();
                 ekranDoldur();
@@ -66,6 +64,10 @@ namespace VeribisTasarım
             idACTIVITY_GROUP = dbGetir.doldur(idACTIVITY_GROUP, dbGetir.getAktiviteGrubu());
             idAPPOINTED_USER_CODE = dbGetir.doldur(idAPPOINTED_USER_CODE, dbGetir.userAdSoyadGetir());
             idPROJECT = dbGetir.doldur(idPROJECT, dbGetir.getProje());
+
+            idSDATE.Text = DateTime.Now.ToString();
+            idEDATE.Text = DateTime.Now.ToString();
+
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
             #endregion
         }
@@ -116,10 +118,18 @@ namespace VeribisTasarım
             GridView1.DataSource = dbadapter.getGridIcerik("SELECT  * FROM ACTIVITY WHERE OPENORCLOSE='1'");
             GridView1.DataBind();
         }
+        
         protected void editActivity(object sender, EventArgs e)
         {
-
-
+            ImageButton btn = (ImageButton)sender;
+            string code = btn.CommandArgument;
+            idCONTACT_CODE.Items.Clear();
+            secilenElemanDetayiGetir(this, "ACTIVITY", "ACTIVITY_CODE", String.Format("{0}", code));
+            idCOMPANY_CODE_SelectedIndexChanged(sender, e);
+            DBARACISI adapter = new DBARACISI();
+            System.Data.DataTable ilce = adapter.getGridIcerik(String.Format("select CONTACT_CODE from ACTIVITY where  ACTIVITY_CODE={0}", code));
+            idCONTACT_CODE.SelectedValue = ilce.Rows[0][0].ToString();
+            //gridDoldur(GridView1, idACTIVITY_CODE.Text);
         }
 
 

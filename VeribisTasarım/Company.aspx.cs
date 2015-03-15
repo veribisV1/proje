@@ -199,6 +199,7 @@ namespace VeribisTasarım
             gridPHONE.DataSource = null;
             gridPHONE.DataBind();
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
 
         }
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)

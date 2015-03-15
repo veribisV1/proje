@@ -93,10 +93,13 @@ namespace VeribisTasarım
                 {
                     activiteCode = kaydet("pUpdateActivity");
                 }
-                //Response.Redirect("Aktivite.aspx");
+                gridDoldur();
             }
             else
+            {
                 BosMesaji();
+            }
+               
         }
 
         protected void idCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,11 +130,9 @@ namespace VeribisTasarım
             secilenElemanDetayiGetir(this, "ACTIVITY", "ACTIVITY_CODE", String.Format("{0}", code));
             idCOMPANY_CODE_SelectedIndexChanged(sender, e);
             DBARACISI adapter = new DBARACISI();
-            System.Data.DataTable ilce = adapter.getGridIcerik(String.Format("select CONTACT_CODE from ACTIVITY where  ACTIVITY_CODE={0}", code));
-            idCONTACT_CODE.SelectedValue = ilce.Rows[0][0].ToString();
+            System.Data.DataTable contact = adapter.getGridIcerik(String.Format("select CONTACT_CODE from ACTIVITY where  ACTIVITY_CODE={0}", code));
+            idCONTACT_CODE.SelectedValue = contact.Rows[0][0].ToString();
 
-
-            //gridDoldur(GridView1, idACTIVITY_CODE.Text);
         }
 
 

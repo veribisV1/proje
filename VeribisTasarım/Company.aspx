@@ -31,20 +31,35 @@
 
     </script>
     <script type="text/javascript">
+        function tabloBosalt(tablo) {
+
+            tablo.each(function (i) {
+                
+                if (i != 0) {
+
+                    var par = $(this);
+                    par.remove();
+                }
+
+            });
+
+        }
+        
         function adresDoldur(companyCode) {
 
             PageMethods.adres(companyCode, onComplete);
         }
 
         function onComplete(res) {
-            alert(res);
+          
            res= JSON.parse(res);
-            var $table = $('#ContentPlaceHolder1_grdADDRESS tbody');
+           var $table = $('#ContentPlaceHolder1_grdADDRESS tbody');
+           tabloBosalt($('#ContentPlaceHolder1_grdADDRESS tbody tr'));
             $.each(res, function () {
                 var elements = " ";
                 elements = '<tr>';
-                elements += "<td>" + this.TUR + "</td>";
-                elements += "<td>" + this.ADRES + "</td>";
+                elements += "<td><img src='image/Deleteicon.png'></td>";
+                elements += "<td><img src='image/editicon.png'></td>";
                 elements += "<td>" + this.TUR + "</td>";
                 elements += "<td>" + this.ADRES + "</td>";
                 elements += "<td>" + this.ULKE + "</td>";

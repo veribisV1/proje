@@ -79,7 +79,7 @@ namespace VeribisTasarım
                 }
 
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
-           //     Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", String.Format("parent.adresDoldur({0});",idCOMPANY_CODE.Text), true);
 
 
             }

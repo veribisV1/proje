@@ -126,6 +126,7 @@ namespace VeribisTasarım
                         }
 
                     }
+                    KayitBasariliMesaji("Firma");
                 }
                 else
                 {

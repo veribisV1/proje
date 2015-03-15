@@ -136,7 +136,7 @@
                                     <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" OnClientClick="return confirm('Firma bilgisi kaydedilmiştir.')" />
+                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />

@@ -254,7 +254,7 @@ namespace VeribisTasarım
                 }
                 KayitBasariliMesaji("Rakip Firmalar Kaydedildi");
 
-
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
             }
         }
 

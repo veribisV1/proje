@@ -30,7 +30,20 @@
 
       
     </script>
+     <script type="text/javascript">
+         function adresDoldur(companyCode) {
 
+            
+                 PageMethods.adres(companyCode, onComplete);
+           
+         }
+
+         function onComplete(res) {
+             alert(res);
+
+         }
+      
+    </script>
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
@@ -44,7 +57,7 @@
     <script src="Content/js/jquery.multiple.select.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
     <div class="ALAN12">
         <h3><%=ResGetir.resGetir(2)%></h3>
 
@@ -130,7 +143,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClientClick="adresDoldur(11)" OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />

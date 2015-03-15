@@ -94,7 +94,7 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT PHONE_CODE, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
+            sorgu.Append("SELECT PHONE_CODE, PHONE_TYPE_ID, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             gridPHONE.DataSource = tablo;
@@ -177,11 +177,16 @@ namespace VeribisTasarım
         protected void telefonSil(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
-            string phoneCode = silButon.CommandArgument;
+            string[] commandArgs = silButon.CommandArgument.ToString().Split(new char[] { ',' });
+            string phoneCode = commandArgs[0];
+            string phoneType = commandArgs[1];
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
+            if(phoneType=="1")
+                dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}",-1,idCOMPANY_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+            gridDoldur();
         }
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {

@@ -51,7 +51,7 @@
         <div id="tabs" class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li id="liste" class="active"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="kisi"><a href="#KisiEkle"><%=ResGetir.resGetir(434)%></a></li>
+                <li id="kisi"><a href="#KisiEkle" onclick=''><%=ResGetir.resGetir(434)%></a></li>
                 <li><a href="#AktivitePlanla" onclick="GoToPage('Aktivite.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;"><%=ResGetir.resGetir(132)%></a></li>
                 <li><a href="#NotEkle">Not Ekle</a></li>
                 <li><a href="#Firsat" onclick="GoToPage('Firsat.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),$('#ContentPlaceHolder1_idCONTACT_CODE').val());return false;"><%=ResGetir.resGetir(210)%></a></li>
@@ -114,7 +114,7 @@
                                         <asp:Label ID="lblMAIL" runat="server" Text='<%# Eval("MAIL")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="IS TELEFONU">
+                                 <asp:TemplateField HeaderText="İŞ TELEFONU">
                                     <ItemTemplate>
                                         <asp:Label ID="lblcep" runat="server" Text='<%# Eval("IS")%>'></asp:Label>
                                     </ItemTemplate>

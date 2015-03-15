@@ -159,7 +159,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCOMPANY_NAME" MaxLength="200" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idCOMPANY_NAME" MaxLength="200" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -168,7 +168,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCOMPANY_COMMERCIAL_CODE" Height="30px" Width="100%" MaxLength="30" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idCOMPANY_COMMERCIAL_CODE" CssClass="textbox" MaxLength="30" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -177,7 +177,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_REPRESENT_CODE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_REPRESENT_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -187,7 +187,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idSECTOR" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idSECTOR" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -216,7 +216,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_SPECIAL_TYPE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_SPECIAL_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -226,7 +226,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idSTATUS" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idSTATUS" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -236,7 +236,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idUPPER_COMPANY_CODE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idUPPER_COMPANY_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -246,7 +246,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_REGION" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_REGION" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -256,7 +256,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idTAX_DEPARTMENT" MaxLength="30" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idTAX_DEPARTMENT" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -265,7 +265,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idTAX_NO" MaxLength="30" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idTAX_NO" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -274,7 +274,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:ListBox ID="idGROUP_CODE" runat="server" Width="100%" Height="30px" SelectionMode="Multiple"></asp:ListBox>
+                                        <asp:ListBox ID="idGROUP_CODE" runat="server" CssClass="dropdown" SelectionMode="Multiple"></asp:ListBox>
                                         <script type="text/javascript">
                                             $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
                                         </script>
@@ -286,7 +286,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMAIL" MaxLength="100" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idMAIL" MaxLength="100" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -295,7 +295,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idWEBADDRESS" MaxLength="150" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idWEBADDRESS" MaxLength="150" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -305,7 +305,7 @@
                                     </td>
                                     <td>
 
-                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" T runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idFOUNDATION_DATE" CssClass="textbox" runat="server"></asp:TextBox>
 
                                     </td>
                                 </tr>
@@ -322,7 +322,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_REFERANCE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_REFERANCE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -332,7 +332,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idENDORSEMENT" MaxLength="20" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idENDORSEMENT" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -341,7 +341,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idDISCOUNT_RATIO" MaxLength="20" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idDISCOUNT_RATIO" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -350,7 +350,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCURRENCY_TYPE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCURRENCY_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -360,7 +360,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCOMPANY_OWNER" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idCOMPANY_OWNER" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -369,7 +369,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idPAYMENT_PERSON" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idPAYMENT_PERSON" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -378,7 +378,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idPURCHASE_PERSON" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idPURCHASE_PERSON" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -387,7 +387,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idWAREHOUSE_PERSON" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idWAREHOUSE_PERSON" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -396,7 +396,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -406,7 +406,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idPAYMENT_DAY" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idPAYMENT_DAY" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>

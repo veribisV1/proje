@@ -69,6 +69,7 @@ namespace VeribisTasarım
 
             idDOCUMENT_DATE.Text = DateTime.Now.ToString();
             idCERTIFICATE_DATE.Text = DateTime.Now.ToString();
+            idSIPARIS_TARIHI.Text = DateTime.Now.ToString();
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 

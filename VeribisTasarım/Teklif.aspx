@@ -32,7 +32,7 @@
                                 </td>
                                 <td>:</td>
                                 <td>
-                                     <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="EvrakListesiArama" Width="180px"></asp:TextBox>
+                                     <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="aramakontrol" ></asp:TextBox>
                                  
                                 </td>
                                  <td>
@@ -40,7 +40,7 @@
                                 </td>
                                    <td>:</td>
                                 <td>
-                                   <asp:DropDownList ID="idDropDownTeklifDurum" runat="server" CssClass="EvrakListesiDropdownDurum" Width="180px"></asp:DropDownList>
+                                   <asp:DropDownList ID="idDropDownTeklifDurum" runat="server" CssClass="aramakontrol" ></asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
@@ -49,14 +49,14 @@
                                  </td>
                                    <td>:</td>
                                  <td> 
-                                     <asp:TextBox ID="idTeklifBaslangicTarih" runat="server" Width="180px"  ></asp:TextBox>
+                                     <asp:TextBox ID="idTeklifBaslangicTarih" runat="server" CssClass="aramakontrol" ></asp:TextBox>
                                  </td>
                                 <td>
                                     <asp:Label ID="idLabelTeklifBitis" runat="server" CssClass="LabelEvrakListesiBitis"></asp:Label>
                                 </td>
                                    <td>:</td>
                                  <td>
-                                     <asp:TextBox ID="idTeklifBitisTarih" runat="server" Width="180px" ></asp:TextBox>
+                                     <asp:TextBox ID="idTeklifBitisTarih" runat="server" CssClass="aramakontrol" ></asp:TextBox>
                                  </td>
                                 <td>
                                       <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" />

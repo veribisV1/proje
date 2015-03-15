@@ -178,11 +178,14 @@
         jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idTeklifBaslangicTarih').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idTeklifBitisTarih').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idFirsatBaslangicTarih').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idFirsatBitisTarih').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idFOUNDATION_DATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idBIRTHDATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idANNIVERSARY_DATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idDOCUMENT_DATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idCERTIFICATE_DATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idSIPARIS_TARIHI').datetimepicker({ format: 'd.m.Y H:i' });
         
     </script>
 

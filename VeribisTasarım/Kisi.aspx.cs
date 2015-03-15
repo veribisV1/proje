@@ -141,7 +141,7 @@ namespace VeribisTasarım
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
-            gridDoldur();
+           
         }
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)

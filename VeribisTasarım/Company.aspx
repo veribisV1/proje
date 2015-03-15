@@ -28,9 +28,7 @@
             return false;
         }
 
-        function tabDegistir() {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#liste').removeClass('active');$('#rakipFirma').addClass('active')", true);
-        }
+      
     </script>
 
 

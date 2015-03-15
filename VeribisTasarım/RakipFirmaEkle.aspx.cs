@@ -29,9 +29,9 @@ namespace VeribisTasarım
                 rivalCode = kaydet("pInsertRivalCompany");
                 idRIVAL_COMPANY_CODE.Text = rivalCode.ToString();
                 rivalCode = kaydet("pInsertRivalCompanyGroup");
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);                
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);          
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
-             
+                
 
             }
         }

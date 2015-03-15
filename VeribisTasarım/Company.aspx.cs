@@ -202,7 +202,7 @@ namespace VeribisTasarım
             gridPHONE.DataSource = null;
             gridPHONE.DataBind();
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
+           
 
         }
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)
@@ -238,6 +238,7 @@ namespace VeribisTasarım
             idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Add(idRAKIP_FIRMALAR.SelectedItem);
             idRAKIP_FIRMALAR.SelectedIndex = -1;
             idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedIndex = -1;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void idButtonRakipFirmaKaydet_Click(object sender, EventArgs e)
@@ -260,6 +261,7 @@ namespace VeribisTasarım
         protected void idRakipFirmaCikar_Click(object sender, EventArgs e)
         {
             idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Remove(idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedItem);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
         }
     }
 }

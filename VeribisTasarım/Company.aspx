@@ -51,7 +51,7 @@
                 <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
                 <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
-                <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
+                <li id="rakipFirma"><a href="#RakipFirma" onclick='Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);'><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
                 <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"><%=ResGetir.resGetir(1)%></a></li>
                 <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(637)%></a></li>

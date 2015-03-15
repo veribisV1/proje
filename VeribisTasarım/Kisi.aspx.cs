@@ -128,6 +128,7 @@ namespace VeribisTasarım
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
             telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void adresSil(object sender, EventArgs e)
@@ -138,6 +139,7 @@ namespace VeribisTasarım
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)

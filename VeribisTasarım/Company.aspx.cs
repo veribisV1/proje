@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Text;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using VeribisTasarım.Controller;
@@ -77,6 +80,8 @@ namespace VeribisTasarım
             #endregion
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
+
+
         private void adresDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -87,8 +92,34 @@ namespace VeribisTasarım
             DataTable tablo = db.get(sorgu.ToString());
             grdADDRESS.DataSource = tablo;
             grdADDRESS.DataBind();
-
+          
         }
+
+        [WebMethod]
+        public static string adres(int companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
+            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, ADDRESS.ADDRESS_TYPE_ID, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE where GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
+            sorgu.Append(companyCode);
+            DataTable tablo = db.get(sorgu.ToString());
+            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+            Dictionary<string, object> row;
+            foreach (DataRow dr in tablo.Rows)
+            {
+                row = new Dictionary<string, object>();
+                foreach (DataColumn col in tablo.Columns)
+                {
+                    row.Add(col.ColumnName, dr[col]);
+                }
+                rows.Add(row);
+            }
+            return serializer.Serialize(rows);
+        }
+
+        [WebMethod]
         private void telefonDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -113,6 +144,7 @@ namespace VeribisTasarım
                         idCOMPANY_CODE.Text = Company_Code.ToString();
                         gruopCodeKaydet();
                     }
+                    KayitBasariliMesaji("Firma");
                 }
                 else
                 {
@@ -123,6 +155,7 @@ namespace VeribisTasarım
             }
             KayitBasariliMesaji("Firma");
             gridDoldur();
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
         }
         private void gruopCodeKaydet()

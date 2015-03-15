@@ -77,9 +77,10 @@ namespace VeribisTasarım
                     DBARACISI db = new DBARACISI();
                     db.set(String.Format("UPDATE CONTACT SET ADDRESS={0} WHERE CONTACT_CODE={1}", addressCode, idCONTACT_CODE.Text));
                 }
+
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
-               
+           //     Page.ClientScript.RegisterStartupScript(this.GetType(), "Refresh", "parent.location.reload(true);", true);
+
 
             }
         }

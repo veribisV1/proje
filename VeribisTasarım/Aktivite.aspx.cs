@@ -135,6 +135,13 @@ namespace VeribisTasarım
 
         }
 
+        protected void idButtonAktiviteYeni_Click(object sender, EventArgs e)
+        {
+            formTemizle(this);
+            ekranDoldur();
+          
+        }
+
 
     }
 }

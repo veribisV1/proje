@@ -18,8 +18,8 @@
         <h3><%=ResGetir.resGetir(333)%></h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li id="liste" class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li id="teklif"><a href="#TeklifEkle"><%=ResGetir.resGetir(136)%></a></li>
+                <li id="liste"><a href="#ListeAdi">Liste Adı</a></li>
+                <li id="teklif" class="active"><a href="#TeklifEkle"><%=ResGetir.resGetir(136)%></a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi" style="min-height: 100px">

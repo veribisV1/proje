@@ -19,21 +19,24 @@ namespace VeribisTasarım
                 butonText();
                 ekranDoldur();
                 gridDoldur();
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#liste').addClass('active');$('#teklif').removeClass('active')", true); 
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#teklif').addClass('active');$('#liste').removeClass('active')", true); 
                     var qString = Request.QueryString["param"].ToString();
                     if (qString.Contains('-'))
                     {
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
                         idCOMPANY_CODE_SelectedIndexChanged(sender, e);
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#teklif').addClass('active');$('#liste').removeClass('active')", true); 
+                       
                     }
                     else
                     {
                         idCOMPANY_CODE.SelectedValue = qString;
                     }
                 }
+               
             }
 
         }
@@ -98,6 +101,7 @@ namespace VeribisTasarım
             System.Data.DataTable ilce = adapter.getGridIcerik(String.Format("select CONTACT_CODE from OPPORTUNITYMASTER where  OPPORTUNITY_CODE={0}", code));
             idCONTACT_CODE.SelectedValue = ilce.Rows[0][0].ToString();
             gridDoldur(GridView1, idOPPORTUNITY_CODE.Text);
+           
 
         }
 

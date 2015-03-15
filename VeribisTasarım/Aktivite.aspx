@@ -77,7 +77,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonAktiviteYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
+                                    <asp:Button ID="idButtonAktiviteYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonAktiviteYeni_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAktiviteKaydet" runat="server" CssClass="bg-blue fg-white"  Height="30px" OnClick="idButtonAktiviteKaydet_Click" />

@@ -118,6 +118,28 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
+
+.textbox {
+
+width:100%;
+height:30px;
+}
+
+.multilinetextbox {
+width:100%;
+height:60px;
+}
+
+.dropdown {
+width:100%;
+height:30px;
+}
+
+.aramakontrol{
+    width:180px;
+    height:30px;
+}
+
 input[type=text]::-ms-clear,
 input[type=email]::-ms-clear,
 input[type=url]::-ms-clear,

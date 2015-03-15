@@ -71,7 +71,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
     <div class="ALAN12">
         <h3><%=ResGetir.resGetir(2)%></h3>
-        <button onclick="adresDoldur(15)">tıkla </button>
+       
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
 

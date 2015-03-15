@@ -185,6 +185,8 @@ namespace VeribisTasarım
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
             if(phoneType=="1")
                 dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}",-1,idCOMPANY_CODE.Text));
+            else if(phoneType=="3")
+                dbadapter.set(String.Format("UPDATE COMPANY SET FAX={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
             gridDoldur();
         }

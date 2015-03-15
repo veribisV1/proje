@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdresEkle.aspx.cs" Inherits="VeribisTasarım.AdresEkle" %>
+<%@ Import Namespace="VeribisTasarım.Controller"  %>
 
 <!DOCTYPE html>
 
@@ -25,7 +26,7 @@
                         <div class="ALAN6">
                             <table>
                                 <tr>
-                                    <td width="35%">Tipi
+                                    <td width="35%"> <%=ResGetir.resGetir(14)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -34,7 +35,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Ülke
+                                    <td width="35%"><%=ResGetir.resGetir(302)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -43,7 +44,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">İli
+                                    <td width="35%"><%=ResGetir.resGetir(303)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -52,7 +53,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">İlçe
+                                    <td width="35%"><%=ResGetir.resGetir(304)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -61,7 +62,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Adres 1
+                                    <td width="35%"><%=ResGetir.resGetir(8)%>1
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -70,7 +71,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Adres 2
+                                    <td width="35%"><%=ResGetir.resGetir(8)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -79,7 +80,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Adres 3
+                                    <td width="35%"><%=ResGetir.resGetir(8)%>3
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -94,7 +95,7 @@
                         <div class="ALAN6">
                             <table>
                                   <tr>
-                                    <td width="35%">Mevki
+                                    <td width="35%"><%=ResGetir.resGetir(667)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -104,7 +105,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Posta Kodu
+                                    <td width="35%"><%=ResGetir.resGetir(666)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -149,10 +150,10 @@
                             <table style="float: right; margin-right: 10px;">
                                 <tr>
                                     <td>
-                                        <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonAdresKaydet_Click" />
+                                        <asp:Button ID="idButtonAdresKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonAdresKaydet_Click" />
                                     </td>
                                     <td>
-                                        <asp:Button ID="idButtonAdresIptal" runat="server" CssClass="bg-blue fg-white" Text="İptal" Height="30px" OnClientClick="parent.$.fancybox.close();" />
+                                        <asp:Button ID="idButtonAdresIptal" runat="server" CssClass="bg-blue fg-white"  Height="30px" OnClientClick="parent.$.fancybox.close();" />
                                     </td>
                                 </tr>
                     

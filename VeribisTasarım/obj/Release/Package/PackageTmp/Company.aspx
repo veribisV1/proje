@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
 
+<%@ Import Namespace="VeribisTasarım.Controller" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -30,7 +31,8 @@
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin {
+        .fancybox-custom .fancybox-skin
+        {
             box-shadow: 0 0 50px #222;
         }
     </style>
@@ -41,20 +43,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="ALAN12">
-        <h3>FİRMA KARTI</h3>
+        <h3><%=ResGetir.resGetir(2)%></h3>
 
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li><a href="#ListeAdi">Liste Adı</a></li>
-                <li class="active"><a href="#FirmaEkle">Firma Ekle</a></li>
-                <li><a href="#MakinaParki">Makina Parkı</a></li>
-                <li><a href="#RakipFirma">Rakip Firma</a></li>
-                <li><a href="#RakipUrun">Rakip Ürün</a></li>
-                <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;">Kontak</a></li>
-                <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Numune</a></li>
-                <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Proforma</a></li>
-                <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;">Fatura</a></li>
-                <li><a href="#EkForm">Ek Form</a></li>
+
+                <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
+                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
+                <li><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
+                <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
+                <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"><%=ResGetir.resGetir(1)%></a></li>
+                <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(637)%></a></li>
+                <li><a href="#Proforma" onclick="GoToPage('Proforma.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(636)%></a></li>
+                <li><a href="#Fatura" onclick="GoToPage('Fatura.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(211)%></a></li>
+                <li><a href="#EkForm"><%=ResGetir.resGetir(573)%></a></li>
+
 
             </ul>
 
@@ -123,23 +127,23 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle"   OnClick="idButtonFirmaEkleYeni_Click" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Text="Adres Ekle" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Text="Telefon Ekle" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" OnClientClick="return confirm('Firma bilgisi kaydedilmiştir.')" />
+                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" OnClientClick="return confirm('Firma bilgisi kaydedilmiştir.')" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
 
                                 <td>
-                                    <asp:Button ID="idButtonKisileriListele" runat="server" CssClass="bg-blue fg-white" Text="Kişileri Listele" Height="30px" OnClientClick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonKisileriListele" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                             </tr>
                         </table>
@@ -207,7 +211,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%">Tipi
+                                    <td width="35%"><%=ResGetir.resGetir(14)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -217,7 +221,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Aktif
+                                    <td width="35%"><%=ResGetir.resGetir(16)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -227,7 +231,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Bağlı Firma
+                                    <td width="35%"><%=ResGetir.resGetir(23)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -237,7 +241,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Bölgesi
+                                    <td width="35%"><%=ResGetir.resGetir(18)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -247,7 +251,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Vergi Dairesi
+                                    <td width="35%"><%=ResGetir.resGetir(19)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -256,7 +260,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Vergi Numarası
+                                    <td width="35%"><%=ResGetir.resGetir(20)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -265,7 +269,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Grubu
+                                    <td width="35%"><%=ResGetir.resGetir(17)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -277,7 +281,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Mail
+                                    <td width="35%"><%=ResGetir.resGetir(11)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -286,7 +290,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Web Adresi
+                                    <td width="35%"><%=ResGetir.resGetir(12)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -295,7 +299,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Kuruluş Tarihi
+                                    <td width="35%"><%=ResGetir.resGetir(15)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -313,7 +317,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%">Referans
+                                    <td width="35%"><%=ResGetir.resGetir(13)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -323,7 +327,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Yıllık Cirosu
+                                    <td width="35%"><%=ResGetir.resGetir(30)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -332,7 +336,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">İskonto Oranı
+                                    <td width="35%"><%=ResGetir.resGetir(31)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -341,7 +345,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Para Birimi
+                                    <td width="35%"><%=ResGetir.resGetir(32)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -351,7 +355,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Sahibi
+                                    <td width="35%"><%=ResGetir.resGetir(24)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -360,7 +364,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Ödeme Yetkilisi
+                                    <td width="35%"><%=ResGetir.resGetir(25)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -369,7 +373,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Satın Alma Yetkilisi
+                                    <td width="35%"><%=ResGetir.resGetir(26)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -378,7 +382,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Teslimat Sorumlusu
+                                    <td width="35%"><%=ResGetir.resGetir(27)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -387,7 +391,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Ödeme Şekli
+                                    <td width="35%"><%=ResGetir.resGetir(28)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -397,7 +401,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Ödeme Günü
+                                    <td width="35%"><%=ResGetir.resGetir(29)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -560,13 +564,13 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonMakinaParkiYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonMakinaParkiYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonMakinaParkiKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" OnClick="idButtonMakinaParkiKaydet_Click" />
+                                    <asp:Button ID="idButtonMakinaParkiKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonMakinaParkiKaydet_Click" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonMakinaParkiSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                    <asp:Button ID="idButtonMakinaParkiSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                             </tr>
                         </table>
@@ -576,7 +580,7 @@
 
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="15%">Markası
+                                    <td width="15%"><%=ResGetir.resGetir(141)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -586,7 +590,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td width="15%">Modeli
+                                    <td width="15%"><%=ResGetir.resGetir(298)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -595,7 +599,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Yılı
+                                    <td width="15%"><%=ResGetir.resGetir(151)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -604,7 +608,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Adet
+                                    <td width="15%"><%=ResGetir.resGetir(142)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -613,7 +617,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Deger1
+                                    <td width="15%"><%=ResGetir.resGetir(18)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -622,7 +626,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Deger2
+                                    <td width="15%"><%=ResGetir.resGetir(18)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -631,7 +635,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Tip1
+                                    <td width="15%"><%=ResGetir.resGetir(14)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -641,7 +645,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Tip2
+                                    <td width="15%"><%=ResGetir.resGetir(14)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -651,7 +655,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Tip3
+                                    <td width="15%"><%=ResGetir.resGetir(14)%>3
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -661,7 +665,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Tip4
+                                    <td width="15%"><%=ResGetir.resGetir(14)%>4
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -671,7 +675,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Tip5
+                                    <td width="15%"><%=ResGetir.resGetir(14)%>5
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -681,7 +685,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Açıklama
+                                    <td width="15%"><%=ResGetir.resGetir(206)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -699,13 +703,13 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                             </tr>
                         </table>
@@ -716,8 +720,19 @@
                             <table class="KisiTable">
                                 <tr>
                                     <td>
-                                        <asp:GridView ID="idRAKIP_FIRMALAR" runat="server"></asp:GridView>
-                                        <asp:GridView ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>
+                                        <%--<asp:GridView ID="idRAKIP_FIRMALAR" runat="server"></asp:GridView>
+                                        <asp:GridView ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>--%>
+                                        <span style="font-size:small">Rakip Firmalar Listesi</span>
+                                        <asp:ListBox ID="idRAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" /><br /><br />
+                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" />
+
+                                    </td>
+                                    <td>
+                                        <span style="font-size:small">Bu Firmadaki Rakip Firmalar</span>
+                                        <asp:ListBox ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                 </tr>
 
@@ -731,13 +746,13 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonRakipUrunYeni" runat="server" CssClass="bg-blue fg-white" Text="Yeni" Height="30px" />
+                                    <asp:Button ID="idButtonRakipUrunYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipUrunKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" />
+                                    <asp:Button ID="idButtonRakipUrunKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipUrunSil" runat="server" CssClass="bg-blue fg-white" Text="Sil" Height="30px" />
+                                    <asp:Button ID="idButtonRakipUrunSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
                                 </td>
                             </tr>
                         </table>
@@ -747,7 +762,7 @@
 
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="15%">Rakip Firma Adı
+                                    <td width="15%"><%=ResGetir.resGetir(172)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -757,7 +772,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td width="15%">Ürün Adı
+                                    <td width="15%"><%=ResGetir.resGetir(373)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -767,7 +782,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Fiyati
+                                    <td width="15%"><%=ResGetir.resGetir(198)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -776,7 +791,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%">Para Birimi
+                                    <td width="15%"><%=ResGetir.resGetir(32)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -785,7 +800,7 @@
                                         </asp:DropDownList>
                                     </td>
                                     <tr>
-                                        <td width="15%">Ödeme Şekli
+                                        <td width="15%"><%=ResGetir.resGetir(28)%>
                                         </td>
                                         <td width="2%">:
                                         </td>
@@ -795,7 +810,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td width="15%">Miktar
+                                        <td width="15%"><%=ResGetir.resGetir(197)%>
                                         </td>
                                         <td width="2%">:
                                         </td>
@@ -804,7 +819,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td width="15%">Birim
+                                        <td width="15%"><%=ResGetir.resGetir(201)%>
                                         </td>
                                         <td width="2%">:
                                         </td>
@@ -814,7 +829,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td width="15%">Dönem
+                                        <td width="15%"><%=ResGetir.resGetir(375)%>
                                         </td>
                                         <td width="2%">:
                                         </td>

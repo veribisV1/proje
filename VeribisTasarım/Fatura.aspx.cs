@@ -15,7 +15,7 @@ namespace VeribisTasarım
             base.Page_Load();
             if (!IsPostBack)
             {
-                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+              
                 butonText();
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
@@ -58,6 +58,8 @@ namespace VeribisTasarım
             idOPEN_CLOSE = dbGetir.doldur(idOPEN_CLOSE, dbGetir.getFaturaAcikKapali());
             idGROUPS = dbGetir.doldur(idGROUPS, dbGetir.getFaturaGrubu());
             #endregion
+
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString();
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 

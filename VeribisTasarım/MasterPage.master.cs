@@ -27,7 +27,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         DBARACISI adapter = new DBARACISI();
         Repeater Repeater2 = (Repeater)this.FindControl("Repeater2");
-        Dictionary<string, string> dt = adapter.getListEleman(String.Format("select MENU_NAME as col1,SQL as col2 from MENULOAD inner join PSQL on MENULOAD.LINK=PSQL.SQL_ID WHERE USER_CODE = {0} AND MENULOAD.TYPE=2", Session["USER_CODE"]));
+        Dictionary<string, string> dt = adapter.getListEleman(String.Format("select {1} as col1,SQL as col2 from MENULOAD inner join PSQL on MENULOAD.LINK=PSQL.SQL_ID inner join RES on RES.R_ID=MENULOAD.RES_ID WHERE USER_CODE = {0} AND MENULOAD.TYPE=2", Session["USER_CODE"],Session["DIL"]));
        
         dt.Remove("-1");
         Dictionary<string, string> dtClone = new Dictionary<string, string>();
@@ -45,7 +45,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         DBARACISI adapter = new DBARACISI();
         Repeater Repeater1 = (Repeater)this.FindControl("Repeater1");
-        Repeater1.DataSource = adapter.getGridIcerik(String.Format("SELECT MENU_NAME,LINK FROM MENULOAD WITH (NOLOCK) WHERE USER_CODE = {0} AND TYPE=1 ORDER BY ORDER_BY", Session["USER_CODE"]));
+        Repeater1.DataSource = adapter.getGridIcerik(String.Format("SELECT {1} as MENU_NAME,LINK FROM MENULOAD  WITH (NOLOCK) inner join RES on RES.R_ID=MENULOAD.RES_ID WHERE USER_CODE = {0} AND TYPE=1 ORDER BY ORDER_BY", Session["USER_CODE"], Session["DIL"]));
         Repeater1.DataBind();           
 
     }

@@ -103,12 +103,12 @@
                                <table>
                                    <tr>
                                     <td>
- <a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></a>
+ <span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></span>
                                     </td>                                    
                                 </tr>
                                  <tr>
-                                     <td>
-<a style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></a>
+                                     <td style="text-align:center;">
+<span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></span>
                                      </td>
                                      
                                 </tr>
@@ -146,7 +146,7 @@
                 <a class="element place-right" href="Giris.aspx?param=logout" style="margin-top: 20px;"><span class="icon-switch"></span></a>
                 <span class="element-divider place-right" style="margin-top: 10px;"></span>
                 <button class="element image-button image-left place-right" style="padding-right: 10px; margin-top: 15px;">
-                    Hoþgeldin <%= this.Page.User.Identity.Name %>
+                    <%= this.Page.User.Identity.Name %>
                     <i class="icon-user" style="margin-top: 15px;"></i>
                 </button>
             </nav>
@@ -178,6 +178,15 @@
         jQuery('#ContentPlaceHolder1_idEDATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idTeklifBaslangicTarih').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idTeklifBitisTarih').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idFirsatBaslangicTarih').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idFirsatBitisTarih').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idFOUNDATION_DATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idBIRTHDATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idANNIVERSARY_DATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idDOCUMENT_DATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idCERTIFICATE_DATE').datetimepicker({ format: 'd.m.Y H:i' });
+        jQuery('#ContentPlaceHolder1_idSIPARIS_TARIHI').datetimepicker({ format: 'd.m.Y H:i' });
+        
     </script>
 
 </body>

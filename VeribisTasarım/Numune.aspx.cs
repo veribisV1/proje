@@ -16,8 +16,7 @@ namespace VeribisTasarım
             if (!IsPostBack)
             {
                 butonText();
-                idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+             
                 ekranDoldur();
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
@@ -46,6 +45,8 @@ namespace VeribisTasarım
             idSEARCH_METHOD = dbGetir.doldur(idSEARCH_METHOD, dbGetir.getTakipYontemi());
             idSEARCH_STEP = dbGetir.doldur(idSEARCH_STEP, dbGetir.getTakipAsamalari());
             #endregion
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString();
+            idCERTIFICATE_DATE.Text = DateTime.Now.ToString();
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
         private void butonText()

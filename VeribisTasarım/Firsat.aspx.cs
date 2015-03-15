@@ -78,8 +78,8 @@ namespace VeribisTasarım
             
             #endregion
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
-            idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString();
+            idCERTIFICATE_DATE.Text = DateTime.Now.ToString();
         }
 
 

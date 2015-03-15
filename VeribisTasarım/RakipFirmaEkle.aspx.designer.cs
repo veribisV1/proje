@@ -64,7 +64,7 @@ namespace VeribisTasarım {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idNOTE;
+        protected global::System.Web.UI.WebControls.TextBox idNOTE;
         
         /// <summary>
         /// idButtonRakipFirmaKaydet control.

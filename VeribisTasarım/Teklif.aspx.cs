@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -26,6 +27,7 @@ namespace VeribisTasarım
                         idCOMPANY_CODE.SelectedValue = qString.Split('-')[0];
                         idCOMPANY_CODE_SelectedIndexChanged(sender, e);
                         idCONTACT_CODE.SelectedValue = qString.Split('-')[1];
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#teklif').addClass('active');$('#liste').removeClass('active')", true); 
                     }
                     else
                     {
@@ -33,7 +35,7 @@ namespace VeribisTasarım
                     }
                 }
             }
-            
+
         }
         private void butonText()
         {
@@ -51,9 +53,9 @@ namespace VeribisTasarım
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-           
+
             grTeklifListe.DataSource = dbadapter.getGridIcerik("SELECT OPPORTUNITY_CODE,COMPANY.COMPANY_NAME,(CONTACT.NAME +' ' + CONTACT.SURNAME) AS 'CONTACT_NAME', OPPORTUNITYMASTER.EXPLANATION, STEP.EXP_TR AS 'SEARCH_STEP',USERS.AUSER_NAME +' '+USERS.SURNAME AS 'APPOINTED_USER_CODE', OPPORTUNITYMASTER.EXPLANATION, OPPORTUNITYMASTER.DOCUMENT_DATE,TOTAL,TOTAL_UPB FROM OPPORTUNITYMASTER LEFT JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE LEFT JOIN CONTACT ON CONTACT.CONTACT_CODE=OPPORTUNITYMASTER.CONTACT_CODE LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=42 ) AS STEP ON STEP.ROW_ORDER_NO=OPPORTUNITYMASTER.SEARCH_STEP LEFT JOIN USERS ON USERS.USER_CODE=OPPORTUNITYMASTER.APPOINTED_USER_CODE WHERE DOCUMENT_TYPE=2 AND OPEN_CLOSE=1 order by OPPORTUNITYMASTER.LAST_UPDATE desc");
-           
+
             grTeklifListe.DataBind();
         }
 
@@ -76,10 +78,13 @@ namespace VeribisTasarım
             idRIVAL_COMPANY_CODE = dbGetir.doldur(idRIVAL_COMPANY_CODE, dbGetir.getRakipFirma());
             idOPEN_CLOSE = dbGetir.doldur(idOPEN_CLOSE, dbGetir.getAktiviteAcikKapali());
             idOPEN_CLOSE.SelectedValue = "1";
+            idDropDownTeklifDurum = dbGetir.doldur(idDropDownTeklifDurum, dbGetir.getAktiviteAcikKapali());
+            idDropDownTeklifDurum.SelectedValue = "1";
+            
             #endregion
             idAPPOINTED_USER_CODE.SelectedValue = Session["USER_CODE"].ToString();
-            idDOCUMENT_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            idCERTIFICATE_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            idDOCUMENT_DATE.Text = DateTime.Now.ToString();
+            idCERTIFICATE_DATE.Text = DateTime.Now.ToString();
         }
 
         protected void editTeklif(object sender, EventArgs e)
@@ -128,6 +133,46 @@ namespace VeribisTasarım
             ekranDoldur();
             GridView1.DataSource = null;
             GridView1.DataBind();
+        }
+
+        protected void idButtonTeklifArama_Click(object sender, EventArgs e)
+        {
+            StringBuilder aramaKosulu = new StringBuilder();
+            if (!String.IsNullOrEmpty(idTextBoxTeklifArama.Text))
+            {
+                aramaKosulu.Append(" AND OPPORTUNITYMASTER.EXPLANATION like '%");
+                aramaKosulu.Append(idTextBoxTeklifArama.Text);
+                aramaKosulu.Append("%' ");
+            }
+            if (idDropDownTeklifDurum.SelectedValue != "-1" || idDropDownTeklifDurum.SelectedValue != "3")
+            {
+                aramaKosulu.Append("AND OPEN_CLOSE=");
+                aramaKosulu.Append(idDropDownTeklifDurum.SelectedValue);
+            }
+            if (!String.IsNullOrEmpty(idTeklifBaslangicTarih.Text))
+            {
+                aramaKosulu.Append(" AND OPPORTUNITYMASTER.DOCUMENT_DATE>=Convert(datetime,'");
+                aramaKosulu.Append(idTeklifBaslangicTarih.Text);
+                aramaKosulu.Append("', 104) ");
+            }
+            if (!String.IsNullOrEmpty(idTeklifBitisTarih.Text))
+            {
+                aramaKosulu.Append(" AND OPPORTUNITYMASTER.DOCUMENT_DATE<=Convert(datetime,'");
+                aramaKosulu.Append(idTeklifBitisTarih.Text);
+                aramaKosulu.Append("', 104) ");
+            }
+            gridDoldurFitre(aramaKosulu.ToString());
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#liste').addClass('active');$('#liste').removeClass('active')", true); 
+
+        }
+
+        private void gridDoldurFitre(string kriter)
+        {
+            DBARACISI dbadapter = new DBARACISI();
+
+            grTeklifListe.DataSource = dbadapter.getGridIcerik(String.Format("SELECT OPPORTUNITY_CODE,COMPANY.COMPANY_NAME,(CONTACT.NAME +' ' + CONTACT.SURNAME) AS 'CONTACT_NAME', OPPORTUNITYMASTER.EXPLANATION, STEP.EXP_TR AS 'SEARCH_STEP',USERS.AUSER_NAME +' '+USERS.SURNAME AS 'APPOINTED_USER_CODE', OPPORTUNITYMASTER.EXPLANATION, OPPORTUNITYMASTER.DOCUMENT_DATE,TOTAL,TOTAL_UPB FROM OPPORTUNITYMASTER LEFT JOIN COMPANY ON COMPANY.COMPANY_CODE=OPPORTUNITYMASTER.COMPANY_CODE LEFT JOIN CONTACT ON CONTACT.CONTACT_CODE=OPPORTUNITYMASTER.CONTACT_CODE LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=42 ) AS STEP ON STEP.ROW_ORDER_NO=OPPORTUNITYMASTER.SEARCH_STEP LEFT JOIN USERS ON USERS.USER_CODE=OPPORTUNITYMASTER.APPOINTED_USER_CODE WHERE DOCUMENT_TYPE=2 {0} order by OPPORTUNITYMASTER.LAST_UPDATE desc", kriter));
+
+            grTeklifListe.DataBind();
         }
     }
 }

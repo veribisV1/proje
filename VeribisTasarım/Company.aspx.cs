@@ -75,6 +75,9 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
+            #region RakipFirma
+            idRAKIP_FIRMALAR = dbGetir.doldur(idRAKIP_FIRMALAR, dbGetir.getRakipFirmalar());
+            #endregion
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
         private void adresDoldur(int companyCode)
@@ -214,6 +217,30 @@ namespace VeribisTasarım
                     KayitBasariliMesaji(Company_Code.ToString());
 
                 }
+            }
+        }
+
+        protected void idRakipFirmaEkle_Click(object sender, EventArgs e)
+        {
+            idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Add(idRAKIP_FIRMALAR.SelectedItem);
+            idRAKIP_FIRMALAR.SelectedIndex = -1;
+            idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedIndex = -1;
+        }
+
+        protected void idButtonRakipFirmaKaydet_Click(object sender, EventArgs e)
+        {
+
+            if (idRAKIP_FIRMALAR.Items.Count != 0)
+            {
+                DBARACISI adapter = new DBARACISI();
+                foreach (ListItem item in idBU_FIRMADAKI_RAKIP_FIRMALAR.Items)
+                {
+                    string rivalCode = item.Value.ToString();
+                    adapter.set(String.Format("INSERT INTO COMPANYRIVALCOMPANY ([COMPANY_CODE],[RIVAL_COMPANY_CODE],[LAST_UPDATE_USER],[LAST_UPDATE],[CREATE_DATE],[CREATE_USER]) VALUES({0},{1},'{2}','{3}','{3}','{2}')", idCOMPANY_CODE.Text, rivalCode, Session["USER_CODE"], DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")));
+                }
+                KayitBasariliMesaji("Rakip Firmalar Kaydedildi");
+
+
             }
         }
     }

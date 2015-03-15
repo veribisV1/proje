@@ -727,7 +727,7 @@
                                     </td>
                                     <td>
                                         <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaEkle_Click"/><br /><br />
-                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" />
+                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaCikar_Click" />
 
                                     </td>
                                     <td>

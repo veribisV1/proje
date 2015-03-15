@@ -255,6 +255,11 @@ namespace VeribisTasarım
 
             }
         }
+
+        protected void idRakipFirmaCikar_Click(object sender, EventArgs e)
+        {
+            idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Remove(idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedItem);
+        }
     }
 }
 

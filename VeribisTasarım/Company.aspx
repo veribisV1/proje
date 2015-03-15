@@ -154,7 +154,7 @@
                             <table class="KisiTable" id="Table1">
 
                                 <tr>
-                                    <td width="35%">Firma Adı
+                                    <td width="25%">Firma Adı
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -163,7 +163,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Kodu
+                                    <td width="25%">Kodu
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -172,7 +172,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Temsilcisi
+                                    <td width="25%">Temsilcisi
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -182,7 +182,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Sektörü
+                                    <td width="25%">Sektörü
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -192,7 +192,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">&nbsp;</td>
+                                    <td width="25%">&nbsp;</td>
                                     <td width="2%"></td>
                                     <td>
                                         <div style="visibility: hidden;">
@@ -305,7 +305,7 @@
                                     </td>
                                     <td>
 
-                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" T runat="server"></asp:TextBox>
 
                                     </td>
                                 </tr>
@@ -317,7 +317,7 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(13)%>
+                                    <td width="40%"><%=ResGetir.resGetir(13)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -327,7 +327,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(30)%>
+                                    <td width="40%"><%=ResGetir.resGetir(30)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -336,7 +336,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(31)%>
+                                    <td width="40%"><%=ResGetir.resGetir(31)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -345,7 +345,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(32)%>
+                                    <td width="40%"><%=ResGetir.resGetir(32)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -355,7 +355,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(24)%>
+                                    <td width="40%"><%=ResGetir.resGetir(24)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -364,7 +364,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(25)%>
+                                    <td width="40%"><%=ResGetir.resGetir(25)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -373,7 +373,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(26)%>
+                                    <td width="40%"><%=ResGetir.resGetir(26)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -382,7 +382,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(27)%>
+                                    <td width="40%"><%=ResGetir.resGetir(27)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -391,7 +391,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(28)%>
+                                    <td width="40%"><%=ResGetir.resGetir(28)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -401,7 +401,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(29)%>
+                                    <td width="40%"><%=ResGetir.resGetir(29)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -580,112 +580,112 @@
 
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(141)%>
+                                    <td width="25%"><%=ResGetir.resGetir(141)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idNAME" runat="server" Height="30px" Width="60%"></asp:DropDownList>
+                                        <asp:DropDownList ID="idNAME" runat="server" Height="30px" Width="100%"></asp:DropDownList>
                                     </td>
 
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(298)%>
+                                    <td width="25%"><%=ResGetir.resGetir(298)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMODEL" runat="server" MaxLength="50" Height="30px" Width="60%"></asp:TextBox>
+                                        <asp:TextBox ID="idMODEL" runat="server" MaxLength="50" Height="30px" Width="100%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(151)%>
+                                    <td width="25%"><%=ResGetir.resGetir(151)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_YILI" runat="server" Height="30px" Width="60%"></asp:DropDownList>
+                                        <asp:DropDownList ID="idMAKINAPARKI_YILI" runat="server" Height="30px" Width="100%"></asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(142)%>
+                                    <td width="25%"><%=ResGetir.resGetir(142)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idAMOUNT" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idAMOUNT" runat="server" MaxLength="20" Width="100%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(18)%>
+                                    <td width="25%"><%=ResGetir.resGetir(18)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMAKINAPARKI_DEGER1" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idMAKINAPARKI_DEGER1" runat="server" MaxLength="20" Width="100%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(18)%>2
+                                    <td width="25%"><%=ResGetir.resGetir(18)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMAKINAPARKI_DEGER2" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idMAKINAPARKI_DEGER2" runat="server" MaxLength="20" Width="100%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP1" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP1" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>2
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP2" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP2" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>3
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>3
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP3" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP3" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>4
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>4
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP4" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP4" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>5
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>5
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP5" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP5" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(206)%>
+                                    <td width="25%"><%=ResGetir.resGetir(206)%>
                                     </td>
                                     <td width="2%">:
                                     </td>

@@ -146,6 +146,7 @@ namespace VeribisTasarım
             }
             //formTemizle(this);
             gridDoldur();
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
         }
         protected void editCompany(object sender, EventArgs e)

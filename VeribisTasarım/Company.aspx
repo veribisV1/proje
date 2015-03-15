@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company"%>
 
 <%@ Import Namespace="VeribisTasarım.Controller" %>
 
@@ -48,8 +48,8 @@
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
 
-                <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li id="liste"><a href="#ListeAdi" ><%=ResGetir.resGetir(217)%></a></li>
+                <li id="firma" class="active"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
                 <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
@@ -195,10 +195,9 @@
                                     <td width="25%">&nbsp;</td>
                                     <td width="2%"></td>
                                     <td>
-                                        <div style="visibility: hidden;">
-                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
-
-                                            <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="true"></asp:TextBox>
+                                        <div hidden="hidden">
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" ></asp:TextBox>
+                                            <asp:TextBox ID="idADDRESS" runat="server" ></asp:TextBox>
                                         </div>
 
                                     </td>

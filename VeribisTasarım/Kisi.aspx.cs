@@ -14,7 +14,9 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (drpCOMPANY_CODE.SelectedIndex!=-1)
+                gridDoldur();
+            
             if (!IsPostBack)
             {
                 base.Page_Load();
@@ -79,7 +81,7 @@ namespace VeribisTasarım
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
             idISMARRIED = dbGetir.doldur(idISMARRIED, dbGetir.getMedeniHal());
             #endregion
-            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
+            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
         private void adresDoldur(int contactCode)
@@ -87,22 +89,22 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
 
-            sorgu.Append("SELECT ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS.ADDRESS1+ ' ' + ADDRESS.ADDRESS2 + ' ' + ADDRESS.ADDRESS3) AS ADRES, ADDRESS.COUNTY AS ULKE,  ADDRESS.CITY AS IL ,ADDRESS.COUNTY1 AS ILCE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
+            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, ADDRESS.COUNTY AS ULKE,  ADDRESS.CITY AS IL ,ADDRESS.COUNTY1 AS ILCE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
             sorgu.Append(contactCode);
             DataTable tablo = db.get(sorgu.ToString());
             idADDRESS.DataSource = tablo;
             idADDRESS.DataBind();
 
-            if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
-            {
-                sorgu.Length = 0;
-                sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3) AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
-                sorgu.Append(idCOMPANY_CODE.Text);
-                tablo = db.get(sorgu.ToString());
-                GridView2.DataSource = tablo;
-                GridView2.DataBind();
-            }
-          
+            //if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
+            //{
+            //    sorgu.Length = 0;
+            //    sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,(ADDRESS1+ ' ' + ADDRESS2 + ' ' + ADDRESS3) AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
+            //    sorgu.Append(idCOMPANY_CODE.Text);
+            //    tablo = db.get(sorgu.ToString());
+            //    GridView2.DataSource = tablo;
+            //    GridView2.DataBind();
+            //}
+
 
         }
 
@@ -126,6 +128,7 @@ namespace VeribisTasarım
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
             telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void adresSil(object sender, EventArgs e)
@@ -136,6 +139,7 @@ namespace VeribisTasarım
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
@@ -155,8 +159,8 @@ namespace VeribisTasarım
 
                     }
                     KayitBasariliMesaji("Kişi");
-                    
-                   
+
+
                     //Page.ClientScript.RegisterStartupScript(this.GetType(), "Uyari", "alert('Kişi bilgisi kaydedilmiştir.');", true);
                 }
                 else
@@ -168,10 +172,11 @@ namespace VeribisTasarım
             }
             else
                 BosMesaji();
-           
+
 
             //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');", true);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
+            gridDoldur();
         }
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
@@ -182,7 +187,7 @@ namespace VeribisTasarım
         protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
         {
             formTemizle(this);
-            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString(); 
+            idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
 
@@ -210,12 +215,14 @@ namespace VeribisTasarım
         protected void drpCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
         {
             gridDoldur();
+            idCOMPANY_CODE.Text = drpCOMPANY_CODE.Text;
+
         }
 
-        protected void gridDoldur() 
+        protected void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("select CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,TEL.COUNTRY_CODE+TEL.AREA_CODE+TEL.PHONE_NUMBER as 'IS' ,TELCep.COUNTRY_CODE+TELCep.AREA_CODE+TELCep.PHONE_NUMBER as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE where CONTACT.COMPANY_CODE={0} ORDER BY CONTACT.CONTACT_CODE DESC", drpCOMPANY_CODE.SelectedValue));
+            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("SELECT CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,TEL.COUNTRY_CODE+TEL.AREA_CODE+TEL.PHONE_NUMBER as 'IS' ,TELCep.COUNTRY_CODE+TELCep.AREA_CODE+TELCep.PHONE_NUMBER as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE where CONTACT.COMPANY_CODE={0} ORDER BY CONTACT.CONTACT_CODE DESC", drpCOMPANY_CODE.SelectedValue));
             //"SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='" + drpCOMPANY_CODE.SelectedValue + "' ORDER BY CONTACT_CODE DESC");
             GridView1.DataBind();
 

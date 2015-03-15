@@ -18,6 +18,7 @@
 .ms-choice {
 	display: block;
 	height: 26px;
+    width:50%;
 	padding: 0;
 	overflow: hidden;
 	cursor: pointer;

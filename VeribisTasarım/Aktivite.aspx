@@ -2,7 +2,8 @@
 <%@ Import Namespace="VeribisTasarım.Controller"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+    <link href="Content/css/multiple-select.css" rel="stylesheet" />
+    <script src="Content/js/jquery.multiple.select.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -107,7 +108,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(101)%>
+                                    <td width="35%"><%=ResGetir.resGetir(1)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -178,8 +179,13 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idSUBJECT_CODE" runat="server" CssClass="dropdown">
-                                        </asp:DropDownList>
+
+                                        <asp:ListBox ID="idSUBJECT_CODE" runat="server" Height="30px" Width="100%">
+                                        </asp:ListBox>
+                                        <script type="text/javascript">
+                                            $('#ContentPlaceHolder1_idSUBJECT_CODE').multipleSelect();
+                                        </script>
+
                                     </td>
                                 </tr>
                                 <tr>

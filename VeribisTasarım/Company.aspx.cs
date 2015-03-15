@@ -75,6 +75,9 @@ namespace VeribisTasarım
             idMAKINAPARKI_TIP4 = dbGetir.doldur(idMAKINAPARKI_TIP4, dbGetir.getTip(4));
             idMAKINAPARKI_TIP5 = dbGetir.doldur(idMAKINAPARKI_TIP5, dbGetir.getTip(5));
             #endregion
+            #region RakipFirma
+            idRAKIP_FIRMALAR = dbGetir.doldur(idRAKIP_FIRMALAR, dbGetir.getRakipFirmalar());
+            #endregion
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
         private void adresDoldur(int companyCode)
@@ -82,7 +85,7 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE where GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
+            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, ADDRESS.ADDRESS_TYPE_ID, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE where GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             grdADDRESS.DataSource = tablo;
@@ -94,7 +97,7 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
             //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
-            sorgu.Append("SELECT PHONE_CODE, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
+            sorgu.Append("SELECT PHONE_CODE, PHONE_TYPE_ID, GROUPS.EXP_TR AS TUR,(PHONE.COUNTRY_CODE+ ' (' + PHONE.AREA_CODE + ') ' + PHONE.PHONE_NUMBER) AS TELEFON FROM PHONE INNER JOIN GROUPS ON PHONE.PHONE_TYPE_ID=GROUPS.ROW_ORDER_NO WHERE GROUPS.GROUP_CODE=3 AND COMPANY_CODE=");
             sorgu.Append(companyCode);
             DataTable tablo = db.get(sorgu.ToString());
             gridPHONE.DataSource = tablo;
@@ -177,11 +180,18 @@ namespace VeribisTasarım
         protected void telefonSil(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
-            string phoneCode = silButon.CommandArgument;
+            string[] commandArgs = silButon.CommandArgument.ToString().Split(new char[] { ',' });
+            string phoneCode = commandArgs[0];
+            string phoneType = commandArgs[1];
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
+            if(phoneType=="1")
+                dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}",-1,idCOMPANY_CODE.Text));
+            else if(phoneType=="3")
+                dbadapter.set(String.Format("UPDATE COMPANY SET FAX={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+            gridDoldur();
         }
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
@@ -197,11 +207,16 @@ namespace VeribisTasarım
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
-            string addressCode = silButon.CommandArgument;
+            string[] commandArgs = silButon.CommandArgument.ToString().Split(new char[] { ',' });
+            string addressCode = commandArgs[0];
+            string addressType = commandArgs[1];
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
+            if (addressType == "1")
+                dbadapter.set(String.Format("UPDATE COMPANY SET ADDRESS={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
+            gridDoldur();
         }
         protected void idButtonMakinaParkiKaydet_Click(object sender, EventArgs e)
         {
@@ -215,6 +230,35 @@ namespace VeribisTasarım
 
                 }
             }
+        }
+
+        protected void idRakipFirmaEkle_Click(object sender, EventArgs e)
+        {
+            idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Add(idRAKIP_FIRMALAR.SelectedItem);
+            idRAKIP_FIRMALAR.SelectedIndex = -1;
+            idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedIndex = -1;
+        }
+
+        protected void idButtonRakipFirmaKaydet_Click(object sender, EventArgs e)
+        {
+
+            if (idRAKIP_FIRMALAR.Items.Count != 0)
+            {
+                DBARACISI adapter = new DBARACISI();
+                foreach (ListItem item in idBU_FIRMADAKI_RAKIP_FIRMALAR.Items)
+                {
+                    string rivalCode = item.Value.ToString();
+                    adapter.set(String.Format("INSERT INTO COMPANYRIVALCOMPANY ([COMPANY_CODE],[RIVAL_COMPANY_CODE],[LAST_UPDATE_USER],[LAST_UPDATE],[CREATE_DATE],[CREATE_USER]) VALUES({0},{1},'{2}','{3}','{3}','{2}')", idCOMPANY_CODE.Text, rivalCode, Session["USER_CODE"], DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")));
+                }
+                KayitBasariliMesaji("Rakip Firmalar Kaydedildi");
+
+
+            }
+        }
+
+        protected void idRakipFirmaCikar_Click(object sender, EventArgs e)
+        {
+            idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Remove(idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedItem);
         }
     }
 }

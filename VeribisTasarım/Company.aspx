@@ -51,7 +51,7 @@
                 <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
                 <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
-                <li><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
+                <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
                 <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"><%=ResGetir.resGetir(1)%></a></li>
                 <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(637)%></a></li>
@@ -432,7 +432,7 @@
 
                                                     <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                         <ItemTemplate>
-                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE") + "," + Eval("ADDRESS_TYPE_ID")%>'></asp:ImageButton>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 
@@ -515,7 +515,7 @@
 
                                                     <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                         <ItemTemplate>
-                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")+ "," + Eval("PHONE_TYPE_ID")%>'></asp:ImageButton>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 
@@ -706,7 +706,7 @@
                                     <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonRakipFirmaKaydet_Click"/>
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonRakipFirmaSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
@@ -726,8 +726,8 @@
                                         <asp:ListBox ID="idRAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                     <td>
-                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" /><br /><br />
-                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" />
+                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaEkle_Click"/><br /><br />
+                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaCikar_Click" />
 
                                     </td>
                                     <td>

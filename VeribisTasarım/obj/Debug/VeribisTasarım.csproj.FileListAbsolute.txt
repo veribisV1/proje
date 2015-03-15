@@ -29,3 +29,9 @@ C:\Users\emre.karadeniz\Desktop\EMRE YEDEK1\veribisPr\VeribisTasarım\bin\Veribi
 C:\Users\emre.karadeniz\Desktop\EMRE YEDEK1\veribisPr\VeribisTasarım\bin\VeribisTasarım.pdb
 C:\veribis\proje\VeribisTasarım\bin\login.dll
 C:\veribis\proje\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribisproje\proje\VeribisTasarım\bin\VeribisTasarım.dll
+C:\veribisproje\proje\VeribisTasarım\bin\VeribisTasarım.pdb
+C:\veribisproje\proje\VeribisTasarım\bin\login.dll
+C:\veribisproje\proje\VeribisTasarım\obj\Debug\VeribisTasarım.csprojResolveAssemblyReference.cache
+C:\veribisproje\proje\VeribisTasarım\obj\Debug\VeribisTasarım.dll
+C:\veribisproje\proje\VeribisTasarım\obj\Debug\VeribisTasarım.pdb

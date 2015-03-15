@@ -107,7 +107,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(101)%>
+                                    <td width="35%"><%=ResGetir.resGetir(1)%>
                                     </td>
                                     <td width="2%">:
                                     </td>

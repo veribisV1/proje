@@ -88,7 +88,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idDOCUMENT_DATE" TextMode="Date" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idDOCUMENT_DATE" Height="30px" Width="100%" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -188,7 +188,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="100%" TextMode="Date" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Width="100%" Height="30px"></asp:TextBox>
 
                                     </td>
                                 </tr>

@@ -210,12 +210,14 @@ namespace VeribisTasarım
         protected void drpCOMPANY_CODE_SelectedIndexChanged(object sender, EventArgs e)
         {
             gridDoldur();
+            idCOMPANY_CODE.Text = drpCOMPANY_CODE.Text;
+            
         }
 
         protected void gridDoldur() 
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("select CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,TEL.COUNTRY_CODE+TEL.AREA_CODE+TEL.PHONE_NUMBER as 'IS' ,TELCep.COUNTRY_CODE+TELCep.AREA_CODE+TELCep.PHONE_NUMBER as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE where CONTACT.COMPANY_CODE={0} ORDER BY CONTACT.CONTACT_CODE DESC", drpCOMPANY_CODE.SelectedValue));
+            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("SELECT CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,TEL.COUNTRY_CODE+TEL.AREA_CODE+TEL.PHONE_NUMBER as 'IS' ,TELCep.COUNTRY_CODE+TELCep.AREA_CODE+TELCep.PHONE_NUMBER as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE where CONTACT.COMPANY_CODE={0} ORDER BY CONTACT.CONTACT_CODE DESC", drpCOMPANY_CODE.SelectedValue));
             //"SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='" + drpCOMPANY_CODE.SelectedValue + "' ORDER BY CONTACT_CODE DESC");
             GridView1.DataBind();
 

@@ -102,6 +102,7 @@ namespace VeribisTasarım
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
             idCITY = dbGetir.doldur(idCITY, dbGetir.getSehir(idCOUNTY.SelectedItem.Value));
+            idCOUNTY1.Items.Clear();
         }
 
         protected void idCITY_SelectedIndexChanged(object sender, EventArgs e)

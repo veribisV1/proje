@@ -463,7 +463,7 @@
 
                                             </Columns>
                                         </asp:GridView>
-                                          <asp:GridView ID="GridView2" runat="server"
+                                          <%--<asp:GridView ID="GridView2" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
 
                                             <Columns>
@@ -523,7 +523,7 @@
 
 
                                             </Columns>
-                                        </asp:GridView>
+                                        </asp:GridView>--%>
                                     </div>
 
                                 </td>

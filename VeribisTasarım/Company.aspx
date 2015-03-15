@@ -432,7 +432,7 @@
 
                                                     <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                         <ItemTemplate>
-                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE") + "," + Eval("ADDRESS_TYPE_ID")%>'></asp:ImageButton>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 

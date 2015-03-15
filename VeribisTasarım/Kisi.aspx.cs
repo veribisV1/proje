@@ -14,9 +14,9 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (drpCOMPANY_CODE.SelectedIndex!=-1)
+            if (drpCOMPANY_CODE.SelectedIndex != -1)
                 gridDoldur();
-            
+
             if (!IsPostBack)
             {
                 base.Page_Load();
@@ -31,8 +31,8 @@ namespace VeribisTasarım
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
                     idCONTACT_CODE.Text = contactCode.ToString();
-                    gelenKisiyiYukle();                  
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);                  
+                    gelenKisiyiYukle();
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
                 if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
                 {
@@ -42,7 +42,7 @@ namespace VeribisTasarım
                     }
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
-            }         
+            }
 
         }
         private void butonText()
@@ -152,12 +152,8 @@ namespace VeribisTasarım
                 if (String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
                     contactCode = kaydet("pInsertContact");
-                    if (contactCode != -1)
-                    {
-                        idCONTACT_CODE.Text = contactCode.ToString();
-
-
-                    }
+                    idCONTACT_CODE.Text = contactCode.ToString();
+                    multiselecetKaydet(contactCode);
                     KayitBasariliMesaji("Kişi");
 
 
@@ -166,6 +162,7 @@ namespace VeribisTasarım
                 else
                 {
                     contactCode = kaydet("pUpdateContact");
+                    multiselecetKaydet(Convert.ToInt32(idCONTACT_CODE.Text));
                 }
 
                 //gridDoldur();
@@ -178,6 +175,46 @@ namespace VeribisTasarım
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
             gridDoldur();
         }
+
+        private void multiselecetKaydet(int contactCode)
+        {
+            if (contactCode != -1)
+            {               
+                DBARACISI adapter = new DBARACISI();
+                foreach (ListItem item in idGROUP_CODE.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Value != "-1")
+                            adapter.set(String.Format("INSERT INTO CONTACTGROUP VALUES({0},{1})", contactCode, item.Value));
+                    }
+
+                }
+
+                foreach (ListItem item in idASSOCIATION_CODE.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Value != "-1")
+                            adapter.set(String.Format("INSERT INTO ASSOCIATION VALUES({0},{1})", contactCode, item.Value));
+                    }
+
+                }
+
+                foreach (ListItem item in idLANGUAGE_CODE.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Value != "-1")
+                            adapter.set(String.Format("INSERT INTO LANGUAGES VALUES({0},{1})", contactCode, item.Value));
+                    }
+
+                }
+
+
+            }
+        }
+
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
         {
@@ -198,9 +235,39 @@ namespace VeribisTasarım
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", idCONTACT_CODE.Text));
+            multiSelecetDoldur(idCONTACT_CODE.Text);
         }
 
+        private void multiSelecetDoldur(string code)
+        {
+            idGROUP_CODE.ClearSelection();
+            idASSOCIATION_CODE.ClearSelection();
+            idLANGUAGE_CODE.ClearSelection();
+            DBARACISI adapter = new DBARACISI();
+           List<string> group = adapter.getElemanList(String.Format("SELECT GROUP_CODE FROM CONTACTGROUP WHERE CONTACT_CODE={0}", code));
+           multiselecetIsaretle(idGROUP_CODE, group);
+           group = adapter.getElemanList(String.Format("SELECT ASSOCIATION_CODE FROM ASSOCIATION WHERE CONTACT_CODE={0}", code));
+           multiselecetIsaretle(idASSOCIATION_CODE, group);
+           group = adapter.getElemanList(String.Format("SELECT LANGUAGE_CODE FROM LANGUAGES WHERE CONTACT_CODE={0}", code));
+           multiselecetIsaretle(idLANGUAGE_CODE, group);
+           
 
+
+        }
+        private void multiselecetIsaretle(ListBox eleman, List<string> group)
+        {
+            foreach (ListItem listItem in eleman.Items)
+            {
+                foreach (string item in group)
+                {
+                    if (listItem.Value.ToString() == item)
+                    {
+                        listItem.Selected = true;
+                    }
+                }
+            }
+
+        }
 
         protected void editContact(object sender, EventArgs e)
         {

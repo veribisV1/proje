@@ -80,6 +80,10 @@ namespace VeribisTasarım
             //CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
             //Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             //int companyCode = firma.storeKaydet("pInsertOppMaster", dataListesi);
+            if (refreshOlduMu())
+            {
+                return;
+            }
 
             int oppurtunityCode = -1;
             //Tipi kontrol edilecek

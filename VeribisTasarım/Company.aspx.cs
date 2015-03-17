@@ -231,6 +231,11 @@ namespace VeribisTasarım
         }
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
+            
             formTemizle(this);
             ekranDoldur();
             grdADDRESS.DataSource = null;
@@ -258,6 +263,11 @@ namespace VeribisTasarım
         }
         protected void idButtonMakinaParkiKaydet_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
             {
@@ -272,6 +282,12 @@ namespace VeribisTasarım
 
         protected void idRakipFirmaEkle_Click(object sender, EventArgs e)
         {
+
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Add(idRAKIP_FIRMALAR.SelectedItem);
             idRAKIP_FIRMALAR.SelectedIndex = -1;
             idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedIndex = -1;
@@ -280,6 +296,11 @@ namespace VeribisTasarım
 
         protected void idButtonRakipFirmaKaydet_Click(object sender, EventArgs e)
         {
+
+            if (refreshOlduMu())
+            {
+                return;
+            }
 
             if (idRAKIP_FIRMALAR.Items.Count != 0)
             {

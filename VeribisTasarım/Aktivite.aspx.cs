@@ -76,6 +76,11 @@ namespace VeribisTasarım
 
         protected void idButtonAktiviteKaydet_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             int activiteCode = -1;
             if (!String.IsNullOrEmpty(idSUBJECT.Text))
             {

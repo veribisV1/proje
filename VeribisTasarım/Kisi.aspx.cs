@@ -146,6 +146,10 @@ namespace VeribisTasarım
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
 
             int contactCode = -1;
             if (!String.IsNullOrEmpty(idNAME.Text))
@@ -180,6 +184,8 @@ namespace VeribisTasarım
 
         private void multiselecetKaydet(int contactCode)
         {
+
+
             if (contactCode != -1)
             {               
                 DBARACISI adapter = new DBARACISI();

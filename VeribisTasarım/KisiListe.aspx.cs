@@ -45,6 +45,11 @@ namespace VeribisTasarım
 
         protected void btnVeriEkle_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "parent.$.fancybox.close();", true);
             StringBuilder script = new StringBuilder();
             script.Append("parent.location.replace('Kisi.aspx?btnKisiListele=");

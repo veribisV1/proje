@@ -85,6 +85,10 @@ namespace VeribisTasarım
 
         protected void idButtonFirsatEkleKaydet_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
 
             int oppurtunityCode = -1;
             //Tipi kontrol edilecek
@@ -125,6 +129,10 @@ namespace VeribisTasarım
 
         protected void idButtonFirsatEkleYeni_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
             formTemizle(this);
             ekranDoldur();
             GridView1.DataSource = null;

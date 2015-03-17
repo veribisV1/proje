@@ -55,6 +55,7 @@ namespace VeribisTasarım
         }
         protected void idButtonAdresKaydet_Click(object sender, EventArgs e)
         {
+          
             int addressCode = -1;
             if (!String.IsNullOrEmpty(idADDRESS1.Text))
             {

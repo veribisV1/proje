@@ -55,6 +55,7 @@ namespace VeribisTasarım
         }
         protected void idButtonFirsatKaydet_Click(object sender, EventArgs e)
         {
+            
             int rowOrderCode = -1;
             //if (!String.IsNullOrEmpty(idSUBJECT.Text))
             //{

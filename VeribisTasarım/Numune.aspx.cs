@@ -59,7 +59,10 @@ namespace VeribisTasarım
         }
         protected void idButtonNumuneEkleKaydet_Click(object sender, EventArgs e)
         {
-           
+            if (refreshOlduMu())
+            {
+                return;
+            }
 
             int oppurtunityCode = -1;
             //Tipi kontrol edilecek

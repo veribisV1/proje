@@ -108,6 +108,11 @@ namespace VeribisTasarım
         protected void idButtonTeklifEkleKaydet_Click(object sender, EventArgs e)
         {
 
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             int oppurtunityCode = -1;
             //Tipi kontrol edilecek
             if (String.IsNullOrEmpty(idOPPORTUNITY_CODE.Text))
@@ -133,6 +138,11 @@ namespace VeribisTasarım
 
         protected void idButtonTeklifEkleYeni_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             formTemizle(this);
             ekranDoldur();
             GridView1.DataSource = null;

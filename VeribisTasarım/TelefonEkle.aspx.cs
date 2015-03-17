@@ -48,8 +48,7 @@ namespace VeribisTasarım
 
         protected void idButtonTelefonKaydet_Click(object sender, EventArgs e)
         {
-
-
+            
             int PhoneFaxCode = -1;
             if (!String.IsNullOrEmpty(idPHONE_NUMBER.Text))
             {

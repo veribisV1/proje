@@ -22,6 +22,11 @@ namespace VeribisTasarım
         }
         protected void idButtonRakipFirmaKaydet_Click(object sender, EventArgs e)
         {
+            if (refreshOlduMu())
+            {
+                return;
+            }
+
             int rivalCode = -1;
             if (!String.IsNullOrEmpty(idRIVAL_COMPANY_NAME.Text))
             {

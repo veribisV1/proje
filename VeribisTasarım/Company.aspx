@@ -240,6 +240,7 @@
                                         <div hidden="hidden">
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
                                             <asp:TextBox ID="idADDRESS" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="idPHONE" runat="server"></asp:TextBox>
                                         </div>
 
                                     </td>

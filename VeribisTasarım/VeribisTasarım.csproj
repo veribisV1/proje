@@ -72,6 +72,7 @@
     <Content Include="Content\fonts\iconFont.dev.svg" />
     <Content Include="Content\fonts\iconFont.svg" />
     <Content Include="Content\fonts\metroSysIcons.svg" />
+    <Content Include="Content\icons\guncelle.png" />
     <Content Include="Content\js\jquery.multiple.select.js" />
     <Content Include="Content\js\jquery\jquery.datetimepicker.js" />
     <Content Include="Content\js\jquery\jquery.js" />

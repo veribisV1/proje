@@ -31,7 +31,7 @@
 
 
     </script>
-    <script type="text/javascript">
+ <%--   <script type="text/javascript">
         
         
      
@@ -44,7 +44,7 @@
             alert("çalışıyor");
             $('#rakipFirma').tabs("option", "active", 1);
         }
-    </script>
+    </script>--%>
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
@@ -57,7 +57,7 @@
     <script src="Content/js/jquery.multiple.select.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+  
     <div class="ALAN12">
         <h3><%=ResGetir.resGetir(2)%></h3>
        
@@ -65,7 +65,7 @@
             <ul class="tabs">
 
                 <li id="liste"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma" class="active"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
                 <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>

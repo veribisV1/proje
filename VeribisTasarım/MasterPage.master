@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    
     <title>VERIBIS</title>
 
 
@@ -23,42 +24,7 @@
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
     <script src="Content/js/metro/metro.min.js"></script>
     <script src="Content/js/navigate.js"></script>
-    <style>
-        .dropdown-dark {
-            background: #444;
-            background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-            background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-            background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-            background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
-            -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-        }
-
-            .dropdown-dark:before {
-                border-bottom-color: #aaa;
-            }
-
-            .dropdown-dark:after {
-                border-top-color: #aaa;
-            }
-
-            .dropdown-dark .dropdown-select {
-                color: #aaa;
-                text-shadow: 0 1px black;
-                /* Fallback for IE 8 */
-                background: #444;
-            }
-
-                .dropdown-dark .dropdown-select:focus {
-                    color: #ccc;
-                }
-
-                .dropdown-dark .dropdown-select > option {
-                    background: #444;
-                    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-                }
-    </style>
-
+   
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
     <script>
@@ -83,48 +49,76 @@
                 ctrlKeyDown = false;
         };
     </script>
+    <style>
+     .button_example{
+ -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:8px;font-family:arial, helvetica, sans-serif; padding: 5px; text-decoration:none;display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold;
+ background-color: #DDDCE3; background-image: -webkit-gradient(linear, left top, left bottom, from(#DDDCE3), to(#82878C));
+ background-image: -webkit-linear-gradient(top, #DDDCE3, #82878C);
+ background-image: -moz-linear-gradient(top, #DDDCE3, #82878C);
+ background-image: -ms-linear-gradient(top, #DDDCE3, #82878C);
+ background-image: -o-linear-gradient(top, #DDDCE3, #82878C);
+ background-image: linear-gradient(to bottom, #DDDCE3, #82878C);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DDDCE3, endColorstr=#82878C);
+ 
+}
+
+.button_example:hover{
+
+ background-color: #c1c0cc; background-image: -webkit-gradient(linear, left top, left bottom, from(#c1c0cc), to(#696e72));
+ background-image: -webkit-linear-gradient(top, #c1c0cc, #696e72);
+ background-image: -moz-linear-gradient(top, #c1c0cc, #696e72);
+ background-image: -ms-linear-gradient(top, #c1c0cc, #696e72);
+ background-image: -o-linear-gradient(top, #c1c0cc, #696e72);
+ background-image: linear-gradient(to bottom, #c1c0cc, #696e72);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#c1c0cc, endColorstr=#696e72);
+}
+    </style>
 </head>
 <body class="metro">
     <form id="form1" runat="server">
 
-        <nav class="navigation-bar" style="height: 80px;">
+        <nav class="navigation-bar" style="height: 125px;">
             <nav class="navigation-bar-content">
-                <a class="element" style="font-size: 36px; margin-top: 10px;" href="Default.aspx">VeribisCRM 
+                
+                
+                <a class="element" style="font-size: 28px;font-family:Calibri; margin-top:14px;" href="Default.aspx"><img src="image/logo.png" style="margin-left:34px;"  /><br />VeribisCRM 
                 </a>
 
               <%--  <span class="element-divider" style="margin-top: 15px;"></span>--%>
-                <div class="element">
+                <div class="element" style="margin-left:52px;">
                     <table>
                         <tbody>
                             <tr>
-                    <asp:Repeater ID="Repeater2" runat="server">
-                        <ItemTemplate>
-                           <td>
-                               <table>
-                                   <tr>
-                                    <td>
- <span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %></span>
-                                    </td>                                    
-                                </tr>
-                                 <tr>
-                                     <td style="text-align:center;">
-<span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></span>
-                                     </td>
-                                     
-                                </tr>
-                               </table> 
-                            
-                           </td> 
-                        </ItemTemplate></asp:Repeater>
-</tr> </tbody>                   
-</table>
-                </div>
-               <%-- <span class="element-divider" style="margin-top: 30px;"></span>--%>
-                <div class="element">
-                    <table <%--style="margin-top: 85px;"--%>>
+                                <asp:Repeater ID="Repeater2" runat="server">
+                                    <ItemTemplate>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <a runat="server" href="#" class="button_example">
+                                                             <span style="padding: 20px;font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %><br /><%# Eval("Value") %></span>
+                                                        </a>
+                                                       
+                                                  <br />
+                                               
+                                                   
+                                                     <%--   <a runat="server" href="#" class="button_example">
+                                                            <span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></span>
+                                                        </a>--%>
+                                                    </td>
+
+                                                </tr>
+                                            </table>
+
+                                        </td>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                       <table style="margin-top: -15px;">
                         <tr>
                             <td>
-                                <asp:DropDownList ID="DropDownList1" runat="server" ForeColor="White" Width="120px" Height="30px" CssClass="dropdown-dark">
+                                <asp:DropDownList ID="DropDownList1" runat="server" Width="100px" Height="26px">
                                     <asp:ListItem Text="Kiþiler"></asp:ListItem>
                                     <asp:ListItem Text="Firmalar"></asp:ListItem>
                                     <asp:ListItem Text="Aktivite"></asp:ListItem>
@@ -132,13 +126,15 @@
                             </td>
                             <td>
                                 <div class="input-control text" style="margin-top: 11px;">
-                                    <input type="text" placeholder="Arama Yapýn..." style="width: 150px; height: 30px;" />
+                                    <input type="text" placeholder="Arama Yapýn..." style="width: 400px; height: 25px;" />
                                     <button class="btn-search"></button>
                                 </div>
                             </td>
                         </tr>
                     </table>
                 </div>
+
+               
 
 
 
@@ -158,7 +154,7 @@
                 <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
                     <ItemTemplate>
                         <li id="menulist" runat="server">
-                            <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><i class="icon-arrow-right"></i><%# Eval("MENU_NAME") %></a></li>
+                            <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><img runat="server" src="Content/icons/guncelle.png" style="padding-right:20px;" /><%# Eval("MENU_NAME") %></a></li>
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>

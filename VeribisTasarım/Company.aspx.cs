@@ -23,8 +23,9 @@ namespace VeribisTasarım
                     adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                     telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                 }
-             
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
                 ekranDoldur();
+               
             }
 
            

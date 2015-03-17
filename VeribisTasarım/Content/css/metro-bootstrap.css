@@ -4090,7 +4090,7 @@ a {
 .metro .navbar .navigation-bar-content .element:hover,
 .metro .navigation-bar .navbar-content .element:hover,
 .metro .navbar .navbar-content .element:hover {
-  background-color: #00aafd;
+  /*background-color: #00aafd;*/
 }
 .metro .navigation-bar .navigation-bar-content .element > a.dropdown-toggle,
 .metro .navbar .navigation-bar-content .element > a.dropdown-toggle,
@@ -6195,7 +6195,8 @@ a {
   background-color: #ffffff;
 }
 .metro .sidebar.light li a:hover {
-  background-color: #00aff0;
+  /*background-color: #00aff0;*/
+   background-color:#336699;
 }
 .metro .sidebar.light li ul {
   background-color: #ffffff;
@@ -6213,7 +6214,8 @@ a {
   color: #999999;
 }
 .metro .sidebar.light li.active a {
-  background-color: #1ba1e2;
+  /*background-color: #1ba1e2;*/
+  background-color:#336699;
   color: #ffffff;
 }
 .metro .accordion > .accordion-frame {

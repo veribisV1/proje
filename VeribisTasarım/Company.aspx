@@ -32,45 +32,18 @@
 
     </script>
     <script type="text/javascript">
-        function tabloBosalt(tablo) {
-
-            tablo.each(function (i) {
-                
-                if (i != 0) {
-
-                    var par = $(this);
-                    par.remove();
-                }
-
-            });
-
-        }
         
-        function adresDoldur(companyCode) {
+        
+     
 
-            PageMethods.adres(companyCode, onComplete);
+       
+        $(document).ready(function () {
+            tabGecir();
+        });
+        function tabGecir() {
+            alert("çalışıyor");
+            $('#rakipFirma').tabs("option", "active", 1);
         }
-
-        function onComplete(res) {
-          
-           res= JSON.parse(res);
-           var $table = $('#ContentPlaceHolder1_grdADDRESS tbody');
-           tabloBosalt($('#ContentPlaceHolder1_grdADDRESS tbody tr'));
-            $.each(res, function () {
-                var elements = " ";
-                elements = '<tr>';
-                elements += "<td><img src='image/Deleteicon.png'></td>";
-                elements += "<td><img src='image/editicon.png'></td>";
-                elements += "<td>" + this.TUR + "</td>";
-                elements += "<td>" + this.ADRES + "</td>";
-                elements += "<td>" + this.ULKE + "</td>";
-                elements += "<td>" + this.IL + "</td>";
-                elements += "<td>" + this.ILCE + "</td>";               
-                elements += "</tr>";
-                $table.append(elements);
-            })
-        }
-
     </script>
 
     <%--fancy_box stil tanımı--%>
@@ -241,6 +214,7 @@
                                         <div hidden="hidden">
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
                                             <asp:TextBox ID="idADDRESS" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="idPHONE" runat="server"></asp:TextBox>
                                         </div>
 
                                     </td>

@@ -14,13 +14,17 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //*************** telefon ve adres gridleri dolmuyor...***********
+            //if (!String.IsNullOrEmpty(idCONTACT_CODE.Text))
+            //    adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
+           
             if (drpCOMPANY_CODE.SelectedIndex != -1)
                 gridDoldur();
 
 
             if (!IsPostBack)
             {
+
                 base.Page_Load();
 
                 butonText();
@@ -146,7 +150,7 @@ namespace VeribisTasarım
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
-            if (addressType == "2")
+            if (addressType == "1")
                 dbadapter.set(String.Format("UPDATE CONTACT SET ADDRESS={0} WHERE CONTACT_CODE={1}", -1, idCONTACT_CODE.Text));
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);

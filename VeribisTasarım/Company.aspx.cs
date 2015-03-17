@@ -27,6 +27,7 @@ namespace VeribisTasarım
                 ekranDoldur();
             }
 
+           
         }
         private void butonText()
         {

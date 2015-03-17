@@ -69,7 +69,13 @@
                 $table.append(elements);
             })
         }
-
+        $(document).ready(function () {
+            tabGecir();
+        });
+        function tabGecir() {
+            alert("çalışıyor");
+            $('#rakipFirma').tabs("option", "active", 1);
+        }
     </script>
 
     <%--fancy_box stil tanımı--%>

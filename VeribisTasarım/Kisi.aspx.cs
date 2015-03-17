@@ -14,8 +14,10 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (drpCOMPANY_CODE.SelectedIndex != -1)
                 gridDoldur();
+
 
             if (!IsPostBack)
             {
@@ -33,6 +35,7 @@ namespace VeribisTasarım
                     idCONTACT_CODE.Text = contactCode.ToString();
                     gelenKisiyiYukle();
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
+                    
                 }
                 if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
                 {
@@ -41,9 +44,10 @@ namespace VeribisTasarım
                         idCOMPANY_CODE.SelectedValue = Request.QueryString["btnKisiListele"].Split('-')[0];
                     }
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
-                }
+                } 
             }
 
+           
         }
         private void butonText()
         {
@@ -91,11 +95,11 @@ namespace VeribisTasarım
             DBTOOL db = new DBTOOL();
             StringBuilder sorgu = new StringBuilder();
 
-            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, ADDRESS.COUNTY AS ULKE,  ADDRESS.CITY AS IL ,ADDRESS.COUNTY1 AS ILCE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
+            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, ADDRESS.ADDRESS_TYPE_ID, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, ADDRESS.COUNTY AS ULKE,  ADDRESS.CITY AS IL ,ADDRESS.COUNTY1 AS ILCE FROM ADDRESS INNER JOIN GROUPS ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE WHERE GROUPS.GROUP_CODE=1 AND ADDRESS.CONTACT_CODE=");
             sorgu.Append(contactCode);
             DataTable tablo = db.get(sorgu.ToString());
-            idADDRESS.DataSource = tablo;
-            idADDRESS.DataBind();
+            gridADDRESS.DataSource = tablo;
+            gridADDRESS.DataBind();
 
             //if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
             //{
@@ -136,10 +140,14 @@ namespace VeribisTasarım
         protected void adresSil(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
-            string addressCode = silButon.CommandArgument;
+            string[] commandArgs = silButon.CommandArgument.ToString().Split(new char[] { ',' });
+            string addressCode = commandArgs[0];
+            string addressType = commandArgs[1];
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
+            if (addressType == "2")
+                dbadapter.set(String.Format("UPDATE CONTACT SET ADDRESS={0} WHERE CONTACT_CODE={1}", -1, idCONTACT_CODE.Text));
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
         }

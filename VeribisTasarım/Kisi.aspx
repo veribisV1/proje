@@ -157,6 +157,7 @@
                     </table>
                     <div style="visibility: hidden;">
                         <asp:TextBox ID="idCONTACT_CODE" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="idADDRESS" runat="server"></asp:TextBox>
                     </div>
 
                     <hr />
@@ -402,14 +403,14 @@
                             <tr>
                                 <td>
                                     <div class="gridDivAdres">
-                                        <asp:GridView ID="idADDRESS" runat="server"
+                                        <asp:GridView ID="gridADDRESS" runat="server"
                                             AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
 
                                             <Columns>
 
                                                 <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="adresSil" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                        <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="adresSil" CommandArgument='<%# Eval("ADDRESS_CODE")+ "," + Eval("ADDRESS_TYPE_ID")%>'></asp:ImageButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
 

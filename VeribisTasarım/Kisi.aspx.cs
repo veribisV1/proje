@@ -26,7 +26,7 @@ namespace VeribisTasarım
                 gridDoldurFirmasiz();
 
                 ekranDoldur();
-               
+
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
@@ -169,6 +169,7 @@ namespace VeribisTasarım
                 {
                     contactCode = kaydet("pUpdateContact");
                     multiselecetKaydet(Convert.ToInt32(idCONTACT_CODE.Text));
+                    KayitBasariliMesaji("Kişi");
                 }
 
                 //gridDoldur();
@@ -187,7 +188,7 @@ namespace VeribisTasarım
 
 
             if (contactCode != -1)
-            {               
+            {
                 DBARACISI adapter = new DBARACISI();
                 foreach (ListItem item in idGROUP_CODE.Items)
                 {
@@ -226,7 +227,7 @@ namespace VeribisTasarım
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
         {
-
+            idButtonKisiEkleKaydet_Click(sender, e);
         }
 
         protected void idButtonKisiEkleYeni_Click(object sender, EventArgs e)
@@ -252,13 +253,13 @@ namespace VeribisTasarım
             idASSOCIATION_CODE.ClearSelection();
             idLANGUAGE_CODE.ClearSelection();
             DBARACISI adapter = new DBARACISI();
-           List<string> group = adapter.getElemanList(String.Format("SELECT GROUP_CODE FROM CONTACTGROUP WHERE CONTACT_CODE={0}", code));
-           multiselecetIsaretle(idGROUP_CODE, group);
-           group = adapter.getElemanList(String.Format("SELECT ASSOCIATION_CODE FROM ASSOCIATION WHERE CONTACT_CODE={0}", code));
-           multiselecetIsaretle(idASSOCIATION_CODE, group);
-           group = adapter.getElemanList(String.Format("SELECT LANGUAGE_CODE FROM LANGUAGES WHERE CONTACT_CODE={0}", code));
-           multiselecetIsaretle(idLANGUAGE_CODE, group);
-           
+            List<string> group = adapter.getElemanList(String.Format("SELECT GROUP_CODE FROM CONTACTGROUP WHERE CONTACT_CODE={0}", code));
+            multiselecetIsaretle(idGROUP_CODE, group);
+            group = adapter.getElemanList(String.Format("SELECT ASSOCIATION_CODE FROM ASSOCIATION WHERE CONTACT_CODE={0}", code));
+            multiselecetIsaretle(idASSOCIATION_CODE, group);
+            group = adapter.getElemanList(String.Format("SELECT LANGUAGE_CODE FROM LANGUAGES WHERE CONTACT_CODE={0}", code));
+            multiselecetIsaretle(idLANGUAGE_CODE, group);
+
 
 
         }

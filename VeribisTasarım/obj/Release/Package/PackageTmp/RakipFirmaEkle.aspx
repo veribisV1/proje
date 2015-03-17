@@ -45,7 +45,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idNOTE" Height="30px" runat="server" Width="100%"></asp:DropDownList>
+                                        <asp:TextBox ID="idNOTE" Height="30px" runat="server" Width="100%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 
@@ -58,7 +58,7 @@
                              <table style="float: right; margin-right: 10px;">
                                  <tr>
                                      <td>
-                                         <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px" />
+                                         <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Text="Kaydet" Height="30px"  OnClick="idButtonRakipFirmaKaydet_Click"/>
                                      </td>
 
                                      <td>

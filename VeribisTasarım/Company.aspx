@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" %>
+
 
 <%@ Import Namespace="VeribisTasarım.Controller" %>
 
@@ -28,27 +29,53 @@
             return false;
         }
 
-      
+
     </script>
-     <script type="text/javascript">
-         function adresDoldur(companyCode) {
+    <script type="text/javascript">
+        function tabloBosalt(tablo) {
 
-            
-                 PageMethods.adres(companyCode, onComplete);
-           
-         }
+            tablo.each(function (i) {
+                
+                if (i != 0) {
 
-         function onComplete(res) {
-             alert(res);
+                    var par = $(this);
+                    par.remove();
+                }
 
-         }
-      
+            });
+
+        }
+        
+        function adresDoldur(companyCode) {
+
+            PageMethods.adres(companyCode, onComplete);
+        }
+
+        function onComplete(res) {
+          
+           res= JSON.parse(res);
+           var $table = $('#ContentPlaceHolder1_grdADDRESS tbody');
+           tabloBosalt($('#ContentPlaceHolder1_grdADDRESS tbody tr'));
+            $.each(res, function () {
+                var elements = " ";
+                elements = '<tr>';
+                elements += "<td><img src='image/Deleteicon.png'></td>";
+                elements += "<td><img src='image/editicon.png'></td>";
+                elements += "<td>" + this.TUR + "</td>";
+                elements += "<td>" + this.ADRES + "</td>";
+                elements += "<td>" + this.ULKE + "</td>";
+                elements += "<td>" + this.IL + "</td>";
+                elements += "<td>" + this.ILCE + "</td>";               
+                elements += "</tr>";
+                $table.append(elements);
+            })
+        }
+
     </script>
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin
-        {
+        .fancybox-custom .fancybox-skin {
             box-shadow: 0 0 50px #222;
         }
     </style>
@@ -60,12 +87,12 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
     <div class="ALAN12">
         <h3><%=ResGetir.resGetir(2)%></h3>
-
+       
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
 
-                <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li id="liste"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
+                <li id="firma" class="active"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
                 <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
@@ -211,10 +238,9 @@
                                     <td width="25%">&nbsp;</td>
                                     <td width="2%"></td>
                                     <td>
-                                        <div style="visibility: hidden;">
-                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
-
-                                            <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="true"></asp:TextBox>
+                                        <div hidden="hidden">
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="idADDRESS" runat="server"></asp:TextBox>
                                         </div>
 
                                     </td>
@@ -440,6 +466,8 @@
                                     <td>
                                         <div class="gridDivAdres">
 
+                                 
+                                           
 
                                             <asp:GridView ID="grdADDRESS" runat="server"
                                                 AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">
@@ -722,7 +750,7 @@
                                     <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;tabDegistir();" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonRakipFirmaKaydet_Click"/>
+                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonRakipFirmaKaydet_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonRakipFirmaSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
@@ -738,16 +766,17 @@
                                     <td>
                                         <%--<asp:GridView ID="idRAKIP_FIRMALAR" runat="server"></asp:GridView>
                                         <asp:GridView ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>--%>
-                                        <span style="font-size:small">Rakip Firmalar Listesi</span>
+                                        <span style="font-size: small">Rakip Firmalar Listesi</span>
                                         <asp:ListBox ID="idRAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                     <td>
-                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaEkle_Click"/><br /><br />
-                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaCikar_Click" />
+                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" Width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaEkle_Click" /><br />
+                                        <br />
+                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" Width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaCikar_Click" />
 
                                     </td>
                                     <td>
-                                        <span style="font-size:small">Bu Firmadaki Rakip Firmalar</span>
+                                        <span style="font-size: small">Bu Firmadaki Rakip Firmalar</span>
                                         <asp:ListBox ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                 </tr>

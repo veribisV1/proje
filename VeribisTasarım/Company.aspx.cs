@@ -13,9 +13,8 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            base.Page_Load();
-            idGROUP_CODE.SelectionMode = ListSelectionMode.Multiple;
-            gridDoldur();
+            base.Page_Load();   
+            gridDoldur();         
             if (!IsPostBack)
             {
                 butonText();
@@ -24,10 +23,8 @@ namespace VeribisTasarım
                     adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                     telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                 }
-                //
+             
                 ekranDoldur();
-
-
             }
 
         }
@@ -51,7 +48,7 @@ namespace VeribisTasarım
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,(COUNTRY_CODE+ ' ' + AREA_CODE + ' ' + PHONE_NUMBER) AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE ORDER BY COMPANY_CODE DESC");
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,ISNULL((COUNTRY_CODE+ ' ' + AREA_CODE + ' ' + PHONE_NUMBER),'') AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS AND ADDRESS.ADDRESS_TYPE_ID=1 LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE AND PHONE.PHONE_TYPE_ID=1 ORDER BY COMPANY_CODE DESC");
             GridView1.DataBind();
         }
         private void ekranDoldur()
@@ -95,7 +92,8 @@ namespace VeribisTasarım
             DataTable tablo = db.get(sorgu.ToString());
             grdADDRESS.DataSource = tablo;
             grdADDRESS.DataBind();
-          
+         
+
         }
 
         [WebMethod]
@@ -145,41 +143,35 @@ namespace VeribisTasarım
                     if (Company_Code != -1)
                     {
                         idCOMPANY_CODE.Text = Company_Code.ToString();
-                        DBARACISI adapter = new DBARACISI();
-                        foreach (ListItem item in idGROUP_CODE.Items)
-                        {
-                            if (item.Selected)
-                            {
-                                if (item.Value != "-1")
-                                    adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", Company_Code, item.Value));
-                            }
-
-                        }
-
+                        gruopCodeKaydet();
                     }
                     KayitBasariliMesaji("Firma");
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdateCompany");
-                    DBARACISI adapter = new DBARACISI();
-                    adapter.set(String.Format("Delete from COMPANYGROUP where COMPANY_CODE={0}", idCOMPANY_CODE.Text));
-                    foreach (ListItem item in idGROUP_CODE.Items)
-                    {
-                        if (item.Selected)
-                        {
-                            if (item.Value != "-1")
-                                adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", idCOMPANY_CODE.Text, item.Value));
-                        }
-
-                    }
+                    gruopCodeKaydet();
                 }
 
             }
-            //formTemizle(this);
+            KayitBasariliMesaji("Firma");
             gridDoldur();
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
+        }
+        private void gruopCodeKaydet()
+        {
+            DBARACISI adapter = new DBARACISI();
+            adapter.set(String.Format("Delete from COMPANYGROUP where COMPANY_CODE={0}", idCOMPANY_CODE.Text));
+            foreach (ListItem item in idGROUP_CODE.Items)
+            {
+                if (item.Selected)
+                {
+                    if (item.Value != "-1")
+                        adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", idCOMPANY_CODE.Text, item.Value));
+                }
+
+            }
         }
         protected void editCompany(object sender, EventArgs e)
         {
@@ -219,9 +211,9 @@ namespace VeribisTasarım
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
-            if(phoneType=="1")
-                dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}",-1,idCOMPANY_CODE.Text));
-            else if(phoneType=="3")
+            if (phoneType == "1")
+                dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
+            else if (phoneType == "3")
                 dbadapter.set(String.Format("UPDATE COMPANY SET FAX={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
             gridDoldur();
@@ -230,6 +222,7 @@ namespace VeribisTasarım
         {
             formTemizle(this);
             ekranDoldur();
+
             grdADDRESS.DataSource = null;
             grdADDRESS.DataBind();
             gridPHONE.DataSource = null;
@@ -297,6 +290,7 @@ namespace VeribisTasarım
             idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Remove(idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedItem);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
         }
+
     }
 }
 

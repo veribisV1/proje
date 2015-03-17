@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" SmartNavigation="True" MaintainScrollPositionOnPostback="true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" %>
 
 <%@ Import Namespace="VeribisTasarım.Controller" %>
 
@@ -27,12 +27,39 @@
             OpenPage('AdresEkle.aspx?edit=', parametre, 600, 400);
             return false;
         }
+
+
+    </script>
+    <script type="text/javascript">
+        function adresDoldur(companyCode) {
+
+            PageMethods.adres(companyCode, onComplete);
+        }
+
+        function onComplete(res) {
+            alert(res);
+           res= JSON.parse(res);
+            var $table = $('#ContentPlaceHolder1_grdADDRESS tbody');
+            $.each(res, function () {
+                var elements = " ";
+                elements = '<tr>';
+                elements += "<td>" + this.TUR + "</td>";
+                elements += "<td>" + this.ADRES + "</td>";
+                elements += "<td>" + this.TUR + "</td>";
+                elements += "<td>" + this.ADRES + "</td>";
+                elements += "<td>" + this.ULKE + "</td>";
+                elements += "<td>" + this.IL + "</td>";
+                elements += "<td>" + this.ILCE + "</td>";               
+                elements += "</tr>";
+                $table.append(elements);
+            })
+        }
+
     </script>
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
-        .fancybox-custom .fancybox-skin
-        {
+        .fancybox-custom .fancybox-skin {
             box-shadow: 0 0 50px #222;
         }
     </style>
@@ -41,17 +68,17 @@
     <script src="Content/js/jquery.multiple.select.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
     <div class="ALAN12">
         <h3><%=ResGetir.resGetir(2)%></h3>
-
+       
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
 
-                <li id="liste"><a href="#ListeAdi" class="active"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li id="liste"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
+                <li id="firma" class="active"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
-                <li><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
+                <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
                 <li><a href="#Kontak" onclick="OpenPage('KisiListe.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;"><%=ResGetir.resGetir(1)%></a></li>
                 <li><a href="#Numune" onclick="GoToPage('Numune.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val());return false;"><%=ResGetir.resGetir(637)%></a></li>
@@ -127,7 +154,7 @@
 
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
+                                    <asp:Button ID="idButtonFirmaEkleYeni" runat="server" CssClass="bg-blue fg-white" PostBackUrl="#FirmaEkle" OnClientClick="adresDoldur(11)" OnClick="idButtonFirmaEkleYeni_Click" Height="30px" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonAdresYeni" runat="server" CssClass="bg-blue fg-white" Height="30" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('AdresEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
@@ -136,7 +163,7 @@
                                     <asp:Button ID="idButtonTelefonYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="if($('#ContentPlaceHolder1_idCOMPANY_CODE').val()!='') OpenPage('TelefonEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" OnClientClick="return confirm('Firma bilgisi kaydedilmiştir.')" />
+                                    <asp:Button ID="idButtonFirmaEkleKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonFirmaEkleKaydet_Click1" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonFirmaEkleSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
@@ -154,51 +181,50 @@
                             <table class="KisiTable" id="Table1">
 
                                 <tr>
-                                    <td width="35%">Firma Adı
+                                    <td width="25%">Firma Adı
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCOMPANY_NAME" MaxLength="200" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idCOMPANY_NAME" MaxLength="200" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Kodu
+                                    <td width="25%">Kodu
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCOMPANY_COMMERCIAL_CODE" Height="30px" Width="100%" MaxLength="30" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idCOMPANY_COMMERCIAL_CODE" CssClass="textbox" MaxLength="30" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Temsilcisi
+                                    <td width="25%">Temsilcisi
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_REPRESENT_CODE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_REPRESENT_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">Sektörü
+                                    <td width="25%">Sektörü
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idSECTOR" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idSECTOR" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%">&nbsp;</td>
+                                    <td width="25%">&nbsp;</td>
                                     <td width="2%"></td>
                                     <td>
-                                        <div style="visibility: hidden;">
-                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server" Width="100%" Visible="True"></asp:TextBox>
-
-                                            <asp:TextBox ID="idADDRESS" runat="server" Width="100%" Visible="true"></asp:TextBox>
+                                        <div hidden="hidden">
+                                            <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="idADDRESS" runat="server"></asp:TextBox>
                                         </div>
 
                                     </td>
@@ -216,7 +242,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_SPECIAL_TYPE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_SPECIAL_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -226,7 +252,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idSTATUS" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idSTATUS" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -236,7 +262,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idUPPER_COMPANY_CODE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idUPPER_COMPANY_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -246,7 +272,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_REGION" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_REGION" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -256,7 +282,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idTAX_DEPARTMENT" MaxLength="30" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idTAX_DEPARTMENT" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -265,7 +291,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idTAX_NO" MaxLength="30" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idTAX_NO" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -274,7 +300,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:ListBox ID="idGROUP_CODE" runat="server" Width="100%" Height="30px" SelectionMode="Multiple"></asp:ListBox>
+                                        <asp:ListBox ID="idGROUP_CODE" runat="server" CssClass="dropdown" SelectionMode="Multiple"></asp:ListBox>
                                         <script type="text/javascript">
                                             $('#ContentPlaceHolder1_idGROUP_CODE').multipleSelect();
                                         </script>
@@ -286,7 +312,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMAIL" MaxLength="100" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idMAIL" MaxLength="100" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -295,7 +321,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idWEBADDRESS" MaxLength="150" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idWEBADDRESS" MaxLength="150" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -305,7 +331,7 @@
                                     </td>
                                     <td>
 
-                                        <asp:TextBox ID="idFOUNDATION_DATE" Width="100%" Height="30px" TextMode="Date" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idFOUNDATION_DATE" CssClass="textbox" runat="server"></asp:TextBox>
 
                                     </td>
                                 </tr>
@@ -317,96 +343,96 @@
                         <div class="ALAN4">
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(13)%>
+                                    <td width="40%"><%=ResGetir.resGetir(13)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_REFERANCE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCOMPANY_REFERANCE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(30)%>
+                                    <td width="40%"><%=ResGetir.resGetir(30)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idENDORSEMENT" MaxLength="20" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idENDORSEMENT" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(31)%>
+                                    <td width="40%"><%=ResGetir.resGetir(31)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idDISCOUNT_RATIO" MaxLength="20" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idDISCOUNT_RATIO" MaxLength="20" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(32)%>
+                                    <td width="40%"><%=ResGetir.resGetir(32)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCURRENCY_TYPE" runat="server" Width="100%" Height="30px">
+                                        <asp:DropDownList ID="idCURRENCY_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(24)%>
+                                    <td width="40%"><%=ResGetir.resGetir(24)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCOMPANY_OWNER" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idCOMPANY_OWNER" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(25)%>
+                                    <td width="40%"><%=ResGetir.resGetir(25)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idPAYMENT_PERSON" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idPAYMENT_PERSON" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(26)%>
+                                    <td width="40%"><%=ResGetir.resGetir(26)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idPURCHASE_PERSON" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idPURCHASE_PERSON" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(27)%>
+                                    <td width="40%"><%=ResGetir.resGetir(27)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idWAREHOUSE_PERSON" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idWAREHOUSE_PERSON" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(28)%>
+                                    <td width="40%"><%=ResGetir.resGetir(28)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="35%"><%=ResGetir.resGetir(29)%>
+                                    <td width="40%"><%=ResGetir.resGetir(29)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idPAYMENT_DAY" MaxLength="30" Width="100%" Height="30px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idPAYMENT_DAY" MaxLength="30" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
@@ -432,7 +458,7 @@
 
                                                     <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                         <ItemTemplate>
-                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE")%>'></asp:ImageButton>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="lnkRemove_Click" CommandArgument='<%# Eval("ADDRESS_CODE") + "," + Eval("ADDRESS_TYPE_ID")%>'></asp:ImageButton>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 
@@ -515,7 +541,7 @@
 
                                                     <asp:TemplateField ItemStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                                         <ItemTemplate>
-                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")%>'></asp:ImageButton>
+                                                            <asp:ImageButton ImageUrl="~/image/Deleteicon.png" ID="lnkRemove" runat="server" OnClientClick="return confirm('Gerçekten silmek istiyor musunuz?')" OnClick="telefonSil" CommandArgument='<%# Eval("PHONE_CODE")+ "," + Eval("PHONE_TYPE_ID")%>'></asp:ImageButton>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 
@@ -580,112 +606,112 @@
 
                             <table class="KisiTable">
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(141)%>
+                                    <td width="25%"><%=ResGetir.resGetir(141)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idNAME" runat="server" Height="30px" Width="60%"></asp:DropDownList>
+                                        <asp:DropDownList ID="idNAME" runat="server" Height="30px" Width="100%"></asp:DropDownList>
                                     </td>
 
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(298)%>
+                                    <td width="25%"><%=ResGetir.resGetir(298)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMODEL" runat="server" MaxLength="50" Height="30px" Width="60%"></asp:TextBox>
+                                        <asp:TextBox ID="idMODEL" runat="server" MaxLength="50" Height="30px" Width="100%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(151)%>
+                                    <td width="25%"><%=ResGetir.resGetir(151)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_YILI" runat="server" Height="30px" Width="60%"></asp:DropDownList>
+                                        <asp:DropDownList ID="idMAKINAPARKI_YILI" runat="server" Height="30px" Width="100%"></asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(142)%>
+                                    <td width="25%"><%=ResGetir.resGetir(142)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idAMOUNT" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idAMOUNT" runat="server" MaxLength="20" Width="100%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(18)%>
+                                    <td width="25%"><%=ResGetir.resGetir(18)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMAKINAPARKI_DEGER1" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idMAKINAPARKI_DEGER1" runat="server" MaxLength="20" Width="100%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(18)%>2
+                                    <td width="25%"><%=ResGetir.resGetir(18)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idMAKINAPARKI_DEGER2" runat="server" MaxLength="20" Width="60%" Height="30px"></asp:TextBox>
+                                        <asp:TextBox ID="idMAKINAPARKI_DEGER2" runat="server" MaxLength="20" Width="100%" Height="30px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP1" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP1" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>2
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>2
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP2" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP2" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>3
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>3
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP3" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP3" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>4
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>4
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP4" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP4" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(14)%>5
+                                    <td width="25%"><%=ResGetir.resGetir(14)%>5
                                     </td>
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idMAKINAPARKI_TIP5" runat="server" Height="30px" Width="60%">
+                                        <asp:DropDownList ID="idMAKINAPARKI_TIP5" runat="server" Height="30px" Width="100%">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><%=ResGetir.resGetir(206)%>
+                                    <td width="25%"><%=ResGetir.resGetir(206)%>
                                     </td>
                                     <td width="2%">:
                                     </td>
@@ -703,10 +729,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;" />
+                                    <asp:Button ID="idButtonRakipFirmaYeni" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClientClick="OpenPage('RakipFirmaEkle.aspx',$('#ContentPlaceHolder1_idCOMPANY_CODE').val(),600,400);return false;tabDegistir();" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" />
+                                    <asp:Button ID="idButtonRakipFirmaKaydet" runat="server" CssClass="bg-blue fg-white" Height="30px" OnClick="idButtonRakipFirmaKaydet_Click" />
                                 </td>
                                 <td>
                                     <asp:Button ID="idButtonRakipFirmaSil" runat="server" CssClass="bg-blue fg-white" Height="30px" />
@@ -722,16 +748,17 @@
                                     <td>
                                         <%--<asp:GridView ID="idRAKIP_FIRMALAR" runat="server"></asp:GridView>
                                         <asp:GridView ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server"></asp:GridView>--%>
-                                        <span style="font-size:small">Rakip Firmalar Listesi</span>
+                                        <span style="font-size: small">Rakip Firmalar Listesi</span>
                                         <asp:ListBox ID="idRAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                     <td>
-                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" width="100%" CssClass="bg-blue fg-white" /><br /><br />
-                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" width="100%" CssClass="bg-blue fg-white" />
+                                        <asp:Button ID="idRakipFirmaEkle" runat="server" Text=">>" Width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaEkle_Click" /><br />
+                                        <br />
+                                        <asp:Button ID="idRakipFirmaCikar" runat="server" Text="<<" Width="100%" CssClass="bg-blue fg-white" OnClick="idRakipFirmaCikar_Click" />
 
                                     </td>
                                     <td>
-                                        <span style="font-size:small">Bu Firmadaki Rakip Firmalar</span>
+                                        <span style="font-size: small">Bu Firmadaki Rakip Firmalar</span>
                                         <asp:ListBox ID="idBU_FIRMADAKI_RAKIP_FIRMALAR" runat="server" CssClass="liste"></asp:ListBox>
                                     </td>
                                 </tr>

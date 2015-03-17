@@ -18,8 +18,8 @@
         <h3><%=ResGetir.resGetir(333)%></h3>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
-                <li id="liste" class="active"><a href="#ListeAdi">Liste Adı</a></li>
-                <li id="teklif"><a href="#TeklifEkle"><%=ResGetir.resGetir(136)%></a></li>
+                <li id="liste"><a href="#ListeAdi">Liste Adı</a></li>
+                <li id="teklif" class="active"><a href="#TeklifEkle"><%=ResGetir.resGetir(136)%></a></li>
             </ul>
             <div class="frames" style="float: left; width: 100%">
                 <div class="frame" id="ListeAdi" style="min-height: 100px">
@@ -32,7 +32,7 @@
                                 </td>
                                 <td>:</td>
                                 <td>
-                                     <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="EvrakListesiArama" Width="180px"></asp:TextBox>
+                                     <asp:TextBox ID="idTextBoxTeklifArama" runat="server" CssClass="aramakontrol" ></asp:TextBox>
                                  
                                 </td>
                                  <td>
@@ -40,7 +40,7 @@
                                 </td>
                                    <td>:</td>
                                 <td>
-                                   <asp:DropDownList ID="idDropDownTeklifDurum" runat="server" CssClass="EvrakListesiDropdownDurum" Width="180px"></asp:DropDownList>
+                                   <asp:DropDownList ID="idDropDownTeklifDurum" runat="server" CssClass="aramakontrol" ></asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
@@ -49,14 +49,14 @@
                                  </td>
                                    <td>:</td>
                                  <td> 
-                                     <asp:TextBox ID="idTeklifBaslangicTarih" runat="server" Width="180px"  ></asp:TextBox>
+                                     <asp:TextBox ID="idTeklifBaslangicTarih" runat="server" CssClass="aramakontrol" ></asp:TextBox>
                                  </td>
                                 <td>
                                     <asp:Label ID="idLabelTeklifBitis" runat="server" CssClass="LabelEvrakListesiBitis"></asp:Label>
                                 </td>
                                    <td>:</td>
                                  <td>
-                                     <asp:TextBox ID="idTeklifBitisTarih" runat="server" Width="180px" ></asp:TextBox>
+                                     <asp:TextBox ID="idTeklifBitisTarih" runat="server" CssClass="aramakontrol" ></asp:TextBox>
                                  </td>
                                 <td>
                                       <asp:Button ID="idButtonTeklifArama" runat="server" CssClass="bg-blue fg-white" Text="Ara" OnClick="idButtonTeklifArama_Click"/>
@@ -211,7 +211,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idDOCUMENT_DATE" runat="server" TextMode="Date" Height="30px" Width="100%"></asp:TextBox>
+                                        <asp:TextBox ID="idDOCUMENT_DATE" runat="server" Height="30px" Width="100%"></asp:TextBox>
                                     </td>
                                 </tr>
 
@@ -316,7 +316,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" TextMode="Date" Height="30px" Width="100%"></asp:TextBox>
+                                        <asp:TextBox ID="idCERTIFICATE_DATE" runat="server" Height="30px" Width="100%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>

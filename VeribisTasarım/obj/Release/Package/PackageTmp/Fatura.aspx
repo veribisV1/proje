@@ -49,7 +49,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idCOMPANY_CODE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idCOMPANY_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -59,7 +59,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idSELLING_BUYING" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idSELLING_BUYING" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -69,7 +69,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idNORMAL_BACK" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idNORMAL_BACK" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -89,7 +89,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idDOCUMENT_DATE" TextMode="Date" Height="30px" Width="100%" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="idDOCUMENT_DATE" CssClass="textbox" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -98,7 +98,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idAPPOINTED_USER_CODE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idAPPOINTED_USER_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
 
                                     </td>
@@ -114,7 +114,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idWAREHOUSE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idWAREHOUSE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -124,7 +124,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idPAYMENT_TYPE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -134,7 +134,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idPROJECT_CODE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idPROJECT_CODE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -144,7 +144,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idOPEN_CLOSE" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idOPEN_CLOSE" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -154,7 +154,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="idGROUPS" runat="server" Height="30px" Width="100%">
+                                        <asp:DropDownList ID="idGROUPS" runat="server" CssClass="dropdown">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -164,7 +164,7 @@
                                     <td width="2%">:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="idEXPLANATION" runat="server" Width="100%" Height="90px" TextMode="MultiLine"></asp:TextBox>
+                                        <asp:TextBox ID="idEXPLANATION" runat="server" CssClass="multilinetextbox" TextMode="MultiLine"></asp:TextBox>
                                     </td>
                                 </tr>
 

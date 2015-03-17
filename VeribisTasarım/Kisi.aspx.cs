@@ -14,9 +14,9 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (drpCOMPANY_CODE.SelectedIndex!=-1)
+            if (drpCOMPANY_CODE.SelectedIndex != -1)
                 gridDoldur();
-            
+
             if (!IsPostBack)
             {
                 base.Page_Load();
@@ -26,13 +26,13 @@ namespace VeribisTasarım
                 gridDoldurFirmasiz();
 
                 ekranDoldur();
-                idSDATE.Text = DateTime.Now.ToString();
+               
                 if (!String.IsNullOrEmpty(Request.QueryString["param"]))
                 {
                     var contactCode = Convert.ToInt32((Request.QueryString["param"]));
                     idCONTACT_CODE.Text = contactCode.ToString();
-                    gelenKisiyiYukle();                  
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);                  
+                    gelenKisiyiYukle();
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
                 if (!String.IsNullOrEmpty(Request.QueryString["btnKisiListele"]))
                 {
@@ -42,7 +42,7 @@ namespace VeribisTasarım
                     }
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
                 }
-            }         
+            }
 
         }
         private void butonText()
@@ -81,6 +81,8 @@ namespace VeribisTasarım
             idHOME_RATING = dbGetir.doldur(idHOME_RATING, dbGetir.getEvSkalasi());
             idISMARRIED = dbGetir.doldur(idISMARRIED, dbGetir.getMedeniHal());
             #endregion
+
+            idSDATE.Text = DateTime.Now.ToString();
             idCONTACT_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
@@ -129,7 +131,6 @@ namespace VeribisTasarım
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
             telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
-            gridDoldur();
         }
 
         protected void adresSil(object sender, EventArgs e)
@@ -141,7 +142,6 @@ namespace VeribisTasarım
             dbadapter.set(String.Format("DELETE FROM ADDRESS WHERE ADDRESS_CODE={0}", addressCode));
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
-           
         }
 
         protected void idButtonKisiEkleKaydet_Click(object sender, EventArgs e)
@@ -154,12 +154,8 @@ namespace VeribisTasarım
                 if (String.IsNullOrEmpty(idCONTACT_CODE.Text))
                 {
                     contactCode = kaydet("pInsertContact");
-                    if (contactCode != -1)
-                    {
-                        idCONTACT_CODE.Text = contactCode.ToString();
-
-
-                    }
+                    idCONTACT_CODE.Text = contactCode.ToString();
+                    multiselecetKaydet(contactCode);
                     KayitBasariliMesaji("Kişi");
 
 
@@ -168,6 +164,7 @@ namespace VeribisTasarım
                 else
                 {
                     contactCode = kaydet("pUpdateContact");
+                    multiselecetKaydet(Convert.ToInt32(idCONTACT_CODE.Text));
                 }
 
                 //gridDoldur();
@@ -180,6 +177,46 @@ namespace VeribisTasarım
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#kisi').addClass('active');$('#liste').removeClass('active')", true);
             gridDoldur();
         }
+
+        private void multiselecetKaydet(int contactCode)
+        {
+            if (contactCode != -1)
+            {               
+                DBARACISI adapter = new DBARACISI();
+                foreach (ListItem item in idGROUP_CODE.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Value != "-1")
+                            adapter.set(String.Format("INSERT INTO CONTACTGROUP VALUES({0},{1})", contactCode, item.Value));
+                    }
+
+                }
+
+                foreach (ListItem item in idASSOCIATION_CODE.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Value != "-1")
+                            adapter.set(String.Format("INSERT INTO ASSOCIATION VALUES({0},{1})", contactCode, item.Value));
+                    }
+
+                }
+
+                foreach (ListItem item in idLANGUAGE_CODE.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Value != "-1")
+                            adapter.set(String.Format("INSERT INTO LANGUAGES VALUES({0},{1})", contactCode, item.Value));
+                    }
+
+                }
+
+
+            }
+        }
+
 
         protected void idButtonAileBilgileriKaydet_Click(object sender, EventArgs e)
         {
@@ -200,9 +237,39 @@ namespace VeribisTasarım
             adresDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCONTACT_CODE.Text));
             secilenElemanDetayiGetir(this, "CONTACT", "CONTACT_CODE", String.Format("{0}", idCONTACT_CODE.Text));
+            multiSelecetDoldur(idCONTACT_CODE.Text);
         }
 
+        private void multiSelecetDoldur(string code)
+        {
+            idGROUP_CODE.ClearSelection();
+            idASSOCIATION_CODE.ClearSelection();
+            idLANGUAGE_CODE.ClearSelection();
+            DBARACISI adapter = new DBARACISI();
+           List<string> group = adapter.getElemanList(String.Format("SELECT GROUP_CODE FROM CONTACTGROUP WHERE CONTACT_CODE={0}", code));
+           multiselecetIsaretle(idGROUP_CODE, group);
+           group = adapter.getElemanList(String.Format("SELECT ASSOCIATION_CODE FROM ASSOCIATION WHERE CONTACT_CODE={0}", code));
+           multiselecetIsaretle(idASSOCIATION_CODE, group);
+           group = adapter.getElemanList(String.Format("SELECT LANGUAGE_CODE FROM LANGUAGES WHERE CONTACT_CODE={0}", code));
+           multiselecetIsaretle(idLANGUAGE_CODE, group);
+           
 
+
+        }
+        private void multiselecetIsaretle(ListBox eleman, List<string> group)
+        {
+            foreach (ListItem listItem in eleman.Items)
+            {
+                foreach (string item in group)
+                {
+                    if (listItem.Value.ToString() == item)
+                    {
+                        listItem.Selected = true;
+                    }
+                }
+            }
+
+        }
 
         protected void editContact(object sender, EventArgs e)
         {
@@ -224,7 +291,7 @@ namespace VeribisTasarım
         protected void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("SELECT CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,TEL.COUNTRY_CODE+TEL.AREA_CODE+TEL.PHONE_NUMBER as 'IS' ,TELCep.COUNTRY_CODE+TELCep.AREA_CODE+TELCep.PHONE_NUMBER as 'CEP' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE where CONTACT.COMPANY_CODE={0} ORDER BY CONTACT.CONTACT_CODE DESC", drpCOMPANY_CODE.SelectedValue));
+            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("SELECT CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,(TEL.COUNTRY_CODE+ ' ' + TEL.AREA_CODE + ' ' + TEL.PHONE_NUMBER) as 'IS' ,(TELCep.COUNTRY_CODE+ ' ' + TELCep.AREA_CODE + ' ' + TELCep.PHONE_NUMBER) as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1) as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2) as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE where CONTACT.COMPANY_CODE={0} ORDER BY CONTACT.CONTACT_CODE DESC", drpCOMPANY_CODE.SelectedValue));
             //"SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='" + drpCOMPANY_CODE.SelectedValue + "' ORDER BY CONTACT_CODE DESC");
             GridView1.DataBind();
 
@@ -233,7 +300,7 @@ namespace VeribisTasarım
         protected void gridDoldurFirmasiz()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("select TOP(20) CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,TEL.COUNTRY_CODE+TEL.AREA_CODE+TEL.PHONE_NUMBER as 'IS' ,TELCep.COUNTRY_CODE+TELCep.AREA_CODE+TELCep.PHONE_NUMBER as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE  ORDER BY CONTACT.CONTACT_CODE DESC"));
+            GridView1.DataSource = dbadapter.getGridIcerik(String.Format("select TOP(20) CONTACT.COMPANY_CODE,CONTACT.CONTACT_CODE,CONTACT.NAME,CONTACT.SURNAME,Unvanlar.EXP_TR,CONTACT.MAIL,(TEL.COUNTRY_CODE+ ' ' + TEL.AREA_CODE + ' ' + TEL.PHONE_NUMBER) as 'IS' ,(TELCep.COUNTRY_CODE+ ' ' + TELCep.AREA_CODE + ' ' + TELCep.PHONE_NUMBER) as 'Cep' from CONTACT  LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=1)as TEL on TEL.CONTACT_CODE=CONTACT.CONTACT_CODE LEFT JOIN (select * from PHONE where PHONE.PHONE_TYPE_ID=2)as TELCep on TELCep.CONTACT_CODE=CONTACT.CONTACT_CODE left join (select * from GROUPS where GROUP_CODE=12) as Unvanlar on Unvanlar.ROW_ORDER_NO=CONTACT.TITLE  ORDER BY CONTACT.CONTACT_CODE DESC"));
             //"SELECT TOP 20 * FROM CONTACT WHERE COMPANY_CODE='" + drpCOMPANY_CODE.SelectedValue + "' ORDER BY CONTACT_CODE DESC");
             GridView1.DataBind();
 

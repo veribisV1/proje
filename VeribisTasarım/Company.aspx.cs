@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Text;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using VeribisTasarım.Controller;
@@ -10,9 +13,8 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            base.Page_Load();
-            idGROUP_CODE.SelectionMode = ListSelectionMode.Multiple;
-            gridDoldur();
+            base.Page_Load();   
+            gridDoldur();         
             if (!IsPostBack)
             {
                 butonText();
@@ -21,10 +23,8 @@ namespace VeribisTasarım
                     adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                     telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                 }
-                //
+             
                 ekranDoldur();
-
-
             }
 
         }
@@ -48,7 +48,7 @@ namespace VeribisTasarım
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
-            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,(COUNTRY_CODE+ ' ' + AREA_CODE + ' ' + PHONE_NUMBER) AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE ORDER BY COMPANY_CODE DESC");
+            GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,ISNULL((COUNTRY_CODE+ ' ' + AREA_CODE + ' ' + PHONE_NUMBER),'') AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS AND ADDRESS.ADDRESS_TYPE_ID=1 LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE AND PHONE.PHONE_TYPE_ID=1 ORDER BY COMPANY_CODE DESC");
             GridView1.DataBind();
         }
         private void ekranDoldur()
@@ -80,6 +80,8 @@ namespace VeribisTasarım
             #endregion
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
+
+
         private void adresDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -90,8 +92,34 @@ namespace VeribisTasarım
             DataTable tablo = db.get(sorgu.ToString());
             grdADDRESS.DataSource = tablo;
             grdADDRESS.DataBind();
-
+          
         }
+
+        [WebMethod]
+        public static string adres(int companyCode)
+        {
+            DBTOOL db = new DBTOOL();
+            StringBuilder sorgu = new StringBuilder();
+            //sorgu.Append("SELECT (ADDRESS1+ADDRESS2+ADDRESS3) AS ADRES,COUNTY1 AS BELDE,COUNTY2 AS ILCE, CITY AS IL FROM ADDRESS WHERE ADDRESS.COMPANY_CODE=");
+            sorgu.Append("SELECT ADDRESS.ADDRESS_CODE, ADDRESS.ADDRESS_TYPE_ID, GROUPS.EXP_TR AS TUR,ISNULL(ad1.ADDRESS1,'')+ ' '+ ISNULL( ad2.ADDRESS2,'')+ ' '+ ISNULL(ad3.ADDRESS3,'') AS ADRES, COUNTRY.COUNTRY_NAME AS ULKE, CITY.CITY_NAME AS IL, CITY2.NAME AS ILCE FROM ADDRESS INNER JOIN GROUPS  ON ADDRESS.ADDRESS_TYPE_ID=GROUPS.ROW_ORDER_NO INNER JOIN COUNTRY ON COUNTRY.COUNTRY_CODE=ADDRESS.COUNTY INNER JOIN CITY ON CITY.CITY_CODE=ADDRESS.CITY INNER JOIN CITY2 ON CITY2.ORDER_NO=ADDRESS.COUNTY1 LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS1<>'-1') as ad1 on ad1.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS2<>'-1') as ad2 on ad2.ADDRESS_CODE=ADDRESS.ADDRESS_CODE LEFT JOIN (SELECT * FROM ADDRESS WHERE ADDRESS3<>'-1') as ad3 on ad3.ADDRESS_CODE=ADDRESS.ADDRESS_CODE where GROUPS.GROUP_CODE=1 AND ADDRESS.COMPANY_CODE=");
+            sorgu.Append(companyCode);
+            DataTable tablo = db.get(sorgu.ToString());
+            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+            Dictionary<string, object> row;
+            foreach (DataRow dr in tablo.Rows)
+            {
+                row = new Dictionary<string, object>();
+                foreach (DataColumn col in tablo.Columns)
+                {
+                    row.Add(col.ColumnName, dr[col]);
+                }
+                rows.Add(row);
+            }
+            return serializer.Serialize(rows);
+        }
+
+        [WebMethod]
         private void telefonDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -114,40 +142,35 @@ namespace VeribisTasarım
                     if (Company_Code != -1)
                     {
                         idCOMPANY_CODE.Text = Company_Code.ToString();
-                        DBARACISI adapter = new DBARACISI();
-                        foreach (ListItem item in idGROUP_CODE.Items)
-                        {
-                            if (item.Selected)
-                            {
-                                if (item.Value != "-1")
-                                    adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", Company_Code, item.Value));
-                            }
-
-                        }
-
+                        gruopCodeKaydet();
                     }
+                    KayitBasariliMesaji("Firma");
                 }
                 else
                 {
                     Company_Code = kaydet("pUpdateCompany");
-                    DBARACISI adapter = new DBARACISI();
-                    adapter.set(String.Format("Delete from COMPANYGROUP where COMPANY_CODE={0}", idCOMPANY_CODE.Text));
-                    foreach (ListItem item in idGROUP_CODE.Items)
-                    {
-                        if (item.Selected)
-                        {
-                            if (item.Value != "-1")
-                                adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", idCOMPANY_CODE.Text, item.Value));
-                        }
-
-                    }
+                    gruopCodeKaydet();
                 }
 
             }
-            //formTemizle(this);
+            KayitBasariliMesaji("Firma");
             gridDoldur();
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
+        }
+        private void gruopCodeKaydet()
+        {
+            DBARACISI adapter = new DBARACISI();
+            adapter.set(String.Format("Delete from COMPANYGROUP where COMPANY_CODE={0}", idCOMPANY_CODE.Text));
+            foreach (ListItem item in idGROUP_CODE.Items)
+            {
+                if (item.Selected)
+                {
+                    if (item.Value != "-1")
+                        adapter.set(String.Format("INSERT INTO COMPANYGROUP VALUES({0},{1})", idCOMPANY_CODE.Text, item.Value));
+                }
+
+            }
         }
         protected void editCompany(object sender, EventArgs e)
         {
@@ -187,9 +210,9 @@ namespace VeribisTasarım
             DBARACISI dbadapter = new DBARACISI();
             //recursiveElemanBul(this);
             dbadapter.set(String.Format("DELETE FROM PHONE WHERE PHONE_CODE={0}", phoneCode));
-            if(phoneType=="1")
-                dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}",-1,idCOMPANY_CODE.Text));
-            else if(phoneType=="3")
+            if (phoneType == "1")
+                dbadapter.set(String.Format("UPDATE COMPANY SET PHONE={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
+            else if (phoneType == "3")
                 dbadapter.set(String.Format("UPDATE COMPANY SET FAX={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
             gridDoldur();

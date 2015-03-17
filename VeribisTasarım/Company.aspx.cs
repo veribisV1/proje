@@ -17,6 +17,7 @@ namespace VeribisTasarım
             gridDoldur();         
             if (!IsPostBack)
             {
+                Session["chechRefresh"] = Server.UrlDecode(DateTime.Now.ToString());
                 butonText();
                 if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
                 {
@@ -27,6 +28,11 @@ namespace VeribisTasarım
                 ekranDoldur();
             }
 
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            ViewState["ChekRefresh"] = Session["chechRefresh"];
         }
         private void butonText()
         {
@@ -133,6 +139,15 @@ namespace VeribisTasarım
         }
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
+            if (Session["chechRefresh"].ToString() == ViewState["ChekRefresh"].ToString())
+            {
+                Session["chechRefresh"] = Server.UrlDecode(DateTime.Now.ToString());
+
+            }
+            else
+            {
+                return; 
+            }
             int Company_Code = -1;
             if (!String.IsNullOrEmpty(idCOMPANY_NAME.Text))
             {
@@ -150,10 +165,11 @@ namespace VeribisTasarım
                 {
                     Company_Code = kaydet("pUpdateCompany");
                     gruopCodeKaydet();
+
+                    KayitBasariliMesaji("Firma");
                 }
 
             }
-            KayitBasariliMesaji("Firma");
             gridDoldur();
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 

@@ -76,10 +76,10 @@ namespace VeribisTasarım
 
         protected void idButtonAktiviteKaydet_Click(object sender, EventArgs e)
         {
-            if (refreshOlduMu())
-            {
-                return;
-            }
+            //if (refreshOlduMu())
+            //{
+            //    return;
+            //}
 
             int activiteCode = -1;
             if (!String.IsNullOrEmpty(idSUBJECT.Text))
@@ -118,6 +118,7 @@ namespace VeribisTasarım
             idOPENORCLOSE.Text = "0";
             idButtonAktiviteKaydet_Click(sender, e);
             formTemizle(this);
+            KapatBasariliMesaji("Aktivite");
         }
 
         private void gridDoldur()

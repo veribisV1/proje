@@ -13,11 +13,12 @@ namespace VeribisTasarım
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            base.Page_Load();   
+            
             gridDoldur();         
             if (!IsPostBack)
             {
-                Session["chechRefresh"] = Server.UrlDecode(DateTime.Now.ToString());
+                base.Page_Load();   
+           
                 butonText();
                 if (!String.IsNullOrEmpty(idCOMPANY_CODE.Text))
                 {
@@ -30,10 +31,10 @@ namespace VeribisTasarım
 
         }
 
-        protected void Page_PreRender(object sender, EventArgs e)
-        {
-            ViewState["ChekRefresh"] = Session["chechRefresh"];
-        }
+        //protected void Page_PreRender(object sender, EventArgs e)
+        //{
+        //  //  ViewState["ChekRefresh"] = Session["chechRefresh"];
+        //}
         private void butonText()
         {
             idButtonFirmaEkleYeni.Text = ResGetir.resGetir(123);
@@ -139,12 +140,7 @@ namespace VeribisTasarım
         }
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
-            if (Session["chechRefresh"].ToString() == ViewState["ChekRefresh"].ToString())
-            {
-                Session["chechRefresh"] = Server.UrlDecode(DateTime.Now.ToString());
-
-            }
-            else
+            if (refreshOlduMu())           
             {
                 return; 
             }

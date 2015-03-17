@@ -9,7 +9,7 @@ namespace VeribisTasarım.Controller
 {
     public abstract class BASECONTROLLER : System.Web.UI.Page
     {
-       
+
         CONTROL_PARAMETRE_ESLESTIR controlEslestir = new CONTROL_PARAMETRE_ESLESTIR();
         /// <summary>
         /// ekrandaki tüm form elemanlarının
@@ -39,7 +39,7 @@ namespace VeribisTasarım.Controller
             Dictionary<string, object> dataListesi = controlEslestir.eslestir(this, paramtereListesi);
             if (dataListesi.ContainsKey("@CREATE_USER"))
             {
-                dataListesi["@CREATE_USER"]=Session["USER_CODE"];
+                dataListesi["@CREATE_USER"] = Session["USER_CODE"];
             }
             if (dataListesi.ContainsKey("@LAST_UPDATE_USER"))
             {
@@ -118,6 +118,24 @@ namespace VeribisTasarım.Controller
             if (Session.Count < 1)
             {
                 Response.Redirect("Giris.aspx");
+            }
+            Session["chechRefresh"] = Server.UrlDecode(DateTime.Now.ToString());
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            ViewState["ChekRefresh"] = Session["chechRefresh"];
+        }
+        public bool refreshOlduMu()
+        {
+            if (Session["chechRefresh"].ToString() == ViewState["ChekRefresh"].ToString())
+            {
+                Session["chechRefresh"] = Server.UrlDecode(DateTime.Now.ToString());
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }

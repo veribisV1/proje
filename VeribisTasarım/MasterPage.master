@@ -51,7 +51,7 @@
     </script>
     <style>
      .button_example{
- -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:8px;font-family:arial, helvetica, sans-serif; padding: 5px; text-decoration:none;display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold;
+ -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:8px;font-family:arial, helvetica, sans-serif; padding: 5px; text-decoration:none;display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold;color:#1C1C1C;
  background-color: #DDDCE3; background-image: -webkit-gradient(linear, left top, left bottom, from(#DDDCE3), to(#82878C));
  background-image: -webkit-linear-gradient(top, #DDDCE3, #82878C);
  background-image: -moz-linear-gradient(top, #DDDCE3, #82878C);
@@ -93,16 +93,12 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <a runat="server" href="#" class="button_example">
-                                                             <span style="padding: 20px;font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %><br /><%# Eval("Value") %></span>
+                                                        <a runat="server" href="#" class="button_example" style="text-align:center;">
+                                                             <span style="font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %><br /><%# Eval("Value") %></span>
                                                         </a>
                                                        
                                                   <br />
                                                
-                                                   
-                                                     <%--   <a runat="server" href="#" class="button_example">
-                                                            <span style="padding: 20px; color: white; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Value") %></span>
-                                                        </a>--%>
                                                     </td>
 
                                                 </tr>

@@ -952,18 +952,18 @@ a {
 }
 .metro a,
 .metro .link {
-  color: #2e92cf;
+  /*color: #2e92cf;*/
 }
 .metro a:hover,
 .metro .link:hover {
-  color: rgba(45, 173, 237, 0.8);
+  /*color: rgba(45, 173, 237, 0.8);*/
  
 }
 .metro a:focus,
 .metro .link:focus,
 .metro a:active,
 .metro .link:active {
-  color: rgba(45, 173, 237, 0.6);
+  /*color: rgba(45, 173, 237, 0.6);*/
 }
 .metro div,
 .metro span,

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="VeribisTasarım.Company" %>
 
+
 <%@ Import Namespace="VeribisTasarım.Controller" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -30,47 +31,20 @@
 
 
     </script>
-    <script type="text/javascript">
-        function tabloBosalt(tablo) {
-
-            tablo.each(function (i) {
-                
-                if (i != 0) {
-
-                    var par = $(this);
-                    par.remove();
-                }
-
-            });
-
-        }
+ <%--   <script type="text/javascript">
         
-        function adresDoldur(companyCode) {
+        
+     
 
-            PageMethods.adres(companyCode, onComplete);
+       
+        $(document).ready(function () {
+            tabGecir();
+        });
+        function tabGecir() {
+            alert("çalışıyor");
+            $('#rakipFirma').tabs("option", "active", 1);
         }
-
-        function onComplete(res) {
-          
-           res= JSON.parse(res);
-           var $table = $('#ContentPlaceHolder1_grdADDRESS tbody');
-           tabloBosalt($('#ContentPlaceHolder1_grdADDRESS tbody tr'));
-            $.each(res, function () {
-                var elements = " ";
-                elements = '<tr>';
-                elements += "<td><img src='image/Deleteicon.png'></td>";
-                elements += "<td><img src='image/editicon.png'></td>";
-                elements += "<td>" + this.TUR + "</td>";
-                elements += "<td>" + this.ADRES + "</td>";
-                elements += "<td>" + this.ULKE + "</td>";
-                elements += "<td>" + this.IL + "</td>";
-                elements += "<td>" + this.ILCE + "</td>";               
-                elements += "</tr>";
-                $table.append(elements);
-            })
-        }
-
-    </script>
+    </script>--%>
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
@@ -83,7 +57,7 @@
     <script src="Content/js/jquery.multiple.select.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+  
     <div class="ALAN12">
         <h3><%=ResGetir.resGetir(2)%></h3>
        
@@ -91,7 +65,7 @@
             <ul class="tabs">
 
                 <li id="liste"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma" class="active"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
                 <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
@@ -240,6 +214,7 @@
                                         <div hidden="hidden">
                                             <asp:TextBox ID="idCOMPANY_CODE" runat="server"></asp:TextBox>
                                             <asp:TextBox ID="idADDRESS" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="idPHONE" runat="server"></asp:TextBox>
                                         </div>
 
                                     </td>
@@ -465,6 +440,8 @@
                                     <td>
                                         <div class="gridDivAdres">
 
+                                 
+                                           
 
                                             <asp:GridView ID="grdADDRESS" runat="server"
                                                 AutoGenerateColumns="False" CssClass="mGrid" DataKeyNames="ADDRESS_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Adres bilgisi mevcut değil.">

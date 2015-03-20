@@ -31,20 +31,7 @@
 
 
     </script>
- <%--   <script type="text/javascript">
-        
-        
-     
-
-       
-        $(document).ready(function () {
-            tabGecir();
-        });
-        function tabGecir() {
-            alert("çalışıyor");
-            $('#rakipFirma').tabs("option", "active", 1);
-        }
-    </script>--%>
+ 
 
     <%--fancy_box stil tanımı--%>
     <style type="text/css">
@@ -65,7 +52,7 @@
             <ul class="tabs">
 
                 <li id="liste"><a href="#ListeAdi"><%=ResGetir.resGetir(217)%></a></li>
-                <li id="firma"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
+                <li id="firma" class="active"><a href="#FirmaEkle"><%=ResGetir.resGetir(131)%></a></li>
                 <li><a href="#MakinaParki"><%=ResGetir.resGetir(126)%></a></li>
                 <li id="rakipFirma"><a href="#RakipFirma"><%=ResGetir.resGetir(175)%></a></li>
                 <li><a href="#RakipUrun"><%=ResGetir.resGetir(176)%></a></li>
@@ -82,7 +69,23 @@
 
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
+                        <table>
+                            <tr>
+                                <td>
 
+                                    <asp:Label ID="idLabelTeklifArama" Text="Firma" runat="server" CssClass="EvrakListesiDurum"></asp:Label>
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <asp:TextBox ID="idTextBoxFirsatArama" runat="server" CssClass="aramakontrol"></asp:TextBox>
+
+                                </td>
+                                <td>
+                                    <asp:Button ID="idButtonFirsatArama" runat="server" CssClass="bg-blue fg-white" Height="30px" Text="Ara" />
+                                </td>
+                            </tr>
+                        </table>
+                           <hr />
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Firma bilgisine rastlanmadı.">
 
                             <Columns>
@@ -575,7 +578,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <div class="frame" id="MakinaParki">
                     <div class="KisiTableHizalama">

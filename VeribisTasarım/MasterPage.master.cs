@@ -66,6 +66,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
     }
 
+
     protected void btnSearch_ServerClick(object sender, EventArgs e)
     {
        
@@ -74,6 +75,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
    
    
 
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
 
+
+    }
 }
 

@@ -25,18 +25,13 @@ namespace VeribisTasarım
                     adresDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                     telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
                 }
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');", true);
                 ekranDoldur();
                
             }
-
-           
+          
         }
 
-        //protected void Page_PreRender(object sender, EventArgs e)
-        //{
-        //  //  ViewState["ChekRefresh"] = Session["chechRefresh"];
-        //}
         private void butonText()
         {
             idButtonFirmaEkleYeni.Text = ResGetir.resGetir(123);
@@ -54,12 +49,14 @@ namespace VeribisTasarım
             idButtonRakipUrunKaydet.Text = ResGetir.resGetir(94);
             idButtonRakipUrunSil.Text = ResGetir.resGetir(93);
         }
+
         private void gridDoldur()
         {
             DBARACISI dbadapter = new DBARACISI();
             GridView1.DataSource = dbadapter.getGridIcerik("SELECT TOP 20 COMPANY.COMPANY_CODE,COMPANY.COMPANY_NAME,ADDRESS.ADDRESS1 AS ADDRESS, T_SECTOR.EXP_TR AS SECTOR,ISNULL((COUNTRY_CODE+ ' ' + AREA_CODE + ' ' + PHONE_NUMBER),'') AS PHONE,COMPANY.MAIL, COMPANY.WEBADDRESS FROM COMPANY LEFT JOIN ADDRESS ON ADDRESS.ADDRESS_CODE=COMPANY.ADDRESS AND ADDRESS.ADDRESS_TYPE_ID=1 LEFT JOIN (SELECT * FROM GROUPS WHERE GROUP_CODE=4 )AS T_SECTOR ON T_SECTOR.ROW_ORDER_NO=COMPANY.SECTOR LEFT JOIN PHONE ON PHONE.PHONE_CODE=COMPANY.PHONE AND PHONE.PHONE_TYPE_ID=1 ORDER BY COMPANY_CODE DESC");
             GridView1.DataBind();
         }
+        
         private void ekranDoldur()
         {
             DB_ELEMAN_GETIR dbGetir = new DB_ELEMAN_GETIR();
@@ -90,7 +87,6 @@ namespace VeribisTasarım
             idCOMPANY_REPRESENT_CODE.SelectedValue = Session["USER_CODE"].ToString();
         }
 
-
         private void adresDoldur(int companyCode)
         {
             DBTOOL db = new DBTOOL();
@@ -102,11 +98,7 @@ namespace VeribisTasarım
             grdADDRESS.DataSource = tablo;
             grdADDRESS.DataBind();
          
-
         }
-
-     
-
      
         private void telefonDoldur(int companyCode)
         {
@@ -119,6 +111,7 @@ namespace VeribisTasarım
             gridPHONE.DataSource = tablo;
             gridPHONE.DataBind();
         }
+        
         protected void idButtonFirmaEkleKaydet_Click1(object sender, EventArgs e)
         {
             if (refreshOlduMu())           
@@ -153,6 +146,7 @@ namespace VeribisTasarım
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
         }
+        
         private void gruopCodeKaydet()
         {
             DBARACISI adapter = new DBARACISI();
@@ -167,6 +161,7 @@ namespace VeribisTasarım
 
             }
         }
+        
         protected void editCompany(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
@@ -179,6 +174,7 @@ namespace VeribisTasarım
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
 
         }
+        
         private void companyGroupDoldur(string code)
         {
             idGROUP_CODE.ClearSelection();
@@ -196,6 +192,7 @@ namespace VeribisTasarım
             }
 
         }
+        
         protected void telefonSil(object sender, EventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
@@ -212,6 +209,7 @@ namespace VeribisTasarım
             telefonDoldur(Convert.ToInt32(idCOMPANY_CODE.Text));
             gridDoldur();
         }
+        
         protected void idButtonFirmaEkleYeni_Click(object sender, EventArgs e)
         {
             if (refreshOlduMu())
@@ -231,6 +229,7 @@ namespace VeribisTasarım
            
 
         }
+        
         protected void lnkRemove_Click(object sender, ImageClickEventArgs e)
         {
             ImageButton silButon = (ImageButton)sender;
@@ -245,6 +244,7 @@ namespace VeribisTasarım
                 dbadapter.set(String.Format("UPDATE COMPANY SET ADDRESS={0} WHERE COMPANY_CODE={1}", -1, idCOMPANY_CODE.Text));
             gridDoldur();
         }
+
         protected void idButtonMakinaParkiKaydet_Click(object sender, EventArgs e)
         {
             if (refreshOlduMu())

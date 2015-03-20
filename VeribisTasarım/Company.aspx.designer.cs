@@ -13,6 +13,33 @@ namespace VeribisTasarım {
     public partial class Company {
         
         /// <summary>
+        /// idLabelTeklifArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idLabelTeklifArama;
+        
+        /// <summary>
+        /// idTextBoxFirsatArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idTextBoxFirsatArama;
+        
+        /// <summary>
+        /// idButtonFirsatArama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button idButtonFirsatArama;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>

@@ -138,6 +138,7 @@ namespace VeribisTasarım
             DBARACISI adapter = new DBARACISI();
             System.Data.DataTable contact = adapter.getGridIcerik(String.Format("select CONTACT_CODE from ACTIVITY where  ACTIVITY_CODE={0}", code));
             idCONTACT_CODE.SelectedValue = contact.Rows[0][0].ToString();
+            
 
         }
 

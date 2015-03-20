@@ -66,6 +66,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
     }
 
+    protected void btnSearch_ServerClick(object sender, EventArgs e)
+    {
+       
+    }
+
    
    
 

@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 
-    <style>
+    <%-- <style>
         button, input
         {
             line-height: normal;
@@ -434,59 +434,140 @@
                 box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
                 background-color: #e0e0e0;
             }
+    </style>--%>
+    <style>
+        input[type=radio] {
+            display: none;
+        }
+
+            input[type=radio] + label {
+                display: inline-block;
+                margin: -2px;
+                padding: 4px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 20px;
+                color: #333;
+                text-align: center;
+                text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+                vertical-align: middle;
+                cursor: pointer;
+                /*background-color: #f5f5f5;
+                background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+                background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+                background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+                background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+                background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+                background-repeat: repeat-x;
+                border: 1px solid #ccc;
+                border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+                border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+                border-bottom-color: #b3b3b3;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+                filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);*/
+                -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+            }
+
+            input[type=radio]:checked + label {
+                background-image: none;
+                outline: 0;
+                -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+                background-color: #e0e0e0;
+            }
     </style>
+    <link href="content/css/bootstrap.css"
+        rel="stylesheet">
+    <link href="content/css/custom.css"
+        rel="stylesheet">
 
+    <script src="content/js/jquery-2.1.3.js"></script>
+    <script src="content/js/bootstrap.js"></script>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta id="appViewport"
+        name="viewport"
+        content="width=device-width, initial-scale=1">
 </head>
-<body class="login-page">
-    <form id="form1" runat="server">
+<body class="background" background="image/zemin.jpg">
 
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-default navbar-renk">
+              <div class="col-md-9">
+                            <span class="element logo-yazi-tipi">VeribisCRM 
+                            </span>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="lang-btn-div dil-buton">
+                                <asp:RadioButtonList ID="idDilSecim" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="TR" Selected="True">TR</asp:ListItem>
+                                    <asp:ListItem Value="EN">EN</asp:ListItem>
+                                </asp:RadioButtonList>
+
+                            </div>
+                        </div>
+            <div class="container-fluid icerik">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <div class="yazi-yeri">
+                      
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
         <section class="content login-page">
             <div class="content-liquid">
                 <div class="container">
-                    <div class="row">
-                        <div class="login-page-container" style="line-height: 805px; min-height: 805px;">
-                            <div class="boxed animated flipInY">
 
-                                <div class="inner">
+                    <div class="col-md-4">
+                        <span class="element"></span>
+                    </div>
+                    <div class="col-md-4" style="margin-top: 100px;"></div>
+                    <div class="col-md-4" style="margin-top: 100px;">
 
-
-                                    <div class="login-title">
-                                        <div class="text-left">
-                                            <h4>Kullanıcı Girişi</h4>
-                                        </div>
-                                        <div class="lang-btn-div">
-                                            <asp:RadioButtonList ID="idDilSecim" runat="server" RepeatDirection="Horizontal">
-                                                <asp:ListItem Value="TR" Selected="True">TR</asp:ListItem>
-                                                <asp:ListItem Value="EN">EN</asp:ListItem>
-                                            </asp:RadioButtonList>
-
-                                        </div>
-                                        <div class="lang-cl"></div>
-
-                                    </div>
-
-                                    <div id="ticarikod" class="input-group">
-                                        <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtTicariKod" runat="server" placeholder="Ticari Kod"></asp:TextBox>
-                                    </div>
-
-                                    <div id="kullaniciadi" class="input-group">
-                                        <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtKullaniciAdi" runat="server" placeholder="Kullanıcı Adı"></asp:TextBox>
-                                    </div>
-
-                                    <div id="sifre" class="input-group">
-                                        <span class="input-group-addon"></span>
-                                        <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password" placeholder="Şifre"></asp:TextBox>
-                                    </div>
-
-                                    <asp:Button ID="btnGiris" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />
-                                </div>
-
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span class="element login-label">Ticari Kod </span>
+                            </div>
+                            <div class="col-md-8">
+                                <asp:TextBox CssClass="form-control" ID="_txtTicariKod" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="row kullanici-ayar">
+                            <div class="col-md-4">
+                                <span class="element login-label">Kullanıcı Adı  </span>
+                            </div>
+                            <div class="col-md-8">
+                                <asp:TextBox CssClass="form-control" ID="_txtKullaniciAdi" runat="server"></asp:TextBox>
                             </div>
 
                         </div>
+                        <div class="row kullanici-ayar">
+                            <div class="col-md-4">
+                                <span class="element login-label">Şifre  </span>
+                            </div>
+                            <div class="col-md-8">
+                                <asp:TextBox CssClass="form-control" ID="_txtSifre" runat="server" TextMode="Password"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="row kullanici-ayar">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-8" style="float: left;">
+                                <asp:Button ID="btnGiris" class="btn btn-primary buton-ozellik" runat="server" Text="Sisteme Giriş" OnClick="btnGiris_Click" />
+
+                            </div>
+                        </div>
+
+
 
                     </div>
 

@@ -19,7 +19,7 @@
                 <div class="frame" id="ListeAdi">
                     <div class="KisiTableHizalama">
 
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Firma bilgisine rastlanmadı.">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="nGrid" DataKeyNames="COMPANY_CODE" AlternatingRowStyle-CssClass="alt" EmptyDataText="Firma bilgisine rastlanmadı." DataSourceID="SqlDataSource1">
 
                             <Columns>
 
@@ -69,6 +69,8 @@
                             </Columns>
 
                         </asp:GridView>
+
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Vdb_Master2014ConnectionString %>" SelectCommand="SELECT [COMPANY_NAME], [ADDRESS], [SECTOR], [PHONE], [MAIL], [WEBADDRESS] FROM [COMPANY]"></asp:SqlDataSource>
 
                     </div>
                 </div>

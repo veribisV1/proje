@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    
+
     <title>VERIBIS</title>
 
 
@@ -24,7 +24,7 @@
     <script src="Content/js/jquery/jquery.mousewheel.js"></script>
     <script src="Content/js/metro/metro.min.js"></script>
     <script src="Content/js/navigate.js"></script>
-   
+
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
     <script>
@@ -50,40 +50,50 @@
         };
     </script>
     <style>
-     .button_example{
- -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:8px;font-family:arial, helvetica, sans-serif; padding: 5px; text-decoration:none;display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold;color:#1C1C1C;
- background-color: #DDDCE3; background-image: -webkit-gradient(linear, left top, left bottom, from(#DDDCE3), to(#82878C));
- background-image: -webkit-linear-gradient(top, #DDDCE3, #82878C);
- background-image: -moz-linear-gradient(top, #DDDCE3, #82878C);
- background-image: -ms-linear-gradient(top, #DDDCE3, #82878C);
- background-image: -o-linear-gradient(top, #DDDCE3, #82878C);
- background-image: linear-gradient(to bottom, #DDDCE3, #82878C);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DDDCE3, endColorstr=#82878C);
- 
-}
+        .button_example {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            font-size: 8px;
+            font-family: arial, helvetica, sans-serif;
+            padding: 5px;
+            text-decoration: none;
+            display: inline-block;
+            text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+            font-weight: bold;
+            color: #1C1C1C;
+            background-color: #DDDCE3;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#DDDCE3), to(#82878C));
+            background-image: -webkit-linear-gradient(top, #DDDCE3, #82878C);
+            background-image: -moz-linear-gradient(top, #DDDCE3, #82878C);
+            background-image: -ms-linear-gradient(top, #DDDCE3, #82878C);
+            background-image: -o-linear-gradient(top, #DDDCE3, #82878C);
+            background-image: linear-gradient(to bottom, #DDDCE3, #82878C);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DDDCE3, endColorstr=#82878C);
+        }
 
-.button_example:hover{
-
- background-color: #c1c0cc; background-image: -webkit-gradient(linear, left top, left bottom, from(#c1c0cc), to(#696e72));
- background-image: -webkit-linear-gradient(top, #c1c0cc, #696e72);
- background-image: -moz-linear-gradient(top, #c1c0cc, #696e72);
- background-image: -ms-linear-gradient(top, #c1c0cc, #696e72);
- background-image: -o-linear-gradient(top, #c1c0cc, #696e72);
- background-image: linear-gradient(to bottom, #c1c0cc, #696e72);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#c1c0cc, endColorstr=#696e72);
-}
+            .button_example:hover {
+                background-color: #c1c0cc;
+                background-image: -webkit-gradient(linear, left top, left bottom, from(#c1c0cc), to(#696e72));
+                background-image: -webkit-linear-gradient(top, #c1c0cc, #696e72);
+                background-image: -moz-linear-gradient(top, #c1c0cc, #696e72);
+                background-image: -ms-linear-gradient(top, #c1c0cc, #696e72);
+                background-image: -o-linear-gradient(top, #c1c0cc, #696e72);
+                background-image: linear-gradient(to bottom, #c1c0cc, #696e72);
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#c1c0cc, endColorstr=#696e72);
+            }
     </style>
 </head>
 <body class="metro">
     <form id="form1" runat="server">
 
-        <nav class="navigation-bar" style="height: 125px;">
+        <nav class="navigation-bar">
             <nav class="navigation-bar-content">
-                
-                
-                <a class="element" style="font-size: 28px;font-family:Calibri; margin-top:14px;" href="Default.aspx"><img src="image/logo.png" style="margin-left:34px;"  /><br />VeribisCRM 
+                <a class="element" style="font-size: 28px; font-family: Calibri; margin-top: 14px;" href="Default.aspx">VeribisCRM 
                 </a>
 
-              <%--  <span class="element-divider" style="margin-top: 15px;"></span>--%>
-                <div class="element" style="margin-left:52px;">
+                <%--  <span class="element-divider" style="margin-top: 15px;"></span>--%>
+                <div class="element" style="margin-left: 52px;">
                     <table>
                         <tbody>
                             <tr>
@@ -93,14 +103,11 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <a runat="server" href="#" class="button_example" style="text-align:center;">
-                                                             <span style="font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;"><%# Eval("Key") %><br /><%# Eval("Value") %></span>
-                                                        </a>
-                                                       
-                                                  <br />
-                                               
+                                                        <button class="shortcut danger" style="width: 70px; height: 50px;">
+                                                            <%# Eval("Key") %>
+                                                            <small class="bg-cobalt fg-danger"><%# Eval("Value") %></small>
+                                                        </button>
                                                     </td>
-
                                                 </tr>
                                             </table>
 
@@ -110,49 +117,45 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br />
-                       <table style="margin-top: -15px;">
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList1" runat="server" Width="100px" Height="26px">
-                                    <asp:ListItem Text="Kiþiler"></asp:ListItem>
-                                    <asp:ListItem Text="Firmalar"></asp:ListItem>
-                                    <asp:ListItem Text="Aktivite"></asp:ListItem>
-                                </asp:DropDownList>
-                            </td>
-                            <td>
-                                <div class="input-control text" style="margin-top: 11px;">
-                                    <input type="text" placeholder="Arama Yapýn..." style="width: 400px; height: 25px;" />
 
-                                    <button class="btn-search" id="btnSearch" runat="server" onserverclick="btnSearch_ServerClick"></button>
-
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
                 </div>
 
-               
+                <div class="element" style="padding: 0px 0px 0px 0px; margin-top:15px;">
+                    <div style="float:left;margin-top:10px;">
+                        <asp:DropDownList ID="DropDownList1" runat="server" Width="100px" Height="26px">
+                            <asp:ListItem Text="Kiþiler"></asp:ListItem>
+                            <asp:ListItem Text="Firmalar"></asp:ListItem>
+                            <asp:ListItem Text="Aktivite"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="input-control text" style="float:left;margin-left:2px;margin-top:16px;">
+                        <input type="text" placeholder="Arama Yapýn..." style="width: 200px; height: 25px;" />
+                        <button class="btn-search" id="btnSearch" runat="server" onserverclick="btnSearch_ServerClick"></button>
+                    </div>
+                </div>
 
 
 
-              <%--  <span class="element-divider" style="margin-top: 30px;"></span>--%>
-                <a class="element place-right" href="Giris.aspx?param=logout" style="margin-top: 20px;"><span class="icon-switch"></span></a>
+
+                <%--  <span class="element-divider" style="margin-top: 30px;"></span>--%>
                 <span class="element-divider place-right" style="margin-top: 10px;"></span>
+
+                <a class="element place-right" href="Giris.aspx?param=logout" style="margin-top: 20px;"><span class="icon-switch"></span></a>
                 <button class="element image-button image-left place-right" style="padding-right: 10px; margin-top: 15px;">
                     <%= this.Page.User.Identity.Name %>
                     <i class="icon-user" style="margin-top: 15px;"></i>
                 </button>
             </nav>
         </nav>
-       
-         <div class="clearfix"></div>
+
+        <div class="clearfix"></div>
         <nav class="sidebar light" style="width: 15%; height: 100%; float: left;">
             <ul>
                 <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
                     <ItemTemplate>
                         <li id="menulist" runat="server">
-                            <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'><img runat="server" src="Content/icons/guncelle.png" style="padding-right:20px;" /><%# Eval("MENU_NAME") %></a></li>
+                            <a runat="server" id="menulink" style="padding: 20px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; font-size: 20px;" href='<%#Eval("LINK") %>'>
+                                <img id="Img1" runat="server" src="Content/icons/guncelle.png" style="padding-right: 20px;" /><%# Eval("MENU_NAME") %></a></li>
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>
@@ -180,7 +183,7 @@
         jQuery('#ContentPlaceHolder1_idDOCUMENT_DATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idCERTIFICATE_DATE').datetimepicker({ format: 'd.m.Y H:i' });
         jQuery('#ContentPlaceHolder1_idSIPARIS_TARIHI').datetimepicker({ format: 'd.m.Y H:i' });
-        
+
     </script>
 
 </body>

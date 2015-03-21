@@ -123,8 +123,9 @@
                             <td>
                                 <div class="input-control text" style="margin-top: 11px;">
                                     <input type="text" placeholder="Arama Yapýn..." style="width: 400px; height: 25px;" />
-                                  <%--  <asp:Button ID="btnSearch" CssClass="btn-search" runat="server" OnClick="btnSearch_Click"/>--%>
-                                    <button class="btn-search" runat="server" id="btnSearch" onserverclick="btnSearch_Click"></button>
+
+                                    <button class="btn-search" id="btnSearch" runat="server" onserverclick="btnSearch_ServerClick"></button>
+
                                 </div>
                             </td>
                         </tr>

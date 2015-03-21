@@ -116,6 +116,8 @@ namespace VeribisTasarım
         {
             if (refreshOlduMu())           
             {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#firma').addClass('active');$('#liste').removeClass('active')", true);
+             
                 return; 
             }
             int Company_Code = -1;
@@ -276,6 +278,8 @@ namespace VeribisTasarım
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
         }
 
+       
+
         protected void idButtonRakipFirmaKaydet_Click(object sender, EventArgs e)
         {
 
@@ -303,6 +307,8 @@ namespace VeribisTasarım
             idBU_FIRMADAKI_RAKIP_FIRMALAR.Items.Remove(idBU_FIRMADAKI_RAKIP_FIRMALAR.SelectedItem);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#rakipFirma').addClass('active');$('#liste').removeClass('active')", true);
         }
+
+       
 
     }
 }

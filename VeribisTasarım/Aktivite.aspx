@@ -70,6 +70,7 @@
 
                         </asp:GridView>
 
+                        
                     </div>
                 </div>
                 <div class="frame" id="AktiviteEkle" style="min-height: 100px;">

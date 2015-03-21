@@ -63,7 +63,7 @@
                 <li><a href="#EkForm"><%=ResGetir.resGetir(573)%></a></li>
 
 
-            </ul>
+                </ul>
 
             <div class="frames" style="float: left; width: 100%">
 
